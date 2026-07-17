@@ -1,0 +1,46 @@
+{
+  "files": [
+    {
+      "bytes": 362,
+      "path": "checkpoint.json",
+      "sha256": "5ffdb69f937eb0d079012efafbd57d8e261209b58dbb2e0dd679682fd77ddd41"
+    },
+    {
+      "bytes": 544237,
+      "path": "checkpoint.pt",
+      "sha256": "2f9d1e5473be85e4b97d8140a915a5b5c3d07abb2d004a8bc14e4040f7479ce7"
+    },
+    {
+      "bytes": 337,
+      "path": "confusion_matrix.csv",
+      "sha256": "30227fcfb2f39f633e7a6f64e2a19fe3c4707564bed60d07267fc034042214f2"
+    },
+    {
+      "bytes": 575,
+      "path": "layer_profiles.csv",
+      "sha256": "7ae1f2dcbbb5a8b2f9cf710bfd82edab9e20ba0192b1b20f8f5ad010b19ce7a5"
+    },
+    {
+      "bytes": 180679,
+      "path": "small_mnist_cnn_state.pt",
+      "sha256": "0aa004a4bd1bbbdaf550a115ad0ed5cda16b6269b8753b97bd076cd1fc55d662"
+    },
+    {
+      "bytes": 3751,
+      "path": "summary.json",
+      "sha256": "b8fad9f23a79a113f130d4795a131222dec7e994e19b69e9b3afe2c82c9b6782"
+    },
+    {
+      "bytes": 268031,
+      "path": "test_predictions.csv",
+      "sha256": "22a6341fd32a5468ddafd217cb2eff746a2f07d5e2578e117085e2c7f9403970"
+    },
+    {
+      "bytes": 218,
+      "path": "training_history.csv",
+      "sha256": "ec2a8d89eac7191ffe0a6b55555253b983ec2b196352f898df4203057fed001c"
+    }
+  ],
+  "schema_version": "aspg-mnist-cnn-manifest-1.0",
+  "summary_sha256": "b8fad9f23a79a113f130d4795a131222dec7e994e19b69e9b3afe2c82c9b6782"
+}

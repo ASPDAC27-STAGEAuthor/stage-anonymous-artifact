@@ -1,0 +1,37 @@
+schema: aspdac.mapping_config.v1
+name: baseline_fixed_mapping
+status: planning_spec
+mapping_policy:
+  type: fixed_static_mapping
+  comparison_role: normalize_across_tools
+  notes:
+    - This file records intended mapping constraints, not an implemented VHaCSim mapper.
+    - Any tool-specific behavior that cannot be disabled must be recorded in the result manifest.
+workload_mappings:
+  - workload: GEMM_256
+    dataflow: output_stationary
+    tiling:
+      M_tile: 64
+      N_tile: 64
+      K_tile: 64
+    target: 16_pe_mesh
+  - workload: Attention_128_64
+    dataflow: staged_attention
+    stages:
+      QK:
+        target: pe_mesh
+      Softmax:
+        target: softmax_component
+      V:
+        target: pe_mesh
+    target: 16_pe_mesh
+  - workload: MLP_512_256_128
+    dataflow: layer_sequential
+    target: 16_pe_mesh
+normalization:
+  precision: FP16
+  batch_size: 1
+  sparsity: dense
+  clock_period_ns: TBD
+  packetization: 128_bit_packets
+

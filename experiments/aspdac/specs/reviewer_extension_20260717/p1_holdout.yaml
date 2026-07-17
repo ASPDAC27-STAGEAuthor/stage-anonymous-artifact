@@ -1,0 +1,36 @@
+schema_version: reviewer-extension-p1-holdout/1.0
+scenario: reviewer_holdout_ws
+seed: 40
+repeats: [0, 1]
+input_allowlist: [case_id, M, N, K, precision_bits, repeat, seed]
+architecture:
+  array_rows: 4
+  array_columns: 4
+  macs_per_pe_per_cycle: 1
+  dataflow: weight_stationary
+  memory_words_per_stream_per_cycle: 8
+  cold_start_prefetch_words: 16384
+cases:
+  - {case_id: holdout_gemm_096, M: 96, N: 96, K: 96, precision_bits: 16}
+  - {case_id: holdout_gemm_192, M: 192, N: 192, K: 192, precision_bits: 16}
+  - {case_id: holdout_gemm_384, M: 384, N: 384, K: 384, precision_bits: 16}
+  - {case_id: holdout_rect_128x256x64, M: 128, N: 256, K: 64, precision_bits: 16}
+  - {case_id: holdout_rect_256x64x192, M: 256, N: 64, K: 192, precision_bits: 16}
+  - {case_id: holdout_rect_64x384x128, M: 64, N: 384, K: 128, precision_bits: 16}
+  - {case_id: holdout_attn_qk_s096_d064, M: 96, N: 96, K: 64, precision_bits: 16}
+  - {case_id: holdout_attn_qk_s192_d064, M: 192, N: 192, K: 64, precision_bits: 16}
+evidence:
+  input_shape_and_macs: Exact
+  same_candidate_stage_trace_repeat: Exact
+  cross_tool_cycles_stalls_utilization: Trend
+  cross_tool_accesses: Numerical_or_Trend_by_shared_counter_definition
+comparison_gate:
+  rule: compare_only_after_independent_stage_and_scalesim_raw_are_both_completed
+  missing_side_status: blocked
+outputs:
+  - raw/stage/{case_id}/r{repeat}/result.json
+  - raw/scalesim/{case_id}/r{repeat}/result.json
+  - summary/holdout_pair_status.csv
+  - summary/holdout_scalesim_stage_timing.csv
+  - summary/holdout_scalesim_stage_accesses.csv
+

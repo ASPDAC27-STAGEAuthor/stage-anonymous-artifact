@@ -1,0 +1,16 @@
+{
+  "candidate_id": "p1-holdout-holdout_rect_128x256x64-5981473c8299b30d-r1",
+  "config_hash": "5981473c8299b30d678f6306487ae1bcb6d09d83207645d1d59d7e4cff40086e",
+  "resolved": {
+    "parameters": {
+      "K": 64,
+      "M": 128,
+      "N": 256,
+      "case_id": "holdout_rect_128x256x64",
+      "precision_bits": 16,
+      "repeat": 1,
+      "seed": 40
+    }
+  },
+  "scenario": "reviewer_holdout_ws"
+}

@@ -1,0 +1,246 @@
+{
+  "schema_version": "stage-reviewer-p2-analysis-1.0",
+  "generated_utc": "2026-07-16T19:01:37.691751Z",
+  "preregistration": {
+    "path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\manifests\\p2_intervention_preregistration.json",
+    "content_sha256": "64d01c386378c9028796704adaa81e7087e2fbd9ee8789c29fef3b3acb544708",
+    "file_sha256": "9630d44d7bf5b708bd40737ae6ffd2f3ff6201df0752fa3199a9cd76b1bfffee"
+  },
+  "candidate_manifest": {
+    "path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\manifests\\p2_candidate_manifest.json",
+    "content_sha256": "9399d5b206981c382c0774d81e85841c0366b946752ab2cc1352bc5b9bada264",
+    "file_sha256": "9bf638651dac8782e95e96265f6665cb4249aa04936e484ad1bfb626f5924b89"
+  },
+  "inputs": [
+    {
+      "path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\raw\\p2_interventions\\p2-2c495d8d49d4e782.json",
+      "file_sha256": "d58dd8c1ea6e47b4780274a4bb8d445e8b5042b8aa8798b622ecc479edd36ff2",
+      "candidate_id": "p2-2c495d8d49d4e782"
+    },
+    {
+      "path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\raw\\p2_interventions\\p2-4f667ca23aa1efc0.json",
+      "file_sha256": "e035b36620b912a47a7255516bb0c4a0f21e4ad76ac8a62cb5fcebe8979d8b55",
+      "candidate_id": "p2-4f667ca23aa1efc0"
+    },
+    {
+      "path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\raw\\p2_interventions\\p2-64500505c864db3b.json",
+      "file_sha256": "550ca96217067ab67a42655ffe2eb1c1911c7cefc22f4e6c0c326da2b4d82a85",
+      "candidate_id": "p2-64500505c864db3b"
+    },
+    {
+      "path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\raw\\p2_interventions\\p2-8803bc6bf3f4caa8.json",
+      "file_sha256": "631e60dba89529576119e4acbc9c790c2b37a6d5635d62f8bdad99022fa31865",
+      "candidate_id": "p2-8803bc6bf3f4caa8"
+    },
+    {
+      "path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\raw\\p2_interventions\\p2-9d6cc6ed7905b7c7.json",
+      "file_sha256": "c2addbe2b4d09218e8331194d35953ddeb09af8ee2708b3cd7d921d3439b7ecb",
+      "candidate_id": "p2-9d6cc6ed7905b7c7"
+    },
+    {
+      "path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\raw\\p2_interventions\\p2-b2c9b43932fc805c.json",
+      "file_sha256": "ccb9ab5858f4f1854b0896ff18f8e0286566590c60a688ea8be24bfc47e12a35",
+      "candidate_id": "p2-b2c9b43932fc805c"
+    },
+    {
+      "path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\raw\\p2_interventions\\p2-d898e7b810de0b9f.json",
+      "file_sha256": "d404d5ee42a1d3d7f83e094a361bdf06d9cd012a7d9d3f93cd3d44754c1da906",
+      "candidate_id": "p2-d898e7b810de0b9f"
+    },
+    {
+      "path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\raw\\p2_interventions\\p2-fb395e9a12da508a.json",
+      "file_sha256": "59eeb0314d14eb89465fbe75d020d0c3a9fb3d49d7c791d02109bead0c134e09",
+      "candidate_id": "p2-fb395e9a12da508a"
+    }
+  ],
+  "candidate_count": 8,
+  "validation": {
+    "preregistration_integrity_pass": true,
+    "candidate_identity_pass": true,
+    "candidate_manifest_pass": true,
+    "invariant_and_pair_hash_pass": true,
+    "repeat_contract_pass": true
+  },
+  "pairs": [
+    {
+      "pair_id": "p2_mem_ports_1_to_2",
+      "axis": {
+        "name": "memory_ports",
+        "parameter": "memory_ports",
+        "baseline_value": 1,
+        "intervention_value": 2
+      },
+      "invariant_pair_hash": "ecc304ac6307d08f27eff6c9f3c3d84e2772eda50b1028472d743a380612eccb",
+      "intervention_pair_hash": "5420018201b4fe4207fa7ea4d4e67215f819b096ad9b12ba552f2bec04e7764d",
+      "repeat_trace_sha256": {
+        "baseline": "bde09f4cd62aeab0467758402fa20630e3837f205f1134777a45b979f29fbe4a",
+        "intervention": "26c3cb5fa34700599d65ba91f6677afb4d551a32da8f675267e634b30ea3d75a"
+      },
+      "prediction_error": {
+        "total_cycles": {
+          "before": 2560,
+          "after": 2304,
+          "measured_delta": -256,
+          "measured_relative_delta": -0.1,
+          "registered_delta_point": -256,
+          "registered_delta_interval": [
+            -256,
+            -256
+          ],
+          "absolute_prediction_error": 0,
+          "relative_prediction_error": 0.0,
+          "interval_pass": true
+        },
+        "target_service_cycles": {
+          "before": 1280,
+          "after": 640,
+          "measured_delta": -640,
+          "measured_relative_delta": -0.5,
+          "registered_delta_point": -640,
+          "registered_delta_interval": [
+            -640,
+            -640
+          ],
+          "absolute_prediction_error": 0,
+          "relative_prediction_error": 0.0,
+          "interval_pass": true
+        },
+        "target_critical_cycles": {
+          "before": 1280,
+          "after": 0,
+          "measured_delta": -1280,
+          "measured_relative_delta": -1.0,
+          "registered_delta_point": -1280,
+          "registered_delta_interval": [
+            -1280,
+            -1280
+          ],
+          "absolute_prediction_error": 0,
+          "relative_prediction_error": 0.0,
+          "interval_pass": true
+        }
+      },
+      "dominant_evaluation": {
+        "measured_baseline_set": [
+          "memory"
+        ],
+        "measured_intervention_set": [
+          "noc",
+          "softmax"
+        ],
+        "measured_selected_intervention": "noc",
+        "registered_baseline_set": [
+          "memory"
+        ],
+        "registered_intervention_set": [
+          "noc",
+          "softmax"
+        ],
+        "registered_selected_intervention": "noc"
+      },
+      "acceptance": {
+        "exact_repeat_pass": true,
+        "registered_baseline_metrics_pass": true,
+        "registered_intervention_metrics_pass": true,
+        "total_after_interval_pass": true,
+        "all_delta_intervals_pass": true,
+        "dominant_set_pass": true,
+        "selected_dominant_pass": true,
+        "pair_acceptance_pass": true
+      }
+    },
+    {
+      "pair_id": "p2_link_bits_64_to_128",
+      "axis": {
+        "name": "link_width",
+        "parameter": "link_bits_per_cycle",
+        "baseline_value": 64,
+        "intervention_value": 128
+      },
+      "invariant_pair_hash": "9bf2441191d9cde8ba6ab1e8ec69976aa044e15457b7c848bb1a0ab8b9adc259",
+      "intervention_pair_hash": "c08dc27fe4fe7837c35190a8918f7b48e64629236d9d299fdfc4fde894b67d7c",
+      "repeat_trace_sha256": {
+        "baseline": "085e00d99947b361f6afbe2986b7f1dab3e5b5cf27f926eea14292dff1a4f537",
+        "intervention": "bde09f4cd62aeab0467758402fa20630e3837f205f1134777a45b979f29fbe4a"
+      },
+      "prediction_error": {
+        "total_cycles": {
+          "before": 3328,
+          "after": 2560,
+          "measured_delta": -768,
+          "measured_relative_delta": -0.23076923076923078,
+          "registered_delta_point": -768,
+          "registered_delta_interval": [
+            -768,
+            -768
+          ],
+          "absolute_prediction_error": 0,
+          "relative_prediction_error": 0.0,
+          "interval_pass": true
+        },
+        "target_service_cycles": {
+          "before": 2048,
+          "after": 1024,
+          "measured_delta": -1024,
+          "measured_relative_delta": -0.5,
+          "registered_delta_point": -1024,
+          "registered_delta_interval": [
+            -1024,
+            -1024
+          ],
+          "absolute_prediction_error": 0,
+          "relative_prediction_error": 0.0,
+          "interval_pass": true
+        },
+        "target_critical_cycles": {
+          "before": 2048,
+          "after": 0,
+          "measured_delta": -2048,
+          "measured_relative_delta": -1.0,
+          "registered_delta_point": -2048,
+          "registered_delta_interval": [
+            -2048,
+            -2048
+          ],
+          "absolute_prediction_error": 0,
+          "relative_prediction_error": 0.0,
+          "interval_pass": true
+        }
+      },
+      "dominant_evaluation": {
+        "measured_baseline_set": [
+          "noc"
+        ],
+        "measured_intervention_set": [
+          "memory"
+        ],
+        "measured_selected_intervention": "memory",
+        "registered_baseline_set": [
+          "noc"
+        ],
+        "registered_intervention_set": [
+          "memory"
+        ],
+        "registered_selected_intervention": "memory"
+      },
+      "acceptance": {
+        "exact_repeat_pass": true,
+        "registered_baseline_metrics_pass": true,
+        "registered_intervention_metrics_pass": true,
+        "total_after_interval_pass": true,
+        "all_delta_intervals_pass": true,
+        "dominant_set_pass": true,
+        "selected_dominant_pass": true,
+        "pair_acceptance_pass": true
+      }
+    }
+  ],
+  "overall_acceptance_pass": true,
+  "claim_boundary": "Deterministic within-model counterfactual evidence only. It is not general causal identification, hardware accuracy, or a cross-tool timing claim.",
+  "integrity": {
+    "algorithm": "sha256",
+    "canonicalization": "sorted-key compact UTF-8 JSON",
+    "scope": "document excluding integrity",
+    "content_sha256": "8125c6a28713ff16ca75ab1d1af2d85c437bf12009f5c46c709afbb06eee453e"
+  }
+}

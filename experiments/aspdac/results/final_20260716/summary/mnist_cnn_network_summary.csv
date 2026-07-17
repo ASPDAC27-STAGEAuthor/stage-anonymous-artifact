@@ -1,0 +1,3 @@
+mode,evidence_level,repeat_count,layer_count,completed_macs_per_image,functional_macs_full_test_set,logical_bits_per_image,compute_cycles_per_image,memory_cycles_per_image,noc_cycles_per_image,post_op_cycles_per_image,total_cycles_per_image,dominant_service,trace_hash_repeat_identical,interpretation
+compute_only,trend,2,5,281640,2816400000,2347008,72,0,0,0,72,compute,True,Exact-shape STAGE cycle/data-movement feasibility per image; no end-to-end STAGE numerical accuracy claim
+full_system,trend,2,5,281640,2816400000,2347008,72,18362,18337,364,37135,memory,True,Exact-shape STAGE cycle/data-movement feasibility per image; no end-to-end STAGE numerical accuracy claim

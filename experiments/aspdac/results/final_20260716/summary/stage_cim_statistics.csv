@@ -1,0 +1,2 @@
+effect_evidence,evidence_level,fixed_seed_42_rmse,fixed_seed_repeat_hash_identical,mean_output_rmse,mode,sample_count,standard_deviation,student_t_95_high,student_t_95_low,uncertainty_boundary
+derived from literature-bound 8-bit ADC resolution; not measured device-noise calibration,Trend statistics,0.0014849591851670953,True,0.0010096796191103683,characterization_multi_seed,10,0.0002687264375737676,0.001201914918211268,0.0008174443200094686,ADC-resolution-equivalent derived sigma; not measured ReRAM device noise

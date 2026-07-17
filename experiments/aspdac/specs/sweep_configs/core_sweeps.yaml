@@ -1,0 +1,31 @@
+schema: aspdac.sweep_config.v1
+name: core_aspdac_sweeps
+status: planning_spec
+axes:
+  precision:
+    values: [FP16, BF16, INT8, INT4]
+    gate: Phase 5 approved for precision modeling; final runtime evidence still requires measured runs.
+  link_width_bits_per_cycle:
+    values: [64, 128, 256, 512]
+    gate: Approved only for existing logical link behavior unless route-derived comparisons are separately approved.
+  queue_capacity_packets:
+    values: [16, 32, 64, 128]
+    gate: Approved only for existing cycle/runtime contracts.
+  memory_ports:
+    values: [1, 2, 4, 8]
+    gate: Requires equivalent memory model support in the measured path.
+  memory_banks:
+    values: [1, 2, 4, 8, 16]
+    gate: Requires equivalent memory model support in the measured path.
+  pe_count:
+    values: [4, 8, 16, 32, 64]
+    gate: Requires graph generator and runtime scaling evidence before paper claims.
+  topology:
+    values: [mesh, torus, hierarchical]
+    gate: Torus and hierarchical topologies are planning only unless implemented and approved.
+execution_rules:
+  deterministic_config_id: true
+  skip_reason_required: true
+  cartesian_product_allowed: false
+  default_sweep_mode: one_axis_at_a_time
+

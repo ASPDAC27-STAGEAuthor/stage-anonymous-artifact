@@ -1,0 +1,21 @@
+{
+  "schema_version": "aspg-rq3-size-matrix-manifest-1.0",
+  "phase": "Phase 10 IN_PROGRESS",
+  "created_utc": "2026-07-16T11:43:47.9309356+00:00",
+  "commit": "1e57371524a7a2cde2bcfdd07f05197a9181a73a",
+  "host": "anonymous-host",
+  "case_count": 9,
+  "source": "experiments/aspdac/specs/final_sweeps/rq3_size_matrix.yaml",
+  "source_sha256": "0c503d4fc403830840441e7c723126140b146c79de8a734273d5fa0e65746c72",
+  "resolved_json": "experiments/aspdac/results/final_20260716/config/rq3_size_matrix.resolved.json",
+  "resolved_json_sha256": "45d351f79d947d46d1ba6fd94797026bc803e73d29cb07769f5d63cdfab06fbf",
+  "resolved_yaml": "experiments/aspdac/results/final_20260716/config/rq3_size_matrix.resolved.yaml",
+  "resolved_yaml_sha256": "54063254d6c151e9a804238c6687e65524afb05f729d4a6b4b1c82821108766a",
+  "canonical_resolved_sha256": "62ae0faf43bd2af41dad5c9f181d598013318c8c3e8b9193ea9e6056beb150e2",
+  "frozen_config_hashes": {
+    "V_TL": "66be1a4a59df2fe1a6350bb6ee6ed017e519381af04e93a1d8aab8b1e5032afe",
+    "V_SS": "31c924deb3b71967f90237fd5a6f33c502046d5613e349136fd8c673e9537f79",
+    "S_Native": "a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd"
+  },
+  "claim_boundary": "Cross-size generalization evidence. Exact only for matched Timeloop schedule/count semantics; SCALE-Sim and native Accelergy totals remain Trend unless definitions match."
+}

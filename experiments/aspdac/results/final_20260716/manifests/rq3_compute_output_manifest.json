@@ -1,0 +1,139 @@
+{
+  "schema_version": "aspg-derived-output-manifest-1.0",
+  "rq": "RQ3-A/RQ3-B",
+  "inputs": [
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/candidates_rq3_matched_compute.json",
+      "sha256": "b865711f99c0359a12f93e193a475856a045ce3d313dc87277c8c84fbd33678d"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_vss/c-1f790c0a4b4dc9c1.json",
+      "sha256": "7b617674f83fba1acfe4cb122a002a5023b495d5831430674061c53ba4b1954b"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_vss/c-38379bd0ab7ff391.json",
+      "sha256": "8ceff668404275b72ba93a6c6c1c688548e23134319285731821622486b487de"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_vss/c-483e09ca5ea26c9a.json",
+      "sha256": "37c908c0d9c7cd6dcd3e3a9092e0eaccb9f5ef4968c74b0c928b3d4a91eb4f51"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_vss/c-7661e44487d0acdd.json",
+      "sha256": "a2699a52b7a4cde067497abfdab09a4141916729dacf8c3d860aab2b5367dac7"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_vss/c-7cfe91f03f349a9c.json",
+      "sha256": "a90cd542ebe4de3936485a0c08775628e52753d869b286df053658a4cc28a38f"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_vss/c-87f294081b9c3bdf.json",
+      "sha256": "ca5249a0e28d2ea336ac6f52cac77b80d691d133c240ab6be93554eb7d3bb09e"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_vss/c-e73327cf66a82804.json",
+      "sha256": "bcefc74d7e02570e41fe0428588c36c649be9513d3fe4a13b98140e440fef35d"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_vss/c-e819c827404eb2e1.json",
+      "sha256": "0e1b482e5e3c8d6331c7438a4e844ea50461b22d73181f0ab070f49902462deb"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_vss/c-eb32fd67550096d6.json",
+      "sha256": "a4f21a4fa9474e3277b5b827a16b7afee30bb22117339f875d805d574c653659"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_vss/c-fed8115749a78472.json",
+      "sha256": "05f888f071a4098abba90742e0ab49a0a9f6d47ffadd555e00702facef2862f6"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_vtl/c-032b22a5c2984be9.json",
+      "sha256": "342c3212a737e3288988b8b46bdf5ccde07f87a0e3b5f6de2821f5141e6d7038"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_vtl/c-1867441b9bce994c.json",
+      "sha256": "b86adb0bf436bb7cc48189f7175f7c1d11c5795b509a10a429dec4d928800b14"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_vtl/c-303be7e718b70ce0.json",
+      "sha256": "f2b319426c48570c1e0207ee39d4150422e657fe8e5c61c5e8c86c28e5bcaf43"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_vtl/c-38cae104d792c3d0.json",
+      "sha256": "c9b68320a4e371b0a037ec25aacddf32e7196b3b5f2e3058ce6de4835c92fe58"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_vtl/c-39917f2da5c56c91.json",
+      "sha256": "5fd9722ccb78786c85d4b2059ca5e5aac64a95870a51eb03a917999d74b621d2"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_vtl/c-3f7fdbc295b54f7f.json",
+      "sha256": "e65802bf6a87a854000a9d2c243f09dcd7c029ee8c592cb831d4c54d1d25688e"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_vtl/c-57fce6ce4725a016.json",
+      "sha256": "a8bac52eb395d01d41f6068f41d4985032ce164d2e05604d2b31a2b086055510"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_vtl/c-9adce0dd7f90a495.json",
+      "sha256": "e00fcc9ac3092ae1d640540183ae3bdfbe7032352583cb54e5095130c396cb7e"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_vtl/c-c9721e99ac2f15cb.json",
+      "sha256": "a411685cbd7cfc8bf930f0c42635cd0022e34e4814b84eeb3b77cc29afac7f3f"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_vtl/c-e609fc3c52855234.json",
+      "sha256": "1995da6f27a928738988bde40c059f062819dc5be636f6e7902c5779e27a9a9c"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/rq3_compute_external_raw_manifest.json",
+      "sha256": "7c6ea8912c58b7f45a31a7bd90b157e9bd709b9abe7eae27db353cbc074924bd"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/timeloop_model_summary.csv",
+      "sha256": "89fceaaef7090f6a3fe09e1516f9a862edebde2bc4ca3cf8c4ccde0933980007"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_scalesim/scalesim_summary.csv",
+      "sha256": "77e792ea8a82e38ac22940ced6faa61f10e03007f0d95ff5f8d1b314837d1c48"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq3_timeloop_stage_cycles.csv",
+      "sha256": "faff9cb494e14a28e542656588857d441d4ce9f93f5c90dd2dde5dd9537d8c46"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq3_timeloop_stage_accesses.csv",
+      "sha256": "bc9c77c08e97d3a73fc03e48e776d7aa5383c51ff71ef5b64c6cef9b5d2d676c"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq3_scalesim_stage_timing.csv",
+      "sha256": "5ae31be1340e05c72690af59a71d2b3cc7b82d87f9f24445ea332611657d64ae"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq3_scalesim_stage_accesses.csv",
+      "sha256": "852a23ea9daa0f9d7c9538b1547431df9914dda25cdab82928358b799623944e"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/figures/fig_rq3_compute_and_stalls.pdf",
+      "sha256": "a973cefd0437fc4a7e660d8179d11bc40c340b48bf88fa4565eaadda2beccc08"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/figures/fig_rq3_compute_and_stalls.png",
+      "sha256": "f2cdeb7aa7112de04aae4327e3c55ab3cb50419ccf1e60df4fb11c670071f279"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/figures/fig_rq3_systolic_timing.pdf",
+      "sha256": "c4d0d7090cd187fc0ade9668055d0addce5c87ca10f9473ca305243636dd8783"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/figures/fig_rq3_systolic_timing.png",
+      "sha256": "d9f082a8a51f16efa14b8914ab146327cf344ccf0da91c6dc23c539df3decd5e"
+    }
+  ],
+  "vtl_exact_cycle_cases": 5,
+  "vss_trend_cases_under_10pct": 5,
+  "vss_evidence_boundary": "Trend: STAGE does not replicate SCALE-Sim internal bank arbitration"
+}

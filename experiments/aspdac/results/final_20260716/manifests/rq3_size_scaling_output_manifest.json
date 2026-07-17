@@ -1,0 +1,193 @@
+{
+  "schema_version": "aspg-derived-output-manifest-1.0",
+  "rq": "RQ3 shared size scaling tidy data",
+  "inputs": [
+    {
+      "path": "experiments/aspdac/specs/final_sweeps/rq3_size_matrix.yaml",
+      "sha256": "0c503d4fc403830840441e7c723126140b146c79de8a734273d5fa0e65746c72"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/size_scaling_timeloop/timeloop_size_summary.csv",
+      "sha256": "8dd5c812bc36108188387cc5d194414ef624e905d4eed7093e8cd5464d66133c"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/size_scaling_scalesim/size_scaling_scalesim_summary.csv",
+      "sha256": "501a158b427680154cd6f7fde21d39f0340c96a1cabc94a252610bf5caa00d07"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/size_scaling_accelergy/accelergy_size_summary.csv",
+      "sha256": "78af8426062739d15441a6ca88bd89dd30c6d0085291deef44a5892a9dbc6cdb"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/candidates_rq3_size_stage.json",
+      "sha256": "7bf5c1c9743a37d28273cbeb917a1846588c07bc74124df71f9d02ec4218afb4"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vss/c-0cc77f5e3d10e325.json",
+      "sha256": "380bddc22161297b430ca563aaded3d83e95025dbfed0f0f06e2e41c56d7bd2a"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vss/c-23b7d7f2a03085ff.json",
+      "sha256": "ae06921cc16a316eed67d1531fead3aeb2ac0c4fc00f687c8d96c88d42362699"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vss/c-2d51e71974a23176.json",
+      "sha256": "cec4c332407c762d6c6de8abaa57fe06638f99bfc39dc18ff6933fd86a0e4e7e"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vss/c-5a73fbc07fdd232b.json",
+      "sha256": "1c596ba1a03e08f1b595af9e2f6d57ff0ba0d3445fc2f540af6a5ec1d0b42179"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vss/c-5e3cfcf5a492d963.json",
+      "sha256": "e61f6b63d54c1198ebe4f678bf315db665ecf576f3abd437a047675b46a4329b"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vss/c-641f6a6bbe5f7fbd.json",
+      "sha256": "bf27e0c12dd3405a2cbb3eb212a2bb48d120c05f86a4827a4ed436263cce6d10"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vss/c-66ab6c5a7b31b4a8.json",
+      "sha256": "20b4765e13c92278965110a33d13e21f8de2681a16dd85c3593c93c775d0924e"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vss/c-748deba07f03d075.json",
+      "sha256": "855580aa01eaf7b63fc9a5b95d5b2aae1ee0053cb35bd224c407eb0d4c02cb72"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vss/c-7c9eacc1e015bdf4.json",
+      "sha256": "aa6423d75c63ed17cc9ad44de182747baf87ebcb2b9cbbbd2c04f7ce06fdd9b9"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vss/c-918fadbcfbbbe956.json",
+      "sha256": "05e66e1e97fe8ea53474d93a7b82ed50d90e5a30e853ca5196ada62c6c63340e"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vss/c-9648eca441bc7b7d.json",
+      "sha256": "fdd333205c8258512c8cbce9a199c3bbdac077fe43a66a126e0b9ea9ca2b1741"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vss/c-9d29da740b14e244.json",
+      "sha256": "a24277f33097736cab336031ebc7735766a1e54676f64ec7c730e30122361639"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vss/c-b58cf349a543272b.json",
+      "sha256": "4166dbe846a44721be8dab48fe1b7884f382560df58c3b3630f13ee329a0f19a"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vss/c-b6e0920abacb04c7.json",
+      "sha256": "46af358dd78bb5816efa90d2b8c8aeea7dfb850c2d0a3448486e7c0a16b5357b"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vss/c-e29ba7cc0bf8a1a2.json",
+      "sha256": "10837316817ac956b49587326bba7c1768ce4c199c618c710d90bf9ace910224"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vss/c-e8087d9c7f85a81a.json",
+      "sha256": "14eb71a044fd144bf83be3fcf23d8aaadd9f31a8875f806dd3b0508012a02340"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vss/c-ecd67fa3cdf7db19.json",
+      "sha256": "abe292b9187409d16f97a84676a18fca971b07ffbdcf8bc031acb5dd00ba84f4"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vss/c-ee37c6b52957e3e2.json",
+      "sha256": "e6b01228b24e490c5ac2b9a35b13399202fa39edaeae0f1bf2b37821d464751b"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vtl/c-0672faabc74b450b.json",
+      "sha256": "f0869732f1c811c67dac1e768df3ccf1a1d6a28bfb279cadcd92e22322d31155"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vtl/c-089e7aa3933a60ee.json",
+      "sha256": "29a490d238035f0c3e72732a8b74fbe93b542326408effe7f2b1cad0cdaae87c"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vtl/c-3aa64d4574db6fbc.json",
+      "sha256": "3b800b78aa0857c72641cf1433c225648333b583c7775f4622ae505e5d3cffd7"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vtl/c-4a1e35e28d8e6363.json",
+      "sha256": "ac6c29e8f614221154710eba4dd92430c4ac6b44a5e4729a7a95248a055c7135"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vtl/c-4c7faf253cc14a0a.json",
+      "sha256": "dcff24ee5d3b3cee07d14f93687c440d45aa9a4b9cb9888d02fe55933b3b2716"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vtl/c-541ff1564ad63f25.json",
+      "sha256": "fd3894a47b9db3d9e35e6c0a2011281d8e99ae8eff0d43e5e6fe2a22cb6e77e7"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vtl/c-5c790f495be9b36e.json",
+      "sha256": "bb2517880a5d8472cd3d66f67bec59a1a03335c32551bad042f8572beed633e5"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vtl/c-5cd02ad1be24de4c.json",
+      "sha256": "97680fe4cfe56f0271236f2b079952b33949ec629b897adaa7ece04abc39dc89"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vtl/c-5fae0d10acd67c4e.json",
+      "sha256": "86dc49f02cfd3b66ee93d5cc543db38c42c8e5c332f33e1e4c4b79706d8d78d6"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vtl/c-6e77a41cf777a8a6.json",
+      "sha256": "6cdc9fd3e584506d54452391372424de7b01df68e73e2454a5943d2110dec25a"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vtl/c-707212c33a8adbd7.json",
+      "sha256": "3c6abb2ac23a425d7cf094485003b933a5de6311364fe6db960059ca423dd86f"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vtl/c-760b9f4cd88c5f8a.json",
+      "sha256": "b2adca90cfd6b8f4790263a83ef52b1764ca89a6166d9d74283addad2ad56956"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vtl/c-87eb5155bbd7161d.json",
+      "sha256": "efca9f5db099fe8eb11260addcdf6fd8a5ce9b7f6e57d1ae2cb340aef5a2f9c2"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vtl/c-a1b4541a1fb0b053.json",
+      "sha256": "9b53c6c94b1b19588659b488b1eb6262428d3b3a0ccc5956ecbf930a44ec1684"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vtl/c-bfd06952e0730032.json",
+      "sha256": "e2490c58f07ded20db3b8f84a41870065f17719a88bbd79e154fb2dab0c29ef7"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vtl/c-cd03310f3e50b89d.json",
+      "sha256": "546acb6eb0bdfb3838331a725704cf89b258b752f22a0661c3396487adcc13de"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vtl/c-d0b9d4c1657731c3.json",
+      "sha256": "805d62e7f277f360d21c5aaed9387222eab07d5d1ffc06da6d8ae1586f62376e"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_size_stage_vtl/c-f69865f30f3337ca.json",
+      "sha256": "c9566e8d6e687935c7a7995247bfd34bfda95ce890c75c25d1c4e48970031b84"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq3_size_timeloop_stage_scaling.csv",
+      "sha256": "e2a6254e088043d37bc97cd16c0592de299a1658ac955573255746d5a4f4b4b6"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq3_size_scalesim_stage_scaling.csv",
+      "sha256": "8b267b511e3c7c31f1abefec7e926a0e5a16939391e06102f394a21ee2b3df96"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq3_size_access_scaling.csv",
+      "sha256": "2ae0f9ed489662df61d5883c034155c85454e99ba02df6542d024ece8f1844dc"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq3_size_accelergy_scaling.csv",
+      "sha256": "6d90702f5a662dc5ac2ae5733efcd741473c677e2796a6c1c2e024895076714c"
+    }
+  ],
+  "timeloop_exact_cases": 9,
+  "scalesim_trend_cases_under_10pct": 9,
+  "scalesim_max_absolute_cycle_error_pct": 5.400411761600591,
+  "accelergy_valid_ert_cases": 9,
+  "evidence_boundary": "Timeloop compute/access replay Exact; SCALE-Sim timing Trend; Accelergy uses a shared 45-nm reference and is not silicon calibrated."
+}

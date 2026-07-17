@@ -1,0 +1,406 @@
+{
+  "candidates": {
+    "p1-holdout-holdout_attn_qk_s096_d064-4ee4a76eba42deda-r0": {
+      "attempts": 1,
+      "raw_relpath": "raw/scalesim/holdout_attn_qk_s096_d064/r0/result.json",
+      "reason": "",
+      "status": "completed",
+      "updated_utc": "2026-07-16T19:29:36.201747+00:00",
+      "worker": "reviewer-p1-scalesim"
+    },
+    "p1-holdout-holdout_attn_qk_s096_d064-4ee4a76eba42deda-r1": {
+      "attempts": 1,
+      "raw_relpath": "raw/scalesim/holdout_attn_qk_s096_d064/r1/result.json",
+      "reason": "",
+      "status": "completed",
+      "updated_utc": "2026-07-16T19:29:38.636345+00:00",
+      "worker": "reviewer-p1-scalesim"
+    },
+    "p1-holdout-holdout_attn_qk_s096_d064-cf82757e571974ee-r0": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/holdout_attn_qk_s096_d064/r0/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T18:59:56.925613+00:00",
+      "worker": ""
+    },
+    "p1-holdout-holdout_attn_qk_s096_d064-cf82757e571974ee-r1": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/holdout_attn_qk_s096_d064/r1/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T18:59:57.105765+00:00",
+      "worker": ""
+    },
+    "p1-holdout-holdout_attn_qk_s192_d064-05a638e2de54fa90-r0": {
+      "attempts": 1,
+      "raw_relpath": "raw/scalesim/holdout_attn_qk_s192_d064/r0/result.json",
+      "reason": "",
+      "status": "completed",
+      "updated_utc": "2026-07-16T19:29:46.900620+00:00",
+      "worker": "reviewer-p1-scalesim"
+    },
+    "p1-holdout-holdout_attn_qk_s192_d064-05a638e2de54fa90-r1": {
+      "attempts": 1,
+      "raw_relpath": "raw/scalesim/holdout_attn_qk_s192_d064/r1/result.json",
+      "reason": "",
+      "status": "completed",
+      "updated_utc": "2026-07-16T19:29:55.059422+00:00",
+      "worker": "reviewer-p1-scalesim"
+    },
+    "p1-holdout-holdout_attn_qk_s192_d064-f94b76dea3c99c6b-r0": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/holdout_attn_qk_s192_d064/r0/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T18:59:57.268212+00:00",
+      "worker": ""
+    },
+    "p1-holdout-holdout_attn_qk_s192_d064-f94b76dea3c99c6b-r1": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/holdout_attn_qk_s192_d064/r1/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T18:59:57.423260+00:00",
+      "worker": ""
+    },
+    "p1-holdout-holdout_gemm_096-451daf1ed1c12ed2-r0": {
+      "attempts": 3,
+      "raw_relpath": "raw/scalesim/holdout_gemm_096/r0/result.json",
+      "reason": "",
+      "status": "completed",
+      "updated_utc": "2026-07-16T19:13:26.477696+00:00",
+      "worker": "reviewer-p1-scalesim"
+    },
+    "p1-holdout-holdout_gemm_096-451daf1ed1c12ed2-r1": {
+      "attempts": 1,
+      "raw_relpath": "raw/scalesim/holdout_gemm_096/r1/result.json",
+      "reason": "",
+      "status": "completed",
+      "updated_utc": "2026-07-16T19:14:00.740147+00:00",
+      "worker": "reviewer-p1-scalesim"
+    },
+    "p1-holdout-holdout_gemm_096-b6a62809008ff575-r0": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/holdout_gemm_096/r0/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T18:59:54.861568+00:00",
+      "worker": ""
+    },
+    "p1-holdout-holdout_gemm_096-b6a62809008ff575-r1": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/holdout_gemm_096/r1/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T18:59:55.034243+00:00",
+      "worker": ""
+    },
+    "p1-holdout-holdout_gemm_192-0f990a9434110def-r0": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/holdout_gemm_192/r0/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T18:59:55.198115+00:00",
+      "worker": ""
+    },
+    "p1-holdout-holdout_gemm_192-0f990a9434110def-r1": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/holdout_gemm_192/r1/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T18:59:55.363117+00:00",
+      "worker": ""
+    },
+    "p1-holdout-holdout_gemm_192-60a111ce896b8e19-r0": {
+      "attempts": 1,
+      "raw_relpath": "raw/scalesim/holdout_gemm_192/r0/result.json",
+      "reason": "",
+      "status": "completed",
+      "updated_utc": "2026-07-16T19:14:25.148793+00:00",
+      "worker": "reviewer-p1-scalesim"
+    },
+    "p1-holdout-holdout_gemm_192-60a111ce896b8e19-r1": {
+      "attempts": 1,
+      "raw_relpath": "raw/scalesim/holdout_gemm_192/r1/result.json",
+      "reason": "",
+      "status": "completed",
+      "updated_utc": "2026-07-16T19:14:50.333872+00:00",
+      "worker": "reviewer-p1-scalesim"
+    },
+    "p1-holdout-holdout_gemm_384-2dc73f7ab8542825-r0": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/holdout_gemm_384/r0/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T18:59:55.533290+00:00",
+      "worker": ""
+    },
+    "p1-holdout-holdout_gemm_384-2dc73f7ab8542825-r1": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/holdout_gemm_384/r1/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T18:59:55.717725+00:00",
+      "worker": ""
+    },
+    "p1-holdout-holdout_gemm_384-a0ac510429e61b4b-r0": {
+      "attempts": 1,
+      "raw_relpath": "raw/scalesim/holdout_gemm_384/r0/result.json",
+      "reason": "",
+      "status": "completed",
+      "updated_utc": "2026-07-16T19:21:36.805634+00:00",
+      "worker": "reviewer-p1-scalesim"
+    },
+    "p1-holdout-holdout_gemm_384-a0ac510429e61b4b-r1": {
+      "attempts": 1,
+      "raw_relpath": "raw/scalesim/holdout_gemm_384/r1/result.json",
+      "reason": "",
+      "status": "completed",
+      "updated_utc": "2026-07-16T19:28:29.681768+00:00",
+      "worker": "reviewer-p1-scalesim"
+    },
+    "p1-holdout-holdout_rect_128x256x64-5981473c8299b30d-r0": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/holdout_rect_128x256x64/r0/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T18:59:55.901014+00:00",
+      "worker": ""
+    },
+    "p1-holdout-holdout_rect_128x256x64-5981473c8299b30d-r1": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/holdout_rect_128x256x64/r1/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T18:59:56.067289+00:00",
+      "worker": ""
+    },
+    "p1-holdout-holdout_rect_128x256x64-7cb7c5048ab6f87e-r0": {
+      "attempts": 1,
+      "raw_relpath": "raw/scalesim/holdout_rect_128x256x64/r0/result.json",
+      "reason": "",
+      "status": "completed",
+      "updated_utc": "2026-07-16T19:28:37.857637+00:00",
+      "worker": "reviewer-p1-scalesim"
+    },
+    "p1-holdout-holdout_rect_128x256x64-7cb7c5048ab6f87e-r1": {
+      "attempts": 1,
+      "raw_relpath": "raw/scalesim/holdout_rect_128x256x64/r1/result.json",
+      "reason": "",
+      "status": "completed",
+      "updated_utc": "2026-07-16T19:28:45.933170+00:00",
+      "worker": "reviewer-p1-scalesim"
+    },
+    "p1-holdout-holdout_rect_256x64x192-2ca34cfdeb3c4e5d-r0": {
+      "attempts": 1,
+      "raw_relpath": "raw/scalesim/holdout_rect_256x64x192/r0/result.json",
+      "reason": "",
+      "status": "completed",
+      "updated_utc": "2026-07-16T19:28:57.899491+00:00",
+      "worker": "reviewer-p1-scalesim"
+    },
+    "p1-holdout-holdout_rect_256x64x192-2ca34cfdeb3c4e5d-r1": {
+      "attempts": 1,
+      "raw_relpath": "raw/scalesim/holdout_rect_256x64x192/r1/result.json",
+      "reason": "",
+      "status": "completed",
+      "updated_utc": "2026-07-16T19:29:09.220355+00:00",
+      "worker": "reviewer-p1-scalesim"
+    },
+    "p1-holdout-holdout_rect_256x64x192-96f4d8fbc5a70d21-r0": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/holdout_rect_256x64x192/r0/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T18:59:56.226019+00:00",
+      "worker": ""
+    },
+    "p1-holdout-holdout_rect_256x64x192-96f4d8fbc5a70d21-r1": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/holdout_rect_256x64x192/r1/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T18:59:56.403146+00:00",
+      "worker": ""
+    },
+    "p1-holdout-holdout_rect_64x384x128-111e7db34170a28c-r0": {
+      "attempts": 1,
+      "raw_relpath": "raw/scalesim/holdout_rect_64x384x128/r0/result.json",
+      "reason": "",
+      "status": "completed",
+      "updated_utc": "2026-07-16T19:29:21.453955+00:00",
+      "worker": "reviewer-p1-scalesim"
+    },
+    "p1-holdout-holdout_rect_64x384x128-111e7db34170a28c-r1": {
+      "attempts": 1,
+      "raw_relpath": "raw/scalesim/holdout_rect_64x384x128/r1/result.json",
+      "reason": "",
+      "status": "completed",
+      "updated_utc": "2026-07-16T19:29:33.725036+00:00",
+      "worker": "reviewer-p1-scalesim"
+    },
+    "p1-holdout-holdout_rect_64x384x128-764bce7677c7bc4e-r0": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/holdout_rect_64x384x128/r0/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T18:59:56.571286+00:00",
+      "worker": ""
+    },
+    "p1-holdout-holdout_rect_64x384x128-764bce7677c7bc4e-r1": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/holdout_rect_64x384x128/r1/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T18:59:56.746770+00:00",
+      "worker": ""
+    },
+    "p1-noc-noc_n01_single_128-a27e906411d4fa7c-r0": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/noc_n01_single_128/r0/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T18:59:57.881057+00:00",
+      "worker": ""
+    },
+    "p1-noc-noc_n01_single_128-a27e906411d4fa7c-r1": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/noc_n01_single_128/r1/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T18:59:58.324534+00:00",
+      "worker": ""
+    },
+    "p1-noc-noc_n02_single_256_vc1-410a3635357c967b-r0": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/noc_n02_single_256_vc1/r0/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T18:59:58.764267+00:00",
+      "worker": ""
+    },
+    "p1-noc-noc_n02_single_256_vc1-410a3635357c967b-r1": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/noc_n02_single_256_vc1/r1/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T18:59:59.236868+00:00",
+      "worker": ""
+    },
+    "p1-noc-noc_n03_single_512_vc3-3a39d41273aa55ae-r0": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/noc_n03_single_512_vc3/r0/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T18:59:59.679811+00:00",
+      "worker": ""
+    },
+    "p1-noc-noc_n03_single_512_vc3-3a39d41273aa55ae-r1": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/noc_n03_single_512_vc3/r1/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T19:00:00.126146+00:00",
+      "worker": ""
+    },
+    "p1-noc-noc_n04_single_1024-302e6f932eaf9166-r0": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/noc_n04_single_1024/r0/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T19:00:00.568709+00:00",
+      "worker": ""
+    },
+    "p1-noc-noc_n04_single_1024-302e6f932eaf9166-r1": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/noc_n04_single_1024/r1/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T19:00:01.012592+00:00",
+      "worker": ""
+    },
+    "p1-noc-noc_n05_contend_128-84df0dcaaaf636a6-r0": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/noc_n05_contend_128/r0/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T19:00:01.480375+00:00",
+      "worker": ""
+    },
+    "p1-noc-noc_n05_contend_128-84df0dcaaaf636a6-r1": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/noc_n05_contend_128/r1/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T19:00:01.952481+00:00",
+      "worker": ""
+    },
+    "p1-noc-noc_n06_contend_512-f8a7c7b64b0d684b-r0": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/noc_n06_contend_512/r0/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T19:00:02.391443+00:00",
+      "worker": ""
+    },
+    "p1-noc-noc_n06_contend_512-f8a7c7b64b0d684b-r1": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/noc_n06_contend_512/r1/result.json",
+      "reason": "completed",
+      "status": "completed",
+      "updated_utc": "2026-07-16T19:00:02.862297+00:00",
+      "worker": ""
+    },
+    "p1-noc-noc_n07_block_release_256-8527e5cc0cd13859-r0": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/noc_n07_block_release_256/r0/result.json",
+      "reason": "The generic engine has no public deterministic capacity-release event input; the blocked/release cases remain oracle-only until that input exists.",
+      "status": "not_supported",
+      "updated_utc": "2026-07-16T19:00:03.048729+00:00",
+      "worker": ""
+    },
+    "p1-noc-noc_n07_block_release_256-8527e5cc0cd13859-r1": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/noc_n07_block_release_256/r1/result.json",
+      "reason": "The generic engine has no public deterministic capacity-release event input; the blocked/release cases remain oracle-only until that input exists.",
+      "status": "not_supported",
+      "updated_utc": "2026-07-16T19:00:03.219387+00:00",
+      "worker": ""
+    },
+    "p1-noc-noc_n08_block_tail_1024-c8d78220c70e2460-r0": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/noc_n08_block_tail_1024/r0/result.json",
+      "reason": "The generic engine has no public deterministic capacity-release event input; the blocked/release cases remain oracle-only until that input exists.",
+      "status": "not_supported",
+      "updated_utc": "2026-07-16T19:00:03.385387+00:00",
+      "worker": ""
+    },
+    "p1-noc-noc_n08_block_tail_1024-c8d78220c70e2460-r1": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/noc_n08_block_tail_1024/r1/result.json",
+      "reason": "The generic engine has no public deterministic capacity-release event input; the blocked/release cases remain oracle-only until that input exists.",
+      "status": "not_supported",
+      "updated_utc": "2026-07-16T19:00:03.565411+00:00",
+      "worker": ""
+    },
+    "p1-noc-noc_n09_atomic_depth_boundary-61008605a69536c2-r0": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/noc_n09_atomic_depth_boundary/r0/result.json",
+      "reason": "expected_boundary",
+      "status": "completed",
+      "updated_utc": "2026-07-16T19:00:04.025807+00:00",
+      "worker": ""
+    },
+    "p1-noc-noc_n09_atomic_depth_boundary-61008605a69536c2-r1": {
+      "attempts": 0,
+      "raw_relpath": "raw/stage/noc_n09_atomic_depth_boundary/r1/result.json",
+      "reason": "expected_boundary",
+      "status": "completed",
+      "updated_utc": "2026-07-16T19:00:04.480631+00:00",
+      "worker": ""
+    }
+  },
+  "schema_version": "reviewer-extension-p1-checkpoint/1.0",
+  "updated_utc": "2026-07-16T19:29:55.059422+00:00"
+}

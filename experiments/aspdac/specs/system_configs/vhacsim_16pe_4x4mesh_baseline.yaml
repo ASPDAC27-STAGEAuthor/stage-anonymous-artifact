@@ -1,0 +1,54 @@
+schema: aspdac.system_config.v1
+name: vhacsim_16pe_4x4mesh_baseline
+status: planning_spec
+evidence_level: pending
+phase_gate_notes:
+  approved_inputs:
+    - Phase 0 through Phase 6A are approved according to goal/05_*.md.
+  awaiting_approval:
+    - Phase 6B explicit routing is awaiting user approval.
+  locked_pending:
+    - Phase 6C routing congestion.
+    - Phase 7 model import.
+    - Phase 8 optical runtime.
+    - Phase 9 CIM/analog runtime.
+    - Phase 10 experiment manager.
+topology:
+  type: mesh
+  dimensions:
+    rows: 4
+    cols: 4
+  pe_count: 16
+  router_count: 12
+  router_ports: 5
+  routing: XY
+  router_arbitration: deterministic_round_robin
+links:
+  packet_size_bits: 128
+  link_width_bits_per_cycle: 128
+  logical_link_latency_cycles: 1
+  buffer_capacity_bits: 65536
+memory:
+  read_latency_cycles: 5
+  write_latency_cycles: 5
+  ports: 1
+  banks: 1
+compute:
+  pe_mac_rate: 256
+  pe_mac_rate_unit: MAC/cycle
+components:
+  reduction_latency_cycles: 2
+  softmax_latency_cycles: 8
+physical:
+  cell_width_um: 100
+  cell_height_um: 100
+  delay_ps_per_um: 1.0
+  energy_pj_per_bit_um: 0.0001
+measurement:
+  seed: 0
+  trace_hash_required: true
+  deterministic_repeats: 2
+notes:
+  - The exact 4x4 mesh router count and PE-to-router attachment must be resolved before final results.
+  - Do not use Phase 6B routing as approved evidence until the user approves Phase 6B.
+

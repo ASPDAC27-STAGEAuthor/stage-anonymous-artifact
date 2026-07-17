@@ -1,0 +1,12 @@
+{
+  "candidate_id": "p1-noc-noc_n06_contend_512-f8a7c7b64b0d684b-r0",
+  "config_hash": "f8a7c7b64b0d684b37c398654175ce902d06df0c6fa09a8c05459e40e5275777",
+  "resolved": {
+    "parameters": {
+      "case_id": "noc_n06_contend_512",
+      "repeat": 0,
+      "seed": 40
+    }
+  },
+  "scenario": "reviewer_noc_contract"
+}

@@ -1,0 +1,26 @@
+feature_id,feature_group,status,modeled_semantics,evidence_label,comparison_permission
+xy_route_function,routing,modeled,Combinational deterministic route selection at issue.,Exact,contract_only
+per_input_vc_fifo,buffering,modeled,Per-input VC capacity with whole-packet atomic admission.,Exact,contract_only
+tail_complete_visibility,visibility,modeled,Router visibility occurs only after tail arrival and next-state commit.,Exact,contract_only
+physical_input_round_robin,arbitration,modeled,One whole packet per router cycle with persistent physical-input order.,Exact,contract_only
+vc_selection,arbitration,modeled,"Explicit VC, with lowest non-empty VC taking priority within an input.",Exact,contract_only
+flit_link_serialization,transport,modeled,Strict bit budget and one-cycle base link latency.,Exact,contract_only
+direct_capacity_backpressure,flow_control,modeled,Ready/valid capacity observation without credit messages.,Exact,contract_only
+route_compute_stage,router_pipeline,not_modeled,not_modeled,Exact,none
+route_compute_latency_cycles,router_pipeline,not_modeled,not_modeled,Exact,none
+vc_allocation_stage,router_pipeline,not_modeled,not_modeled,Exact,none
+vc_allocator,router_pipeline,not_modeled,not_modeled,Exact,none
+vc_allocation_latency_cycles,router_pipeline,not_modeled,not_modeled,Exact,none
+switch_allocation_stage,router_pipeline,not_modeled,not_modeled,Exact,none
+switch_allocator,router_pipeline,not_modeled,not_modeled,Exact,none
+switch_allocation_latency_cycles,router_pipeline,not_modeled,not_modeled,Exact,none
+crossbar_traversal_stage,router_pipeline,not_modeled,not_modeled,Exact,none
+crossbar_latency_cycles,router_pipeline,not_modeled,not_modeled,Exact,none
+credit_return_stage,flow_control,not_modeled,not_modeled,Exact,none
+credit_return_latency_cycles,flow_control,not_modeled,not_modeled,Exact,none
+credit_count,flow_control,not_modeled,not_modeled,Exact,none
+credit_available,flow_control,not_modeled,not_modeled,Exact,none
+credit_release_cycle,flow_control,not_modeled,not_modeled,Exact,none
+wormhole_head_reservation,flow_control,not_modeled,not_modeled,Exact,none
+per_flit_router_pipeline,router_pipeline,not_modeled,not_modeled,Exact,none
+vc_round_robin,arbitration,not_modeled,not_modeled,Exact,none

@@ -1,0 +1,5 @@
+booksim_saturation,booksim_tested_max,booksim_tested_rate_count,criterion,evidence_level,ordering_match_eligible,stage_minus_booksim_saturation,stage_saturation,stage_tested_max,stage_tested_rate_count,traffic
+0.32,0.36,14,first of two consecutive tested rates with any unstable seed or mean accepted/offered < 0.95,Numerical,False,nan,>0.6,0.6,20,uniform
+0.16,0.32,13,first of two consecutive tested rates with any unstable seed or mean accepted/offered < 0.95,Numerical,False,nan,>0.32,0.32,13,transpose
+0.2,0.32,13,first of two consecutive tested rates with any unstable seed or mean accepted/offered < 0.95,Numerical,False,nan,>0.32,0.32,13,bit_complement
+0.04,0.32,13,first of two consecutive tested rates with any unstable seed or mean accepted/offered < 0.95,Numerical,True,0.04,0.08,0.32,13,hotspot_node5

@@ -1,0 +1,103 @@
+{
+  "schema_version": "aspg-derived-output-manifest-1.0",
+  "rq": "RQ1",
+  "inputs": [
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/candidates_rq1_exact.json",
+      "sha256": "c07267acc443603ad8b14b154ad88f09bc904a1ee3419fd441223f812574657a"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq1_exact_oracles/c-0c307957a07e0c03.json",
+      "sha256": "2d53a2e33545dc9f4e59ffffe8a18f1aab1be25a013994b57e128c2d512ae19c"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq1_exact_oracles/c-1855b56ead73626c.json",
+      "sha256": "7984a0e4642dcfbc3753816938411e0e73194a93e1abfb20c889ec8824942ad7"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq1_exact_oracles/c-291222e979d8dc53.json",
+      "sha256": "6c6b88b1d1c997304c6b41599107c93ff54cec9434b74df0aa2bbae3a4b00d45"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq1_exact_oracles/c-316e7f65a89c246f.json",
+      "sha256": "10bffbd73ed28fedacf561c208bbc61168c1302ced9184c78ae8d89ef3f2f8c0"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq1_exact_oracles/c-3fff47a50cd1e7d5.json",
+      "sha256": "b00dee5d6956e84922d65b3fb0a174e62eb6368f5371b2a79712f0fbe29f354b"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq1_exact_oracles/c-7b9fcbb81eab1f55.json",
+      "sha256": "4dfa675188a6bab4219cb811526a9cfb40d214e9966f7349fac84f56833f14bb"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq1_exact_oracles/c-8659f330143bd252.json",
+      "sha256": "546c47f3564465bb39ad8c6ec22d66411302c412b164c500e15948ee94cba774"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq1_exact_oracles/c-8acbeb9696ffc03c.json",
+      "sha256": "a95e7debf9497ebeea44445e4bbf95b2246a093cd6b80390d3934453365cb05c"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq1_exact_oracles/c-9859e936119aa10d.json",
+      "sha256": "5dcb8b79981849a0ed7eff9267bc5683a500c21aad441a849497a4782b0db282"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq1_exact_oracles/c-99026b69ef1e3926.json",
+      "sha256": "fc09057b9e1ab0ed76732ef97926a82e62e806f943b7e0ba844fe674911bc382"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq1_exact_oracles/c-a8b4415394a015be.json",
+      "sha256": "b027ff714e814c276994e6911a973c9f8dcf98d36cc58263bfe6d1d47a2cea0c"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq1_exact_oracles/c-b00630d4a249b789.json",
+      "sha256": "683233e7e213432a30dc032d0ec4896ce7f9262233a554557bb4d79e06c64e49"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq1_exact_oracles/c-c6d45ae5582c0021.json",
+      "sha256": "f51dcfeddb9df628340d2059012e0cedba5826dc27c584c46bbc5231dc550c8c"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq1_exact_oracles/c-cb36c739811dbbb4.json",
+      "sha256": "80586dfc87975ee9dfa86f705826206eb65e46a1e944cbccdf6dcbdc86885c04"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq1_exact_oracles/c-d7e35be2a7810b26.json",
+      "sha256": "beedc85fb44efa0c8ba80c1cb10ffe9704c28123f6e0fa0839f5ffbc9c438d09"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq1_exact_oracles/c-def8623bb3fd1a32.json",
+      "sha256": "780c0cb92b87e06705877ef25bafb1257aca32430fac566a92797f273fe2abc9"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq1_exact_oracles/c-e608733522c193b4.json",
+      "sha256": "39d3a2f678ad38f3d55f0513a5665699e86316d251238093121a2d887e3f814e"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq1_exact_oracles/c-f4706c665f311c9d.json",
+      "sha256": "29042fcaf39c97c583509c6e4a99fe55eae353cc1e6009917508cfa90ebb227b"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq1_exact_cases.csv",
+      "sha256": "87d18545c0b86117b593ca6d7bc4abdb5ef5d885245879efb6c28ea77d0e7c0f"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq1_repeat_hashes.csv",
+      "sha256": "bf7284e3cf0a8c735cb0378e55029d1e65d6728d9f10c35750446cba01605d7e"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/figures/fig_rq1_exact_validation.pdf",
+      "sha256": "b491271293d648bfa34bbca16a4109645ce246e5b2bb0e834dcb8730d9ef61df"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/figures/fig_rq1_exact_validation.png",
+      "sha256": "72723eefdbbeb9a78592b9636b126a0c3c9cf37880161e12a76caa8f54f36161"
+    }
+  ],
+  "case_count": 9,
+  "repeat_count": 18,
+  "all_byte_identical": true
+}

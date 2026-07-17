@@ -1,0 +1,224 @@
+{
+  "schema_version": "aspg-derived-output-manifest-1.0",
+  "rq": "STAGE-only co-design and digital/CIM",
+  "inputs": [
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/candidates_stage_codesign.json",
+      "sha256": "702e059845992981e1bf4900c899c9cef27cabaf21e5213dc14736dba9839841"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_bottleneck_attention/c-37182b0c1afbea68.json",
+      "sha256": "8a6e643b055fd4fae8bd407edeced8f56073533c6642987f9d38c3339241294e"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_bottleneck_attention/c-40b6835de9e02e39.json",
+      "sha256": "691a2d528df0c35eb6db345aa65b455ec0f4801b399e869ae9410897f1b7d51f"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_bottleneck_attention/c-5b5e75e79ef649d9.json",
+      "sha256": "3632c97262a89b50fef34dece58275a6f1f2a4c41d8b7b203b37e9a4f0fe77ba"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_bottleneck_attention/c-601bac16beae02f8.json",
+      "sha256": "6f8b0bc61443ff72f14fa65b9562b23e62a9eb78eb91e649e4d8a998dc796b68"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_bottleneck_attention/c-6fd06f1f71a33af1.json",
+      "sha256": "b184b9c887af441c83c5c4dd7979cc01cb05ac5f2bfac4a9b9af16f61babae88"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_bottleneck_attention/c-7ada7310325321bf.json",
+      "sha256": "e5ef3ed81ee7b462a159e0e15f30cada5600646d94b3c1263f4791cda548d0fd"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_bottleneck_attention/c-a73ad11104b82c50.json",
+      "sha256": "93d7e051233d280d3dde04c46990975318dcbbe69c8184c9567d9bc74024326d"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_bottleneck_attention/c-af618f744a323c25.json",
+      "sha256": "a2340b6a7815899c8ddadf427738ac7254190c39030f34093e2a770488df7b8e"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_bottleneck_attention/c-c1e3e18d12bd1116.json",
+      "sha256": "7466ba2ecf898d5e566f4f80124f4854a62079b62c200cd0d7186ff7e673761f"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_bottleneck_attention/c-decd2085c759d963.json",
+      "sha256": "18ff19a7e6db4dfcf612a589b7db09833f5cd958ace16c610bfd1f23ee769c1c"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_bottleneck_attention/c-ed191e7e31b8680a.json",
+      "sha256": "81734cfb7e9852629ee0a6361bc241a4b5888b4398d3d35016f1d1dfce4bce9c"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_bottleneck_gemm/c-092c2e0be9200e25.json",
+      "sha256": "8933d0c51ad3bbe87175952da1c55a1dc069dac936876e5e776e12fc02a5a557"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_bottleneck_gemm/c-12536b6c8fe9af74.json",
+      "sha256": "7c741bee00ae88f807520cabad76cd630414214e87fa61d6f2e4cdd651801511"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_bottleneck_gemm/c-2b7137ce90f0b372.json",
+      "sha256": "5a937f33df19129c13854eee7d5c436c558a876ff65be38f99e5d5a9214c6c47"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_bottleneck_gemm/c-32e489d9f3916a3e.json",
+      "sha256": "fdf493121231a0256317b17d607bb24fad640f2a9a1900bd0eeced86234a9654"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_bottleneck_gemm/c-53c3575de159afe8.json",
+      "sha256": "78cc33826d75e214ae921eecb22da1b477a78f9ddbf70e335ac320442d337c44"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_bottleneck_gemm/c-7fd33f34d407ae22.json",
+      "sha256": "1b44e3929e5a2e419e92ac6c850f8785393ade3a8bdb8c0dc1d442298017119f"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_bottleneck_gemm/c-a7e90acfce4c5368.json",
+      "sha256": "dea2e755ec358cbbba9d212668e870f0844e3ef12c7697d3c7163be12e4a8e43"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_bottleneck_gemm/c-ad7958c47a5f6b49.json",
+      "sha256": "352d2b7f4602b3c609c83e0d2c920898986e7863ce9aa6766ad66ddf170833fc"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_bottleneck_gemm/c-be3a4ac2d3f659e5.json",
+      "sha256": "1808408aa385c90708b59e7d6761bb0a706ca85099f8f2ff9be18dd3d66cef7f"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_bottleneck_gemm/c-c1f9e6c2dbaacbf6.json",
+      "sha256": "c9ec4f4dd370f9a52f99664fbe6bd8d2c3d037cfa427dda13aedfb2bc04d2549"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_bottleneck_gemm/c-d8e9564f9e37fd33.json",
+      "sha256": "29b0277ebdc24097e9eb698d8ab0a32abb44e51dd1c485b0cf84e94e4908db63"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_cim_characterization_fixed/c-0fd5cdf6c088274f.json",
+      "sha256": "3d97323be544235182ea5abf14b819ccd04930d57c46e42343ec57c986247dac"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_cim_characterization_fixed/c-cc5018df195cdb06.json",
+      "sha256": "a27f31ef463ff3ea2a9684d6e751617296156f2a3d63d53f97920a2b9e58cc0b"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_cim_characterization_multiseed/c-0f8dae424c60cf98.json",
+      "sha256": "a68f7fd5acefacf328bd999af26ff8a2220939bf35cbcce7dd20f3bff0246c8f"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_cim_characterization_multiseed/c-63158a89fcc78478.json",
+      "sha256": "660f9dbc4a21f54fe3bd8f68e9fa6495c6cbe81b862564dd4e1debb4736bbbe1"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_cim_characterization_multiseed/c-67742084bf6737ae.json",
+      "sha256": "3b1cf7b45ea12917622d0a50e161e3d86669cf4e42601985933e056c57308b86"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_cim_characterization_multiseed/c-747c3ae68fb91e37.json",
+      "sha256": "bf262ed8fc05727640fb097b3a2f325dfc411a4edde93b3ff3d30425e86ca434"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_cim_characterization_multiseed/c-770dc4409b041697.json",
+      "sha256": "e10b223528527fbe0a079938b9b425e06011fd98540023ec9e2a8eacb7daf455"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_cim_characterization_multiseed/c-81daa5ee0b03a747.json",
+      "sha256": "efe9c85dd4cc142f20c57f7d770c032ecdefefe7ec5455a59e235498b3bd5fd4"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_cim_characterization_multiseed/c-86a95cb53c2ce744.json",
+      "sha256": "c0ffb118c4f862bee76fdb3d46e14d36d51ed3f4563c70945a196df1510e71ca"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_cim_characterization_multiseed/c-97c53a2bc96dfbcf.json",
+      "sha256": "423c2649269edd6663fc95a401f256fc06256556d3ed6d8a3ca2eb4b264dbde1"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_cim_characterization_multiseed/c-9c898f052f714afc.json",
+      "sha256": "915d2a2b9705d9ba0d22351526179b411a48e65794a422b5013a22f5b7d01ed1"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_cim_characterization_multiseed/c-bc436652a8d13818.json",
+      "sha256": "462644d9adb89d17146abcd84c329f2206f5d6deccf894aba22f64733a937d4c"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_cim_functional/c-134800230763fce8.json",
+      "sha256": "2baf0452fa12a6b751eb8f7c93cf41d721e5e4b66aea3c4a574a813bbb91cc0e"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_cim_functional/c-236ee8bc7d84f242.json",
+      "sha256": "401806ab51e1c7b17108a7f5da1e23ce82edbb68f1c79f10ca2ca1ce97628b88"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_digital_functional/c-ae86051d8500da6f.json",
+      "sha256": "0f4de38c2f983827c7f6a9abb3b725e4fbf33cf5b9ac0019035bade0285caf6f"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_digital_functional/c-bab0b8d546dff58a.json",
+      "sha256": "1b01146fd9eb92adcc4332ae520c184fd2a01c154165ee2de13e8e1a62773614"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_precision_attention/c-08cf7d3d5cc7a30b.json",
+      "sha256": "b627070c99bbfc6dd3980ec1723b6932085e4d4e0a2e4608eec5cf4ab402642c"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_precision_attention/c-448f219121b38526.json",
+      "sha256": "1b61e1676f9c1861a73670b9198147125aeaac30c761beb6537d48c433e497ee"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_precision_attention/c-55bae73bd1af770c.json",
+      "sha256": "679357b13f126a0a5c829b810f14ecd5c225847e969e9b3a973ddc6a8669881f"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_precision_attention/c-d375a17b2e57973a.json",
+      "sha256": "9640cec23df3f7b736f9e8a3f327256b4d93a351531513dd98473a9c23f94205"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/stage_codesign_bottleneck.csv",
+      "sha256": "18950031f566b6434b4414b337d769c67c924dc7d794f5d2e0819f7bfbf6e3c9"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/stage_precision.csv",
+      "sha256": "53218336578c4baf6a82f8701d106859800067aa9b235732f3d53af5890664a5"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/stage_causal_intervention.csv",
+      "sha256": "8bd6cd598891620db10bc5efda3152e9336419114ecf5df0f49250542d17170a"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/stage_cim_comparison.csv",
+      "sha256": "7ffc9f3e7e433337432843483b8543c262f5a6f8b8d14b8b74378f49f67d5a11"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/stage_cim_statistics.csv",
+      "sha256": "d27ed3aea2c2c3c5c970947f21d3c836dd2700d49b2fd2b160d5dbe93df1adcb"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/figures/fig_stage_codesign.pdf",
+      "sha256": "e9a2c89436d88c929f1330f77f0ad9b07eb8c3442b2c80014be344a3543ba2da"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/figures/fig_stage_codesign.png",
+      "sha256": "ebd9c9492e02730a2b9918aca80fd54a9faababb786ebb924817d8bcd562697f"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/figures/fig_stage_cim.pdf",
+      "sha256": "ec2863f96b3993d007e694227ca8d5b0714b53d7c82afaa13ef54e3952862320"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/figures/fig_stage_cim.png",
+      "sha256": "8b46a5da1a64f537ae55feaf7b5743943c0afd6b32fbdcc76a8f7820cb086f04"
+    }
+  ],
+  "bottleneck_cases": 22,
+  "precision_cases": 4,
+  "causal_interventions": 1,
+  "cim_cases": 16,
+  "fixed_seed_reproducible": true,
+  "multi_seed_count": 10,
+  "energy_boundary": "Complete digital and CIM totals remain unknown due to egress energy; known subtotals are Trend only",
+  "profile_boundary": "Phase7C digital is synthetic; Phase9 CIM uses literature exact-point array/ADC plus model-derived peripherals"
+}

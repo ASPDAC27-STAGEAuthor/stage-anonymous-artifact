@@ -1,0 +1,33 @@
+schema_version: aspg-final-config-1.0
+config_id: V-BS
+purpose: BookSim2-matched packet NoC
+evidence_level: numerical
+topology:
+  kind: mesh
+  dimensions: [4, 4]
+  router_count: 16
+  endpoint_count: 16
+  endpoints_per_router: 1
+  routing: dimension_order_xy
+transport:
+  packet_bits: 128
+  flit_bits: 128
+  link_bits_per_cycle: 128
+  packet_flits: 1
+  virtual_channels: 1
+  flits_per_vc: 16
+  matched_capacity_bits_per_vc: 2048
+  link_latency_cycles: 1
+runtime:
+  provider: stage_cycle_runtime
+  warmup_cycles: 3000
+  measurement_cycles: 10000
+  drain_cycles: 2000
+  trace_mode: metrics_only
+statistics:
+  seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  ci: student_t_95
+notes:
+  - One logical endpoint is represented by one source/sink pair attached to the same router.
+  - Runtime metrics must originate from packet injection through the cycle kernel.
+

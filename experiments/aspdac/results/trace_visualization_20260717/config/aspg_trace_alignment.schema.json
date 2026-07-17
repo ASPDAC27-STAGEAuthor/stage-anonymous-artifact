@@ -1,0 +1,87 @@
+{
+  "$id": "aspg-trace-alignment-1.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "comparison_policy": "Time coordinates and evidence levels are never silently coerced or mixed.",
+  "properties": {
+    "canonical_id": {
+      "type": "string"
+    },
+    "delivery_cycle": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "evidence_level": {
+      "enum": [
+        "Exact input",
+        "Exact within-tool",
+        "Numerical descriptive",
+        "Trend",
+        "Not comparable",
+        "Not supported",
+        "Pending"
+      ]
+    },
+    "host_wall_seconds": {
+      "minimum": 0,
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "injection_cycle": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "input_release_cycle": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "metric_definition": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "native_cycle": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "normalized_progress": {
+      "maximum": 1,
+      "minimum": 0,
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "source_path": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "source_sha256": {
+      "minLength": 64,
+      "type": "string"
+    },
+    "window_offset": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "canonical_id",
+    "source_path",
+    "source_sha256",
+    "metric_definition",
+    "evidence_level"
+  ],
+  "title": "STAGE external trace alignment row",
+  "type": "object"
+}

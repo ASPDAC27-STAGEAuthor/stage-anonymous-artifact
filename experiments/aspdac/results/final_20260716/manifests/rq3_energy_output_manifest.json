@@ -1,0 +1,97 @@
+{
+  "schema_version": "aspg-derived-output-manifest-1.0",
+  "rq": "RQ3-Energy",
+  "inputs": [
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/candidates_rq3_energy.json",
+      "sha256": "49a0c99b7f3de1e35d20513843edb411fbaab8d708405ef419d7616708b3a68a"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_energy/c-102e179921e4d3dc.json",
+      "sha256": "e7df6151c5db8fc0fc4478c6717454b0416070b5373543d169cb647bf8d8004e"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_energy/c-6ee654aaecb6bec0.json",
+      "sha256": "bbc91403e72e3340ccd8aaf68b630540a1ae3da0c5923042e3dbd34fb6b233fe"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_energy/c-7818f6ef36dea00d.json",
+      "sha256": "87b16c235e4a14444cfcfba48d7338695fb95c29d9f048af55a527007c6ee9a8"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_energy/c-7b3851d763515aa7.json",
+      "sha256": "0e3556f596c44b97e752643235a4d36b4000a05fe62c76832832f20a8043013f"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_energy/c-7c3621f77ec5d779.json",
+      "sha256": "08b0184a9685802796ff85b7a7fc23e18f8db8bd94a15fded5bf26cef9f33622"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_energy/c-8e336206311c316a.json",
+      "sha256": "b12ce3d0507c74fcaafdd9eec71dd193e4d16a673f4ab80f4e0f3de852ca217c"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_energy/c-acbb5488662953b8.json",
+      "sha256": "3b01392dd572486a92a2dba9053c4851c8a610fee414ebdc67ac30037cc40144"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_energy/c-be25610dd5513bc6.json",
+      "sha256": "06db3f1c8a286c1e5c81969b9cce711023556cd5a1b9b4d83fbb900ba1b33eec"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_energy/c-bf9673b4d5ec1c74.json",
+      "sha256": "f3e665beb0b1984e8037eb43ebcb8ae94a7dfa021f36a5a31f33cd953182aa2d"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_energy/c-e065dcc47e0a82e9.json",
+      "sha256": "b1d525d4630a14e455313da8ce9052c6034ead28bb1d0ba5a893ad612188668e"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_energy/c-eba2dd2d07035013.json",
+      "sha256": "f5c99136f9a97ae6a118feccd8fcc25f1ce404de72692da3d5168490635ef574"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_energy/c-f1b2943d16d85871.json",
+      "sha256": "0817f14a46ca8baba2d58c19e1c4a69d99c7bfb6b018aca3521e62c64084d759"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_energy/c-f26b423044389c1b.json",
+      "sha256": "f4133aa35dd0c5aa7f7efe9d87c18dfc1f98e6cdac2cd7b371f4fa38ff58ec32"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq3_stage_energy/c-fd46e9dbecdd7260.json",
+      "sha256": "2d84be26c7eb7e93ed8433be9daeba5aa8a9624961344d146a135f3037384558"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/rq3_energy_external_raw_manifest.json",
+      "sha256": "3e529a3f9e034060ebd3ed251dda23e394d79255e8175047b11f214a5e287bbc"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq3_energy_microbench.csv",
+      "sha256": "8caf475a4a7f500eaed2ee9e6128f3d73080af69f1b0a7a836c2b39ee05b04a2"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq3_accelergy_stage_energy.csv",
+      "sha256": "852c909bf7006df22d0cca12bf419bc8d626ae8f918a3b1b7228725b08d04a97"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq3_accelergy_verification.csv",
+      "sha256": "2df5c463345a2e1170e9198419dc54b1ae8ffa1dd2a97d35811f5cb1af13ccbf"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/figures/fig_rq3_energy_breakdown.pdf",
+      "sha256": "07bbaa297debaf99dfda526a865f3880b5b735761c2d3a6d85df793455d37fb0"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/figures/fig_rq3_energy_breakdown.png",
+      "sha256": "560d38cb6c0e8c758d920ac16eee24b3f121edca9372f11b888cce1021e01c8d"
+    }
+  ],
+  "microbench_exact_cases": 9,
+  "workload_cases": 5,
+  "native_workload_evidence": "Trend",
+  "matched_rebound_evidence": "Exact action-accounting replay",
+  "binding_mismatch_retained": true
+}

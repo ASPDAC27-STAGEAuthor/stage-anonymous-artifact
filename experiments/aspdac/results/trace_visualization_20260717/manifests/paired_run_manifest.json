@@ -1,0 +1,25 @@
+{
+  "comparison_policy_sha256": "41abcd110e23d24049fc107ed700dd57214f5106d155e3124a40d0de12ead180",
+  "holdout_pair_count": 16,
+  "schema_version": "stage-trace-paired-run-manifest/1.0",
+  "shared_cnn_input": {
+    "booksim_packet_delivery_path": "experiments/aspdac/results/external_rerun_20260717/raw/external_booksim_cnn_trace/c-2b4cf12a6ed1af66/packet_delivery.csv",
+    "booksim_packet_delivery_sha256": "b9e11d3f1585c0f822c73721cbb4b137b174a3f15183a59ceccdfab39a7789ec",
+    "packet_count": 18337,
+    "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_traces/sequential_network.csv",
+    "sha256": "7844f237c4b3461cf0ed1df81aecce1b664d3abb6a6da77861173cc01f4c145a",
+    "stage_per_packet_delivery_status": "not_available_in_terminal_bundle"
+  },
+  "stage_hotspot_node5": {
+    "candidate_id": "c-a85e81b6571cf97d",
+    "injection_rate": 0.06,
+    "projected_offered_packets": 12433,
+    "projection_validation": "exact offered-packet count match",
+    "raw_path": "experiments/aspdac/results/final_20260716/raw/rq2_stage_vbs/c-a85e81b6571cf97d.json",
+    "raw_sha256": "aeb2281b816eda63a132ebb7fecee8d13c38dc6032565279e9542806f1601d3e",
+    "recorded_offered_packets": 12433,
+    "seed": 0
+  },
+  "supported_noc_repeat_count": 14,
+  "unsupported_noc_repeat_count": 4
+}

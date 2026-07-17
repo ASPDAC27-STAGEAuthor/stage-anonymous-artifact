@@ -1,0 +1,88 @@
+{
+  "architecture": "Conv1(1->6,5x5)-ReLU-AvgPool2-Conv2(6->16,5x5)-ReLU-AvgPool2-FC256-120-84-10",
+  "claim_boundary": "End-to-end numerical accuracy is a PyTorch functional oracle. STAGE consumes the exact Conv/im2col and FC layer shapes for cycle/data-movement feasibility; pooling/ReLU numerical execution is not claimed as a STAGE neural-network kernel.",
+  "command": [
+    "USER_HOME\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "ARTIFACT_ROOT\\experiments\\aspdac\\scripts\\run_mnist_cnn_feasibility.py",
+    "--output",
+    "experiments\\aspdac\\results\\final_20260716\\raw\\mnist_cnn",
+    "--resume"
+  ],
+  "completed_utc": "2026-07-16T12:22:58.850052+00:00",
+  "dataset_files": [
+    {
+      "bytes": 7840016,
+      "path": "experiments\\aspdac\\data\\MNIST\\raw\\t10k-images-idx3-ubyte",
+      "sha256": "0fa7898d509279e482958e8ce81c8e77db3f2f8254e26661ceb7762c4d494ce7"
+    },
+    {
+      "bytes": 1648877,
+      "path": "experiments\\aspdac\\data\\MNIST\\raw\\t10k-images-idx3-ubyte.gz",
+      "sha256": "8d422c7b0a1c1c79245a5bcf07fe86e33eeafee792b84584aec276f5a2dbc4e6"
+    },
+    {
+      "bytes": 10008,
+      "path": "experiments\\aspdac\\data\\MNIST\\raw\\t10k-labels-idx1-ubyte",
+      "sha256": "ff7bcfd416de33731a308c3f266cc351222c34898ecbeaf847f06e48f7ec33f2"
+    },
+    {
+      "bytes": 4542,
+      "path": "experiments\\aspdac\\data\\MNIST\\raw\\t10k-labels-idx1-ubyte.gz",
+      "sha256": "f7ae60f92e00ec6debd23a6088c31dbd2371eca3ffa0defaefb259924204aec6"
+    },
+    {
+      "bytes": 47040016,
+      "path": "experiments\\aspdac\\data\\MNIST\\raw\\train-images-idx3-ubyte",
+      "sha256": "ba891046e6505d7aadcbbe25680a0738ad16aec93bde7f9b65e87a2fc25776db"
+    },
+    {
+      "bytes": 9912422,
+      "path": "experiments\\aspdac\\data\\MNIST\\raw\\train-images-idx3-ubyte.gz",
+      "sha256": "440fcabf73cc546fa21475e81ea370265605f56be210a4024d2ca8f203523609"
+    },
+    {
+      "bytes": 60008,
+      "path": "experiments\\aspdac\\data\\MNIST\\raw\\train-labels-idx1-ubyte",
+      "sha256": "65a50cbbf4e906d70832878ad85ccda5333a97f0f4c3dd2ef09a8a9eef7101c5"
+    },
+    {
+      "bytes": 28881,
+      "path": "experiments\\aspdac\\data\\MNIST\\raw\\train-labels-idx1-ubyte.gz",
+      "sha256": "3552534a0a558bbed6aed32b30c495cca23d567ec52cac8be1a0730e8010255c"
+    }
+  ],
+  "device": "cuda",
+  "epochs": 3,
+  "git_commit": "1e57371524a7a2cde2bcfdd07f05197a9181a73a",
+  "git_status_porcelain_sha256": "27cc7b2e05cef0edc5f956089a78a157b83ad0b5016241e8c75f35f674d4d76e",
+  "host": "anonymous-host",
+  "layer_profile_sha256": "98311305665da9094b2d693a241b76172e8d7e4a0533a0242bb62c9a9706f7a9",
+  "macs_full_test_set": 2816400000,
+  "macs_per_image": 281640,
+  "model": "SmallMnistCnn/LeNet-style",
+  "model_parameters": 44426,
+  "model_sha256": "0aa004a4bd1bbbdaf550a115ad0ed5cda16b6269b8753b97bd076cd1fc55d662",
+  "python_version": "3.10.6",
+  "repeat_prediction_hash_identical": true,
+  "schema_version": "aspg-mnist-cnn-feasibility-1.0",
+  "seed": 20260716,
+  "started_utc": "2026-07-16T12:22:55.150408+00:00",
+  "status": "completed",
+  "test_repeat_1": {
+    "accuracy": 0.9839,
+    "correct": 9839,
+    "elapsed_seconds": 3.043425900003058,
+    "prediction_sha256": "9d56dbfd0611130a20aec9638bb9ce935dc023c17f6b0815e83b4b3a27efaa26",
+    "samples": 10000
+  },
+  "test_repeat_2": {
+    "accuracy": 0.9839,
+    "correct": 9839,
+    "elapsed_seconds": 0.570249899988994,
+    "prediction_sha256": "9d56dbfd0611130a20aec9638bb9ce935dc023c17f6b0815e83b4b3a27efaa26",
+    "samples": 10000
+  },
+  "test_samples": 10000,
+  "torch_version": "1.12.1+cu116",
+  "train_samples": 60000
+}

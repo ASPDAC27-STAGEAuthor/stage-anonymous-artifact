@@ -1,0 +1,1296 @@
+{
+  "comparison_gate_blocked_count": 0,
+  "comparison_gate_ready_count": 16,
+  "files": [
+    {
+      "bytes": 427,
+      "path": "inputs/p1-holdout-holdout_attn_qk_s096_d064-4ee4a76eba42deda-r0.json",
+      "sha256": "4e86eda2d8d675f8055d114d768bca3afc7c1a4a024237dfae44544aeddd94c6"
+    },
+    {
+      "bytes": 427,
+      "path": "inputs/p1-holdout-holdout_attn_qk_s096_d064-4ee4a76eba42deda-r1.json",
+      "sha256": "a45ca7e81fbe03835b6bb2f649efcd9e9658a88676dab318e1e71a9862b96d04"
+    },
+    {
+      "bytes": 421,
+      "path": "inputs/p1-holdout-holdout_attn_qk_s096_d064-cf82757e571974ee-r0.json",
+      "sha256": "1b89c4b7522e45cd4fa8eafb3a3d8008934fde761fc4ff5e0a0f71637b54b4c5"
+    },
+    {
+      "bytes": 421,
+      "path": "inputs/p1-holdout-holdout_attn_qk_s096_d064-cf82757e571974ee-r1.json",
+      "sha256": "d354665bd248c6f3953d6e0db5fbbf7c36f7ad22cb8374f6c334765b2ac2edc3"
+    },
+    {
+      "bytes": 429,
+      "path": "inputs/p1-holdout-holdout_attn_qk_s192_d064-05a638e2de54fa90-r0.json",
+      "sha256": "0cdfacb0ce840741be90827fe29261660fd22c087ed67c071c4d4fcbe1c1a6b2"
+    },
+    {
+      "bytes": 429,
+      "path": "inputs/p1-holdout-holdout_attn_qk_s192_d064-05a638e2de54fa90-r1.json",
+      "sha256": "316bb0d98f70a28631681a6e216c3d0a7e2921f8b8bbfe2f4210c822cc5c2dad"
+    },
+    {
+      "bytes": 423,
+      "path": "inputs/p1-holdout-holdout_attn_qk_s192_d064-f94b76dea3c99c6b-r0.json",
+      "sha256": "c5eb9a1abc546bb2e518bfbe8ec5c09a66ec7c87f6d749d2f97154dfc86a8aaf"
+    },
+    {
+      "bytes": 423,
+      "path": "inputs/p1-holdout-holdout_attn_qk_s192_d064-f94b76dea3c99c6b-r1.json",
+      "sha256": "06e5fdedea91cfdb25be3d28b218c3b0afd58e548197dc0695f5ac845f469fe0"
+    },
+    {
+      "bytes": 409,
+      "path": "inputs/p1-holdout-holdout_gemm_096-451daf1ed1c12ed2-r0.json",
+      "sha256": "c7c2e6cbe4b63ba3db06c1e7134eb40980e91ce8a5b5f424640d48fd341a75c4"
+    },
+    {
+      "bytes": 409,
+      "path": "inputs/p1-holdout-holdout_gemm_096-451daf1ed1c12ed2-r1.json",
+      "sha256": "2a1ebb6d675a21e4bfa408be933206d51dbe67e51d22afc3d8ee8041f165a040"
+    },
+    {
+      "bytes": 403,
+      "path": "inputs/p1-holdout-holdout_gemm_096-b6a62809008ff575-r0.json",
+      "sha256": "c4ae2e5b56dd1734304198553aa0edf954fda64148a8bc8d698daa21853c8f6e"
+    },
+    {
+      "bytes": 403,
+      "path": "inputs/p1-holdout-holdout_gemm_096-b6a62809008ff575-r1.json",
+      "sha256": "badce82fc782bc47ba610657bd559533f44be4843350dd148547c23b0a92de95"
+    },
+    {
+      "bytes": 406,
+      "path": "inputs/p1-holdout-holdout_gemm_192-0f990a9434110def-r0.json",
+      "sha256": "869954e8fe767264e40eda1ebc96b599340344a6d7f0160801ad3afaa59e1c51"
+    },
+    {
+      "bytes": 406,
+      "path": "inputs/p1-holdout-holdout_gemm_192-0f990a9434110def-r1.json",
+      "sha256": "9509871b9e37ec84db1d0767da9c46f156d417d2c735926734cf5ecac639fd0b"
+    },
+    {
+      "bytes": 412,
+      "path": "inputs/p1-holdout-holdout_gemm_192-60a111ce896b8e19-r0.json",
+      "sha256": "a18f07c5018578ad9f09dc09aaaf2ec869ae40cd1b1e9f1eacd12df2e973461e"
+    },
+    {
+      "bytes": 412,
+      "path": "inputs/p1-holdout-holdout_gemm_192-60a111ce896b8e19-r1.json",
+      "sha256": "90abd46a4a42a671ba8ce1510319c4766cb2232b658ba6b35bd65b0366cb3272"
+    },
+    {
+      "bytes": 406,
+      "path": "inputs/p1-holdout-holdout_gemm_384-2dc73f7ab8542825-r0.json",
+      "sha256": "656c62570e17c285550367b6e2e705cec32807ecf77baab4841f161f77799115"
+    },
+    {
+      "bytes": 406,
+      "path": "inputs/p1-holdout-holdout_gemm_384-2dc73f7ab8542825-r1.json",
+      "sha256": "da68f1965e25c19baf715d96bd982859367e5bec98885be0890d3ea7adabc309"
+    },
+    {
+      "bytes": 412,
+      "path": "inputs/p1-holdout-holdout_gemm_384-a0ac510429e61b4b-r0.json",
+      "sha256": "d60fde9394282cf26765bccd0f1e8503ec1e5e090aa521991011573a9b23855b"
+    },
+    {
+      "bytes": 412,
+      "path": "inputs/p1-holdout-holdout_gemm_384-a0ac510429e61b4b-r1.json",
+      "sha256": "b1b1d18d5e6f7b177fbcbcb615cc035bfc90020cacc87dc1a3d11d7a81cd3b34"
+    },
+    {
+      "bytes": 419,
+      "path": "inputs/p1-holdout-holdout_rect_128x256x64-5981473c8299b30d-r0.json",
+      "sha256": "e6662978f965f2b95aa18c6f22edfcb28f8825382ea7bca452547aa22a2b37f8"
+    },
+    {
+      "bytes": 419,
+      "path": "inputs/p1-holdout-holdout_rect_128x256x64-5981473c8299b30d-r1.json",
+      "sha256": "38624db8289785f6f14b9f7f48a45b6d321236e346b1fe072b272a0002861e3b"
+    },
+    {
+      "bytes": 425,
+      "path": "inputs/p1-holdout-holdout_rect_128x256x64-7cb7c5048ab6f87e-r0.json",
+      "sha256": "f9921898ab83b0813870d6d0fd8500a6f347ab91a03c85e6380270fcfb756a7b"
+    },
+    {
+      "bytes": 425,
+      "path": "inputs/p1-holdout-holdout_rect_128x256x64-7cb7c5048ab6f87e-r1.json",
+      "sha256": "d7d60887bae57c0733274e3b29c98d98e2898bbd6fce0276b9780b3b81c999c9"
+    },
+    {
+      "bytes": 425,
+      "path": "inputs/p1-holdout-holdout_rect_256x64x192-2ca34cfdeb3c4e5d-r0.json",
+      "sha256": "cfa7c92f31ce0ce9745b02e31f785eac364f598ef240c0d0eb9280a1b8b74fcd"
+    },
+    {
+      "bytes": 425,
+      "path": "inputs/p1-holdout-holdout_rect_256x64x192-2ca34cfdeb3c4e5d-r1.json",
+      "sha256": "b8642640f77d206ad785bee545a933663e4761631d47cefaa9414058e83691c3"
+    },
+    {
+      "bytes": 419,
+      "path": "inputs/p1-holdout-holdout_rect_256x64x192-96f4d8fbc5a70d21-r0.json",
+      "sha256": "5a1f3e1306b3032ff4c153f9956b46127b7052a184fd7124f35e1f6f7028fc3c"
+    },
+    {
+      "bytes": 419,
+      "path": "inputs/p1-holdout-holdout_rect_256x64x192-96f4d8fbc5a70d21-r1.json",
+      "sha256": "57afc46ab7a1e73d883f938fcd4be63974299208d4be2105dcd943b65eb0368a"
+    },
+    {
+      "bytes": 425,
+      "path": "inputs/p1-holdout-holdout_rect_64x384x128-111e7db34170a28c-r0.json",
+      "sha256": "fa538434649d6913dcf80ca65eb1f817f1ca68c35b924d81c9a7dba446c8f119"
+    },
+    {
+      "bytes": 425,
+      "path": "inputs/p1-holdout-holdout_rect_64x384x128-111e7db34170a28c-r1.json",
+      "sha256": "63e98fc3a91c98393dfb355c3e0c006d8eab48bbea66de0b6506e6cb8805cff3"
+    },
+    {
+      "bytes": 419,
+      "path": "inputs/p1-holdout-holdout_rect_64x384x128-764bce7677c7bc4e-r0.json",
+      "sha256": "edfe632629150d0607c4a61646d04d90600026e665add4f0da94c3702a0c2962"
+    },
+    {
+      "bytes": 419,
+      "path": "inputs/p1-holdout-holdout_rect_64x384x128-764bce7677c7bc4e-r1.json",
+      "sha256": "919f27f2fe0a702cfff475757c067901b46c4a2ca3730b56666bb96512cbf4bb"
+    },
+    {
+      "bytes": 328,
+      "path": "inputs/p1-noc-noc_n01_single_128-a27e906411d4fa7c-r0.json",
+      "sha256": "04b7a04b570fb8322ed5ed469cdbac5e3338a4b2a4645de03f5011c16087cd0f"
+    },
+    {
+      "bytes": 328,
+      "path": "inputs/p1-noc-noc_n01_single_128-a27e906411d4fa7c-r1.json",
+      "sha256": "26b8461c3eba26f1619f9422ef85770ae02f72e5b94aee15ad7cfdb3ad444d60"
+    },
+    {
+      "bytes": 336,
+      "path": "inputs/p1-noc-noc_n02_single_256_vc1-410a3635357c967b-r0.json",
+      "sha256": "f6cf7e1e00db1a019554223f925730a276698ec80342521afbe7059fc2979346"
+    },
+    {
+      "bytes": 336,
+      "path": "inputs/p1-noc-noc_n02_single_256_vc1-410a3635357c967b-r1.json",
+      "sha256": "3d2780d825539c930fc36a33aff2b7c4fa2ac0fcec82c85c02dfe7fa4385c55b"
+    },
+    {
+      "bytes": 336,
+      "path": "inputs/p1-noc-noc_n03_single_512_vc3-3a39d41273aa55ae-r0.json",
+      "sha256": "94b7b646678d9e52077f3ff222dd831c3e5a06ba1dba4a2e1818c649838157f1"
+    },
+    {
+      "bytes": 336,
+      "path": "inputs/p1-noc-noc_n03_single_512_vc3-3a39d41273aa55ae-r1.json",
+      "sha256": "f7a1089ed260d4191dae01682efdb966c5afa4ade015a417a59d0721d2897943"
+    },
+    {
+      "bytes": 330,
+      "path": "inputs/p1-noc-noc_n04_single_1024-302e6f932eaf9166-r0.json",
+      "sha256": "7f8febb712600a821bf49c398c40e38bc793b44ac1cd72e498906a160d2eb724"
+    },
+    {
+      "bytes": 330,
+      "path": "inputs/p1-noc-noc_n04_single_1024-302e6f932eaf9166-r1.json",
+      "sha256": "f6f9a2fb72d00e8cab2738e847afba93207af34495a967a387b4611afee1fb21"
+    },
+    {
+      "bytes": 330,
+      "path": "inputs/p1-noc-noc_n05_contend_128-84df0dcaaaf636a6-r0.json",
+      "sha256": "9fa017f890ad34da5f397c1c3246027c16b032cb70b3fa8fd1b04dc9e6f8fd24"
+    },
+    {
+      "bytes": 330,
+      "path": "inputs/p1-noc-noc_n05_contend_128-84df0dcaaaf636a6-r1.json",
+      "sha256": "5a2440d0bc520e85b9e282017e6ef26bf72f60f96f5cdebcf63f7e20e4d52600"
+    },
+    {
+      "bytes": 330,
+      "path": "inputs/p1-noc-noc_n06_contend_512-f8a7c7b64b0d684b-r0.json",
+      "sha256": "c22818db703bd4b36ed9167185ca1effbec01451aceaa872fb58ba5814b78fac"
+    },
+    {
+      "bytes": 330,
+      "path": "inputs/p1-noc-noc_n06_contend_512-f8a7c7b64b0d684b-r1.json",
+      "sha256": "cc4c74bb2cb959668158630e110fe0c15aea77f80ceb3eb8527219a3d9a20a6f"
+    },
+    {
+      "bytes": 342,
+      "path": "inputs/p1-noc-noc_n07_block_release_256-8527e5cc0cd13859-r0.json",
+      "sha256": "ad92d71adbe700273be2e2b96dc1b0e0a65cc05953368735058a3e8d3ef3b777"
+    },
+    {
+      "bytes": 342,
+      "path": "inputs/p1-noc-noc_n07_block_release_256-8527e5cc0cd13859-r1.json",
+      "sha256": "1925dcbba01d46f06580f3d797960f3fc3b37daffc0b455fedc656d47e87d9f3"
+    },
+    {
+      "bytes": 338,
+      "path": "inputs/p1-noc-noc_n08_block_tail_1024-c8d78220c70e2460-r0.json",
+      "sha256": "8d83f087a414bf9fdcb643dbb37139f498ce03c2445eb3be649c603dba1a1489"
+    },
+    {
+      "bytes": 338,
+      "path": "inputs/p1-noc-noc_n08_block_tail_1024-c8d78220c70e2460-r1.json",
+      "sha256": "40f337173c48a773dc5f62d9839fc32efd3969a9b92e8ec41a2a2e73e4f693cc"
+    },
+    {
+      "bytes": 350,
+      "path": "inputs/p1-noc-noc_n09_atomic_depth_boundary-61008605a69536c2-r0.json",
+      "sha256": "91262b2c8edcab96e5f3326b0d2c7a0bf3be09d830e2bbf5da26e3dffbe836a4"
+    },
+    {
+      "bytes": 350,
+      "path": "inputs/p1-noc-noc_n09_atomic_depth_boundary-61008605a69536c2-r1.json",
+      "sha256": "eb3b3f2c88f6800f67b490f5cc5eaa6a82a05447b6639f425a7c6293ce8e09c7"
+    },
+    {
+      "bytes": 4248,
+      "path": "manifests/holdout_independence_audit.md",
+      "sha256": "ec61a02a5be8b5cd5aed02a0f559366b36515ebda4a37336850aace815c5c532"
+    },
+    {
+      "bytes": 37533,
+      "path": "manifests/p1_candidates.json",
+      "sha256": "2a84f91899cd32d0f55a5ad2469500a4770f87885fe8f75f7f93475a3e7d34c3"
+    },
+    {
+      "bytes": 16046,
+      "path": "manifests/p1_checkpoint.json",
+      "sha256": "17371630a759649af4e02b44b64bf17adf22f8737b8bd24b993067ef06fa96f5"
+    },
+    {
+      "bytes": 40216,
+      "path": "manifests/p1_plan.json",
+      "sha256": "6d74a279c8376652db9dae3ded07f6c3b1c988abe21f4358670361030d85a4f4"
+    },
+    {
+      "bytes": 651,
+      "path": "manifests/p1_source_audit.json",
+      "sha256": "ed2c1faa28ee032b71a326b1d210310b4c6f04c40d820f3b274e3be219767262"
+    },
+    {
+      "bytes": 2537,
+      "path": "raw/scalesim/holdout_attn_qk_s096_d064/r0/command.json",
+      "sha256": "8b07dd41c43cdde2e7f47efe7f99dc8681d38010ffcb29e499d38527ec83521b"
+    },
+    {
+      "bytes": 804,
+      "path": "raw/scalesim/holdout_attn_qk_s096_d064/r0/inputs/aspdac_4x4_ws.cfg",
+      "sha256": "edc62aa81e06188f93ad3a998dd88893a0b989a36c6675ab602a28eb628379a8"
+    },
+    {
+      "bytes": 57,
+      "path": "raw/scalesim/holdout_attn_qk_s096_d064/r0/inputs/holdout_attn_qk_s096_d064.csv",
+      "sha256": "c4a190cfc868c2ab118731e6eefeede39d1914d9449c2cda376d6a99aca90a2d"
+    },
+    {
+      "bytes": 6836,
+      "path": "raw/scalesim/holdout_attn_qk_s096_d064/r0/result.json",
+      "sha256": "f23cb108aa25a165795271b70cfe49c1479e49179a33fc110f348561609bfe0c"
+    },
+    {
+      "bytes": 246,
+      "path": "raw/scalesim/holdout_attn_qk_s096_d064/r0/scale_outputs/aspdac_reviewer_p1_holdout_attn_qk_s096_d064_r0/BANDWIDTH_REPORT.csv",
+      "sha256": "bcf3b24094d18255987569c5e919537aae2d1a395ef7e3c59f1df638b789868c"
+    },
+    {
+      "bytes": 187,
+      "path": "raw/scalesim/holdout_attn_qk_s096_d064/r0/scale_outputs/aspdac_reviewer_p1_holdout_attn_qk_s096_d064_r0/COMPUTE_REPORT.csv",
+      "sha256": "e23fd201e78fd85b00dde41271a6d04c480ced66d298d564d661294b4f10aac2"
+    },
+    {
+      "bytes": 545,
+      "path": "raw/scalesim/holdout_attn_qk_s096_d064/r0/scale_outputs/aspdac_reviewer_p1_holdout_attn_qk_s096_d064_r0/DETAILED_ACCESS_REPORT.csv",
+      "sha256": "b6fd48c5fe61ced268134ebe0ad1b50a7d094c882af8f411f0f228e2842cf81f"
+    },
+    {
+      "bytes": 30,
+      "path": "raw/scalesim/holdout_attn_qk_s096_d064/r0/scale_outputs/aspdac_reviewer_p1_holdout_attn_qk_s096_d064_r0/TIME_REPORT.csv",
+      "sha256": "3f425697887c3d0f1319cad164daf6918e89aaa3c8f165206787afcb0828237e"
+    },
+    {
+      "bytes": 1223,
+      "path": "raw/scalesim/holdout_attn_qk_s096_d064/r0/stderr.log",
+      "sha256": "c5f0fa4080590e0d9d48c1863011f3264a2e8212cc2b84aa4bd96f11b19985a1"
+    },
+    {
+      "bytes": 1112,
+      "path": "raw/scalesim/holdout_attn_qk_s096_d064/r0/stdout.log",
+      "sha256": "6ec81306d15c180321b784cd041371b5fc989a481561e799f89239ea3e01627e"
+    },
+    {
+      "bytes": 2536,
+      "path": "raw/scalesim/holdout_attn_qk_s096_d064/r1/command.json",
+      "sha256": "fed77f8010bd2294cedff725ae6883fd8c4c009af4c8edeb84b4012c0fbde42c"
+    },
+    {
+      "bytes": 804,
+      "path": "raw/scalesim/holdout_attn_qk_s096_d064/r1/inputs/aspdac_4x4_ws.cfg",
+      "sha256": "6dabe57e6c676d9b08b9b4b9ae87751e18a152fe2d2dedda36baf53088780696"
+    },
+    {
+      "bytes": 57,
+      "path": "raw/scalesim/holdout_attn_qk_s096_d064/r1/inputs/holdout_attn_qk_s096_d064.csv",
+      "sha256": "c4a190cfc868c2ab118731e6eefeede39d1914d9449c2cda376d6a99aca90a2d"
+    },
+    {
+      "bytes": 6835,
+      "path": "raw/scalesim/holdout_attn_qk_s096_d064/r1/result.json",
+      "sha256": "837832636cc9c3cf03b3b1334ec78c8fa80e27460fde70e5848a7e62f3811201"
+    },
+    {
+      "bytes": 246,
+      "path": "raw/scalesim/holdout_attn_qk_s096_d064/r1/scale_outputs/aspdac_reviewer_p1_holdout_attn_qk_s096_d064_r1/BANDWIDTH_REPORT.csv",
+      "sha256": "bcf3b24094d18255987569c5e919537aae2d1a395ef7e3c59f1df638b789868c"
+    },
+    {
+      "bytes": 187,
+      "path": "raw/scalesim/holdout_attn_qk_s096_d064/r1/scale_outputs/aspdac_reviewer_p1_holdout_attn_qk_s096_d064_r1/COMPUTE_REPORT.csv",
+      "sha256": "e23fd201e78fd85b00dde41271a6d04c480ced66d298d564d661294b4f10aac2"
+    },
+    {
+      "bytes": 545,
+      "path": "raw/scalesim/holdout_attn_qk_s096_d064/r1/scale_outputs/aspdac_reviewer_p1_holdout_attn_qk_s096_d064_r1/DETAILED_ACCESS_REPORT.csv",
+      "sha256": "b6fd48c5fe61ced268134ebe0ad1b50a7d094c882af8f411f0f228e2842cf81f"
+    },
+    {
+      "bytes": 30,
+      "path": "raw/scalesim/holdout_attn_qk_s096_d064/r1/scale_outputs/aspdac_reviewer_p1_holdout_attn_qk_s096_d064_r1/TIME_REPORT.csv",
+      "sha256": "3f425697887c3d0f1319cad164daf6918e89aaa3c8f165206787afcb0828237e"
+    },
+    {
+      "bytes": 1297,
+      "path": "raw/scalesim/holdout_attn_qk_s096_d064/r1/stderr.log",
+      "sha256": "1e8552cc294d1c619d0f3e968013d2a30cfb3bc42f6732d9e76194ec70e61d13"
+    },
+    {
+      "bytes": 1112,
+      "path": "raw/scalesim/holdout_attn_qk_s096_d064/r1/stdout.log",
+      "sha256": "d65e59db12692aa04da369f88900fb7e56a46e1231335bdbf155bcea2f77a195"
+    },
+    {
+      "bytes": 2537,
+      "path": "raw/scalesim/holdout_attn_qk_s192_d064/r0/command.json",
+      "sha256": "c28817aaabda733ce1037c8f130b3e84a30b2c84ea49e917855e7ecd2fe1771e"
+    },
+    {
+      "bytes": 804,
+      "path": "raw/scalesim/holdout_attn_qk_s192_d064/r0/inputs/aspdac_4x4_ws.cfg",
+      "sha256": "87a85d25675895b6831aa79d7b399cd48238c759d102e2f1a830feefee30075c"
+    },
+    {
+      "bytes": 59,
+      "path": "raw/scalesim/holdout_attn_qk_s192_d064/r0/inputs/holdout_attn_qk_s192_d064.csv",
+      "sha256": "002c598de169d8dc15a132910092dafb7bce948dfb9acecf4fb44272a332ed33"
+    },
+    {
+      "bytes": 6842,
+      "path": "raw/scalesim/holdout_attn_qk_s192_d064/r0/result.json",
+      "sha256": "988f3cf04207585dd453e895b6a769006d933f4321aedea8ae5588f61f188ebe"
+    },
+    {
+      "bytes": 245,
+      "path": "raw/scalesim/holdout_attn_qk_s192_d064/r0/scale_outputs/aspdac_reviewer_p1_holdout_attn_qk_s192_d064_r0/BANDWIDTH_REPORT.csv",
+      "sha256": "915c2a6c44f97e0b12795e81ca1a606a0ea2db7960683549a1d2945ee4812470"
+    },
+    {
+      "bytes": 189,
+      "path": "raw/scalesim/holdout_attn_qk_s192_d064/r0/scale_outputs/aspdac_reviewer_p1_holdout_attn_qk_s192_d064_r0/COMPUTE_REPORT.csv",
+      "sha256": "5df7c544c53e39987cc57f993597fa166107efe1ac29f12301bafd4ad78618ad"
+    },
+    {
+      "bytes": 552,
+      "path": "raw/scalesim/holdout_attn_qk_s192_d064/r0/scale_outputs/aspdac_reviewer_p1_holdout_attn_qk_s192_d064_r0/DETAILED_ACCESS_REPORT.csv",
+      "sha256": "02f814d9d01666ed5ff4ee196af00c65d35cd662ff46e8bd7ac4e9ad374d75cd"
+    },
+    {
+      "bytes": 31,
+      "path": "raw/scalesim/holdout_attn_qk_s192_d064/r0/scale_outputs/aspdac_reviewer_p1_holdout_attn_qk_s192_d064_r0/TIME_REPORT.csv",
+      "sha256": "ae04b2fd365e7f16c368d8dad6f4893a9abc67e99c0097d1198033624b0797a8"
+    },
+    {
+      "bytes": 4618,
+      "path": "raw/scalesim/holdout_attn_qk_s192_d064/r0/stderr.log",
+      "sha256": "dcb87d7714470ea8c52aba095fed483a6e4a031a6a230e8284e337327726999d"
+    },
+    {
+      "bytes": 1114,
+      "path": "raw/scalesim/holdout_attn_qk_s192_d064/r0/stdout.log",
+      "sha256": "d576e73839e1bf75a1e17a0e7d63afcdea684da77223ea66495316e6eaca535e"
+    },
+    {
+      "bytes": 2537,
+      "path": "raw/scalesim/holdout_attn_qk_s192_d064/r1/command.json",
+      "sha256": "3d3fa879c9e57ef8449bbffc0cb60f709b694ad0effb25712a32d130aa3fed0a"
+    },
+    {
+      "bytes": 804,
+      "path": "raw/scalesim/holdout_attn_qk_s192_d064/r1/inputs/aspdac_4x4_ws.cfg",
+      "sha256": "bfe52027d083f19131ca1d887e77da3f4d505ce46bac603d16d1d66fafae732f"
+    },
+    {
+      "bytes": 59,
+      "path": "raw/scalesim/holdout_attn_qk_s192_d064/r1/inputs/holdout_attn_qk_s192_d064.csv",
+      "sha256": "002c598de169d8dc15a132910092dafb7bce948dfb9acecf4fb44272a332ed33"
+    },
+    {
+      "bytes": 6842,
+      "path": "raw/scalesim/holdout_attn_qk_s192_d064/r1/result.json",
+      "sha256": "1976595460b6f2f2fa35d7b3c8119fd44c05f2bbdfa23bfc125163e2b094c7e3"
+    },
+    {
+      "bytes": 245,
+      "path": "raw/scalesim/holdout_attn_qk_s192_d064/r1/scale_outputs/aspdac_reviewer_p1_holdout_attn_qk_s192_d064_r1/BANDWIDTH_REPORT.csv",
+      "sha256": "915c2a6c44f97e0b12795e81ca1a606a0ea2db7960683549a1d2945ee4812470"
+    },
+    {
+      "bytes": 189,
+      "path": "raw/scalesim/holdout_attn_qk_s192_d064/r1/scale_outputs/aspdac_reviewer_p1_holdout_attn_qk_s192_d064_r1/COMPUTE_REPORT.csv",
+      "sha256": "5df7c544c53e39987cc57f993597fa166107efe1ac29f12301bafd4ad78618ad"
+    },
+    {
+      "bytes": 552,
+      "path": "raw/scalesim/holdout_attn_qk_s192_d064/r1/scale_outputs/aspdac_reviewer_p1_holdout_attn_qk_s192_d064_r1/DETAILED_ACCESS_REPORT.csv",
+      "sha256": "02f814d9d01666ed5ff4ee196af00c65d35cd662ff46e8bd7ac4e9ad374d75cd"
+    },
+    {
+      "bytes": 31,
+      "path": "raw/scalesim/holdout_attn_qk_s192_d064/r1/scale_outputs/aspdac_reviewer_p1_holdout_attn_qk_s192_d064_r1/TIME_REPORT.csv",
+      "sha256": "ae04b2fd365e7f16c368d8dad6f4893a9abc67e99c0097d1198033624b0797a8"
+    },
+    {
+      "bytes": 4629,
+      "path": "raw/scalesim/holdout_attn_qk_s192_d064/r1/stderr.log",
+      "sha256": "c27b335719e90096824c2dd6ae1f7e96dc47a4ca8dffa41c078c906c896698e9"
+    },
+    {
+      "bytes": 1114,
+      "path": "raw/scalesim/holdout_attn_qk_s192_d064/r1/stdout.log",
+      "sha256": "91f0b29186694874c98bc141e9357a3f945085ec6b93b392a4fcac03d85fe376"
+    },
+    {
+      "bytes": 2429,
+      "path": "raw/scalesim/holdout_gemm_096/r0/command.json",
+      "sha256": "695d52416bc1799469e7d31d32f555459a9a25564851f53861ceb8007dd1856e"
+    },
+    {
+      "bytes": 795,
+      "path": "raw/scalesim/holdout_gemm_096/r0/inputs/aspdac_4x4_ws.cfg",
+      "sha256": "8e2f8d247b910dfad84aad5004561a1dbc13c6d6986fb162b9e542387d9c7d4a"
+    },
+    {
+      "bytes": 48,
+      "path": "raw/scalesim/holdout_gemm_096/r0/inputs/holdout_gemm_096.csv",
+      "sha256": "aacdaccfcf880d65f451285b1d1650af07618b5f7439be960695b45589ffd0b3"
+    },
+    {
+      "bytes": 6718,
+      "path": "raw/scalesim/holdout_gemm_096/r0/result.json",
+      "sha256": "c17f1b9ea03e0f382ac52bf52bd93280834aeea0ad438f0756b416f96e0aae3c"
+    },
+    {
+      "bytes": 244,
+      "path": "raw/scalesim/holdout_gemm_096/r0/scale_outputs/aspdac_reviewer_p1_holdout_gemm_096_r0/BANDWIDTH_REPORT.csv",
+      "sha256": "35ef83c198f01e97979530b75f380ec96bdb8fae4e6825ab5608b53bd3ae4751"
+    },
+    {
+      "bytes": 187,
+      "path": "raw/scalesim/holdout_gemm_096/r0/scale_outputs/aspdac_reviewer_p1_holdout_gemm_096_r0/COMPUTE_REPORT.csv",
+      "sha256": "a3c3a7b6175e1648c00a12b0d17e6370e5ad70d026c8b1f773949e72dec04243"
+    },
+    {
+      "bytes": 547,
+      "path": "raw/scalesim/holdout_gemm_096/r0/scale_outputs/aspdac_reviewer_p1_holdout_gemm_096_r0/DETAILED_ACCESS_REPORT.csv",
+      "sha256": "83486856dfcd53b4d7cfa0415dcf219048ab93fc0fb4aab56d75a6a4eabd13d7"
+    },
+    {
+      "bytes": 30,
+      "path": "raw/scalesim/holdout_gemm_096/r0/scale_outputs/aspdac_reviewer_p1_holdout_gemm_096_r0/TIME_REPORT.csv",
+      "sha256": "bf404e41b09e5932576f4d009a15efa79220e557caa03134bde1fba37fbe14c6"
+    },
+    {
+      "bytes": 1843,
+      "path": "raw/scalesim/holdout_gemm_096/r0/stderr.log",
+      "sha256": "94646cd0889151817781e38dcd2f537fd7f53566108f158dc812a2808fc47c75"
+    },
+    {
+      "bytes": 1094,
+      "path": "raw/scalesim/holdout_gemm_096/r0/stdout.log",
+      "sha256": "36df2faa0b84fc6b7a8cd87605166527dc7c3283b79a1e9485a81599e5c6f9a2"
+    },
+    {
+      "bytes": 2429,
+      "path": "raw/scalesim/holdout_gemm_096/r1/command.json",
+      "sha256": "24be1ba33a025afbb96764eb4435600502b6f74e0052da01c3c9222ffdaa84ba"
+    },
+    {
+      "bytes": 795,
+      "path": "raw/scalesim/holdout_gemm_096/r1/inputs/aspdac_4x4_ws.cfg",
+      "sha256": "fd6601457272735d39f32463d592d2cc38c0dc7de2e143ba191cf22d521d2d4d"
+    },
+    {
+      "bytes": 48,
+      "path": "raw/scalesim/holdout_gemm_096/r1/inputs/holdout_gemm_096.csv",
+      "sha256": "aacdaccfcf880d65f451285b1d1650af07618b5f7439be960695b45589ffd0b3"
+    },
+    {
+      "bytes": 6718,
+      "path": "raw/scalesim/holdout_gemm_096/r1/result.json",
+      "sha256": "bc8b5be0932ea6fdc7c3159e7dec9f58feb58fd3adc66bb83cc74a458ed6e52c"
+    },
+    {
+      "bytes": 244,
+      "path": "raw/scalesim/holdout_gemm_096/r1/scale_outputs/aspdac_reviewer_p1_holdout_gemm_096_r1/BANDWIDTH_REPORT.csv",
+      "sha256": "35ef83c198f01e97979530b75f380ec96bdb8fae4e6825ab5608b53bd3ae4751"
+    },
+    {
+      "bytes": 187,
+      "path": "raw/scalesim/holdout_gemm_096/r1/scale_outputs/aspdac_reviewer_p1_holdout_gemm_096_r1/COMPUTE_REPORT.csv",
+      "sha256": "a3c3a7b6175e1648c00a12b0d17e6370e5ad70d026c8b1f773949e72dec04243"
+    },
+    {
+      "bytes": 547,
+      "path": "raw/scalesim/holdout_gemm_096/r1/scale_outputs/aspdac_reviewer_p1_holdout_gemm_096_r1/DETAILED_ACCESS_REPORT.csv",
+      "sha256": "83486856dfcd53b4d7cfa0415dcf219048ab93fc0fb4aab56d75a6a4eabd13d7"
+    },
+    {
+      "bytes": 30,
+      "path": "raw/scalesim/holdout_gemm_096/r1/scale_outputs/aspdac_reviewer_p1_holdout_gemm_096_r1/TIME_REPORT.csv",
+      "sha256": "bf404e41b09e5932576f4d009a15efa79220e557caa03134bde1fba37fbe14c6"
+    },
+    {
+      "bytes": 1986,
+      "path": "raw/scalesim/holdout_gemm_096/r1/stderr.log",
+      "sha256": "2c470527b00aacb3889915e2ac3ac652d75c9b1a952ef6d310182bb08d1f1c11"
+    },
+    {
+      "bytes": 1094,
+      "path": "raw/scalesim/holdout_gemm_096/r1/stdout.log",
+      "sha256": "b38dded667332859d0851a6cdf33891043eb85020dda6bad1802311f37378d1e"
+    },
+    {
+      "bytes": 2430,
+      "path": "raw/scalesim/holdout_gemm_192/r0/command.json",
+      "sha256": "c43f11264135a3a243b69afa52a0b1c61a9b038e6fd80f8cd2da2564d93c3772"
+    },
+    {
+      "bytes": 795,
+      "path": "raw/scalesim/holdout_gemm_192/r0/inputs/aspdac_4x4_ws.cfg",
+      "sha256": "91d8076c1ed63566eca222d837a4d4ff742cb7e936d24220b989b56283189934"
+    },
+    {
+      "bytes": 51,
+      "path": "raw/scalesim/holdout_gemm_192/r0/inputs/holdout_gemm_192.csv",
+      "sha256": "ae192d94fbba4fb55043fe032e96894a8fb02b3fd665dc40d094fe60873444b7"
+    },
+    {
+      "bytes": 6728,
+      "path": "raw/scalesim/holdout_gemm_192/r0/result.json",
+      "sha256": "0627a5bd012540ce96c76a8ceece548cd3111117b70abf65cd63a1694027c669"
+    },
+    {
+      "bytes": 241,
+      "path": "raw/scalesim/holdout_gemm_192/r0/scale_outputs/aspdac_reviewer_p1_holdout_gemm_192_r0/BANDWIDTH_REPORT.csv",
+      "sha256": "4d7d70f9ffb51d98474dd9f8d92cf271cf6a02624e23bcac061fc5ce7409fc49"
+    },
+    {
+      "bytes": 188,
+      "path": "raw/scalesim/holdout_gemm_192/r0/scale_outputs/aspdac_reviewer_p1_holdout_gemm_192_r0/COMPUTE_REPORT.csv",
+      "sha256": "ac8a01cafd4e149ca5252aae0b4420b2502c46e696ff918415b72b928f562575"
+    },
+    {
+      "bytes": 559,
+      "path": "raw/scalesim/holdout_gemm_192/r0/scale_outputs/aspdac_reviewer_p1_holdout_gemm_192_r0/DETAILED_ACCESS_REPORT.csv",
+      "sha256": "4a1422a47a413d89dda6930d558cf0eda9f7fe7b31ebdbe3897342c257a5373a"
+    },
+    {
+      "bytes": 31,
+      "path": "raw/scalesim/holdout_gemm_192/r0/scale_outputs/aspdac_reviewer_p1_holdout_gemm_192_r0/TIME_REPORT.csv",
+      "sha256": "ad3fd20739b7b4f20807ab597e7b279e185c6547a90b57495b6755fb6e346166"
+    },
+    {
+      "bytes": 14390,
+      "path": "raw/scalesim/holdout_gemm_192/r0/stderr.log",
+      "sha256": "46c496339451ce0f159edf2208fdaed697e3b6bd8cfe5913d5a364eb9f3e2e51"
+    },
+    {
+      "bytes": 1096,
+      "path": "raw/scalesim/holdout_gemm_192/r0/stdout.log",
+      "sha256": "34afcdbdf1559f5c248219878e66b31a3652bbf647bbe6c9fa22630817b555f5"
+    },
+    {
+      "bytes": 2430,
+      "path": "raw/scalesim/holdout_gemm_192/r1/command.json",
+      "sha256": "71e5988dc8c443d24ae9c598e9bbf5255b16fbde4ccbf43b3ff0562a0d11cf89"
+    },
+    {
+      "bytes": 795,
+      "path": "raw/scalesim/holdout_gemm_192/r1/inputs/aspdac_4x4_ws.cfg",
+      "sha256": "c2f6d45c5667f310ccafeb9d6c2785039e937c1b9ea4464baa4af22a6a8efa02"
+    },
+    {
+      "bytes": 51,
+      "path": "raw/scalesim/holdout_gemm_192/r1/inputs/holdout_gemm_192.csv",
+      "sha256": "ae192d94fbba4fb55043fe032e96894a8fb02b3fd665dc40d094fe60873444b7"
+    },
+    {
+      "bytes": 6728,
+      "path": "raw/scalesim/holdout_gemm_192/r1/result.json",
+      "sha256": "bba0208ddfc4747ae86be696348e8d259cec4d05a4bf45e331c0c7f8d82497ca"
+    },
+    {
+      "bytes": 241,
+      "path": "raw/scalesim/holdout_gemm_192/r1/scale_outputs/aspdac_reviewer_p1_holdout_gemm_192_r1/BANDWIDTH_REPORT.csv",
+      "sha256": "4d7d70f9ffb51d98474dd9f8d92cf271cf6a02624e23bcac061fc5ce7409fc49"
+    },
+    {
+      "bytes": 188,
+      "path": "raw/scalesim/holdout_gemm_192/r1/scale_outputs/aspdac_reviewer_p1_holdout_gemm_192_r1/COMPUTE_REPORT.csv",
+      "sha256": "ac8a01cafd4e149ca5252aae0b4420b2502c46e696ff918415b72b928f562575"
+    },
+    {
+      "bytes": 559,
+      "path": "raw/scalesim/holdout_gemm_192/r1/scale_outputs/aspdac_reviewer_p1_holdout_gemm_192_r1/DETAILED_ACCESS_REPORT.csv",
+      "sha256": "4a1422a47a413d89dda6930d558cf0eda9f7fe7b31ebdbe3897342c257a5373a"
+    },
+    {
+      "bytes": 31,
+      "path": "raw/scalesim/holdout_gemm_192/r1/scale_outputs/aspdac_reviewer_p1_holdout_gemm_192_r1/TIME_REPORT.csv",
+      "sha256": "ad3fd20739b7b4f20807ab597e7b279e185c6547a90b57495b6755fb6e346166"
+    },
+    {
+      "bytes": 14554,
+      "path": "raw/scalesim/holdout_gemm_192/r1/stderr.log",
+      "sha256": "e126f4087957d9c5bc5f650216e20fe0516df28767c783cc3d40eb0b341e58ec"
+    },
+    {
+      "bytes": 1096,
+      "path": "raw/scalesim/holdout_gemm_192/r1/stdout.log",
+      "sha256": "7d36c32aacb2f41bb54176d345b92b5baaef52893fe0fa7526c43c576a34b5d8"
+    },
+    {
+      "bytes": 2431,
+      "path": "raw/scalesim/holdout_gemm_384/r0/command.json",
+      "sha256": "15522747276f19aea1c359578cf387ffa458b7a350037835bc3229d6f03bfdf4"
+    },
+    {
+      "bytes": 795,
+      "path": "raw/scalesim/holdout_gemm_384/r0/inputs/aspdac_4x4_ws.cfg",
+      "sha256": "83f3a3077144d900092d03063192f1da7779ce21dfe6966b5701a32c5c9211f0"
+    },
+    {
+      "bytes": 51,
+      "path": "raw/scalesim/holdout_gemm_384/r0/inputs/holdout_gemm_384.csv",
+      "sha256": "cebe31be28354f401b45963a149739a70c8892fc6e6ce55b17d62823aa9e4366"
+    },
+    {
+      "bytes": 6749,
+      "path": "raw/scalesim/holdout_gemm_384/r0/result.json",
+      "sha256": "b3ea2647e0b2936ba04c934b62f8fb727abcf2a75f5978828c6615c8222595da"
+    },
+    {
+      "bytes": 248,
+      "path": "raw/scalesim/holdout_gemm_384/r0/scale_outputs/aspdac_reviewer_p1_holdout_gemm_384_r0/BANDWIDTH_REPORT.csv",
+      "sha256": "1a8f95cb0564befd8895d14d973abca23323df656ac02cca38b082caaf2ae4f8"
+    },
+    {
+      "bytes": 192,
+      "path": "raw/scalesim/holdout_gemm_384/r0/scale_outputs/aspdac_reviewer_p1_holdout_gemm_384_r0/COMPUTE_REPORT.csv",
+      "sha256": "902ba199ab0055729152aa7bff46062b6e7aff51124fc25ccfa8fe7973b7d264"
+    },
+    {
+      "bytes": 573,
+      "path": "raw/scalesim/holdout_gemm_384/r0/scale_outputs/aspdac_reviewer_p1_holdout_gemm_384_r0/DETAILED_ACCESS_REPORT.csv",
+      "sha256": "7de4e2449455e827b66e349b42d8a9d218bace1c6e6655b3feb12accaa9d78f7"
+    },
+    {
+      "bytes": 32,
+      "path": "raw/scalesim/holdout_gemm_384/r0/scale_outputs/aspdac_reviewer_p1_holdout_gemm_384_r0/TIME_REPORT.csv",
+      "sha256": "2191698b5d13944aee130d03dc8a2391f6cc86eb872ac265f9cc09f5e3b826eb"
+    },
+    {
+      "bytes": 160047,
+      "path": "raw/scalesim/holdout_gemm_384/r0/stderr.log",
+      "sha256": "570b1a00b83c02a3c37cd00642d1bec7f1e5376b8dfea19b9bba636692e7094b"
+    },
+    {
+      "bytes": 1099,
+      "path": "raw/scalesim/holdout_gemm_384/r0/stdout.log",
+      "sha256": "b03bd1975b336327b03bb5b8cef7a2418b67ba1b3efdf125255ff7868804aaa7"
+    },
+    {
+      "bytes": 2430,
+      "path": "raw/scalesim/holdout_gemm_384/r1/command.json",
+      "sha256": "6be29dde8848e6dd72901c1c2e9f016e86304a0fdcace01230f96b22dce6f227"
+    },
+    {
+      "bytes": 795,
+      "path": "raw/scalesim/holdout_gemm_384/r1/inputs/aspdac_4x4_ws.cfg",
+      "sha256": "ea7f6d5445e738445d54c47a1d6752bb11e5b615410acdae743812f8084ec565"
+    },
+    {
+      "bytes": 51,
+      "path": "raw/scalesim/holdout_gemm_384/r1/inputs/holdout_gemm_384.csv",
+      "sha256": "cebe31be28354f401b45963a149739a70c8892fc6e6ce55b17d62823aa9e4366"
+    },
+    {
+      "bytes": 6748,
+      "path": "raw/scalesim/holdout_gemm_384/r1/result.json",
+      "sha256": "369667f775e039fd92e9f8572c501044f1fa998ec7ec2a337d545f8c5d102e17"
+    },
+    {
+      "bytes": 248,
+      "path": "raw/scalesim/holdout_gemm_384/r1/scale_outputs/aspdac_reviewer_p1_holdout_gemm_384_r1/BANDWIDTH_REPORT.csv",
+      "sha256": "1a8f95cb0564befd8895d14d973abca23323df656ac02cca38b082caaf2ae4f8"
+    },
+    {
+      "bytes": 192,
+      "path": "raw/scalesim/holdout_gemm_384/r1/scale_outputs/aspdac_reviewer_p1_holdout_gemm_384_r1/COMPUTE_REPORT.csv",
+      "sha256": "902ba199ab0055729152aa7bff46062b6e7aff51124fc25ccfa8fe7973b7d264"
+    },
+    {
+      "bytes": 573,
+      "path": "raw/scalesim/holdout_gemm_384/r1/scale_outputs/aspdac_reviewer_p1_holdout_gemm_384_r1/DETAILED_ACCESS_REPORT.csv",
+      "sha256": "7de4e2449455e827b66e349b42d8a9d218bace1c6e6655b3feb12accaa9d78f7"
+    },
+    {
+      "bytes": 32,
+      "path": "raw/scalesim/holdout_gemm_384/r1/scale_outputs/aspdac_reviewer_p1_holdout_gemm_384_r1/TIME_REPORT.csv",
+      "sha256": "2191698b5d13944aee130d03dc8a2391f6cc86eb872ac265f9cc09f5e3b826eb"
+    },
+    {
+      "bytes": 161872,
+      "path": "raw/scalesim/holdout_gemm_384/r1/stderr.log",
+      "sha256": "103da772688f0a1265567acffd50e860817d593e168808b46973cc3c36042835"
+    },
+    {
+      "bytes": 1099,
+      "path": "raw/scalesim/holdout_gemm_384/r1/stdout.log",
+      "sha256": "7a49f516dc321a8fb6bdc67417574f5bb042dc2477355827d03dcc29ad320071"
+    },
+    {
+      "bytes": 2513,
+      "path": "raw/scalesim/holdout_rect_128x256x64/r0/command.json",
+      "sha256": "8693bc385bf6c997a244674cd725610349d1f586866ec7c355843ecac27256a8"
+    },
+    {
+      "bytes": 802,
+      "path": "raw/scalesim/holdout_rect_128x256x64/r0/inputs/aspdac_4x4_ws.cfg",
+      "sha256": "7735b3601348f499359582ddc30165871367155e6b924a45cbccc391dadeba29"
+    },
+    {
+      "bytes": 57,
+      "path": "raw/scalesim/holdout_rect_128x256x64/r0/inputs/holdout_rect_128x256x64.csv",
+      "sha256": "712f1e7b15ca646c15d92c9df482c54492980fb00c7c9d4656c228410fa12f6f"
+    },
+    {
+      "bytes": 6820,
+      "path": "raw/scalesim/holdout_rect_128x256x64/r0/result.json",
+      "sha256": "8c3d31e3f02f08bfdf5802bbd9c146674a74bae2ab60eb0459c3defba3a2e47c"
+    },
+    {
+      "bytes": 247,
+      "path": "raw/scalesim/holdout_rect_128x256x64/r0/scale_outputs/aspdac_reviewer_p1_holdout_rect_128x256x64_r0/BANDWIDTH_REPORT.csv",
+      "sha256": "736f1b69961530686bd22348d3c0e83c3b01542427b5f2ba4e1ef09f432f75c6"
+    },
+    {
+      "bytes": 190,
+      "path": "raw/scalesim/holdout_rect_128x256x64/r0/scale_outputs/aspdac_reviewer_p1_holdout_rect_128x256x64_r0/COMPUTE_REPORT.csv",
+      "sha256": "af87240f02679b95e461e9dcba54c177981801d67f9a96e2e6b517d04d75348f"
+    },
+    {
+      "bytes": 554,
+      "path": "raw/scalesim/holdout_rect_128x256x64/r0/scale_outputs/aspdac_reviewer_p1_holdout_rect_128x256x64_r0/DETAILED_ACCESS_REPORT.csv",
+      "sha256": "53b1c1977406b3705e33ddabc6398c58246571208714675d45a153fae97d3def"
+    },
+    {
+      "bytes": 31,
+      "path": "raw/scalesim/holdout_rect_128x256x64/r0/scale_outputs/aspdac_reviewer_p1_holdout_rect_128x256x64_r0/TIME_REPORT.csv",
+      "sha256": "7d7b7de554070b8bea3e6f689532d4191e83cdeb98a19145c9129533c31e9b4e"
+    },
+    {
+      "bytes": 4485,
+      "path": "raw/scalesim/holdout_rect_128x256x64/r0/stderr.log",
+      "sha256": "31c4feb5ace4a7c395eb84d618fc7fd64a67b8d49ef23b29b1300899595938ed"
+    },
+    {
+      "bytes": 1112,
+      "path": "raw/scalesim/holdout_rect_128x256x64/r0/stdout.log",
+      "sha256": "7252c063b7f4769d1213a7b3a047979d9d06a770c97fd2065512d058d3647201"
+    },
+    {
+      "bytes": 2513,
+      "path": "raw/scalesim/holdout_rect_128x256x64/r1/command.json",
+      "sha256": "4c9c21201dcc0e0fad165ea51d47fad82859766e855701f474262873fb5b6429"
+    },
+    {
+      "bytes": 802,
+      "path": "raw/scalesim/holdout_rect_128x256x64/r1/inputs/aspdac_4x4_ws.cfg",
+      "sha256": "54b550ccb99b97ddd126d372455f5d2f1b71cdbdc45abc277f35c11b0433a1ec"
+    },
+    {
+      "bytes": 57,
+      "path": "raw/scalesim/holdout_rect_128x256x64/r1/inputs/holdout_rect_128x256x64.csv",
+      "sha256": "712f1e7b15ca646c15d92c9df482c54492980fb00c7c9d4656c228410fa12f6f"
+    },
+    {
+      "bytes": 6820,
+      "path": "raw/scalesim/holdout_rect_128x256x64/r1/result.json",
+      "sha256": "55508d5c14490fbfe15f542640358539adbd17e6f70e69d399bf8bfd590b0ba0"
+    },
+    {
+      "bytes": 247,
+      "path": "raw/scalesim/holdout_rect_128x256x64/r1/scale_outputs/aspdac_reviewer_p1_holdout_rect_128x256x64_r1/BANDWIDTH_REPORT.csv",
+      "sha256": "736f1b69961530686bd22348d3c0e83c3b01542427b5f2ba4e1ef09f432f75c6"
+    },
+    {
+      "bytes": 190,
+      "path": "raw/scalesim/holdout_rect_128x256x64/r1/scale_outputs/aspdac_reviewer_p1_holdout_rect_128x256x64_r1/COMPUTE_REPORT.csv",
+      "sha256": "af87240f02679b95e461e9dcba54c177981801d67f9a96e2e6b517d04d75348f"
+    },
+    {
+      "bytes": 554,
+      "path": "raw/scalesim/holdout_rect_128x256x64/r1/scale_outputs/aspdac_reviewer_p1_holdout_rect_128x256x64_r1/DETAILED_ACCESS_REPORT.csv",
+      "sha256": "53b1c1977406b3705e33ddabc6398c58246571208714675d45a153fae97d3def"
+    },
+    {
+      "bytes": 31,
+      "path": "raw/scalesim/holdout_rect_128x256x64/r1/scale_outputs/aspdac_reviewer_p1_holdout_rect_128x256x64_r1/TIME_REPORT.csv",
+      "sha256": "7d7b7de554070b8bea3e6f689532d4191e83cdeb98a19145c9129533c31e9b4e"
+    },
+    {
+      "bytes": 4487,
+      "path": "raw/scalesim/holdout_rect_128x256x64/r1/stderr.log",
+      "sha256": "e9fa3a749875103ffab51b9a7f08efadaa6366094d314c22d6c3c2ec8d541e9a"
+    },
+    {
+      "bytes": 1112,
+      "path": "raw/scalesim/holdout_rect_128x256x64/r1/stdout.log",
+      "sha256": "a974504ca0efe18e1a1e64e259b0270e0898e0e0777ab3119ab179ede3961987"
+    },
+    {
+      "bytes": 2514,
+      "path": "raw/scalesim/holdout_rect_256x64x192/r0/command.json",
+      "sha256": "2516ae4f365eda8d29c7e9ce4d907aadce68c2a8aaa6ce0681ce8d9d21f51ffc"
+    },
+    {
+      "bytes": 802,
+      "path": "raw/scalesim/holdout_rect_256x64x192/r0/inputs/aspdac_4x4_ws.cfg",
+      "sha256": "a77206f69cf6066f94dd30adb3b31ab463faaf6c0fb73e8179220850c2ba0116"
+    },
+    {
+      "bytes": 57,
+      "path": "raw/scalesim/holdout_rect_256x64x192/r0/inputs/holdout_rect_256x64x192.csv",
+      "sha256": "597040eaba41dd0b87a5e4526234223745be209b48435a2f1fcee32c6293b6b2"
+    },
+    {
+      "bytes": 6824,
+      "path": "raw/scalesim/holdout_rect_256x64x192/r0/result.json",
+      "sha256": "c02a1bef164ed10d03a2202b1fe27e342207cf74977ffbd2a14072c8b4144c48"
+    },
+    {
+      "bytes": 248,
+      "path": "raw/scalesim/holdout_rect_256x64x192/r0/scale_outputs/aspdac_reviewer_p1_holdout_rect_256x64x192_r0/BANDWIDTH_REPORT.csv",
+      "sha256": "2d17f968d2613df1b605b75c497b4d1bd6f429de5040af3cabfd02d4160cba23"
+    },
+    {
+      "bytes": 192,
+      "path": "raw/scalesim/holdout_rect_256x64x192/r0/scale_outputs/aspdac_reviewer_p1_holdout_rect_256x64x192_r0/COMPUTE_REPORT.csv",
+      "sha256": "f71f8a1a7329f7639d0d8354230813c4db7382375fee647410e7876b77cacb7a"
+    },
+    {
+      "bytes": 554,
+      "path": "raw/scalesim/holdout_rect_256x64x192/r0/scale_outputs/aspdac_reviewer_p1_holdout_rect_256x64x192_r0/DETAILED_ACCESS_REPORT.csv",
+      "sha256": "4887c22b2fbf034614240bf3690cfd2c5ed8256a0a401fb9361dc8cd42a1a1da"
+    },
+    {
+      "bytes": 31,
+      "path": "raw/scalesim/holdout_rect_256x64x192/r0/scale_outputs/aspdac_reviewer_p1_holdout_rect_256x64x192_r0/TIME_REPORT.csv",
+      "sha256": "9021ce91bd281e63b6860d570afd7112b2df085db490a305c9bc1b097090999a"
+    },
+    {
+      "bytes": 6617,
+      "path": "raw/scalesim/holdout_rect_256x64x192/r0/stderr.log",
+      "sha256": "7dce155d25a94efd048b8ed5ed27944426a67cfb8b1f099248ddb343e3a8bd25"
+    },
+    {
+      "bytes": 1113,
+      "path": "raw/scalesim/holdout_rect_256x64x192/r0/stdout.log",
+      "sha256": "88963662c62b523d6682678e910a249f361f240db7c2dc0359a3ce96f762aaa1"
+    },
+    {
+      "bytes": 2514,
+      "path": "raw/scalesim/holdout_rect_256x64x192/r1/command.json",
+      "sha256": "2a4b369309f09ea6892c07f7d060fdf6dc74e571ac7812a3b4ab4301a5fb1fb1"
+    },
+    {
+      "bytes": 802,
+      "path": "raw/scalesim/holdout_rect_256x64x192/r1/inputs/aspdac_4x4_ws.cfg",
+      "sha256": "63b8ae4bac48b5fd6216cfaf553411b988ab344dae17c2fde4fe2cacfa6e28de"
+    },
+    {
+      "bytes": 57,
+      "path": "raw/scalesim/holdout_rect_256x64x192/r1/inputs/holdout_rect_256x64x192.csv",
+      "sha256": "597040eaba41dd0b87a5e4526234223745be209b48435a2f1fcee32c6293b6b2"
+    },
+    {
+      "bytes": 6824,
+      "path": "raw/scalesim/holdout_rect_256x64x192/r1/result.json",
+      "sha256": "b3b4128c0ba365c1cf85a863b37c912ee31b681d6ef4362c099fe25974a9596b"
+    },
+    {
+      "bytes": 248,
+      "path": "raw/scalesim/holdout_rect_256x64x192/r1/scale_outputs/aspdac_reviewer_p1_holdout_rect_256x64x192_r1/BANDWIDTH_REPORT.csv",
+      "sha256": "2d17f968d2613df1b605b75c497b4d1bd6f429de5040af3cabfd02d4160cba23"
+    },
+    {
+      "bytes": 192,
+      "path": "raw/scalesim/holdout_rect_256x64x192/r1/scale_outputs/aspdac_reviewer_p1_holdout_rect_256x64x192_r1/COMPUTE_REPORT.csv",
+      "sha256": "f71f8a1a7329f7639d0d8354230813c4db7382375fee647410e7876b77cacb7a"
+    },
+    {
+      "bytes": 554,
+      "path": "raw/scalesim/holdout_rect_256x64x192/r1/scale_outputs/aspdac_reviewer_p1_holdout_rect_256x64x192_r1/DETAILED_ACCESS_REPORT.csv",
+      "sha256": "4887c22b2fbf034614240bf3690cfd2c5ed8256a0a401fb9361dc8cd42a1a1da"
+    },
+    {
+      "bytes": 31,
+      "path": "raw/scalesim/holdout_rect_256x64x192/r1/scale_outputs/aspdac_reviewer_p1_holdout_rect_256x64x192_r1/TIME_REPORT.csv",
+      "sha256": "9021ce91bd281e63b6860d570afd7112b2df085db490a305c9bc1b097090999a"
+    },
+    {
+      "bytes": 6313,
+      "path": "raw/scalesim/holdout_rect_256x64x192/r1/stderr.log",
+      "sha256": "20ffbef341c825ffec713078d745553ab5539cad85ba387dbc71f940af8f26d7"
+    },
+    {
+      "bytes": 1113,
+      "path": "raw/scalesim/holdout_rect_256x64x192/r1/stdout.log",
+      "sha256": "ec7e9a34eb64f8ea2e99de4213ce32d1d6aac0b661474fb5d05f9fe712c6e044"
+    },
+    {
+      "bytes": 2512,
+      "path": "raw/scalesim/holdout_rect_64x384x128/r0/command.json",
+      "sha256": "510f0485d7340b6b909741f31db01769351f2cf98d69abdd07228e59c1ae0389"
+    },
+    {
+      "bytes": 802,
+      "path": "raw/scalesim/holdout_rect_64x384x128/r0/inputs/aspdac_4x4_ws.cfg",
+      "sha256": "c2d5514e823e14a8bec23fca50b8f8c0eb06dac0c4ee1d21a08b3875fa5c7ece"
+    },
+    {
+      "bytes": 57,
+      "path": "raw/scalesim/holdout_rect_64x384x128/r0/inputs/holdout_rect_64x384x128.csv",
+      "sha256": "c9ed00a6924a62e593102b8942111b45c936e357e73dc0e583bb5b0e6070f18c"
+    },
+    {
+      "bytes": 6822,
+      "path": "raw/scalesim/holdout_rect_64x384x128/r0/result.json",
+      "sha256": "270b0c05e8641918682340e6c377149b924e65f63f8e731bd5a40c0b3a2b96d6"
+    },
+    {
+      "bytes": 248,
+      "path": "raw/scalesim/holdout_rect_64x384x128/r0/scale_outputs/aspdac_reviewer_p1_holdout_rect_64x384x128_r0/BANDWIDTH_REPORT.csv",
+      "sha256": "478411099cf6c096cc71c00ac83dfe91efcf62985db4d9f8f6c6a429eaebe57b"
+    },
+    {
+      "bytes": 191,
+      "path": "raw/scalesim/holdout_rect_64x384x128/r0/scale_outputs/aspdac_reviewer_p1_holdout_rect_64x384x128_r0/COMPUTE_REPORT.csv",
+      "sha256": "d24a19d0e283a2a4a25dd48d6ffb59f899ed9cc97520749649ddc4b9f21b4ece"
+    },
+    {
+      "bytes": 556,
+      "path": "raw/scalesim/holdout_rect_64x384x128/r0/scale_outputs/aspdac_reviewer_p1_holdout_rect_64x384x128_r0/DETAILED_ACCESS_REPORT.csv",
+      "sha256": "f7cc3e4e5dcbbfbc43d5d72b479628827510148af35054a627dcb2cba388b751"
+    },
+    {
+      "bytes": 31,
+      "path": "raw/scalesim/holdout_rect_64x384x128/r0/scale_outputs/aspdac_reviewer_p1_holdout_rect_64x384x128_r0/TIME_REPORT.csv",
+      "sha256": "ce05c50d2cb8fdec646cbd8f5f6edb97c3cd4068234f8419cac39c34ef31c1a8"
+    },
+    {
+      "bytes": 6816,
+      "path": "raw/scalesim/holdout_rect_64x384x128/r0/stderr.log",
+      "sha256": "515e84615976d485c9a3a40ba05e752df00b30a7c83de0d9474b55d4e975d00f"
+    },
+    {
+      "bytes": 1112,
+      "path": "raw/scalesim/holdout_rect_64x384x128/r0/stdout.log",
+      "sha256": "c73edf43eb9028fff3e28f1f6757cd7c9e0a0929fa7bba8616fe645d716d71fa"
+    },
+    {
+      "bytes": 2514,
+      "path": "raw/scalesim/holdout_rect_64x384x128/r1/command.json",
+      "sha256": "1dd48f4dfdb351f7368ab5720ccfb214b568b2e427b7118dfe48cc3a3dfebd69"
+    },
+    {
+      "bytes": 802,
+      "path": "raw/scalesim/holdout_rect_64x384x128/r1/inputs/aspdac_4x4_ws.cfg",
+      "sha256": "775a47494268ddb992f9ec9df6b00c071f8fa18510c9b255480e56151f3fae68"
+    },
+    {
+      "bytes": 57,
+      "path": "raw/scalesim/holdout_rect_64x384x128/r1/inputs/holdout_rect_64x384x128.csv",
+      "sha256": "c9ed00a6924a62e593102b8942111b45c936e357e73dc0e583bb5b0e6070f18c"
+    },
+    {
+      "bytes": 6824,
+      "path": "raw/scalesim/holdout_rect_64x384x128/r1/result.json",
+      "sha256": "e373871890a8f138e180090ed9de572f6d0944a16bc1bd6612fd9f1b570f94ef"
+    },
+    {
+      "bytes": 248,
+      "path": "raw/scalesim/holdout_rect_64x384x128/r1/scale_outputs/aspdac_reviewer_p1_holdout_rect_64x384x128_r1/BANDWIDTH_REPORT.csv",
+      "sha256": "478411099cf6c096cc71c00ac83dfe91efcf62985db4d9f8f6c6a429eaebe57b"
+    },
+    {
+      "bytes": 191,
+      "path": "raw/scalesim/holdout_rect_64x384x128/r1/scale_outputs/aspdac_reviewer_p1_holdout_rect_64x384x128_r1/COMPUTE_REPORT.csv",
+      "sha256": "d24a19d0e283a2a4a25dd48d6ffb59f899ed9cc97520749649ddc4b9f21b4ece"
+    },
+    {
+      "bytes": 556,
+      "path": "raw/scalesim/holdout_rect_64x384x128/r1/scale_outputs/aspdac_reviewer_p1_holdout_rect_64x384x128_r1/DETAILED_ACCESS_REPORT.csv",
+      "sha256": "f7cc3e4e5dcbbfbc43d5d72b479628827510148af35054a627dcb2cba388b751"
+    },
+    {
+      "bytes": 31,
+      "path": "raw/scalesim/holdout_rect_64x384x128/r1/scale_outputs/aspdac_reviewer_p1_holdout_rect_64x384x128_r1/TIME_REPORT.csv",
+      "sha256": "ce05c50d2cb8fdec646cbd8f5f6edb97c3cd4068234f8419cac39c34ef31c1a8"
+    },
+    {
+      "bytes": 6819,
+      "path": "raw/scalesim/holdout_rect_64x384x128/r1/stderr.log",
+      "sha256": "3bfc77b436e98caa4404d471455ce5caf3b518e45131b4755e541bbd8f7a6f9e"
+    },
+    {
+      "bytes": 1112,
+      "path": "raw/scalesim/holdout_rect_64x384x128/r1/stdout.log",
+      "sha256": "a9bca5057fb78793ddd7f5791450d788289fe25ef8b669addec249db6a380fa0"
+    },
+    {
+      "bytes": 2366,
+      "path": "raw/stage/holdout_attn_qk_s096_d064/r0/result.json",
+      "sha256": "784a3008178c8150230c5714cf4c7be3b2328f8899bf2d375bdb6237fa0a8825"
+    },
+    {
+      "bytes": 2366,
+      "path": "raw/stage/holdout_attn_qk_s096_d064/r1/result.json",
+      "sha256": "871094aa897785a0b4df28ed58ed61cdfe022e4e0cc3b11c1546f21c7ec6b675"
+    },
+    {
+      "bytes": 2376,
+      "path": "raw/stage/holdout_attn_qk_s192_d064/r0/result.json",
+      "sha256": "f58b74e070deb782281c4a7c832135081340c9647e840cca0f310a7976bc8828"
+    },
+    {
+      "bytes": 2376,
+      "path": "raw/stage/holdout_attn_qk_s192_d064/r1/result.json",
+      "sha256": "706910ff3b3b192e91dc05d87c4fc318d53908ec5f9028e89d27123e801e88cc"
+    },
+    {
+      "bytes": 2348,
+      "path": "raw/stage/holdout_gemm_096/r0/result.json",
+      "sha256": "cac6c2acc8e21cf5b50195384d198a1642cd215024b43bd2b627870696ef3ae1"
+    },
+    {
+      "bytes": 2348,
+      "path": "raw/stage/holdout_gemm_096/r1/result.json",
+      "sha256": "2f74e40b042ac275d615002d79163408432a7dec45f754f4ead607c06aaf233f"
+    },
+    {
+      "bytes": 2362,
+      "path": "raw/stage/holdout_gemm_192/r0/result.json",
+      "sha256": "fa24d15ccf359c3134306cbf362379974db4a7dec459268dc30c526352c693cc"
+    },
+    {
+      "bytes": 2362,
+      "path": "raw/stage/holdout_gemm_192/r1/result.json",
+      "sha256": "8201d2f135123ab59a590137ba76ada014799d15ea9474795317cd39b4ac0371"
+    },
+    {
+      "bytes": 2373,
+      "path": "raw/stage/holdout_gemm_384/r0/result.json",
+      "sha256": "f54ec847f831d6f1452c9b2fab667f6bf582da8ff1e01acd9775253130b296bb"
+    },
+    {
+      "bytes": 2373,
+      "path": "raw/stage/holdout_gemm_384/r1/result.json",
+      "sha256": "7a4af2743614684498231b2de2a28c83d45222116703c60907369a6d19dd4945"
+    },
+    {
+      "bytes": 2372,
+      "path": "raw/stage/holdout_rect_128x256x64/r0/result.json",
+      "sha256": "5b9190d0a091b569f5c97add620d18997705f02d1c81968fdb55821d81493fe7"
+    },
+    {
+      "bytes": 2372,
+      "path": "raw/stage/holdout_rect_128x256x64/r1/result.json",
+      "sha256": "e75bc54f99de81bda656a00c1716bfd3753f58f20814f4fae74c74239663086a"
+    },
+    {
+      "bytes": 2372,
+      "path": "raw/stage/holdout_rect_256x64x192/r0/result.json",
+      "sha256": "96538bba50abf0808b0b8c548c00bf99666c1b45b08e40dda6d6089e1be047dd"
+    },
+    {
+      "bytes": 2372,
+      "path": "raw/stage/holdout_rect_256x64x192/r1/result.json",
+      "sha256": "44628ad6b1312ac1c4c624503cda3faa38999acc4469e55ff7ca3ed43c6ddb63"
+    },
+    {
+      "bytes": 2371,
+      "path": "raw/stage/holdout_rect_64x384x128/r0/result.json",
+      "sha256": "1c69fe8617a908b818189f1e018a33095c3f4355dcd69faf90a8a900c9243427"
+    },
+    {
+      "bytes": 2371,
+      "path": "raw/stage/holdout_rect_64x384x128/r1/result.json",
+      "sha256": "30cb6aec2eadbb57c5c697570ffa9db719f49168a0b121cbc33aba0d7bc67b74"
+    },
+    {
+      "bytes": 22928,
+      "path": "raw/stage/noc_n01_single_128/r0/result.json",
+      "sha256": "f0296cf03564147d34f786f62d8a0dfafeceb1f051a86cc56bce0cf27411a698"
+    },
+    {
+      "bytes": 22928,
+      "path": "raw/stage/noc_n01_single_128/r1/result.json",
+      "sha256": "7507d35c70ff5a809225cc65834cdf76855002d0f6615885534abed5dcfac6b6"
+    },
+    {
+      "bytes": 27272,
+      "path": "raw/stage/noc_n02_single_256_vc1/r0/result.json",
+      "sha256": "f78f9d07d3dfb9a00ef63b52bb1a190bc8869baec803be95a71facc46dc9d92e"
+    },
+    {
+      "bytes": 27272,
+      "path": "raw/stage/noc_n02_single_256_vc1/r1/result.json",
+      "sha256": "3ec45461bf881fb42acf4b4089f5f5c3579b29bee036cc02f1e17d4a50f621f3"
+    },
+    {
+      "bytes": 35760,
+      "path": "raw/stage/noc_n03_single_512_vc3/r0/result.json",
+      "sha256": "1786b1ffce0018f87831e3495326afdb4891107c8d1d03dceaa78615da9b828b"
+    },
+    {
+      "bytes": 35760,
+      "path": "raw/stage/noc_n03_single_512_vc3/r1/result.json",
+      "sha256": "a491792158020711ca4af521400cfbf8315fb526831460387337885a7e090e8a"
+    },
+    {
+      "bytes": 52476,
+      "path": "raw/stage/noc_n04_single_1024/r0/result.json",
+      "sha256": "a25f9e88b349752d492f6c8168ecc9891c1f9854ecc8f5463b8f58d0dfb21cc0"
+    },
+    {
+      "bytes": 52476,
+      "path": "raw/stage/noc_n04_single_1024/r1/result.json",
+      "sha256": "bcc3449587c0c2f418ec0341b807e19d2379a9175b7031f5635894925896358e"
+    },
+    {
+      "bytes": 39140,
+      "path": "raw/stage/noc_n05_contend_128/r0/result.json",
+      "sha256": "eb5f2ff691c05d89bdcde7d903c8eb819d28f21d0b43f95e81c5f2eea7ccb0b3"
+    },
+    {
+      "bytes": 39140,
+      "path": "raw/stage/noc_n05_contend_128/r1/result.json",
+      "sha256": "9c7e89ec682beb5c92aa478665ccddd6beac3420b75d78fc36a0f24be22f676e"
+    },
+    {
+      "bytes": 69346,
+      "path": "raw/stage/noc_n06_contend_512/r0/result.json",
+      "sha256": "0331ba13339ac73745add5086f6a0d024ffa370ea9bbf9b331e3627491cb422c"
+    },
+    {
+      "bytes": 69346,
+      "path": "raw/stage/noc_n06_contend_512/r1/result.json",
+      "sha256": "6d9bcca369befc57848fe2fbe261cc2a96b34bad05532f9bc9f952a55c31f237"
+    },
+    {
+      "bytes": 25188,
+      "path": "raw/stage/noc_n07_block_release_256/r0/result.json",
+      "sha256": "72d8c81701fe9d8fcc06b3d74c2434c9bf385a0eca680e7fa956301035892ec2"
+    },
+    {
+      "bytes": 25188,
+      "path": "raw/stage/noc_n07_block_release_256/r1/result.json",
+      "sha256": "b47a315ed7608f8876e0dcc27e5fd6591a7c661c042907aa4da388c97cf2f0a4"
+    },
+    {
+      "bytes": 50677,
+      "path": "raw/stage/noc_n08_block_tail_1024/r0/result.json",
+      "sha256": "610893d4c266cdfeb4987cfa6f7abc7c1ee2eaa67f01fdeef7d60b48af764ea7"
+    },
+    {
+      "bytes": 50677,
+      "path": "raw/stage/noc_n08_block_tail_1024/r1/result.json",
+      "sha256": "1d3261fa9bfed011a2279d9347c57d086f6219bdae31854abc3c13dde6f9f27e"
+    },
+    {
+      "bytes": 72040,
+      "path": "raw/stage/noc_n09_atomic_depth_boundary/r0/result.json",
+      "sha256": "1223af550f41c51a97abe6659ed4ee3933420d3ef5b86172640f792e768ac3dc"
+    },
+    {
+      "bytes": 72040,
+      "path": "raw/stage/noc_n09_atomic_depth_boundary/r1/result.json",
+      "sha256": "ff11f73bf206412fbc91fd7a88f3a5d229618953119dac7406960908ce1cefa0"
+    },
+    {
+      "bytes": 970,
+      "path": "summary/holdout_pair_status.csv",
+      "sha256": "218c00658e8dbeb38bd0e804ffb6deb6fdcf6bf829dfafb5fc0dac6bc7f806ca"
+    },
+    {
+      "bytes": 26650,
+      "path": "summary/holdout_scalesim_stage_accesses.csv",
+      "sha256": "71c89c0dd59a8e4db369fdf8abda653bc21498d57c728ffce9b5ab1283f1a497"
+    },
+    {
+      "bytes": 7744,
+      "path": "summary/holdout_scalesim_stage_timing.csv",
+      "sha256": "f2f2809883df8c328d12a62a9ee7100278b29fd4ab5b951aa3791846dfc93cd1"
+    },
+    {
+      "bytes": 6460,
+      "path": "summary/noc_contract_microbench.csv",
+      "sha256": "4e624e1b9c4014b6df8aaed783e7f0ad9696f8fcdd67d7876a957535851d8cbe"
+    },
+    {
+      "bytes": 67395,
+      "path": "summary/noc_cycle_timeline.csv",
+      "sha256": "800ce1f6e0dbb4a5c0e4bb01b1b67a570bdbfaf5d5993f0165ed69a754d43f76"
+    },
+    {
+      "bytes": 2273,
+      "path": "summary/noc_feature_boundary.csv",
+      "sha256": "cff3a5b5bd9f845ddc296031ad5237d086e516b973a863503a8bc07adf7ed22a"
+    },
+    {
+      "bytes": 122767,
+      "path": "summary/noc_oracle_timeline.csv",
+      "sha256": "f1f9e9ca44cc8cd6fdc27b19bbfe8d67d32170f0d8df012f661c7cd0b5de39ab"
+    }
+  ],
+  "generated_utc": "2026-07-16T19:41:56.032865+00:00",
+  "schema_version": "reviewer-extension-p1-bundle/1.0",
+  "status_counts": {
+    "completed": 46,
+    "failed": 0,
+    "not_supported": 4,
+    "pending": 0,
+    "running": 0,
+    "skipped": 0
+  }
+}

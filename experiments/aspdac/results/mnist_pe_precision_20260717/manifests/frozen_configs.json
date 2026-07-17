@@ -1,0 +1,18 @@
+[
+  {
+    "config_id": "MNIST-PE-PRECISION-20260717",
+    "source": "experiments/aspdac/specs/final_configs/mnist_pe_precision.yaml",
+    "source_sha256": "08b7916172a7ca4ff5da3e8a3bc217d1fddf45971fdb04c54f1efc1fa2e2471f",
+    "resolved_sha256": "ddef5c3a066d4b40ce57809b4469a0b7211f41f29ff8caca4494df1e97230f41",
+    "resolved_yaml": "experiments/aspdac/results/mnist_pe_precision_20260717/config/mnist_pe_precision_20260717.resolved.yaml",
+    "resolved_json": "experiments/aspdac/results/mnist_pe_precision_20260717/config/mnist_pe_precision_20260717.resolved.json"
+  },
+  {
+    "config_id": "MNIST-PE-PRECISION-20260717-R1",
+    "source": "experiments/aspdac/specs/final_configs/mnist_pe_precision.yaml",
+    "source_sha256": "20859e977c7111b5c0a5f3fa7ff3e84d61aca0a0614eb4622c6246b011a86f29",
+    "resolved_sha256": "408b5f7499205e9b4e645590e914f3a1b19723927af5a4080d90bc3c787a2a69",
+    "resolved_yaml": "experiments/aspdac/results/mnist_pe_precision_20260717/config/mnist_pe_precision_20260717_r1.resolved.yaml",
+    "resolved_json": "experiments/aspdac/results/mnist_pe_precision_20260717/config/mnist_pe_precision_20260717_r1.resolved.json"
+  }
+]

@@ -1,0 +1,51 @@
+{
+  "schema_version": "aspg-optical-intervention-output-manifest-1.0",
+  "claim_boundary": "Measured latency relief from WDM parallelism; no energy advantage and no equal-channel optical win.",
+  "files": [
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/raw/optical_intervention_electrical/c-51fa9674e6303cc1.json",
+      "sha256": "f4f326ec3294da561aa8920883302b4e968aad6e4df0362b9a0fc3184f628958",
+      "bytes": 6312
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/raw/optical_intervention_electrical/c-a8d951ef7c96103c.json",
+      "sha256": "bfea7694a9d614e02606ecd9b8e831bb5e2504b82793db5293c178006c12e821",
+      "bytes": 6312
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/raw/optical_intervention_wdm/c-1cfab1f1753dc917.json",
+      "sha256": "3a9990621b78c964222a48504e60b80c533b35961fd8df7aac96d9582f3ff704",
+      "bytes": 6361
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/raw/optical_intervention_wdm/c-1d99b3c28dd735ce.json",
+      "sha256": "8c86945759769e43667c01e39af76952987cb07576cc36ec854b626d7f385f74",
+      "bytes": 6347
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/summary/optical_intervention.csv",
+      "sha256": "1825054b9bb0f5215e4884fcb9816ec3b7b9d697aace06d5273c0ba9ab80aaef",
+      "bytes": 1374
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/summary/optical_intervention_summary.json",
+      "sha256": "dbd8c385b35e8eb3d0111dc76f361e8d26c5dad0b4d95da3cf4f3933023f7879",
+      "bytes": 311
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/summary/optical_intervention_claim_status.md",
+      "sha256": "af83f61618cb1ca1779d47a77bd221aa63fb9b30e5641005a2f9323e19b51fb5",
+      "bytes": 582
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/figures/STAGE_Figure4_Optical_Transport.pdf",
+      "sha256": "8ed8e33a35d3d131d9f6af76f7b9428264edf733be58e4e88ef2a8cd60a7b52f",
+      "bytes": 24059
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/figures/STAGE_Figure4_Optical_Transport.png",
+      "sha256": "150e8fd8344d7fe51d1086bd699c39fea570c92bca6d1fe200b2b29bb1170abe",
+      "bytes": 227863
+    }
+  ]
+}

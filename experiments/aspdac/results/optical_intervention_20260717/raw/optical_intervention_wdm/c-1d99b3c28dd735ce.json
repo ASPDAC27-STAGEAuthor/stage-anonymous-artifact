@@ -1,0 +1,141 @@
+{
+  "schema_version": "aspg-case-result-1.0",
+  "candidate_id": "c-1d99b3c28dd735ce",
+  "config_hash": "a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd",
+  "experiment_name": "optical_intervention_wdm",
+  "provider": "stage",
+  "scenario": "matched_transport",
+  "evidence_level": "measured",
+  "axes": {
+    "repeat": 1
+  },
+  "resolved": {
+    "schema_version": "aspg-candidate-config-1.0",
+    "base_config": {
+      "schema_version": "aspg-final-config-1.0",
+      "config_id": "S-Native",
+      "purpose": "STAGE-native heterogeneous system for bottleneck migration and co-design",
+      "evidence_level": "measured",
+      "compute": {
+        "processing_elements": 16,
+        "macs_per_pe_per_cycle": 256,
+        "aggregate_macs_per_cycle": 4096
+      },
+      "transport": {
+        "topology": "mesh_4x4",
+        "router_count": 16,
+        "endpoint_count": 16,
+        "link_bits_per_cycle": 128,
+        "packet_bits": 128
+      },
+      "memory": {
+        "ports": 1,
+        "latency_cycles": 5
+      },
+      "special_units": {
+        "reduction_latency_cycles": 2,
+        "softmax_latency_cycles": 8
+      },
+      "queue_capacity_packets": 4,
+      "workloads": {
+        "primary": "Attention_128_64",
+        "auxiliary": "GEMM_256"
+      }
+    },
+    "parameters": {
+      "transport_mode": "optical_contended",
+      "channel_capacity": 8,
+      "queue_depth": 4,
+      "payload_bits": 128,
+      "flow_count": 8,
+      "graph_hash": "bf10f69d94b3ad849c1317ccb75ca98e01f67de0ed54b3d19411f1ac344ecdf0",
+      "mapping_hash": "385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597",
+      "compute_hash": "289070eea5adcc3f7f275c07a9285ea55d089995358fc53159da644b3c87437e",
+      "memory_hash": "515cce82b207b8cfd8f34d4d6e93fd49feb4ba890d579bfb0e61603c05450c2d",
+      "endpoint_hash": "043bd74e95652e3021b7cb36e62a6c4c645f0155a003ccd8a148f96ea4908df1",
+      "transport_hash": "423ec39335e0d4129ab9e21bb2f4d29fbbd1fa4aae00e5e8a99b1fe7ff99b49f",
+      "case_id": "attention_128_64",
+      "packet_count": 8192,
+      "workload_hash": "fbe0d419e11d7eec23c613659c5bb85a287de71e1ecb8e63b58488287edd5272",
+      "repeat": 1
+    }
+  },
+  "environment": {
+    "captured_utc": "2026-07-17T09:09:12.523041Z",
+    "manager_version": "aspg-experiment-manager-1.0",
+    "git_commit": "a5e44fdd4899324b4d1b4730d77a91c1ca640ff2",
+    "git_status_porcelain_sha256": "ab3b045a71edcf0bb9fa8383417959bac48b6f6b2d036c3c2a52303e77205a93",
+    "host": "anonymous-host",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.10.6",
+    "dotnet": "9.0.315"
+  },
+  "status": "completed",
+  "completed_utc": "2026-07-17T09:09:13.2596368+00:00",
+  "measurement_kind": "stage_packet_cycle_transport_runtime",
+  "provenance": {
+    "graph_hash": "bf10f69d94b3ad849c1317ccb75ca98e01f67de0ed54b3d19411f1ac344ecdf0",
+    "WorkloadHash": "fbe0d419e11d7eec23c613659c5bb85a287de71e1ecb8e63b58488287edd5272",
+    "MappingHash": "385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597",
+    "ComputeHash": "289070eea5adcc3f7f275c07a9285ea55d089995358fc53159da644b3c87437e",
+    "MemoryHash": "515cce82b207b8cfd8f34d4d6e93fd49feb4ba890d579bfb0e61603c05450c2d",
+    "EndpointHash": "043bd74e95652e3021b7cb36e62a6c4c645f0155a003ccd8a148f96ea4908df1",
+    "TransportHash": "423ec39335e0d4129ab9e21bb2f4d29fbbd1fa4aae00e5e8a99b1fe7ff99b49f",
+    "model_profile_hash": "a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd",
+    "runtime": "HardwareSim.Core.AspdacTransportRuntime",
+    "trace_hash_algorithm": "sha256-event-stream-v1",
+    "paired_condition_contract": "workload/mapping/compute/memory/endpoint hashes invariant; transport hash only variable"
+  },
+  "metrics": {
+    "WorkloadId": "attention_128_64",
+    "TransportMode": "optical_contended",
+    "PacketCount": 8192,
+    "FlowCount": 8,
+    "ChannelCapacity": 8,
+    "PayloadBits": 128,
+    "EncodedBitsPerPacket": 132,
+    "ServiceCyclesPerPacket": 2,
+    "TotalCycles": 2049,
+    "MeanPacketLatencyCycles": 8.97265625,
+    "ConflictCount": 8184,
+    "BackpressureEvents": 8128,
+    "LogicalBits": 1048576,
+    "EncodedBits": 1081344,
+    "RouteLossDb": 4.109999999999999,
+    "ReceivedPowerDbm": -4.109999999999999,
+    "ReceiverMarginDb": 13.89,
+    "SerdesEnergyPj": 21626.88,
+    "ConversionEnergyPj": 86507.52,
+    "TuningEnergyPj": 0,
+    "LaserEnergyPj": 20490,
+    "LinkEnergyPj": 1081.344,
+    "EndpointEnergyPj": 10813.44,
+    "TotalTransportEnergyPj": 140519.184,
+    "BerStatus": "BER not modeled",
+    "WorkloadHash": "fbe0d419e11d7eec23c613659c5bb85a287de71e1ecb8e63b58488287edd5272",
+    "MappingHash": "385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597",
+    "ComputeHash": "289070eea5adcc3f7f275c07a9285ea55d089995358fc53159da644b3c87437e",
+    "MemoryHash": "515cce82b207b8cfd8f34d4d6e93fd49feb4ba890d579bfb0e61603c05450c2d",
+    "EndpointHash": "043bd74e95652e3021b7cb36e62a6c4c645f0155a003ccd8a148f96ea4908df1",
+    "TransportHash": "423ec39335e0d4129ab9e21bb2f4d29fbbd1fa4aae00e5e8a99b1fe7ff99b49f",
+    "CanonicalTraceSha256": "7f36ab0d6f4808e8af0643c40cacf56d7b31cbcae81f390d338cf88e09cd6297"
+  },
+  "limitations": [
+    "Transport-only replay: workload operation count, mapping, compute, memory, and endpoints are held by paired hashes.",
+    "Phase 8 functional energy defaults are shared reference values, not silicon-calibrated power.",
+    "BER not modeled."
+  ],
+  "command": [
+    "dotnet",
+    "ARTIFACT_ROOT\\tools\\HardwareSim.AspdacRunner\\bin\\Release\\net8.0\\HardwareSim.AspdacRunner.dll",
+    "--input",
+    "ARTIFACT_ROOT\\experiments\\aspdac\\results\\optical_intervention_20260717\\manifests\\runner_inputs\\c-1d99b3c28dd735ce.json",
+    "--output",
+    "ARTIFACT_ROOT\\experiments\\aspdac\\results\\optical_intervention_20260717\\manifests\\runner_outputs\\c-1d99b3c28dd735ce.json"
+  ],
+  "elapsed_seconds": 0.125,
+  "stdout": "",
+  "stderr": "",
+  "runner_input_sha256": "9f66e6f15baaccfd559b2b71904fb828215c524eabcd467ad2b6ceb8ff58fda7",
+  "runner_output_sha256": "cafc5d093d85a3d1340ff8645594449ead66092f665ef6ae035efe989a3fefdd"
+}

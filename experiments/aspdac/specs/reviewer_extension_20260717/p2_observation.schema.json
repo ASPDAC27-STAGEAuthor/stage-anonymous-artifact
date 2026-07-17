@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://stage.local/schemas/stage-reviewer-p2-observation-1.0.json",
+  "title": "STAGE reviewer extension P2 observation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "status",
+    "candidate_id",
+    "candidate_identity_sha256",
+    "preregistration_content_sha256",
+    "pair_id",
+    "role",
+    "repeat",
+    "invariant_pair_hash",
+    "intervention_pair_hash",
+    "resolved",
+    "metrics",
+    "provenance"
+  ],
+  "properties": {
+    "schema_version": {"const": "stage-reviewer-p2-observation-1.0"},
+    "status": {"const": "completed"},
+    "candidate_id": {"type": "string", "pattern": "^p2-[0-9a-f]{16}$"},
+    "candidate_identity_sha256": {"$ref": "#/$defs/sha256"},
+    "preregistration_content_sha256": {"$ref": "#/$defs/sha256"},
+    "pair_id": {"type": "string", "minLength": 1},
+    "role": {"enum": ["baseline", "intervention"]},
+    "repeat": {"enum": [0, 1]},
+    "invariant_pair_hash": {"$ref": "#/$defs/sha256"},
+    "intervention_pair_hash": {"$ref": "#/$defs/sha256"},
+    "resolved": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["parameters"],
+      "properties": {
+        "parameters": {"type": "object", "minProperties": 1}
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "required": [
+        "TotalCycles",
+        "ComputeServiceDemandCycles",
+        "MemoryServiceDemandCycles",
+        "NocServiceDemandCycles",
+        "ComputeCriticalCycles",
+        "MemoryCriticalCycles",
+        "NocCriticalCycles",
+        "ReductionCriticalCycles",
+        "SoftmaxCriticalCycles",
+        "ConversionCriticalCycles",
+        "DominantBottleneck",
+        "CanonicalTraceSha256"
+      ],
+      "properties": {
+        "TotalCycles": {"type": "integer", "minimum": 0},
+        "ComputeServiceDemandCycles": {"type": "integer", "minimum": 0},
+        "MemoryServiceDemandCycles": {"type": "integer", "minimum": 0},
+        "NocServiceDemandCycles": {"type": "integer", "minimum": 0},
+        "ComputeCriticalCycles": {"type": "integer", "minimum": 0},
+        "MemoryCriticalCycles": {"type": "integer", "minimum": 0},
+        "NocCriticalCycles": {"type": "integer", "minimum": 0},
+        "ReductionCriticalCycles": {"type": "integer", "minimum": 0},
+        "SoftmaxCriticalCycles": {"type": "integer", "minimum": 0},
+        "ConversionCriticalCycles": {"type": "integer", "minimum": 0},
+        "DominantBottleneck": {
+          "enum": ["compute", "memory", "noc", "reduction", "softmax", "conversion"]
+        },
+        "CanonicalTraceSha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "provenance": {"type": "object"}
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

@@ -1,0 +1,31 @@
+schema_version: aspg-final-config-1.0
+config_id: S-CIM
+purpose: Matched Phase 7C digital versus Phase 9 CIM comparison
+evidence_level: exact_and_statistical
+pairing:
+  digital_template: phase7c.digital_pe
+  cim_template: phase9.cim_pe.literature_backed
+  same_workload: true
+  same_operation_count: true
+  comparable_mapping: true
+modes:
+  - functional_exact
+  - characterization_fixed_seed
+  - characterization_multi_seed
+statistics:
+  fixed_seed: 42
+  seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  ci: student_t_95
+report:
+  - latency_cycles
+  - energy_per_operation_pj
+  - output_error
+  - adc_energy_pj
+  - dac_energy_pj
+  - array_energy_pj
+  - decoder_controller_energy_pj
+  - buffer_accumulator_energy_pj
+  - footprint_um2
+unknown_policy: Unknown values remain unknown and are never coerced to zero.
+profile_policy: Estimated profiles retain evidence references and uncertainty.
+

@@ -1,0 +1,24 @@
+{
+  "schema_version": "aspg-config-revision-history-1.0",
+  "active_config_id": "V-SS",
+  "revisions": [
+    {
+      "revision": 1,
+      "recorded_utc": "2026-07-16T09:25:06.229112+00:00",
+      "phase": "Phase 10 IN_PROGRESS",
+      "reason": "Pre-run matched-model correction: align V-SS request queues, SRAM capacity, ports, banks, and USER bandwidth to the frozen SCALE-Sim deck before any RQ3 STAGE measurement.",
+      "old_source_sha256": "372223458bdfe435f5ef07523f90cf5ca3be9d85b7e0d399c02b5ac4b7c7a9e6",
+      "old_resolved_sha256": "a03ef8d384984c94cb784bc4f595549ad280d1144aedcb868ef4d7a4b8b6994f",
+      "old_resolved_yaml": "experiments/aspdac/results/final_20260716/config/v_ss.preflight.resolved.yaml",
+      "old_resolved_json": "experiments/aspdac/results/final_20260716/config/v_ss.preflight.resolved.json",
+      "new_source_sha256": "b9c74f63a15f5e6625bd6f0037211bcf20fddc9948f8e9cd0a1e48861ed770c4",
+      "new_resolved_sha256": "31c924deb3b71967f90237fd5a6f33c502046d5613e349136fd8c673e9537f79",
+      "new_resolved_yaml": "experiments/aspdac/results/final_20260716/config/v_ss.resolved.yaml",
+      "new_resolved_json": "experiments/aspdac/results/final_20260716/config/v_ss.resolved.json",
+      "authoritative_external_config": "experiments/aspdac/results/external_draft_20260716/scalesim/aspdac_4x4_ws.cfg",
+      "authoritative_external_config_sha256": "e00ddda32f020bcf713f3afc22539243a5b4250786d1e9b90999df23177ed0bd",
+      "data_invalidated": false,
+      "data_invalidation_reason": "No RQ3 V-SS data existed at revision time; the original config-audit smoke is retained as preflight history and superseded by a new smoke."
+    }
+  ]
+}

@@ -1,0 +1,4702 @@
+{
+  "schema_version": "1.0",
+  "components": [
+    {
+      "id": "attention_source",
+      "name": "Attention Activations",
+      "type": "workloadSource",
+      "position": {
+        "x": 1,
+        "y": 2
+      },
+      "ports": [
+        {
+          "name": "out",
+          "direction": "output",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false
+        }
+      ],
+      "parameters": {
+        "packet_count": "8",
+        "packet_bits": "128",
+        "inject_interval": "2",
+        "inject_count": "8"
+      },
+      "modelRef": null,
+      "latencyModel": null,
+      "energyModel": null,
+      "areaModel": null,
+      "visualStyle": {},
+      "internalState": {}
+    },
+    {
+      "id": "hbm_activations",
+      "name": "HBM Activation Bank",
+      "type": "memory",
+      "position": {
+        "x": 3,
+        "y": 2
+      },
+      "ports": [
+        {
+          "name": "in",
+          "direction": "input",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false
+        },
+        {
+          "name": "out",
+          "direction": "output",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false
+        }
+      ],
+      "parameters": {
+        "memory_latency_cycles": "1",
+        "read_latency_cycles": "5",
+        "write_latency_cycles": "5",
+        "memory_ports": "1",
+        "capacity_bits": "67108864"
+      },
+      "modelRef": null,
+      "latencyModel": null,
+      "energyModel": null,
+      "areaModel": null,
+      "visualStyle": {},
+      "internalState": {}
+    },
+    {
+      "id": "io_serializer_ch0",
+      "name": "TX SerDes ch0",
+      "type": "custom",
+      "type_id": "com.hardware-sim.first-party.interface.serializer",
+      "position": {
+        "x": 5,
+        "y": 2
+      },
+      "ports": [
+        {
+          "name": "parallel_in",
+          "direction": "input",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "parallel_packet",
+          "units": "bit|lane"
+        },
+        {
+          "name": "serial_out",
+          "direction": "output",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "encoded_serial_bitstream",
+          "units": "bit|lane"
+        }
+      ],
+      "parameters": {
+        "parallel_width_bits": "64",
+        "lane_count": "4",
+        "lane_rate_bits_per_cycle": "32",
+        "encoding": "64b66b",
+        "gearbox_latency_cycles": "1",
+        "cdr_latency_cycles": "2",
+        "queue_depth": "4",
+        "energy_pj_per_bit": "0.01",
+        "serialization_owner": "link",
+        "payload_bits": "128",
+        "service_cycles_per_packet": "2",
+        "encoded_bits_per_packet": "132"
+      },
+      "model_ref": null,
+      "latency_model": null,
+      "energy_model": null,
+      "area_model": null,
+      "visualStyle": {
+        "plugin_type_id": "com.hardware-sim.first-party.interface.serializer",
+        "plugin_glyph": "serializer",
+        "plugin_color": "#FF6B9A"
+      },
+      "internalState": {}
+    },
+    {
+      "id": "io_eo_ch0",
+      "name": "I/O E/O 1550 nm",
+      "type": "custom",
+      "type_id": "com.hardware-sim.first-party.optical.eo-converter",
+      "position": {
+        "x": 7,
+        "y": 2
+      },
+      "ports": [
+        {
+          "name": "digital_in",
+          "direction": "input",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "digital_payload",
+          "units": "bit"
+        },
+        {
+          "name": "optical_out",
+          "direction": "output",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "control",
+          "direction": "input",
+          "signalType": "control",
+          "dataType": "config",
+          "precision": "any",
+          "protocol": "requestResponse",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "converter_control",
+          "units": "configuration"
+        }
+      ],
+      "parameters": {
+        "wavelength_nm": "1550",
+        "channel_id": "ch0",
+        "optical_power_dbm": "0",
+        "latency_cycles": "1",
+        "conversion_energy_pj_per_bit": "0.04",
+        "adapter_runtime_enabled": "true",
+        "adapter_latency_cycles": "1",
+        "adapter_energy_pj_per_bit": "0.04",
+        "plugin_runtime_latency_cycles": "1",
+        "plugin_energy_pj_per_bit": "0.04",
+        "plugin_energy_pj_per_packet": "0",
+        "adapter_contributes_optical_energy": "false",
+        "adapter_contributes_conversion_energy": "true"
+      },
+      "model_ref": null,
+      "latency_model": null,
+      "energy_model": null,
+      "area_model": null,
+      "visualStyle": {
+        "plugin_type_id": "com.hardware-sim.first-party.optical.eo-converter",
+        "plugin_glyph": "eo-converter",
+        "plugin_color": "#F87171"
+      },
+      "internalState": {}
+    },
+    {
+      "id": "weight_source",
+      "name": "Attention Weights",
+      "type": "workloadSource",
+      "position": {
+        "x": 1,
+        "y": 5
+      },
+      "ports": [
+        {
+          "name": "out",
+          "direction": "output",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false
+        }
+      ],
+      "parameters": {
+        "packet_count": "4",
+        "packet_bits": "128",
+        "inject_interval": "2",
+        "inject_count": "4"
+      },
+      "modelRef": null,
+      "latencyModel": null,
+      "energyModel": null,
+      "areaModel": null,
+      "visualStyle": {},
+      "internalState": {}
+    },
+    {
+      "id": "hbm_weights",
+      "name": "HBM Weight Bank",
+      "type": "memory",
+      "position": {
+        "x": 3,
+        "y": 5
+      },
+      "ports": [
+        {
+          "name": "in",
+          "direction": "input",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false
+        },
+        {
+          "name": "out",
+          "direction": "output",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false
+        }
+      ],
+      "parameters": {
+        "memory_latency_cycles": "1",
+        "read_latency_cycles": "5",
+        "write_latency_cycles": "5",
+        "memory_ports": "1",
+        "capacity_bits": "67108864"
+      },
+      "modelRef": null,
+      "latencyModel": null,
+      "energyModel": null,
+      "areaModel": null,
+      "visualStyle": {},
+      "internalState": {}
+    },
+    {
+      "id": "io_serializer_ch1",
+      "name": "TX SerDes ch1",
+      "type": "custom",
+      "type_id": "com.hardware-sim.first-party.interface.serializer",
+      "position": {
+        "x": 5,
+        "y": 5
+      },
+      "ports": [
+        {
+          "name": "parallel_in",
+          "direction": "input",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "parallel_packet",
+          "units": "bit|lane"
+        },
+        {
+          "name": "serial_out",
+          "direction": "output",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "encoded_serial_bitstream",
+          "units": "bit|lane"
+        }
+      ],
+      "parameters": {
+        "parallel_width_bits": "64",
+        "lane_count": "4",
+        "lane_rate_bits_per_cycle": "32",
+        "encoding": "64b66b",
+        "gearbox_latency_cycles": "1",
+        "cdr_latency_cycles": "2",
+        "queue_depth": "4",
+        "energy_pj_per_bit": "0.01",
+        "serialization_owner": "link",
+        "payload_bits": "128",
+        "service_cycles_per_packet": "2",
+        "encoded_bits_per_packet": "132"
+      },
+      "model_ref": null,
+      "latency_model": null,
+      "energy_model": null,
+      "area_model": null,
+      "visualStyle": {
+        "plugin_type_id": "com.hardware-sim.first-party.interface.serializer",
+        "plugin_glyph": "serializer",
+        "plugin_color": "#FF6B9A"
+      },
+      "internalState": {}
+    },
+    {
+      "id": "io_eo_ch1",
+      "name": "I/O E/O 1551 nm",
+      "type": "custom",
+      "type_id": "com.hardware-sim.first-party.optical.eo-converter",
+      "position": {
+        "x": 7,
+        "y": 5
+      },
+      "ports": [
+        {
+          "name": "digital_in",
+          "direction": "input",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "digital_payload",
+          "units": "bit"
+        },
+        {
+          "name": "optical_out",
+          "direction": "output",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "control",
+          "direction": "input",
+          "signalType": "control",
+          "dataType": "config",
+          "precision": "any",
+          "protocol": "requestResponse",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "converter_control",
+          "units": "configuration"
+        }
+      ],
+      "parameters": {
+        "wavelength_nm": "1551",
+        "channel_id": "ch1",
+        "optical_power_dbm": "0",
+        "latency_cycles": "1",
+        "conversion_energy_pj_per_bit": "0.04",
+        "adapter_runtime_enabled": "true",
+        "adapter_latency_cycles": "1",
+        "adapter_energy_pj_per_bit": "0.04",
+        "plugin_runtime_latency_cycles": "1",
+        "plugin_energy_pj_per_bit": "0.04",
+        "plugin_energy_pj_per_packet": "0",
+        "adapter_contributes_optical_energy": "false",
+        "adapter_contributes_conversion_energy": "true"
+      },
+      "model_ref": null,
+      "latency_model": null,
+      "energy_model": null,
+      "area_model": null,
+      "visualStyle": {
+        "plugin_type_id": "com.hardware-sim.first-party.optical.eo-converter",
+        "plugin_glyph": "eo-converter",
+        "plugin_color": "#F87171"
+      },
+      "internalState": {}
+    },
+    {
+      "id": "io_oe_return_ch0",
+      "name": "I/O O/E Return ch0",
+      "type": "custom",
+      "type_id": "com.hardware-sim.first-party.optical.oe-converter",
+      "position": {
+        "x": 7,
+        "y": 10
+      },
+      "ports": [
+        {
+          "name": "optical_in",
+          "direction": "input",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "detector_current_in",
+          "direction": "input",
+          "signalType": "analog",
+          "dataType": "scalar",
+          "precision": "analog",
+          "protocol": "streaming",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "photocurrent",
+          "units": "A"
+        },
+        {
+          "name": "digital_out",
+          "direction": "output",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "digital_payload",
+          "units": "bit"
+        },
+        {
+          "name": "control",
+          "direction": "input",
+          "signalType": "control",
+          "dataType": "config",
+          "precision": "any",
+          "protocol": "requestResponse",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "converter_control",
+          "units": "configuration"
+        }
+      ],
+      "parameters": {
+        "receiver_sensitivity_dbm": "-18",
+        "snr_threshold_db": "10",
+        "ber_model": "none",
+        "output_precision": "int8",
+        "latency_cycles": "1",
+        "conversion_energy_pj_per_bit": "0.04",
+        "adapter_runtime_enabled": "true",
+        "adapter_latency_cycles": "1",
+        "adapter_energy_pj_per_bit": "0.04",
+        "plugin_runtime_latency_cycles": "1",
+        "plugin_energy_pj_per_bit": "0.04",
+        "plugin_energy_pj_per_packet": "0",
+        "adapter_contributes_optical_energy": "false",
+        "adapter_contributes_conversion_energy": "true"
+      },
+      "model_ref": null,
+      "latency_model": null,
+      "energy_model": null,
+      "area_model": null,
+      "visualStyle": {
+        "plugin_type_id": "com.hardware-sim.first-party.optical.oe-converter",
+        "plugin_glyph": "oe-converter",
+        "plugin_color": "#38BDF8"
+      },
+      "internalState": {}
+    },
+    {
+      "id": "io_deserializer_ch0",
+      "name": "RX SerDes ch0",
+      "type": "custom",
+      "type_id": "com.hardware-sim.first-party.interface.deserializer",
+      "position": {
+        "x": 5,
+        "y": 10
+      },
+      "ports": [
+        {
+          "name": "serial_in",
+          "direction": "input",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "encoded_serial_bitstream",
+          "units": "bit|lane"
+        },
+        {
+          "name": "parallel_out",
+          "direction": "output",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "parallel_packet",
+          "units": "bit|lane"
+        }
+      ],
+      "parameters": {
+        "parallel_width_bits": "64",
+        "lane_count": "4",
+        "lane_rate_bits_per_cycle": "32",
+        "encoding": "64b66b",
+        "gearbox_latency_cycles": "1",
+        "cdr_latency_cycles": "2",
+        "queue_depth": "4",
+        "energy_pj_per_bit": "0.01",
+        "serialization_owner": "link",
+        "payload_bits": "128",
+        "service_cycles_per_packet": "2",
+        "encoded_bits_per_packet": "132"
+      },
+      "model_ref": null,
+      "latency_model": null,
+      "energy_model": null,
+      "area_model": null,
+      "visualStyle": {
+        "plugin_type_id": "com.hardware-sim.first-party.interface.deserializer",
+        "plugin_glyph": "deserializer",
+        "plugin_color": "#60A5FA"
+      },
+      "internalState": {}
+    },
+    {
+      "id": "io_oe_return_ch1",
+      "name": "I/O O/E Return ch1",
+      "type": "custom",
+      "type_id": "com.hardware-sim.first-party.optical.oe-converter",
+      "position": {
+        "x": 7,
+        "y": 12
+      },
+      "ports": [
+        {
+          "name": "optical_in",
+          "direction": "input",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "detector_current_in",
+          "direction": "input",
+          "signalType": "analog",
+          "dataType": "scalar",
+          "precision": "analog",
+          "protocol": "streaming",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "photocurrent",
+          "units": "A"
+        },
+        {
+          "name": "digital_out",
+          "direction": "output",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "digital_payload",
+          "units": "bit"
+        },
+        {
+          "name": "control",
+          "direction": "input",
+          "signalType": "control",
+          "dataType": "config",
+          "precision": "any",
+          "protocol": "requestResponse",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "converter_control",
+          "units": "configuration"
+        }
+      ],
+      "parameters": {
+        "receiver_sensitivity_dbm": "-18",
+        "snr_threshold_db": "10",
+        "ber_model": "none",
+        "output_precision": "int8",
+        "latency_cycles": "1",
+        "conversion_energy_pj_per_bit": "0.04",
+        "adapter_runtime_enabled": "true",
+        "adapter_latency_cycles": "1",
+        "adapter_energy_pj_per_bit": "0.04",
+        "plugin_runtime_latency_cycles": "1",
+        "plugin_energy_pj_per_bit": "0.04",
+        "plugin_energy_pj_per_packet": "0",
+        "adapter_contributes_optical_energy": "false",
+        "adapter_contributes_conversion_energy": "true"
+      },
+      "model_ref": null,
+      "latency_model": null,
+      "energy_model": null,
+      "area_model": null,
+      "visualStyle": {
+        "plugin_type_id": "com.hardware-sim.first-party.optical.oe-converter",
+        "plugin_glyph": "oe-converter",
+        "plugin_color": "#38BDF8"
+      },
+      "internalState": {}
+    },
+    {
+      "id": "io_deserializer_ch1",
+      "name": "RX SerDes ch1",
+      "type": "custom",
+      "type_id": "com.hardware-sim.first-party.interface.deserializer",
+      "position": {
+        "x": 5,
+        "y": 12
+      },
+      "ports": [
+        {
+          "name": "serial_in",
+          "direction": "input",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "encoded_serial_bitstream",
+          "units": "bit|lane"
+        },
+        {
+          "name": "parallel_out",
+          "direction": "output",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "parallel_packet",
+          "units": "bit|lane"
+        }
+      ],
+      "parameters": {
+        "parallel_width_bits": "64",
+        "lane_count": "4",
+        "lane_rate_bits_per_cycle": "32",
+        "encoding": "64b66b",
+        "gearbox_latency_cycles": "1",
+        "cdr_latency_cycles": "2",
+        "queue_depth": "4",
+        "energy_pj_per_bit": "0.01",
+        "serialization_owner": "link",
+        "payload_bits": "128",
+        "service_cycles_per_packet": "2",
+        "encoded_bits_per_packet": "132"
+      },
+      "model_ref": null,
+      "latency_model": null,
+      "energy_model": null,
+      "area_model": null,
+      "visualStyle": {
+        "plugin_type_id": "com.hardware-sim.first-party.interface.deserializer",
+        "plugin_glyph": "deserializer",
+        "plugin_color": "#60A5FA"
+      },
+      "internalState": {}
+    },
+    {
+      "id": "result_router",
+      "name": "Result Merge Router",
+      "type": "router",
+      "position": {
+        "x": 3,
+        "y": 11
+      },
+      "ports": [
+        {
+          "name": "in",
+          "direction": "input",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": true
+        },
+        {
+          "name": "out",
+          "direction": "output",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false
+        }
+      ],
+      "parameters": {
+        "virtual_channels": "1",
+        "num_ports": "3",
+        "vc_depth_flits": "16"
+      },
+      "modelRef": null,
+      "latencyModel": null,
+      "energyModel": null,
+      "areaModel": null,
+      "visualStyle": {},
+      "internalState": {}
+    },
+    {
+      "id": "result_memory",
+      "name": "Result Buffer",
+      "type": "memory",
+      "position": {
+        "x": 2,
+        "y": 11
+      },
+      "ports": [
+        {
+          "name": "in",
+          "direction": "input",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false
+        },
+        {
+          "name": "out",
+          "direction": "output",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false
+        }
+      ],
+      "parameters": {
+        "memory_latency_cycles": "1",
+        "read_latency_cycles": "5",
+        "write_latency_cycles": "5",
+        "memory_ports": "1"
+      },
+      "modelRef": null,
+      "latencyModel": null,
+      "energyModel": null,
+      "areaModel": null,
+      "visualStyle": {},
+      "internalState": {}
+    },
+    {
+      "id": "attention_sink",
+      "name": "Attention Output",
+      "type": "workloadSink",
+      "position": {
+        "x": 1,
+        "y": 11
+      },
+      "ports": [
+        {
+          "name": "in",
+          "direction": "input",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false
+        }
+      ],
+      "parameters": {},
+      "modelRef": null,
+      "latencyModel": null,
+      "energyModel": null,
+      "areaModel": null,
+      "visualStyle": {},
+      "internalState": {}
+    },
+    {
+      "id": "fwd_wdm_mux",
+      "name": "Forward WDM Mux",
+      "type": "custom",
+      "type_id": "com.hardware-sim.first-party.optical.wdm-mux",
+      "position": {
+        "x": 9,
+        "y": 3
+      },
+      "ports": [
+        {
+          "name": "ch0_in",
+          "direction": "input",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "ch1_in",
+          "direction": "input",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "ch2_in",
+          "direction": "input",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "ch3_in",
+          "direction": "input",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "wdm_out",
+          "direction": "output",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "config",
+          "direction": "input",
+          "signalType": "control",
+          "dataType": "config",
+          "precision": "any",
+          "protocol": "requestResponse",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "wavelength_allocation",
+          "units": "configuration"
+        }
+      ],
+      "parameters": {
+        "channel_count": "2",
+        "allocation_mode": "fixed",
+        "channel_table_nm": "1550,1551",
+        "channel_tolerance_nm": "0.1",
+        "insertion_loss_db": "0.5",
+        "crosstalk_db": "0",
+        "queue_depth": "4",
+        "latency_cycles": "1"
+      },
+      "model_ref": null,
+      "latency_model": null,
+      "energy_model": null,
+      "area_model": null,
+      "visualStyle": {
+        "plugin_type_id": "com.hardware-sim.first-party.optical.wdm-mux",
+        "plugin_glyph": "wdm-mux",
+        "plugin_color": "#FB923C"
+      },
+      "internalState": {}
+    },
+    {
+      "id": "fwd_interposer_waveguide",
+      "name": "Forward SiN Waveguide",
+      "type": "custom",
+      "type_id": "com.hardware-sim.first-party.optical.link",
+      "position": {
+        "x": 11,
+        "y": 3
+      },
+      "ports": [
+        {
+          "name": "optical_in",
+          "direction": "input",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "optical_out",
+          "direction": "output",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        }
+      ],
+      "parameters": {
+        "waveguide_material": "silicon_nitride",
+        "dynamic_energy_pj_per_bit": "0.001",
+        "latency_cycles": "0",
+        "bend_loss_db": "0.01",
+        "propagation_loss_db_per_mm": "0.1"
+      },
+      "model_ref": null,
+      "latency_model": null,
+      "energy_model": null,
+      "area_model": null,
+      "visualStyle": {
+        "plugin_type_id": "com.hardware-sim.first-party.optical.link",
+        "plugin_glyph": "optical-link",
+        "plugin_color": "#22D3EE"
+      },
+      "internalState": {}
+    },
+    {
+      "id": "fwd_wdm_demux",
+      "name": "Forward WDM Demux",
+      "type": "custom",
+      "type_id": "com.hardware-sim.first-party.optical.wdm-demux",
+      "position": {
+        "x": 13,
+        "y": 3
+      },
+      "ports": [
+        {
+          "name": "wdm_in",
+          "direction": "input",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "ch0_out",
+          "direction": "output",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "ch1_out",
+          "direction": "output",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "ch2_out",
+          "direction": "output",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "ch3_out",
+          "direction": "output",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "config",
+          "direction": "input",
+          "signalType": "control",
+          "dataType": "config",
+          "precision": "any",
+          "protocol": "requestResponse",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "wavelength_allocation",
+          "units": "configuration"
+        }
+      ],
+      "parameters": {
+        "channel_count": "2",
+        "allocation_mode": "fixed",
+        "channel_table_nm": "1550,1551",
+        "channel_tolerance_nm": "0.1",
+        "insertion_loss_db": "0.5",
+        "crosstalk_db": "0",
+        "queue_depth": "4",
+        "latency_cycles": "1",
+        "unmatched_policy": "stall"
+      },
+      "model_ref": null,
+      "latency_model": null,
+      "energy_model": null,
+      "area_model": null,
+      "visualStyle": {
+        "plugin_type_id": "com.hardware-sim.first-party.optical.wdm-demux",
+        "plugin_glyph": "wdm-demux",
+        "plugin_color": "#A3E635"
+      },
+      "internalState": {}
+    },
+    {
+      "id": "return_wdm_mux",
+      "name": "Return WDM Mux",
+      "type": "custom",
+      "type_id": "com.hardware-sim.first-party.optical.wdm-mux",
+      "position": {
+        "x": 13,
+        "y": 11
+      },
+      "ports": [
+        {
+          "name": "ch0_in",
+          "direction": "input",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "ch1_in",
+          "direction": "input",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "ch2_in",
+          "direction": "input",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "ch3_in",
+          "direction": "input",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "wdm_out",
+          "direction": "output",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "config",
+          "direction": "input",
+          "signalType": "control",
+          "dataType": "config",
+          "precision": "any",
+          "protocol": "requestResponse",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "wavelength_allocation",
+          "units": "configuration"
+        }
+      ],
+      "parameters": {
+        "channel_count": "2",
+        "allocation_mode": "fixed",
+        "channel_table_nm": "1554,1555",
+        "channel_tolerance_nm": "0.1",
+        "insertion_loss_db": "0.5",
+        "crosstalk_db": "0",
+        "queue_depth": "4",
+        "latency_cycles": "1"
+      },
+      "model_ref": null,
+      "latency_model": null,
+      "energy_model": null,
+      "area_model": null,
+      "visualStyle": {
+        "plugin_type_id": "com.hardware-sim.first-party.optical.wdm-mux",
+        "plugin_glyph": "wdm-mux",
+        "plugin_color": "#FB923C"
+      },
+      "internalState": {}
+    },
+    {
+      "id": "return_interposer_waveguide",
+      "name": "Return SiN Waveguide",
+      "type": "custom",
+      "type_id": "com.hardware-sim.first-party.optical.link",
+      "position": {
+        "x": 11,
+        "y": 11
+      },
+      "ports": [
+        {
+          "name": "optical_in",
+          "direction": "input",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "optical_out",
+          "direction": "output",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        }
+      ],
+      "parameters": {
+        "waveguide_material": "silicon_nitride",
+        "dynamic_energy_pj_per_bit": "0.001",
+        "latency_cycles": "0",
+        "bend_loss_db": "0.01",
+        "propagation_loss_db_per_mm": "0.1"
+      },
+      "model_ref": null,
+      "latency_model": null,
+      "energy_model": null,
+      "area_model": null,
+      "visualStyle": {
+        "plugin_type_id": "com.hardware-sim.first-party.optical.link",
+        "plugin_glyph": "optical-link",
+        "plugin_color": "#22D3EE"
+      },
+      "internalState": {}
+    },
+    {
+      "id": "return_wdm_demux",
+      "name": "Return WDM Demux",
+      "type": "custom",
+      "type_id": "com.hardware-sim.first-party.optical.wdm-demux",
+      "position": {
+        "x": 9,
+        "y": 11
+      },
+      "ports": [
+        {
+          "name": "wdm_in",
+          "direction": "input",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "ch0_out",
+          "direction": "output",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "ch1_out",
+          "direction": "output",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "ch2_out",
+          "direction": "output",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "ch3_out",
+          "direction": "output",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "config",
+          "direction": "input",
+          "signalType": "control",
+          "dataType": "config",
+          "precision": "any",
+          "protocol": "requestResponse",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "wavelength_allocation",
+          "units": "configuration"
+        }
+      ],
+      "parameters": {
+        "channel_count": "2",
+        "allocation_mode": "fixed",
+        "channel_table_nm": "1554,1555",
+        "channel_tolerance_nm": "0.1",
+        "insertion_loss_db": "0.5",
+        "crosstalk_db": "0",
+        "queue_depth": "4",
+        "latency_cycles": "1",
+        "unmatched_policy": "stall"
+      },
+      "model_ref": null,
+      "latency_model": null,
+      "energy_model": null,
+      "area_model": null,
+      "visualStyle": {
+        "plugin_type_id": "com.hardware-sim.first-party.optical.wdm-demux",
+        "plugin_glyph": "wdm-demux",
+        "plugin_color": "#A3E635"
+      },
+      "internalState": {}
+    },
+    {
+      "id": "compute_a_oe",
+      "name": "Compute A O/E",
+      "type": "custom",
+      "type_id": "com.hardware-sim.first-party.optical.oe-converter",
+      "position": {
+        "x": 15,
+        "y": 2
+      },
+      "ports": [
+        {
+          "name": "optical_in",
+          "direction": "input",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "detector_current_in",
+          "direction": "input",
+          "signalType": "analog",
+          "dataType": "scalar",
+          "precision": "analog",
+          "protocol": "streaming",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "photocurrent",
+          "units": "A"
+        },
+        {
+          "name": "digital_out",
+          "direction": "output",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "digital_payload",
+          "units": "bit"
+        },
+        {
+          "name": "control",
+          "direction": "input",
+          "signalType": "control",
+          "dataType": "config",
+          "precision": "any",
+          "protocol": "requestResponse",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "converter_control",
+          "units": "configuration"
+        }
+      ],
+      "parameters": {
+        "receiver_sensitivity_dbm": "-18",
+        "snr_threshold_db": "10",
+        "ber_model": "none",
+        "output_precision": "int8",
+        "latency_cycles": "1",
+        "conversion_energy_pj_per_bit": "0.04",
+        "adapter_runtime_enabled": "true",
+        "adapter_latency_cycles": "1",
+        "adapter_energy_pj_per_bit": "0.04",
+        "plugin_runtime_latency_cycles": "1",
+        "plugin_energy_pj_per_bit": "0.04",
+        "plugin_energy_pj_per_packet": "0",
+        "adapter_contributes_optical_energy": "false",
+        "adapter_contributes_conversion_energy": "true"
+      },
+      "model_ref": null,
+      "latency_model": null,
+      "energy_model": null,
+      "area_model": null,
+      "visualStyle": {
+        "plugin_type_id": "com.hardware-sim.first-party.optical.oe-converter",
+        "plugin_glyph": "oe-converter",
+        "plugin_color": "#38BDF8"
+      },
+      "internalState": {}
+    },
+    {
+      "id": "compute_a_deserializer",
+      "name": "Compute A RX SerDes",
+      "type": "custom",
+      "type_id": "com.hardware-sim.first-party.interface.deserializer",
+      "position": {
+        "x": 17,
+        "y": 2
+      },
+      "ports": [
+        {
+          "name": "serial_in",
+          "direction": "input",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "encoded_serial_bitstream",
+          "units": "bit|lane"
+        },
+        {
+          "name": "parallel_out",
+          "direction": "output",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "parallel_packet",
+          "units": "bit|lane"
+        }
+      ],
+      "parameters": {
+        "parallel_width_bits": "64",
+        "lane_count": "4",
+        "lane_rate_bits_per_cycle": "32",
+        "encoding": "64b66b",
+        "gearbox_latency_cycles": "1",
+        "cdr_latency_cycles": "2",
+        "queue_depth": "4",
+        "energy_pj_per_bit": "0.01",
+        "serialization_owner": "link",
+        "payload_bits": "128",
+        "service_cycles_per_packet": "2",
+        "encoded_bits_per_packet": "132"
+      },
+      "model_ref": null,
+      "latency_model": null,
+      "energy_model": null,
+      "area_model": null,
+      "visualStyle": {
+        "plugin_type_id": "com.hardware-sim.first-party.interface.deserializer",
+        "plugin_glyph": "deserializer",
+        "plugin_color": "#60A5FA"
+      },
+      "internalState": {}
+    },
+    {
+      "id": "compute_a_sram",
+      "name": "Compute A Local SRAM",
+      "type": "buffer",
+      "position": {
+        "x": 19,
+        "y": 2
+      },
+      "ports": [
+        {
+          "name": "in",
+          "direction": "input",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false
+        },
+        {
+          "name": "out",
+          "direction": "output",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false
+        }
+      ],
+      "parameters": {
+        "memory_latency_cycles": "1",
+        "read_latency_cycles": "1",
+        "write_latency_cycles": "1",
+        "capacity_bits": "524288"
+      },
+      "modelRef": null,
+      "latencyModel": null,
+      "energyModel": null,
+      "areaModel": null,
+      "visualStyle": {},
+      "internalState": {}
+    },
+    {
+      "id": "compute_a_pe_cluster",
+      "name": "Compute A: 8-PE Cluster",
+      "type": "processingElement",
+      "position": {
+        "x": 21,
+        "y": 2
+      },
+      "ports": [
+        {
+          "name": "in",
+          "direction": "input",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false
+        },
+        {
+          "name": "out",
+          "direction": "output",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false
+        }
+      ],
+      "parameters": {
+        "compute_latency_cycles": "2",
+        "pe_count": "8",
+        "aggregate_mac_per_cycle": "2048",
+        "precision": "fp16",
+        "mac_per_cycle": "256"
+      },
+      "modelRef": null,
+      "latencyModel": null,
+      "energyModel": null,
+      "areaModel": null,
+      "visualStyle": {},
+      "internalState": {}
+    },
+    {
+      "id": "compute_a_reduction",
+      "name": "Compute A Reduction",
+      "type": "reductionUnit",
+      "position": {
+        "x": 23,
+        "y": 2
+      },
+      "ports": [
+        {
+          "name": "in",
+          "direction": "input",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false
+        },
+        {
+          "name": "out",
+          "direction": "output",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false
+        }
+      ],
+      "parameters": {
+        "reduction_latency_cycles": "1",
+        "num_inputs": "8",
+        "accumulate_latency": "2"
+      },
+      "modelRef": null,
+      "latencyModel": null,
+      "energyModel": null,
+      "areaModel": null,
+      "visualStyle": {},
+      "internalState": {}
+    },
+    {
+      "id": "compute_a_serializer",
+      "name": "Compute A TX SerDes",
+      "type": "custom",
+      "type_id": "com.hardware-sim.first-party.interface.serializer",
+      "position": {
+        "x": 23,
+        "y": 4
+      },
+      "ports": [
+        {
+          "name": "parallel_in",
+          "direction": "input",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "parallel_packet",
+          "units": "bit|lane"
+        },
+        {
+          "name": "serial_out",
+          "direction": "output",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "encoded_serial_bitstream",
+          "units": "bit|lane"
+        }
+      ],
+      "parameters": {
+        "parallel_width_bits": "64",
+        "lane_count": "4",
+        "lane_rate_bits_per_cycle": "32",
+        "encoding": "64b66b",
+        "gearbox_latency_cycles": "1",
+        "cdr_latency_cycles": "2",
+        "queue_depth": "4",
+        "energy_pj_per_bit": "0.01",
+        "serialization_owner": "link",
+        "payload_bits": "128",
+        "service_cycles_per_packet": "2",
+        "encoded_bits_per_packet": "132"
+      },
+      "model_ref": null,
+      "latency_model": null,
+      "energy_model": null,
+      "area_model": null,
+      "visualStyle": {
+        "plugin_type_id": "com.hardware-sim.first-party.interface.serializer",
+        "plugin_glyph": "serializer",
+        "plugin_color": "#FF6B9A"
+      },
+      "internalState": {}
+    },
+    {
+      "id": "compute_a_eo",
+      "name": "Compute A E/O 1554 nm",
+      "type": "custom",
+      "type_id": "com.hardware-sim.first-party.optical.eo-converter",
+      "position": {
+        "x": 25,
+        "y": 4
+      },
+      "ports": [
+        {
+          "name": "digital_in",
+          "direction": "input",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "digital_payload",
+          "units": "bit"
+        },
+        {
+          "name": "optical_out",
+          "direction": "output",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "control",
+          "direction": "input",
+          "signalType": "control",
+          "dataType": "config",
+          "precision": "any",
+          "protocol": "requestResponse",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "converter_control",
+          "units": "configuration"
+        }
+      ],
+      "parameters": {
+        "wavelength_nm": "1554",
+        "channel_id": "ch0",
+        "optical_power_dbm": "0",
+        "latency_cycles": "1",
+        "conversion_energy_pj_per_bit": "0.04",
+        "adapter_runtime_enabled": "true",
+        "adapter_latency_cycles": "1",
+        "adapter_energy_pj_per_bit": "0.04",
+        "plugin_runtime_latency_cycles": "1",
+        "plugin_energy_pj_per_bit": "0.04",
+        "plugin_energy_pj_per_packet": "0",
+        "adapter_contributes_optical_energy": "false",
+        "adapter_contributes_conversion_energy": "true"
+      },
+      "model_ref": null,
+      "latency_model": null,
+      "energy_model": null,
+      "area_model": null,
+      "visualStyle": {
+        "plugin_type_id": "com.hardware-sim.first-party.optical.eo-converter",
+        "plugin_glyph": "eo-converter",
+        "plugin_color": "#F87171"
+      },
+      "internalState": {}
+    },
+    {
+      "id": "compute_b_oe",
+      "name": "Compute B O/E",
+      "type": "custom",
+      "type_id": "com.hardware-sim.first-party.optical.oe-converter",
+      "position": {
+        "x": 15,
+        "y": 7
+      },
+      "ports": [
+        {
+          "name": "optical_in",
+          "direction": "input",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "detector_current_in",
+          "direction": "input",
+          "signalType": "analog",
+          "dataType": "scalar",
+          "precision": "analog",
+          "protocol": "streaming",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "photocurrent",
+          "units": "A"
+        },
+        {
+          "name": "digital_out",
+          "direction": "output",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "digital_payload",
+          "units": "bit"
+        },
+        {
+          "name": "control",
+          "direction": "input",
+          "signalType": "control",
+          "dataType": "config",
+          "precision": "any",
+          "protocol": "requestResponse",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "converter_control",
+          "units": "configuration"
+        }
+      ],
+      "parameters": {
+        "receiver_sensitivity_dbm": "-18",
+        "snr_threshold_db": "10",
+        "ber_model": "none",
+        "output_precision": "int8",
+        "latency_cycles": "1",
+        "conversion_energy_pj_per_bit": "0.04",
+        "adapter_runtime_enabled": "true",
+        "adapter_latency_cycles": "1",
+        "adapter_energy_pj_per_bit": "0.04",
+        "plugin_runtime_latency_cycles": "1",
+        "plugin_energy_pj_per_bit": "0.04",
+        "plugin_energy_pj_per_packet": "0",
+        "adapter_contributes_optical_energy": "false",
+        "adapter_contributes_conversion_energy": "true"
+      },
+      "model_ref": null,
+      "latency_model": null,
+      "energy_model": null,
+      "area_model": null,
+      "visualStyle": {
+        "plugin_type_id": "com.hardware-sim.first-party.optical.oe-converter",
+        "plugin_glyph": "oe-converter",
+        "plugin_color": "#38BDF8"
+      },
+      "internalState": {}
+    },
+    {
+      "id": "compute_b_deserializer",
+      "name": "Compute B RX SerDes",
+      "type": "custom",
+      "type_id": "com.hardware-sim.first-party.interface.deserializer",
+      "position": {
+        "x": 17,
+        "y": 7
+      },
+      "ports": [
+        {
+          "name": "serial_in",
+          "direction": "input",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "encoded_serial_bitstream",
+          "units": "bit|lane"
+        },
+        {
+          "name": "parallel_out",
+          "direction": "output",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "parallel_packet",
+          "units": "bit|lane"
+        }
+      ],
+      "parameters": {
+        "parallel_width_bits": "64",
+        "lane_count": "4",
+        "lane_rate_bits_per_cycle": "32",
+        "encoding": "64b66b",
+        "gearbox_latency_cycles": "1",
+        "cdr_latency_cycles": "2",
+        "queue_depth": "4",
+        "energy_pj_per_bit": "0.01",
+        "serialization_owner": "link",
+        "payload_bits": "128",
+        "service_cycles_per_packet": "2",
+        "encoded_bits_per_packet": "132"
+      },
+      "model_ref": null,
+      "latency_model": null,
+      "energy_model": null,
+      "area_model": null,
+      "visualStyle": {
+        "plugin_type_id": "com.hardware-sim.first-party.interface.deserializer",
+        "plugin_glyph": "deserializer",
+        "plugin_color": "#60A5FA"
+      },
+      "internalState": {}
+    },
+    {
+      "id": "compute_b_sram",
+      "name": "Compute B Local SRAM",
+      "type": "buffer",
+      "position": {
+        "x": 19,
+        "y": 7
+      },
+      "ports": [
+        {
+          "name": "in",
+          "direction": "input",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false
+        },
+        {
+          "name": "out",
+          "direction": "output",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false
+        }
+      ],
+      "parameters": {
+        "memory_latency_cycles": "1",
+        "read_latency_cycles": "1",
+        "write_latency_cycles": "1",
+        "capacity_bits": "524288"
+      },
+      "modelRef": null,
+      "latencyModel": null,
+      "energyModel": null,
+      "areaModel": null,
+      "visualStyle": {},
+      "internalState": {}
+    },
+    {
+      "id": "compute_b_pe_cluster",
+      "name": "Compute B: 8-PE Cluster",
+      "type": "processingElement",
+      "position": {
+        "x": 21,
+        "y": 7
+      },
+      "ports": [
+        {
+          "name": "in",
+          "direction": "input",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false
+        },
+        {
+          "name": "out",
+          "direction": "output",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false
+        }
+      ],
+      "parameters": {
+        "compute_latency_cycles": "2",
+        "pe_count": "8",
+        "aggregate_mac_per_cycle": "2048",
+        "precision": "fp16",
+        "mac_per_cycle": "256"
+      },
+      "modelRef": null,
+      "latencyModel": null,
+      "energyModel": null,
+      "areaModel": null,
+      "visualStyle": {},
+      "internalState": {}
+    },
+    {
+      "id": "compute_b_softmax",
+      "name": "Compute B Softmax",
+      "type": "softmaxUnit",
+      "position": {
+        "x": 23,
+        "y": 7
+      },
+      "ports": [
+        {
+          "name": "in",
+          "direction": "input",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false
+        },
+        {
+          "name": "out",
+          "direction": "output",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false
+        }
+      ],
+      "parameters": {
+        "reduction_latency_cycles": "1",
+        "compute_latency": "8"
+      },
+      "modelRef": null,
+      "latencyModel": null,
+      "energyModel": null,
+      "areaModel": null,
+      "visualStyle": {},
+      "internalState": {}
+    },
+    {
+      "id": "compute_b_serializer",
+      "name": "Compute B TX SerDes",
+      "type": "custom",
+      "type_id": "com.hardware-sim.first-party.interface.serializer",
+      "position": {
+        "x": 23,
+        "y": 9
+      },
+      "ports": [
+        {
+          "name": "parallel_in",
+          "direction": "input",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "parallel_packet",
+          "units": "bit|lane"
+        },
+        {
+          "name": "serial_out",
+          "direction": "output",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "encoded_serial_bitstream",
+          "units": "bit|lane"
+        }
+      ],
+      "parameters": {
+        "parallel_width_bits": "64",
+        "lane_count": "4",
+        "lane_rate_bits_per_cycle": "32",
+        "encoding": "64b66b",
+        "gearbox_latency_cycles": "1",
+        "cdr_latency_cycles": "2",
+        "queue_depth": "4",
+        "energy_pj_per_bit": "0.01",
+        "serialization_owner": "link",
+        "payload_bits": "128",
+        "service_cycles_per_packet": "2",
+        "encoded_bits_per_packet": "132"
+      },
+      "model_ref": null,
+      "latency_model": null,
+      "energy_model": null,
+      "area_model": null,
+      "visualStyle": {
+        "plugin_type_id": "com.hardware-sim.first-party.interface.serializer",
+        "plugin_glyph": "serializer",
+        "plugin_color": "#FF6B9A"
+      },
+      "internalState": {}
+    },
+    {
+      "id": "compute_b_eo",
+      "name": "Compute B E/O 1555 nm",
+      "type": "custom",
+      "type_id": "com.hardware-sim.first-party.optical.eo-converter",
+      "position": {
+        "x": 25,
+        "y": 9
+      },
+      "ports": [
+        {
+          "name": "digital_in",
+          "direction": "input",
+          "signalType": "digital",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "digital_payload",
+          "units": "bit"
+        },
+        {
+          "name": "optical_out",
+          "direction": "output",
+          "signalType": "optical",
+          "dataType": "packet",
+          "precision": "any",
+          "protocol": "packet",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": true,
+          "multiConnect": false,
+          "quantity": "optical_packet_state",
+          "units": "nm|channel|dBm|dB"
+        },
+        {
+          "name": "control",
+          "direction": "input",
+          "signalType": "control",
+          "dataType": "config",
+          "precision": "any",
+          "protocol": "requestResponse",
+          "bandwidthBitsPerCycle": 128,
+          "latencyCycles": 0,
+          "clockDomain": "default",
+          "required": false,
+          "multiConnect": false,
+          "quantity": "converter_control",
+          "units": "configuration"
+        }
+      ],
+      "parameters": {
+        "wavelength_nm": "1555",
+        "channel_id": "ch1",
+        "optical_power_dbm": "0",
+        "latency_cycles": "1",
+        "conversion_energy_pj_per_bit": "0.04",
+        "adapter_runtime_enabled": "true",
+        "adapter_latency_cycles": "1",
+        "adapter_energy_pj_per_bit": "0.04",
+        "plugin_runtime_latency_cycles": "1",
+        "plugin_energy_pj_per_bit": "0.04",
+        "plugin_energy_pj_per_packet": "0",
+        "adapter_contributes_optical_energy": "false",
+        "adapter_contributes_conversion_energy": "true"
+      },
+      "model_ref": null,
+      "latency_model": null,
+      "energy_model": null,
+      "area_model": null,
+      "visualStyle": {
+        "plugin_type_id": "com.hardware-sim.first-party.optical.eo-converter",
+        "plugin_glyph": "eo-converter",
+        "plugin_color": "#F87171"
+      },
+      "internalState": {}
+    }
+  ],
+  "links": [
+    {
+      "id": "l_attention_hbm",
+      "source": {
+        "componentId": "attention_source",
+        "portName": "out"
+      },
+      "destination": {
+        "componentId": "hbm_activations",
+        "portName": "in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.01,
+      "physicalLength": 2.0,
+      "routeType": "electrical",
+      "parameters": {
+        "package_medium": "electrical_metal",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_hbm_attention_ser",
+      "source": {
+        "componentId": "hbm_activations",
+        "portName": "out"
+      },
+      "destination": {
+        "componentId": "io_serializer_ch0",
+        "portName": "parallel_in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.01,
+      "physicalLength": 2.0,
+      "routeType": "electrical",
+      "parameters": {
+        "package_medium": "electrical_metal",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_attention_ser_eo",
+      "source": {
+        "componentId": "io_serializer_ch0",
+        "portName": "serial_out"
+      },
+      "destination": {
+        "componentId": "io_eo_ch0",
+        "portName": "digital_in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.01,
+      "physicalLength": 2.0,
+      "routeType": "electrical",
+      "parameters": {
+        "package_medium": "electrical_metal",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_weight_hbm",
+      "source": {
+        "componentId": "weight_source",
+        "portName": "out"
+      },
+      "destination": {
+        "componentId": "hbm_weights",
+        "portName": "in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.01,
+      "physicalLength": 2.0,
+      "routeType": "electrical",
+      "parameters": {
+        "package_medium": "electrical_metal",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_hbm_weight_ser",
+      "source": {
+        "componentId": "hbm_weights",
+        "portName": "out"
+      },
+      "destination": {
+        "componentId": "io_serializer_ch1",
+        "portName": "parallel_in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.01,
+      "physicalLength": 2.0,
+      "routeType": "electrical",
+      "parameters": {
+        "package_medium": "electrical_metal",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_weight_ser_eo",
+      "source": {
+        "componentId": "io_serializer_ch1",
+        "portName": "serial_out"
+      },
+      "destination": {
+        "componentId": "io_eo_ch1",
+        "portName": "digital_in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.01,
+      "physicalLength": 2.0,
+      "routeType": "electrical",
+      "parameters": {
+        "package_medium": "electrical_metal",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_io_eo0_fwd_mux",
+      "source": {
+        "componentId": "io_eo_ch0",
+        "portName": "optical_out"
+      },
+      "destination": {
+        "componentId": "fwd_wdm_mux",
+        "portName": "ch0_in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.001,
+      "physicalLength": 3.0,
+      "routeType": "optical",
+      "parameters": {
+        "package_medium": "silicon_nitride_waveguide",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_io_eo1_fwd_mux",
+      "source": {
+        "componentId": "io_eo_ch1",
+        "portName": "optical_out"
+      },
+      "destination": {
+        "componentId": "fwd_wdm_mux",
+        "portName": "ch1_in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.001,
+      "physicalLength": 4.0,
+      "routeType": "optical",
+      "parameters": {
+        "package_medium": "silicon_nitride_waveguide",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_fwd_mux_waveguide",
+      "source": {
+        "componentId": "fwd_wdm_mux",
+        "portName": "wdm_out"
+      },
+      "destination": {
+        "componentId": "fwd_interposer_waveguide",
+        "portName": "optical_in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.001,
+      "physicalLength": 2.0,
+      "routeType": "optical",
+      "parameters": {
+        "package_medium": "silicon_nitride_waveguide",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_fwd_waveguide_demux",
+      "source": {
+        "componentId": "fwd_interposer_waveguide",
+        "portName": "optical_out"
+      },
+      "destination": {
+        "componentId": "fwd_wdm_demux",
+        "portName": "wdm_in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.001,
+      "physicalLength": 2.0,
+      "routeType": "optical",
+      "parameters": {
+        "package_medium": "silicon_nitride_waveguide",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_fwd_demux_compute_a",
+      "source": {
+        "componentId": "fwd_wdm_demux",
+        "portName": "ch0_out"
+      },
+      "destination": {
+        "componentId": "compute_a_oe",
+        "portName": "optical_in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.001,
+      "physicalLength": 3.0,
+      "routeType": "optical",
+      "parameters": {
+        "package_medium": "silicon_nitride_waveguide",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_fwd_demux_compute_b",
+      "source": {
+        "componentId": "fwd_wdm_demux",
+        "portName": "ch1_out"
+      },
+      "destination": {
+        "componentId": "compute_b_oe",
+        "portName": "optical_in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.001,
+      "physicalLength": 6.0,
+      "routeType": "optical",
+      "parameters": {
+        "package_medium": "silicon_nitride_waveguide",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_compute_a_oe_des",
+      "source": {
+        "componentId": "compute_a_oe",
+        "portName": "digital_out"
+      },
+      "destination": {
+        "componentId": "compute_a_deserializer",
+        "portName": "serial_in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.01,
+      "physicalLength": 2.0,
+      "routeType": "electrical",
+      "parameters": {
+        "package_medium": "electrical_metal",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_compute_a_des_sram",
+      "source": {
+        "componentId": "compute_a_deserializer",
+        "portName": "parallel_out"
+      },
+      "destination": {
+        "componentId": "compute_a_sram",
+        "portName": "in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.01,
+      "physicalLength": 2.0,
+      "routeType": "electrical",
+      "parameters": {
+        "package_medium": "electrical_metal",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_compute_a_sram_pe",
+      "source": {
+        "componentId": "compute_a_sram",
+        "portName": "out"
+      },
+      "destination": {
+        "componentId": "compute_a_pe_cluster",
+        "portName": "in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.01,
+      "physicalLength": 2.0,
+      "routeType": "electrical",
+      "parameters": {
+        "package_medium": "electrical_metal",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_compute_a_pe_reduce",
+      "source": {
+        "componentId": "compute_a_pe_cluster",
+        "portName": "out"
+      },
+      "destination": {
+        "componentId": "compute_a_reduction",
+        "portName": "in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.01,
+      "physicalLength": 2.0,
+      "routeType": "electrical",
+      "parameters": {
+        "package_medium": "electrical_metal",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_compute_a_reduce_ser",
+      "source": {
+        "componentId": "compute_a_reduction",
+        "portName": "out"
+      },
+      "destination": {
+        "componentId": "compute_a_serializer",
+        "portName": "parallel_in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.01,
+      "physicalLength": 2.0,
+      "routeType": "electrical",
+      "parameters": {
+        "package_medium": "electrical_metal",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_compute_a_ser_eo",
+      "source": {
+        "componentId": "compute_a_serializer",
+        "portName": "serial_out"
+      },
+      "destination": {
+        "componentId": "compute_a_eo",
+        "portName": "digital_in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.01,
+      "physicalLength": 2.0,
+      "routeType": "electrical",
+      "parameters": {
+        "package_medium": "electrical_metal",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_compute_b_oe_des",
+      "source": {
+        "componentId": "compute_b_oe",
+        "portName": "digital_out"
+      },
+      "destination": {
+        "componentId": "compute_b_deserializer",
+        "portName": "serial_in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.01,
+      "physicalLength": 2.0,
+      "routeType": "electrical",
+      "parameters": {
+        "package_medium": "electrical_metal",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_compute_b_des_sram",
+      "source": {
+        "componentId": "compute_b_deserializer",
+        "portName": "parallel_out"
+      },
+      "destination": {
+        "componentId": "compute_b_sram",
+        "portName": "in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.01,
+      "physicalLength": 2.0,
+      "routeType": "electrical",
+      "parameters": {
+        "package_medium": "electrical_metal",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_compute_b_sram_pe",
+      "source": {
+        "componentId": "compute_b_sram",
+        "portName": "out"
+      },
+      "destination": {
+        "componentId": "compute_b_pe_cluster",
+        "portName": "in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.01,
+      "physicalLength": 2.0,
+      "routeType": "electrical",
+      "parameters": {
+        "package_medium": "electrical_metal",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_compute_b_pe_softmax",
+      "source": {
+        "componentId": "compute_b_pe_cluster",
+        "portName": "out"
+      },
+      "destination": {
+        "componentId": "compute_b_softmax",
+        "portName": "in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.01,
+      "physicalLength": 2.0,
+      "routeType": "electrical",
+      "parameters": {
+        "package_medium": "electrical_metal",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_compute_b_softmax_ser",
+      "source": {
+        "componentId": "compute_b_softmax",
+        "portName": "out"
+      },
+      "destination": {
+        "componentId": "compute_b_serializer",
+        "portName": "parallel_in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.01,
+      "physicalLength": 2.0,
+      "routeType": "electrical",
+      "parameters": {
+        "package_medium": "electrical_metal",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_compute_b_ser_eo",
+      "source": {
+        "componentId": "compute_b_serializer",
+        "portName": "serial_out"
+      },
+      "destination": {
+        "componentId": "compute_b_eo",
+        "portName": "digital_in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.01,
+      "physicalLength": 2.0,
+      "routeType": "electrical",
+      "parameters": {
+        "package_medium": "electrical_metal",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_compute_a_eo_return_mux",
+      "source": {
+        "componentId": "compute_a_eo",
+        "portName": "optical_out"
+      },
+      "destination": {
+        "componentId": "return_wdm_mux",
+        "portName": "ch0_in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.001,
+      "physicalLength": 19.0,
+      "routeType": "optical",
+      "parameters": {
+        "package_medium": "silicon_nitride_waveguide",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_compute_b_eo_return_mux",
+      "source": {
+        "componentId": "compute_b_eo",
+        "portName": "optical_out"
+      },
+      "destination": {
+        "componentId": "return_wdm_mux",
+        "portName": "ch1_in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.001,
+      "physicalLength": 14.0,
+      "routeType": "optical",
+      "parameters": {
+        "package_medium": "silicon_nitride_waveguide",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_return_mux_waveguide",
+      "source": {
+        "componentId": "return_wdm_mux",
+        "portName": "wdm_out"
+      },
+      "destination": {
+        "componentId": "return_interposer_waveguide",
+        "portName": "optical_in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.001,
+      "physicalLength": 2.0,
+      "routeType": "optical",
+      "parameters": {
+        "package_medium": "silicon_nitride_waveguide",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_return_waveguide_demux",
+      "source": {
+        "componentId": "return_interposer_waveguide",
+        "portName": "optical_out"
+      },
+      "destination": {
+        "componentId": "return_wdm_demux",
+        "portName": "wdm_in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.001,
+      "physicalLength": 2.0,
+      "routeType": "optical",
+      "parameters": {
+        "package_medium": "silicon_nitride_waveguide",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_return_demux_io_oe0",
+      "source": {
+        "componentId": "return_wdm_demux",
+        "portName": "ch0_out"
+      },
+      "destination": {
+        "componentId": "io_oe_return_ch0",
+        "portName": "optical_in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.001,
+      "physicalLength": 3.0,
+      "routeType": "optical",
+      "parameters": {
+        "package_medium": "silicon_nitride_waveguide",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_return_demux_io_oe1",
+      "source": {
+        "componentId": "return_wdm_demux",
+        "portName": "ch1_out"
+      },
+      "destination": {
+        "componentId": "io_oe_return_ch1",
+        "portName": "optical_in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.001,
+      "physicalLength": 3.0,
+      "routeType": "optical",
+      "parameters": {
+        "package_medium": "silicon_nitride_waveguide",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_io_oe0_des",
+      "source": {
+        "componentId": "io_oe_return_ch0",
+        "portName": "digital_out"
+      },
+      "destination": {
+        "componentId": "io_deserializer_ch0",
+        "portName": "serial_in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.01,
+      "physicalLength": 2.0,
+      "routeType": "electrical",
+      "parameters": {
+        "package_medium": "electrical_metal",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_io_oe1_des",
+      "source": {
+        "componentId": "io_oe_return_ch1",
+        "portName": "digital_out"
+      },
+      "destination": {
+        "componentId": "io_deserializer_ch1",
+        "portName": "serial_in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.01,
+      "physicalLength": 2.0,
+      "routeType": "electrical",
+      "parameters": {
+        "package_medium": "electrical_metal",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_io_des0_router",
+      "source": {
+        "componentId": "io_deserializer_ch0",
+        "portName": "parallel_out"
+      },
+      "destination": {
+        "componentId": "result_router",
+        "portName": "in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.01,
+      "physicalLength": 3.0,
+      "routeType": "electrical",
+      "parameters": {
+        "package_medium": "electrical_metal",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_io_des1_router",
+      "source": {
+        "componentId": "io_deserializer_ch1",
+        "portName": "parallel_out"
+      },
+      "destination": {
+        "componentId": "result_router",
+        "portName": "in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.01,
+      "physicalLength": 3.0,
+      "routeType": "electrical",
+      "parameters": {
+        "package_medium": "electrical_metal",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_result_router_memory",
+      "source": {
+        "componentId": "result_router",
+        "portName": "out"
+      },
+      "destination": {
+        "componentId": "result_memory",
+        "portName": "in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.01,
+      "physicalLength": 1.0,
+      "routeType": "electrical",
+      "parameters": {
+        "package_medium": "electrical_metal",
+        "payload_bits": "128"
+      }
+    },
+    {
+      "id": "l_result_memory_sink",
+      "source": {
+        "componentId": "result_memory",
+        "portName": "out"
+      },
+      "destination": {
+        "componentId": "attention_sink",
+        "portName": "in"
+      },
+      "model_ref": null,
+      "bandwidthBitsPerCycle": 128,
+      "latencyCycles": 1,
+      "energyPerBit": 0.01,
+      "physicalLength": 1.0,
+      "routeType": "electrical",
+      "parameters": {
+        "package_medium": "electrical_metal",
+        "payload_bits": "128"
+      }
+    }
+  ],
+  "groups": [
+    {
+      "id": "chiplet_memory_io",
+      "name": "Chiplet 0: Memory + I/O",
+      "componentIds": [
+        "attention_source",
+        "hbm_activations",
+        "io_serializer_ch0",
+        "io_eo_ch0",
+        "weight_source",
+        "hbm_weights",
+        "io_serializer_ch1",
+        "io_eo_ch1",
+        "io_oe_return_ch0",
+        "io_deserializer_ch0",
+        "io_oe_return_ch1",
+        "io_deserializer_ch1",
+        "result_router",
+        "result_memory",
+        "attention_sink"
+      ],
+      "collapsed": false,
+      "visualMetadata": {
+        "fill": "rgba(16,185,129,0.08)",
+        "border": "rgba(52,211,153,0.90)",
+        "border_style": "dashed",
+        "label_visible": "true",
+        "layout_role": "memory_io"
+      }
+    },
+    {
+      "id": "optical_interposer",
+      "name": "Optical Interposer: Bidirectional 2-lane WDM",
+      "componentIds": [
+        "fwd_wdm_mux",
+        "fwd_interposer_waveguide",
+        "fwd_wdm_demux",
+        "return_wdm_mux",
+        "return_interposer_waveguide",
+        "return_wdm_demux"
+      ],
+      "collapsed": false,
+      "visualMetadata": {
+        "fill": "rgba(6,182,212,0.08)",
+        "border": "rgba(34,211,238,0.95)",
+        "border_style": "dashed",
+        "label_visible": "true",
+        "layout_role": "optical_interposer"
+      }
+    },
+    {
+      "id": "chiplet_compute_a",
+      "name": "Chiplet 1: GEMM + Reduction",
+      "componentIds": [
+        "compute_a_oe",
+        "compute_a_deserializer",
+        "compute_a_sram",
+        "compute_a_pe_cluster",
+        "compute_a_reduction",
+        "compute_a_serializer",
+        "compute_a_eo"
+      ],
+      "collapsed": false,
+      "visualMetadata": {
+        "fill": "rgba(59,130,246,0.08)",
+        "border": "rgba(96,165,250,0.90)",
+        "border_style": "dashed",
+        "label_visible": "true",
+        "layout_role": "compute_reduction"
+      }
+    },
+    {
+      "id": "chiplet_compute_b",
+      "name": "Chiplet 2: GEMM + Softmax",
+      "componentIds": [
+        "compute_b_oe",
+        "compute_b_deserializer",
+        "compute_b_sram",
+        "compute_b_pe_cluster",
+        "compute_b_softmax",
+        "compute_b_serializer",
+        "compute_b_eo"
+      ],
+      "collapsed": false,
+      "visualMetadata": {
+        "fill": "rgba(168,85,247,0.08)",
+        "border": "rgba(196,181,253,0.90)",
+        "border_style": "dashed",
+        "label_visible": "true",
+        "layout_role": "compute_softmax"
+      }
+    }
+  ],
+  "macros": [],
+  "parameters": {
+    "project_name": "ASP-DAC multi-chip electro-optical attention package",
+    "scene_purpose": "final_figure_2_capture",
+    "workload": "attention_128_64",
+    "package_architecture": "memory_io_chiplet_plus_two_compute_chiplets_on_optical_interposer",
+    "transport": "bidirectional_two_lane_wdm",
+    "transceiver_abstraction": "serdes_eo_oe",
+    "payload_bits": "128",
+    "line_code": "64b66b",
+    "encoded_bits_per_packet": "132",
+    "service_cycles_per_packet": "2",
+    "forward_wavelengths_nm": "1550,1551",
+    "return_wavelengths_nm": "1554,1555",
+    "optical_source_power_dbm": "0",
+    "receiver_sensitivity_dbm": "-18",
+    "propagation_loss_db_per_mm": "0.10",
+    "bend_loss_db": "0.01",
+    "mux_demux_insertion_loss_db_each": "0.5",
+    "shared_laser_assumption": "package_level_source_accounted_by_eo_model",
+    "ber_model": "none",
+    "limitation": "BER not modeled",
+    "figure_note": "Architecture scene only; do not infer measured performance from the screenshot."
+  },
+  "placement": {
+    "schema_version": "1.0",
+    "rows": 15,
+    "cols": 27,
+    "cellWidthMicrometers": 1000,
+    "cellHeightMicrometers": 1000,
+    "origin": {
+      "x": 0,
+      "y": 0
+    },
+    "layer": "M0",
+    "floorplanMetadata": {
+      "package": "2.5D multi-chip module",
+      "electrical_layer": "M3",
+      "optical_layer": "WG",
+      "layout": "three chiplets plus optical interposer"
+    },
+    "gridCellMicrometers": 1000,
+    "componentCells": {
+      "attention_source": {
+        "row": 2,
+        "col": 1,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "hbm_activations": {
+        "row": 2,
+        "col": 3,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "io_serializer_ch0": {
+        "row": 2,
+        "col": 5,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "io_eo_ch0": {
+        "row": 2,
+        "col": 7,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "weight_source": {
+        "row": 5,
+        "col": 1,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "hbm_weights": {
+        "row": 5,
+        "col": 3,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "io_serializer_ch1": {
+        "row": 5,
+        "col": 5,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "io_eo_ch1": {
+        "row": 5,
+        "col": 7,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "io_oe_return_ch0": {
+        "row": 10,
+        "col": 7,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "io_deserializer_ch0": {
+        "row": 10,
+        "col": 5,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "io_oe_return_ch1": {
+        "row": 12,
+        "col": 7,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "io_deserializer_ch1": {
+        "row": 12,
+        "col": 5,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "result_router": {
+        "row": 11,
+        "col": 3,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "result_memory": {
+        "row": 11,
+        "col": 2,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "attention_sink": {
+        "row": 11,
+        "col": 1,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "fwd_wdm_mux": {
+        "row": 3,
+        "col": 9,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "fwd_interposer_waveguide": {
+        "row": 3,
+        "col": 11,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "fwd_wdm_demux": {
+        "row": 3,
+        "col": 13,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "return_wdm_mux": {
+        "row": 11,
+        "col": 13,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "return_interposer_waveguide": {
+        "row": 11,
+        "col": 11,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "return_wdm_demux": {
+        "row": 11,
+        "col": 9,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "compute_a_oe": {
+        "row": 2,
+        "col": 15,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "compute_a_deserializer": {
+        "row": 2,
+        "col": 17,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "compute_a_sram": {
+        "row": 2,
+        "col": 19,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "compute_a_pe_cluster": {
+        "row": 2,
+        "col": 21,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "compute_a_reduction": {
+        "row": 2,
+        "col": 23,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "compute_a_serializer": {
+        "row": 4,
+        "col": 23,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "compute_a_eo": {
+        "row": 4,
+        "col": 25,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "compute_b_oe": {
+        "row": 7,
+        "col": 15,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "compute_b_deserializer": {
+        "row": 7,
+        "col": 17,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "compute_b_sram": {
+        "row": 7,
+        "col": 19,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "compute_b_pe_cluster": {
+        "row": 7,
+        "col": 21,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "compute_b_softmax": {
+        "row": 7,
+        "col": 23,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "compute_b_serializer": {
+        "row": 9,
+        "col": 23,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      },
+      "compute_b_eo": {
+        "row": 9,
+        "col": 25,
+        "widthCells": 1,
+        "heightCells": 1,
+        "layer": "M0"
+      }
+    },
+    "componentPositions": {
+      "attention_source": {
+        "x": 1000.0,
+        "y": 2000.0
+      },
+      "hbm_activations": {
+        "x": 3000.0,
+        "y": 2000.0
+      },
+      "io_serializer_ch0": {
+        "x": 5000.0,
+        "y": 2000.0
+      },
+      "io_eo_ch0": {
+        "x": 7000.0,
+        "y": 2000.0
+      },
+      "weight_source": {
+        "x": 1000.0,
+        "y": 5000.0
+      },
+      "hbm_weights": {
+        "x": 3000.0,
+        "y": 5000.0
+      },
+      "io_serializer_ch1": {
+        "x": 5000.0,
+        "y": 5000.0
+      },
+      "io_eo_ch1": {
+        "x": 7000.0,
+        "y": 5000.0
+      },
+      "io_oe_return_ch0": {
+        "x": 7000.0,
+        "y": 10000.0
+      },
+      "io_deserializer_ch0": {
+        "x": 5000.0,
+        "y": 10000.0
+      },
+      "io_oe_return_ch1": {
+        "x": 7000.0,
+        "y": 12000.0
+      },
+      "io_deserializer_ch1": {
+        "x": 5000.0,
+        "y": 12000.0
+      },
+      "result_router": {
+        "x": 3000.0,
+        "y": 11000.0
+      },
+      "result_memory": {
+        "x": 2000.0,
+        "y": 11000.0
+      },
+      "attention_sink": {
+        "x": 1000.0,
+        "y": 11000.0
+      },
+      "fwd_wdm_mux": {
+        "x": 9000.0,
+        "y": 3000.0
+      },
+      "fwd_interposer_waveguide": {
+        "x": 11000.0,
+        "y": 3000.0
+      },
+      "fwd_wdm_demux": {
+        "x": 13000.0,
+        "y": 3000.0
+      },
+      "return_wdm_mux": {
+        "x": 13000.0,
+        "y": 11000.0
+      },
+      "return_interposer_waveguide": {
+        "x": 11000.0,
+        "y": 11000.0
+      },
+      "return_wdm_demux": {
+        "x": 9000.0,
+        "y": 11000.0
+      },
+      "compute_a_oe": {
+        "x": 15000.0,
+        "y": 2000.0
+      },
+      "compute_a_deserializer": {
+        "x": 17000.0,
+        "y": 2000.0
+      },
+      "compute_a_sram": {
+        "x": 19000.0,
+        "y": 2000.0
+      },
+      "compute_a_pe_cluster": {
+        "x": 21000.0,
+        "y": 2000.0
+      },
+      "compute_a_reduction": {
+        "x": 23000.0,
+        "y": 2000.0
+      },
+      "compute_a_serializer": {
+        "x": 23000.0,
+        "y": 4000.0
+      },
+      "compute_a_eo": {
+        "x": 25000.0,
+        "y": 4000.0
+      },
+      "compute_b_oe": {
+        "x": 15000.0,
+        "y": 7000.0
+      },
+      "compute_b_deserializer": {
+        "x": 17000.0,
+        "y": 7000.0
+      },
+      "compute_b_sram": {
+        "x": 19000.0,
+        "y": 7000.0
+      },
+      "compute_b_pe_cluster": {
+        "x": 21000.0,
+        "y": 7000.0
+      },
+      "compute_b_softmax": {
+        "x": 23000.0,
+        "y": 7000.0
+      },
+      "compute_b_serializer": {
+        "x": 23000.0,
+        "y": 9000.0
+      },
+      "compute_b_eo": {
+        "x": 25000.0,
+        "y": 9000.0
+      }
+    }
+  },
+  "routing": {
+    "schema_version": "1.0",
+    "routes": [
+      {
+        "routeType": "electrical",
+        "layer": "M3",
+        "schema_version": "1.0",
+        "linkId": "l_attention_hbm",
+        "targetKind": "logicalLink",
+        "medium": "electricalMetal",
+        "layerId": {
+          "stack": "M",
+          "index": 3,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 1000.0,
+            "y": 2000.0
+          },
+          {
+            "x": 3000.0,
+            "y": 2000.0
+          }
+        ]
+      },
+      {
+        "routeType": "electrical",
+        "layer": "M3",
+        "schema_version": "1.0",
+        "linkId": "l_hbm_attention_ser",
+        "targetKind": "logicalLink",
+        "medium": "electricalMetal",
+        "layerId": {
+          "stack": "M",
+          "index": 3,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 3000.0,
+            "y": 2000.0
+          },
+          {
+            "x": 5000.0,
+            "y": 2000.0
+          }
+        ]
+      },
+      {
+        "routeType": "electrical",
+        "layer": "M3",
+        "schema_version": "1.0",
+        "linkId": "l_attention_ser_eo",
+        "targetKind": "logicalLink",
+        "medium": "electricalMetal",
+        "layerId": {
+          "stack": "M",
+          "index": 3,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 5000.0,
+            "y": 2000.0
+          },
+          {
+            "x": 7000.0,
+            "y": 2000.0
+          }
+        ]
+      },
+      {
+        "routeType": "electrical",
+        "layer": "M3",
+        "schema_version": "1.0",
+        "linkId": "l_weight_hbm",
+        "targetKind": "logicalLink",
+        "medium": "electricalMetal",
+        "layerId": {
+          "stack": "M",
+          "index": 3,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 1000.0,
+            "y": 5000.0
+          },
+          {
+            "x": 3000.0,
+            "y": 5000.0
+          }
+        ]
+      },
+      {
+        "routeType": "electrical",
+        "layer": "M3",
+        "schema_version": "1.0",
+        "linkId": "l_hbm_weight_ser",
+        "targetKind": "logicalLink",
+        "medium": "electricalMetal",
+        "layerId": {
+          "stack": "M",
+          "index": 3,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 3000.0,
+            "y": 5000.0
+          },
+          {
+            "x": 5000.0,
+            "y": 5000.0
+          }
+        ]
+      },
+      {
+        "routeType": "electrical",
+        "layer": "M3",
+        "schema_version": "1.0",
+        "linkId": "l_weight_ser_eo",
+        "targetKind": "logicalLink",
+        "medium": "electricalMetal",
+        "layerId": {
+          "stack": "M",
+          "index": 3,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 5000.0,
+            "y": 5000.0
+          },
+          {
+            "x": 7000.0,
+            "y": 5000.0
+          }
+        ]
+      },
+      {
+        "routeType": "optical",
+        "layer": "WG",
+        "schema_version": "1.0",
+        "linkId": "l_io_eo0_fwd_mux",
+        "targetKind": "logicalLink",
+        "medium": "opticalWaveguide",
+        "layerId": {
+          "stack": "WG",
+          "index": 0,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 7000.0,
+            "y": 2000.0
+          },
+          {
+            "x": 8000.0,
+            "y": 2000.0
+          },
+          {
+            "x": 8000.0,
+            "y": 3000.0
+          },
+          {
+            "x": 9000.0,
+            "y": 3000.0
+          }
+        ]
+      },
+      {
+        "routeType": "optical",
+        "layer": "WG1",
+        "schema_version": "1.0",
+        "linkId": "l_io_eo1_fwd_mux",
+        "targetKind": "logicalLink",
+        "medium": "opticalWaveguide",
+        "layerId": {
+          "stack": "WG",
+          "index": 1,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 7000.0,
+            "y": 5000.0
+          },
+          {
+            "x": 8000.0,
+            "y": 5000.0
+          },
+          {
+            "x": 8000.0,
+            "y": 3000.0
+          },
+          {
+            "x": 9000.0,
+            "y": 3000.0
+          }
+        ]
+      },
+      {
+        "routeType": "optical",
+        "layer": "WG",
+        "schema_version": "1.0",
+        "linkId": "l_fwd_mux_waveguide",
+        "targetKind": "logicalLink",
+        "medium": "opticalWaveguide",
+        "layerId": {
+          "stack": "WG",
+          "index": 0,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 9000.0,
+            "y": 3000.0
+          },
+          {
+            "x": 11000.0,
+            "y": 3000.0
+          }
+        ]
+      },
+      {
+        "routeType": "optical",
+        "layer": "WG",
+        "schema_version": "1.0",
+        "linkId": "l_fwd_waveguide_demux",
+        "targetKind": "logicalLink",
+        "medium": "opticalWaveguide",
+        "layerId": {
+          "stack": "WG",
+          "index": 0,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 11000.0,
+            "y": 3000.0
+          },
+          {
+            "x": 13000.0,
+            "y": 3000.0
+          }
+        ]
+      },
+      {
+        "routeType": "optical",
+        "layer": "WG",
+        "schema_version": "1.0",
+        "linkId": "l_fwd_demux_compute_a",
+        "targetKind": "logicalLink",
+        "medium": "opticalWaveguide",
+        "layerId": {
+          "stack": "WG",
+          "index": 0,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 13000.0,
+            "y": 3000.0
+          },
+          {
+            "x": 14000.0,
+            "y": 3000.0
+          },
+          {
+            "x": 14000.0,
+            "y": 2000.0
+          },
+          {
+            "x": 15000.0,
+            "y": 2000.0
+          }
+        ]
+      },
+      {
+        "routeType": "optical",
+        "layer": "WG1",
+        "schema_version": "1.0",
+        "linkId": "l_fwd_demux_compute_b",
+        "targetKind": "logicalLink",
+        "medium": "opticalWaveguide",
+        "layerId": {
+          "stack": "WG",
+          "index": 1,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 13000.0,
+            "y": 3000.0
+          },
+          {
+            "x": 14000.0,
+            "y": 3000.0
+          },
+          {
+            "x": 14000.0,
+            "y": 7000.0
+          },
+          {
+            "x": 15000.0,
+            "y": 7000.0
+          }
+        ]
+      },
+      {
+        "routeType": "electrical",
+        "layer": "M3",
+        "schema_version": "1.0",
+        "linkId": "l_compute_a_oe_des",
+        "targetKind": "logicalLink",
+        "medium": "electricalMetal",
+        "layerId": {
+          "stack": "M",
+          "index": 3,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 15000.0,
+            "y": 2000.0
+          },
+          {
+            "x": 17000.0,
+            "y": 2000.0
+          }
+        ]
+      },
+      {
+        "routeType": "electrical",
+        "layer": "M3",
+        "schema_version": "1.0",
+        "linkId": "l_compute_a_des_sram",
+        "targetKind": "logicalLink",
+        "medium": "electricalMetal",
+        "layerId": {
+          "stack": "M",
+          "index": 3,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 17000.0,
+            "y": 2000.0
+          },
+          {
+            "x": 19000.0,
+            "y": 2000.0
+          }
+        ]
+      },
+      {
+        "routeType": "electrical",
+        "layer": "M3",
+        "schema_version": "1.0",
+        "linkId": "l_compute_a_sram_pe",
+        "targetKind": "logicalLink",
+        "medium": "electricalMetal",
+        "layerId": {
+          "stack": "M",
+          "index": 3,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 19000.0,
+            "y": 2000.0
+          },
+          {
+            "x": 21000.0,
+            "y": 2000.0
+          }
+        ]
+      },
+      {
+        "routeType": "electrical",
+        "layer": "M3",
+        "schema_version": "1.0",
+        "linkId": "l_compute_a_pe_reduce",
+        "targetKind": "logicalLink",
+        "medium": "electricalMetal",
+        "layerId": {
+          "stack": "M",
+          "index": 3,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 21000.0,
+            "y": 2000.0
+          },
+          {
+            "x": 23000.0,
+            "y": 2000.0
+          }
+        ]
+      },
+      {
+        "routeType": "electrical",
+        "layer": "M3",
+        "schema_version": "1.0",
+        "linkId": "l_compute_a_reduce_ser",
+        "targetKind": "logicalLink",
+        "medium": "electricalMetal",
+        "layerId": {
+          "stack": "M",
+          "index": 3,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 23000.0,
+            "y": 2000.0
+          },
+          {
+            "x": 23000.0,
+            "y": 2000.0
+          },
+          {
+            "x": 23000.0,
+            "y": 4000.0
+          },
+          {
+            "x": 23000.0,
+            "y": 4000.0
+          }
+        ]
+      },
+      {
+        "routeType": "electrical",
+        "layer": "M3",
+        "schema_version": "1.0",
+        "linkId": "l_compute_a_ser_eo",
+        "targetKind": "logicalLink",
+        "medium": "electricalMetal",
+        "layerId": {
+          "stack": "M",
+          "index": 3,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 23000.0,
+            "y": 4000.0
+          },
+          {
+            "x": 25000.0,
+            "y": 4000.0
+          }
+        ]
+      },
+      {
+        "routeType": "electrical",
+        "layer": "M3",
+        "schema_version": "1.0",
+        "linkId": "l_compute_b_oe_des",
+        "targetKind": "logicalLink",
+        "medium": "electricalMetal",
+        "layerId": {
+          "stack": "M",
+          "index": 3,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 15000.0,
+            "y": 7000.0
+          },
+          {
+            "x": 17000.0,
+            "y": 7000.0
+          }
+        ]
+      },
+      {
+        "routeType": "electrical",
+        "layer": "M3",
+        "schema_version": "1.0",
+        "linkId": "l_compute_b_des_sram",
+        "targetKind": "logicalLink",
+        "medium": "electricalMetal",
+        "layerId": {
+          "stack": "M",
+          "index": 3,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 17000.0,
+            "y": 7000.0
+          },
+          {
+            "x": 19000.0,
+            "y": 7000.0
+          }
+        ]
+      },
+      {
+        "routeType": "electrical",
+        "layer": "M3",
+        "schema_version": "1.0",
+        "linkId": "l_compute_b_sram_pe",
+        "targetKind": "logicalLink",
+        "medium": "electricalMetal",
+        "layerId": {
+          "stack": "M",
+          "index": 3,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 19000.0,
+            "y": 7000.0
+          },
+          {
+            "x": 21000.0,
+            "y": 7000.0
+          }
+        ]
+      },
+      {
+        "routeType": "electrical",
+        "layer": "M3",
+        "schema_version": "1.0",
+        "linkId": "l_compute_b_pe_softmax",
+        "targetKind": "logicalLink",
+        "medium": "electricalMetal",
+        "layerId": {
+          "stack": "M",
+          "index": 3,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 21000.0,
+            "y": 7000.0
+          },
+          {
+            "x": 23000.0,
+            "y": 7000.0
+          }
+        ]
+      },
+      {
+        "routeType": "electrical",
+        "layer": "M3",
+        "schema_version": "1.0",
+        "linkId": "l_compute_b_softmax_ser",
+        "targetKind": "logicalLink",
+        "medium": "electricalMetal",
+        "layerId": {
+          "stack": "M",
+          "index": 3,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 23000.0,
+            "y": 7000.0
+          },
+          {
+            "x": 23000.0,
+            "y": 7000.0
+          },
+          {
+            "x": 23000.0,
+            "y": 9000.0
+          },
+          {
+            "x": 23000.0,
+            "y": 9000.0
+          }
+        ]
+      },
+      {
+        "routeType": "electrical",
+        "layer": "M3",
+        "schema_version": "1.0",
+        "linkId": "l_compute_b_ser_eo",
+        "targetKind": "logicalLink",
+        "medium": "electricalMetal",
+        "layerId": {
+          "stack": "M",
+          "index": 3,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 23000.0,
+            "y": 9000.0
+          },
+          {
+            "x": 25000.0,
+            "y": 9000.0
+          }
+        ]
+      },
+      {
+        "routeType": "optical",
+        "layer": "WG",
+        "schema_version": "1.0",
+        "linkId": "l_compute_a_eo_return_mux",
+        "targetKind": "logicalLink",
+        "medium": "opticalWaveguide",
+        "layerId": {
+          "stack": "WG",
+          "index": 0,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 25000.0,
+            "y": 4000.0
+          },
+          {
+            "x": 19000.0,
+            "y": 4000.0
+          },
+          {
+            "x": 19000.0,
+            "y": 11000.0
+          },
+          {
+            "x": 13000.0,
+            "y": 11000.0
+          }
+        ]
+      },
+      {
+        "routeType": "optical",
+        "layer": "WG1",
+        "schema_version": "1.0",
+        "linkId": "l_compute_b_eo_return_mux",
+        "targetKind": "logicalLink",
+        "medium": "opticalWaveguide",
+        "layerId": {
+          "stack": "WG",
+          "index": 1,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 25000.0,
+            "y": 9000.0
+          },
+          {
+            "x": 19000.0,
+            "y": 9000.0
+          },
+          {
+            "x": 19000.0,
+            "y": 11000.0
+          },
+          {
+            "x": 13000.0,
+            "y": 11000.0
+          }
+        ]
+      },
+      {
+        "routeType": "optical",
+        "layer": "WG",
+        "schema_version": "1.0",
+        "linkId": "l_return_mux_waveguide",
+        "targetKind": "logicalLink",
+        "medium": "opticalWaveguide",
+        "layerId": {
+          "stack": "WG",
+          "index": 0,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 13000.0,
+            "y": 11000.0
+          },
+          {
+            "x": 11000.0,
+            "y": 11000.0
+          }
+        ]
+      },
+      {
+        "routeType": "optical",
+        "layer": "WG",
+        "schema_version": "1.0",
+        "linkId": "l_return_waveguide_demux",
+        "targetKind": "logicalLink",
+        "medium": "opticalWaveguide",
+        "layerId": {
+          "stack": "WG",
+          "index": 0,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 11000.0,
+            "y": 11000.0
+          },
+          {
+            "x": 9000.0,
+            "y": 11000.0
+          }
+        ]
+      },
+      {
+        "routeType": "optical",
+        "layer": "WG",
+        "schema_version": "1.0",
+        "linkId": "l_return_demux_io_oe0",
+        "targetKind": "logicalLink",
+        "medium": "opticalWaveguide",
+        "layerId": {
+          "stack": "WG",
+          "index": 0,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 9000.0,
+            "y": 11000.0
+          },
+          {
+            "x": 8000.0,
+            "y": 11000.0
+          },
+          {
+            "x": 8000.0,
+            "y": 10000.0
+          },
+          {
+            "x": 7000.0,
+            "y": 10000.0
+          }
+        ]
+      },
+      {
+        "routeType": "optical",
+        "layer": "WG1",
+        "schema_version": "1.0",
+        "linkId": "l_return_demux_io_oe1",
+        "targetKind": "logicalLink",
+        "medium": "opticalWaveguide",
+        "layerId": {
+          "stack": "WG",
+          "index": 1,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 9000.0,
+            "y": 11000.0
+          },
+          {
+            "x": 8000.0,
+            "y": 11000.0
+          },
+          {
+            "x": 8000.0,
+            "y": 12000.0
+          },
+          {
+            "x": 7000.0,
+            "y": 12000.0
+          }
+        ]
+      },
+      {
+        "routeType": "electrical",
+        "layer": "M3",
+        "schema_version": "1.0",
+        "linkId": "l_io_oe0_des",
+        "targetKind": "logicalLink",
+        "medium": "electricalMetal",
+        "layerId": {
+          "stack": "M",
+          "index": 3,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 7000.0,
+            "y": 10000.0
+          },
+          {
+            "x": 5000.0,
+            "y": 10000.0
+          }
+        ]
+      },
+      {
+        "routeType": "electrical",
+        "layer": "M3",
+        "schema_version": "1.0",
+        "linkId": "l_io_oe1_des",
+        "targetKind": "logicalLink",
+        "medium": "electricalMetal",
+        "layerId": {
+          "stack": "M",
+          "index": 3,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 7000.0,
+            "y": 12000.0
+          },
+          {
+            "x": 5000.0,
+            "y": 12000.0
+          }
+        ]
+      },
+      {
+        "routeType": "electrical",
+        "layer": "M3",
+        "schema_version": "1.0",
+        "linkId": "l_io_des0_router",
+        "targetKind": "logicalLink",
+        "medium": "electricalMetal",
+        "layerId": {
+          "stack": "M",
+          "index": 3,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 5000.0,
+            "y": 10000.0
+          },
+          {
+            "x": 4000.0,
+            "y": 10000.0
+          },
+          {
+            "x": 4000.0,
+            "y": 11000.0
+          },
+          {
+            "x": 3000.0,
+            "y": 11000.0
+          }
+        ]
+      },
+      {
+        "routeType": "electrical",
+        "layer": "M4",
+        "schema_version": "1.0",
+        "linkId": "l_io_des1_router",
+        "targetKind": "logicalLink",
+        "medium": "electricalMetal",
+        "layerId": {
+          "stack": "M",
+          "index": 4,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 5000.0,
+            "y": 12000.0
+          },
+          {
+            "x": 4000.0,
+            "y": 12000.0
+          },
+          {
+            "x": 4000.0,
+            "y": 11000.0
+          },
+          {
+            "x": 3000.0,
+            "y": 11000.0
+          }
+        ]
+      },
+      {
+        "routeType": "electrical",
+        "layer": "M3",
+        "schema_version": "1.0",
+        "linkId": "l_result_router_memory",
+        "targetKind": "logicalLink",
+        "medium": "electricalMetal",
+        "layerId": {
+          "stack": "M",
+          "index": 3,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 3000.0,
+            "y": 11000.0
+          },
+          {
+            "x": 2000.0,
+            "y": 11000.0
+          }
+        ]
+      },
+      {
+        "routeType": "electrical",
+        "layer": "M3",
+        "schema_version": "1.0",
+        "linkId": "l_result_memory_sink",
+        "targetKind": "logicalLink",
+        "medium": "electricalMetal",
+        "layerId": {
+          "stack": "M",
+          "index": 3,
+          "purpose": "signal"
+        },
+        "pathUnit": "micrometers",
+        "path": [
+          {
+            "x": 2000.0,
+            "y": 11000.0
+          },
+          {
+            "x": 1000.0,
+            "y": 11000.0
+          }
+        ]
+      }
+    ]
+  }
+}

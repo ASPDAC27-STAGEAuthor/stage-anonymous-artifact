@@ -1,0 +1,74 @@
+{
+  "schema_version": "aspg-final-bundle-manifest-1.0",
+  "bundle_root": "experiments/aspdac/results/final_20260716",
+  "created_or_refreshed_utc": "2026-07-16T14:57:19.038325Z",
+  "plans": {
+    "p0_final_smoke": {
+      "path": "experiments/aspdac/specs/final_sweeps/p0_smoke.yaml",
+      "sha256": "e5883abffcb6556f814c2d521c5d7f59871a5964e78894049b100590a0d02c41"
+    },
+    "rq2_booksim_stage": {
+      "path": "experiments/aspdac/specs/final_sweeps/rq2_booksim_stage.yaml",
+      "sha256": "50d799575333e13b6297565b855bbcc172f4d5284f3708816f346eec63db85f0"
+    },
+    "rq1_exact": {
+      "path": "experiments/aspdac/specs/final_sweeps/rq1_exact.yaml",
+      "sha256": "0d48d54c0243717f1b19c8399eaeeecc569548b3d68216f38b92ee9aabd2a3cf"
+    },
+    "rq2_smoke": {
+      "path": "experiments/aspdac/specs/final_sweeps/rq2_smoke.yaml",
+      "sha256": "c53fc63d184b71d68053aa3757b62bd07e6e0368669fd835b3186127f75476f5"
+    },
+    "rq3_matched_compute": {
+      "path": "experiments/aspdac/specs/final_sweeps/rq3_matched_compute.yaml",
+      "sha256": "7037b0710b0b0211f64fd9fffbf8a1228b82ff504eed80dd7afba8389be20c96"
+    },
+    "rq3_energy": {
+      "path": "experiments/aspdac/specs/final_sweeps/rq3_energy.yaml",
+      "sha256": "36742bb6d8affdd2d7cf3f08ef47e3a4e2dab064d8dc9c7648d58bc3e982be38"
+    },
+    "rq4_optical": {
+      "path": "experiments/aspdac/specs/final_sweeps/rq4_optical.yaml",
+      "sha256": "c0d75e109a90439abe6f541db2b60c9338bea9f2c49c71ef10620610ee4c6332"
+    },
+    "stage_codesign": {
+      "path": "experiments/aspdac/specs/final_sweeps/stage_codesign.yaml",
+      "sha256": "033723a643131f828523c96e79b53c5d193f50b9399d8b867d9fd2de0d236044"
+    },
+    "mnist_cnn_stage": {
+      "path": "experiments/aspdac/specs/final_sweeps/mnist_cnn_stage.yaml",
+      "sha256": "ce85c26c996c383b011087e5cb349f5ebf60fb77e3404b8dcc22d0f153930d9a"
+    },
+    "rq3_size_stage": {
+      "path": "experiments/aspdac/specs/final_sweeps/rq3_size_stage.yaml",
+      "sha256": "1c3e8066872aaf930bd57ca72dd9db5b4f2d0b7dcc0267a62fde8d3b32dedcd3"
+    },
+    "mnist_cnn_noc_booksim_stage": {
+      "path": "experiments/aspdac/specs/final_sweeps/mnist_cnn_noc_booksim_stage.yaml",
+      "sha256": "ccfb956420fb40f07b40721a8b52dcac8a0d3abc5df8bf2651290fbd1e3026c9"
+    },
+    "mnist_cnn_noc_booksim_stage_v2": {
+      "path": "experiments/aspdac/specs/final_sweeps/mnist_cnn_noc_booksim_stage.yaml",
+      "sha256": "f76a1125bd7926d2a4ff2392494beffae3c7662e1ed9e10bbd2c69264c0c3568"
+    }
+  },
+  "external_draft_policy": "read_only",
+  "environment": {
+    "captured_utc": "2026-07-16T14:57:18.856627Z",
+    "manager_version": "aspg-experiment-manager-1.0",
+    "git_commit": "1e57371524a7a2cde2bcfdd07f05197a9181a73a",
+    "git_status_porcelain_sha256": "392c9c24c07043fcc5567d4c9bb9b06ca01f925bb82df899221270e38be7a46d",
+    "host": "anonymous-host",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.10.6",
+    "dotnet": "9.0.315"
+  },
+  "config_hashes": {
+    "V-BS": "f044b2ade101f263af9329ca1bf519e4a20049ec4db15f9bd7b4a133e6ec813a",
+    "V-TL": "66be1a4a59df2fe1a6350bb6ee6ed017e519381af04e93a1d8aab8b1e5032afe",
+    "V-SS": "31c924deb3b71967f90237fd5a6f33c502046d5613e349136fd8c673e9537f79",
+    "S-Native": "a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd",
+    "S-CIM": "0421c8b4d5262821674b9483e59f97b2dbb359a707b62540d5f5d4134ae5b27f",
+    "V-BS-CNN": "7b0ce4c673608edcf7acc31b7795265d6130375843ca079a055d5d5abb97300c"
+  }
+}

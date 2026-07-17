@@ -1,0 +1,23 @@
+{
+  "schema_version": "reviewer-extension-p1-source-audit/1.0",
+  "scope": [
+    "src/HardwareSim.Core/AspdacReviewerHoldoutRuntime.cs",
+    "tools/HardwareSim.AspdacRunner/AspdacReviewerP1Scenarios.cs",
+    "experiments/aspdac/specs/reviewer_extension_20260717/p1_holdout.yaml"
+  ],
+  "runtime_source_forbidden_tokens": [
+    "AspdacMatchedWorkload",
+    "RunScaleSimMatched",
+    "ScaleSim",
+    "SCALE-Sim",
+    "Timeloop",
+    "reference_",
+    "external_",
+    "raw_path",
+    "schedule_csv",
+    "access_count_csv"
+  ],
+  "resolved_stage_parameter_allowlist": ["case_id", "M", "N", "K", "precision_bits", "repeat", "seed"],
+  "negative_test": "Any unexpected resolved STAGE parameter is rejected before the core lowerer is called.",
+  "comparison_layer_exception": "Tool names and raw paths may occur only in provider orchestration and post-run comparison metadata."
+}

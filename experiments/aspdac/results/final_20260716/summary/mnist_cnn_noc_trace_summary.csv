@@ -1,0 +1,7 @@
+case_id,packet_count,logical_bits,wire_bits,padding_bits,first_release_cycle,last_release_cycle,drain_cycles,trace_csv_path,trace_sha256,exact_cross_tool_input_match,both_fully_drained,evidence_level
+conv1,4502,576192,576256,64,0,3701,37040,experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_traces/conv1.csv,565694a7c3e374f195a2bf8e845f7f55d423ae331a11d8f6b4126b5a4123723f,True,True,Exact trace contract
+conv2,3256,416768,416768,0,0,3023,27072,experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_traces/conv2.csv,58ddd0650d9302d4f09f02f4745492b87a042aedc330c8c3f482177f1a53ef2c,True,True,Exact trace contract
+fc1,7774,995072,995072,0,0,7751,63216,experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_traces/fc1.csv,ceb882f04d373e9c8a032be13e9ab9929c1305f3037c223797334947a67b94af,True,True,Exact trace contract
+fc2,2571,329088,329088,0,0,2557,21592,experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_traces/fc2.csv,c98d40d44ed997d5f49c1470553e4adf923c20f1f2cedaeea412ff012cdcaefb,True,True,Exact trace contract
+fc3,234,29888,29952,64,0,237,4096,experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_traces/fc3.csv,362681f361bf9f428ff9c8b3a583939b9e03b3ef9f15975447902550628109e4,True,True,Exact trace contract
+sequential_network,18337,2347008,2347136,128,0,18532,147720,experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_traces/sequential_network.csv,7844f237c4b3461cf0ed1df81aecce1b664d3abb6a6da77861173cc01f4c145a,True,True,Exact trace contract

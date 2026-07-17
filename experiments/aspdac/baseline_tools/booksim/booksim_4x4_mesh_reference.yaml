@@ -1,0 +1,38 @@
+schema: aspdac.baseline_tool_config.v1
+tool: BookSim
+case_id: booksim_4x4_mesh_reference
+status: not_run
+evidence_label: reference_trend
+normalization_target:
+  topology: mesh
+  dimensions:
+    rows: 4
+    cols: 4
+  packet_size_bits: 128
+  link_width_bits_per_cycle: 128
+  routing: XY
+  arbitration: deterministic_round_robin_or_nearest_available_equivalent
+traffic_patterns:
+  - uniform
+  - transpose
+  - hotspot
+  - bit_complement
+  - burst
+sweep:
+  offered_load:
+    start: 0.01
+    stop: saturation
+    step: TBD
+metrics:
+  - average_latency
+  - throughput
+  - saturation_injection_rate
+  - queueing_delay
+  - congestion_trend
+outputs:
+  raw_dir: experiments/aspdac/results/booksim/booksim_4x4_mesh_reference/raw
+  processed_metrics: experiments/aspdac/results/booksim/booksim_4x4_mesh_reference/metrics.csv
+  manifest: experiments/aspdac/results/booksim/booksim_4x4_mesh_reference/manifest.json
+notes:
+  - Use trend wording until all microarchitectural assumptions are normalized.
+  - Generated results are external reference data, not VHaCSim measurements.

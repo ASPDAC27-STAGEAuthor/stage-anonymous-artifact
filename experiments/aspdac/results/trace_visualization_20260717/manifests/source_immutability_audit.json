@@ -1,0 +1,8 @@
+{
+  "after_sha256": "d8231fd185ac136019381e8ebb37fa29d1f8d9b526ee2206767d713d32bc52f3",
+  "before_sha256": "d8231fd185ac136019381e8ebb37fa29d1f8d9b526ee2206767d713d32bc52f3",
+  "changed_sources": [],
+  "passed": true,
+  "schema_version": "stage-trace-source-immutability-audit/1.0",
+  "source_count": 19
+}

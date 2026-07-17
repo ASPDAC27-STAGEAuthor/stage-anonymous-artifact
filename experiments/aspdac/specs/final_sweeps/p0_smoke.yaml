@@ -1,0 +1,53 @@
+schema_version: aspg-experiment-plan-1.0
+name: p0_final_smoke
+bundle_root: experiments/aspdac/results/final_20260716
+configs:
+  - experiments/aspdac/specs/final_configs/v_bs.yaml
+  - experiments/aspdac/specs/final_configs/v_tl.yaml
+  - experiments/aspdac/specs/final_configs/v_ss.yaml
+  - experiments/aspdac/specs/final_configs/s_native.yaml
+  - experiments/aspdac/specs/final_configs/s_cim.yaml
+experiments:
+  - name: p0_vbs_packet_runtime_smoke
+    provider: stage
+    scenario: vbs_noc
+    evidence_level: numerical
+    base_config: V-BS
+    fixed:
+      traffic: uniform
+      injection_rate: 0.005
+      seed: 0
+      warmup_cycles: 20
+      measurement_cycles: 100
+      drain_cycles: 40
+      trace_mode: full
+    axes: {}
+  - name: p0_vtl_config_smoke
+    provider: config_audit
+    scenario: vtl_contract
+    evidence_level: exact
+    base_config: V-TL
+    fixed: {workload: gemm_256}
+    axes: {}
+  - name: p0_vss_config_smoke
+    provider: config_audit
+    scenario: vss_contract
+    evidence_level: exact
+    base_config: V-SS
+    fixed: {workload: gemm_256, seed: 40}
+    axes: {}
+  - name: p0_snative_config_smoke
+    provider: config_audit
+    scenario: s_native_contract
+    evidence_level: exact
+    base_config: S-Native
+    fixed: {workload: Attention_128_64}
+    axes: {}
+  - name: p0_scim_config_smoke
+    provider: config_audit
+    scenario: s_cim_contract
+    evidence_level: exact
+    base_config: S-CIM
+    fixed: {workload: GEMM_256, mode: functional_exact, seed: 42}
+    axes: {}
+

@@ -1,0 +1,21 @@
+schema_version: aspg-experiment-plan-1.0
+name: rq2_smoke
+bundle_root: experiments/aspdac/results/final_20260716
+configs:
+  - experiments/aspdac/specs/final_configs/v_bs.yaml
+experiments:
+  - name: rq2_stage_vbs_smoke
+    provider: stage
+    scenario: vbs_noc
+    evidence_level: numerical
+    base_config: V-BS
+    fixed:
+      injection_rate: 0.005
+      seed: 0
+      warmup_cycles: 20
+      measurement_cycles: 200
+      drain_cycles: 80
+      trace_mode: metrics_only
+    axes:
+      traffic: [uniform, transpose, bit_complement, hotspot_node5]
+

@@ -1,0 +1,12 @@
+{
+  "schema_version": "aspg-checkpoint-1.0",
+  "plan": "optical_intervention",
+  "updated_utc": "2026-07-17T09:09:13.301258Z",
+  "processed": 4,
+  "total": 4,
+  "completed_this_invocation": 4,
+  "failed_this_invocation": 0,
+  "skipped_this_invocation": 0,
+  "resumed": 0,
+  "current_candidate_id": "c-1d99b3c28dd735ce"
+}

@@ -1,0 +1,27 @@
+schema_version: aspg-rq3-size-matrix-1.0
+matrix_id: rq3_cross_tool_size_scaling_20260716
+phase: Phase 10 IN_PROGRESS
+evidence_policy:
+  exact: Timeloop compute floor and access-count replay when mapping semantics match
+  trend: SCALE-Sim timing/access scaling and native Accelergy totals
+  shared_reference: Accelergy ERT action energy rebound
+frozen_configs:
+  v_tl: 66be1a4a59df2fe1a6350bb6ee6ed017e519381af04e93a1d8aab8b1e5032afe
+  v_ss: 31c924deb3b71967f90237fd5a6f33c502046d5613e349136fd8c673e9537f79
+  s_native: a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd
+tool_contracts:
+  timeloop: 16 total MAC/cycle; frozen M4 N4 K1 spatial and K16 temporal schedule
+  scalesim: 4x4 single-MAC weight-stationary; dense; seed 40
+  accelergy: shared 45nm CACTI/Aladdin reference; not silicon calibrated
+  stage_vtl: compute_only and full_system
+  stage_vss: warm_array and cold_start
+cases:
+  - {case_id: gemm_s128, family: gemm, scale: small, M: 128, N: 128, K: 128, expected_macs: 2097152}
+  - {case_id: gemm_s256, family: gemm, scale: medium, M: 256, N: 256, K: 256, expected_macs: 16777216}
+  - {case_id: gemm_s512, family: gemm, scale: large, M: 512, N: 512, K: 512, expected_macs: 134217728}
+  - {case_id: mlp_l1_m64, family: mlp_l1, scale: small, M: 64, N: 256, K: 512, expected_macs: 8388608}
+  - {case_id: mlp_l1_m128, family: mlp_l1, scale: medium, M: 128, N: 256, K: 512, expected_macs: 16777216}
+  - {case_id: mlp_l1_m256, family: mlp_l1, scale: large, M: 256, N: 256, K: 512, expected_macs: 33554432}
+  - {case_id: attention_qk_s64, family: attention_qk, scale: small, M: 64, N: 64, K: 64, expected_macs: 262144}
+  - {case_id: attention_qk_s128, family: attention_qk, scale: medium, M: 128, N: 128, K: 64, expected_macs: 1048576}
+  - {case_id: attention_qk_s256, family: attention_qk, scale: large, M: 256, N: 256, K: 64, expected_macs: 4194304}

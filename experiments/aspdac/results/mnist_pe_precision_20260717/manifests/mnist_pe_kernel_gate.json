@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "candidate_count_96": true,
+    "case_profile_repeat_groups_48": true,
+    "kernel_reference_exact": true,
+    "profile_counts_24_each": true,
+    "python_backend_reference_exact": true,
+    "repeat_output_and_trace_exact": true
+  },
+  "kernel_csv": "experiments/aspdac/results/mnist_pe_precision_20260717/summary/mnist_pe_precision_kernel_conformance.csv",
+  "kernel_csv_sha256": "74c0ac04cdc7db830e169db1bd37c7b081b957614043267b940c54a50f8b581e",
+  "profile_counts": {
+    "fp16_a16": 24,
+    "fp32_a32": 24,
+    "fp8_a16": 24,
+    "fp8_a8": 24
+  },
+  "schema_version": "aspg-mnist-pe-kernel-gate-1.0",
+  "status": "passed"
+}

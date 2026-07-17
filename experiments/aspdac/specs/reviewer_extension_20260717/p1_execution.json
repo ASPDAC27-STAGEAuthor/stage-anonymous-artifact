@@ -1,0 +1,31 @@
+{
+  "schema_version": "reviewer-extension-p1-execution/1.0",
+  "orchestrator": "experiments/aspdac/scripts/reviewer_extension_p1.py",
+  "candidate_identity": {
+    "algorithm": "sha256/canonical-json/v1",
+    "config_hash_excludes": ["repeat"],
+    "candidate_id_suffix": "-r{repeat}",
+    "seed": 40,
+    "repeats": [0, 1]
+  },
+  "checkpoint": {
+    "path": "manifests/p1_checkpoint.json",
+    "atomic_replace": true,
+    "lock": ".checkpoint.lock",
+    "terminal_statuses": ["completed", "failed", "skipped", "not_supported"],
+    "retain_terminal_raw_artifact": true
+  },
+  "comparison_gate": {
+    "providers": ["stage", "scalesim"],
+    "required_status": "completed",
+    "scope": ["case_id", "repeat"],
+    "on_missing_or_noncompleted": "write blocked pair status and do not emit paired comparison rows"
+  },
+  "candidate_counts": {
+    "holdout_stage": 16,
+    "holdout_scalesim": 16,
+    "noc_stage": 18,
+    "total": 50
+  }
+}
+

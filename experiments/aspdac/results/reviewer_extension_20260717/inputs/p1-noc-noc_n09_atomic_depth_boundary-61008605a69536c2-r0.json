@@ -1,0 +1,12 @@
+{
+  "candidate_id": "p1-noc-noc_n09_atomic_depth_boundary-61008605a69536c2-r0",
+  "config_hash": "61008605a69536c297b3d66b582a436157700425731e314a502b464b48ae125e",
+  "resolved": {
+    "parameters": {
+      "case_id": "noc_n09_atomic_depth_boundary",
+      "repeat": 0,
+      "seed": 40
+    }
+  },
+  "scenario": "reviewer_noc_contract"
+}

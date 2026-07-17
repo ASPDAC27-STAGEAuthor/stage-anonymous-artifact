@@ -1,0 +1,39 @@
+schema_version: aspg-experiment-plan-1.0
+name: rq3_energy
+bundle_root: experiments/aspdac/results/final_20260716
+configs:
+  - experiments/aspdac/specs/final_configs/v_tl.yaml
+experiments:
+  - name: rq3_stage_energy
+    provider: stage
+    scenario: energy_reference
+    evidence_level: trend
+    base_config: V-TL
+    fixed:
+      ert_sha256: 5f86d648b6e655d254a31dd3a619bd2476adf3dfae81ae7278a34feb2307d9da
+      action_count: 0
+      per_action_energy_pj: 0.0
+      category: workload
+      expected_macs: 0
+      shared_ert_mac_energy_pj: 3.275
+      register_fj_per_compute: 0.0
+      local_fj_per_compute: 0.0
+      global_fj_per_compute: 0.0
+      dram_fj_per_compute: 0.0
+      external_native_energy_uj: 0.0
+    cases:
+      - {case_id: mac_read, kind: microbench, action_count: 1, per_action_energy_pj: 3.275, category: compute}
+      - {case_id: register_read, kind: microbench, action_count: 1, per_action_energy_pj: 0.009, category: register}
+      - {case_id: register_write, kind: microbench, action_count: 1, per_action_energy_pj: 0.009, category: register}
+      - {case_id: local_sram_read, kind: microbench, action_count: 1, per_action_energy_pj: 1.45068, category: local_sram}
+      - {case_id: local_sram_write, kind: microbench, action_count: 1, per_action_energy_pj: 1.71282, category: local_sram}
+      - {case_id: global_sram_read, kind: microbench, action_count: 1, per_action_energy_pj: 124.61, category: global_sram}
+      - {case_id: global_sram_write, kind: microbench, action_count: 1, per_action_energy_pj: 118.033, category: global_sram}
+      - {case_id: dram_read, kind: microbench, action_count: 1, per_action_energy_pj: 2048.0, category: dram}
+      - {case_id: dram_write, kind: microbench, action_count: 1, per_action_energy_pj: 2048.0, category: dram}
+      - {case_id: gemm_256, kind: workload, expected_macs: 16777216, register_fj_per_compute: 18.56, local_fj_per_compute: 4933.39, global_fj_per_compute: 5200.58, dram_fj_per_compute: 48000.0, external_native_energy_uj: 992.41}
+      - {case_id: mlp_l1, kind: workload, expected_macs: 16777216, register_fj_per_compute: 18.60, local_fj_per_compute: 4939.57, global_fj_per_compute: 5230.20, dram_fj_per_compute: 48250.0, external_native_energy_uj: 997.21}
+      - {case_id: mlp_l2, kind: workload, expected_macs: 4194304, register_fj_per_compute: 18.56, local_fj_per_compute: 4960.16, global_fj_per_compute: 5259.82, dram_fj_per_compute: 48500.0, external_native_energy_uj: 250.56}
+      - {case_id: attention_qk, kind: workload, expected_macs: 1048576, register_fj_per_compute: 18.35, local_fj_per_compute: 4923.08, global_fj_per_compute: 5082.10, dram_fj_per_compute: 47000.0, external_native_energy_uj: 60.84}
+      - {case_id: attention_pv, kind: workload, expected_macs: 1048576, register_fj_per_compute: 18.49, local_fj_per_compute: 4947.80, global_fj_per_compute: 5200.58, dram_fj_per_compute: 48000.0, external_native_energy_uj: 62.04}
+    axes: {}

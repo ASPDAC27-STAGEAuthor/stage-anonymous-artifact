@@ -1,0 +1,38 @@
+{
+  "schema_version": "stage-reviewer-p2-reporting-manifest-1.0",
+  "generated_utc": "2026-07-16T19:10:07.375984Z",
+  "source_analysis": {
+    "path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\manifests\\p2_intervention_analysis.json",
+    "content_sha256": "8125c6a28713ff16ca75ab1d1af2d85c437bf12009f5c46c709afbb06eee453e",
+    "file_sha256": "94c3768f503fd663053b578168311efa423868f2a5c033c72484e8ed92050a17",
+    "candidate_count": 8,
+    "overall_acceptance_pass": true
+  },
+  "outputs": [
+    {
+      "path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\summary\\trace_guided_interventions.csv",
+      "file_sha256": "0c364c2faa86552efaae823cbf7e5f46d8ac1728dbb76eff7e85203b5b214607"
+    },
+    {
+      "path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\summary\\intervention_prediction_error.csv",
+      "file_sha256": "c1a7f4193e31403a7f0d3c07c914eb6dd07d2aba7af78af1502fb229d298f45f"
+    },
+    {
+      "path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\figures\\fig_reviewer_intervention.pdf",
+      "file_sha256": "d23cd86d769580c179c9abd5862c6da92725cb3f6c899c9f98cab0eefac240dd"
+    },
+    {
+      "path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\figures\\fig_reviewer_intervention.png",
+      "file_sha256": "090a13ddc2cdacde966803b18b3312d5f231155eaf7da1a19c5abdc3180a2e93"
+    }
+  ],
+  "trace_guided_intervention_rows": 2,
+  "prediction_error_rows": 6,
+  "claim_boundary": "Deterministic within-model counterfactual evidence only. It is not general causal identification, hardware accuracy, or a cross-tool timing claim.",
+  "integrity": {
+    "algorithm": "sha256",
+    "canonicalization": "sorted-key compact UTF-8 JSON",
+    "scope": "document excluding integrity",
+    "content_sha256": "d4f9b041d3edbb72a3a6257472a84c533f909768bb42715a139b86ecf21098ec"
+  }
+}

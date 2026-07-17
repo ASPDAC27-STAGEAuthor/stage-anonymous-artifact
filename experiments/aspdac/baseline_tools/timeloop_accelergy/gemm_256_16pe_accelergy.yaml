@@ -1,0 +1,163 @@
+# Legacy architecture 0.3 is retained for the installed C++ Timeloop mapper.
+# Explicit actions are required by Accelergy 0.4 to emit a non-empty ERT.
+mapper:
+  algorithm: random_pruned
+  optimization_metrics:
+  - energy
+  - delay
+  search_size: 512
+  victory_condition: 64
+  timeout: 120
+  num_threads: 4
+
+architecture:
+  version: 0.3
+  subtree:
+    - name: system
+      attributes:
+        technology: "45nm"
+        global_cycle_seconds: 1e-9
+      local:
+        - name: DRAM
+          class: DRAM
+          attributes:
+            type: "LPDDR4"
+            width: 256
+            word_bits: 16
+            block_size: 16
+            bandwidth: 16.0
+          required_actions: [read, write, update, leak]
+        - name: GlobalBuffer
+          class: SRAM
+          attributes:
+            technology: "45nm"
+            width: 256
+            depth: 8192
+            datawidth: 16
+            word_bits: 16
+            block_size: 16
+            bandwidth: 32.0
+          required_actions: [read, write, update, leak]
+        - name: LocalBuffer[0..15]
+          class: SRAM
+          attributes:
+            technology: "45nm"
+            width: 16
+            depth: 512
+            datawidth: 16
+            word_bits: 16
+            block_size: 1
+            meshX: 4
+            cluster_size: 1
+          required_actions: [read, write, update, leak]
+        - name: MAC[0..15]
+          class: stage_intmac
+          attributes:
+            technology: "45nm"
+            datawidth: 16
+            width: 16
+            action_latency_cycles: 1
+            word_bits: 16
+            meshX: 4
+          required_actions: [read, write, update, leak]
+        - name: Registers[0..15]
+          class: stage_regfile
+          attributes:
+            technology: "45nm"
+            depth: 1
+            width: 16
+            datawidth: 16
+            action_latency_cycles: 1
+            word_bits: 16
+            meshX: 4
+            cluster_size: 1
+          required_actions: [read, write, update, leak]
+
+mapspace:
+  constraints:
+  - target: Registers
+    type: datatype
+    keep: [Z]
+    bypass: [A, B]
+  - target: LocalBuffer
+    type: datatype
+    keep: [A, B, Z]
+    bypass: []
+  - target: GlobalBuffer
+    type: datatype
+    keep: [A, B, Z]
+    bypass: []
+  - target: GlobalBuffer
+    type: spatial
+    factors: M4 N4 K1
+    permutation: MNK
+  - target: Registers
+    type: temporal
+    factors: M1 N1 K1
+    permutation: MNK
+  - target: LocalBuffer
+    type: temporal
+    factors: M1 N1 K16
+    permutation: KMN
+  - target: GlobalBuffer
+    type: temporal
+    factors: M1 N1 K1
+    permutation: MNK
+  - target: Registers
+    type: utilization
+    min: 0.01
+
+problem:
+  shape: gemm_ABZ
+  M: 256
+  N: 256
+  K: 256
+
+compound_components:
+  version: 0.4
+  classes:
+    - name: stage_intmac
+      attributes:
+        technology: "45nm"
+        width: 16
+        global_cycle_seconds: 1e-9
+      subcomponents:
+        - name: primitive
+          class: intmac
+          attributes:
+            technology: technology
+            width: width
+            global_cycle_seconds: global_cycle_seconds
+      actions:
+        - name: read
+          subcomponents: [{name: primitive, actions: [{name: read, arguments: {action_latency_cycles: 1}}]}]
+        - name: write
+          subcomponents: [{name: primitive, actions: [{name: write, arguments: {action_latency_cycles: 1}}]}]
+        - name: update
+          subcomponents: [{name: primitive, actions: [{name: update, arguments: {action_latency_cycles: 1}}]}]
+        - name: leak
+          subcomponents: [{name: primitive, actions: [{name: leak, arguments: {action_latency_cycles: 1}}]}]
+
+    - name: stage_regfile
+      attributes:
+        technology: "45nm"
+        width: 16
+        depth: 1
+        global_cycle_seconds: 1e-9
+      subcomponents:
+        - name: primitive
+          class: regfile
+          attributes:
+            technology: technology
+            width: width
+            depth: depth
+            global_cycle_seconds: global_cycle_seconds
+      actions:
+        - name: read
+          subcomponents: [{name: primitive, actions: [{name: read, arguments: {action_latency_cycles: 1}}]}]
+        - name: write
+          subcomponents: [{name: primitive, actions: [{name: write, arguments: {action_latency_cycles: 1}}]}]
+        - name: update
+          subcomponents: [{name: primitive, actions: [{name: update, arguments: {action_latency_cycles: 1}}]}]
+        - name: leak
+          subcomponents: [{name: primitive, actions: [{name: leak, arguments: {action_latency_cycles: 1}}]}]

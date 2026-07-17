@@ -1,0 +1,217 @@
+{
+  "evidence_boundaries": {
+    "excluded": "CNN arithmetic, MNIST accuracy, native STAGE tensor trace, and end-to-end system cycles",
+    "runtime": "Numerical descriptive: latency and makespan; no cycle-exact equivalence threshold",
+    "trace_contract": "Exact: byte-identical registered trace hash and packet count across tools",
+    "trend": "Five isolated-layer makespan rank rho >= 0.8 and the same dominant layer"
+  },
+  "files": [
+    {
+      "bytes": 21607,
+      "path": "experiments/aspdac/scripts/analyze_mnist_cnn_noc.py",
+      "sha256": "d9a05ea9a53a9646e4199e422172f654ab913c697a5a41f546aed6e894979baf"
+    },
+    {
+      "bytes": 10207,
+      "path": "experiments/aspdac/results/final_20260716/manifests/mnist_cnn_noc_trace_manifest.json",
+      "sha256": "8cc50a7f5ff4802f527b0d31a3c610fc58e0bcee695cb84a3c5ee001e96351c9"
+    },
+    {
+      "bytes": 245693,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_traces/conv1.csv",
+      "sha256": "565694a7c3e374f195a2bf8e845f7f55d423ae331a11d8f6b4126b5a4123723f"
+    },
+    {
+      "bytes": 177825,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_traces/conv2.csv",
+      "sha256": "58ddd0650d9302d4f09f02f4745492b87a042aedc330c8c3f482177f1a53ef2c"
+    },
+    {
+      "bytes": 390667,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_traces/fc1.csv",
+      "sha256": "ceb882f04d373e9c8a032be13e9ab9929c1305f3037c223797334947a67b94af"
+    },
+    {
+      "bytes": 128503,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_traces/fc2.csv",
+      "sha256": "c98d40d44ed997d5f49c1470553e4adf923c20f1f2cedaeea412ff012cdcaefb"
+    },
+    {
+      "bytes": 11501,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_traces/fc3.csv",
+      "sha256": "362681f361bf9f428ff9c8b3a583939b9e03b3ef9f15975447902550628109e4"
+    },
+    {
+      "bytes": 1225483,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_traces/sequential_network.csv",
+      "sha256": "7844f237c4b3461cf0ed1df81aecce1b664d3abb6a6da77861173cc01f4c145a"
+    },
+    {
+      "bytes": 7849,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_stage/c-02894ebe96738af3.json",
+      "sha256": "38c6452e874789c349d9744a124511ea9703f13a99db4cd80db38f57b340a2a7"
+    },
+    {
+      "bytes": 7863,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_stage/c-3e562cf7eaf671a9.json",
+      "sha256": "7077cd61940b8f3cc5b1617e687bf341826bf577dd1f52f8b58c1e83e6462a03"
+    },
+    {
+      "bytes": 7862,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_stage/c-409cc5ec37dd2866.json",
+      "sha256": "f7f1e9b1d720f9ef4143a06ae5a701fbaeb4fe618037f044693ca42bfaea08aa"
+    },
+    {
+      "bytes": 7889,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_stage/c-49da1cf80961cd31.json",
+      "sha256": "49a92d198d4636faa9f9128c410512b56bd82427954f38fc0060fa6bcc7e8ca0"
+    },
+    {
+      "bytes": 7883,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_stage/c-656bf53a9cc84c38.json",
+      "sha256": "8c820e340bd47e19d080628ac23fa754541be0f7273811c338b6dfed2042417d"
+    },
+    {
+      "bytes": 7883,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_stage/c-6856487a04d584c5.json",
+      "sha256": "3c35de299b35fa7e027bf23db4294999ec7566f1604cb5717ff5c99bc31abc15"
+    },
+    {
+      "bytes": 7876,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_stage/c-6a6457a60d85a2ae.json",
+      "sha256": "6ab9937b6033ccf945369f5275e590629bc46d22be9fbdc52654aa5c4ad3ff18"
+    },
+    {
+      "bytes": 7938,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_stage/c-ac9428758cfe0dd6.json",
+      "sha256": "3e953686f5e1b07447675f1212f377f21a22d484697226ffe9cbac8ee1925097"
+    },
+    {
+      "bytes": 7862,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_stage/c-d535655b6cb8fd7b.json",
+      "sha256": "82321124ddb39115e27af301ea71bdeb410a8a67b1ea1f8450ca5a29b40c3dad"
+    },
+    {
+      "bytes": 7833,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_stage/c-e8bfef9a80a6fb8f.json",
+      "sha256": "bcebe20eeb48ada1add3fa26de504a3eaeda20d7ae4e0d480a9fd01d8521d82c"
+    },
+    {
+      "bytes": 7950,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_stage/c-ef1ce5224f4cb0da.json",
+      "sha256": "6b4a8681352ca1f1fb62d969a236b0aa7726590b04c60eb0a4557c7999a3be04"
+    },
+    {
+      "bytes": 7832,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_stage/c-fc80b7349225a63c.json",
+      "sha256": "d268f3b78baa74e0cd142338095f87454f7ae00cdd7a96e971b4c749873903fa"
+    },
+    {
+      "bytes": 8590,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_booksim2/c-2b4cf12a6ed1af66.json",
+      "sha256": "46b55aaeaf0d23b27ff5b889ca972e641e491114e0c08c94433a591df4e1bec3"
+    },
+    {
+      "bytes": 8531,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_booksim2/c-3c9a76e98e974aeb.json",
+      "sha256": "b9d3b8de33e57e0cf5774fbae472b938fe510a4a62375d26e1a4576e94df0602"
+    },
+    {
+      "bytes": 8527,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_booksim2/c-58eca0c32e339ce8.json",
+      "sha256": "dcdb368cbb46a230cf986adbe0e1a676ed3e156fd5b1d72c7f6bb3e1226f419e"
+    },
+    {
+      "bytes": 8512,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_booksim2/c-5ccdf7493ac27767.json",
+      "sha256": "7fa1ea898f8f1de22f7d632a2b6c7c8c0be3926e06e54e5f328940c77d9b3927"
+    },
+    {
+      "bytes": 8521,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_booksim2/c-8d8306e16d420d08.json",
+      "sha256": "17803e9369a160a988431d22c4d4cda601199b85481fc41cfc277f934712ae14"
+    },
+    {
+      "bytes": 8589,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_booksim2/c-a468e81cb3dd1e73.json",
+      "sha256": "85b1475cc3969cc2b83b7ef237a174de09d86066492b87dda08286784a64376d"
+    },
+    {
+      "bytes": 8517,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_booksim2/c-ab74d8874c2c9f66.json",
+      "sha256": "44eedb4b9af2e6d3debecbde01151aee3941f9d5d6edcd6e54c78808ab241221"
+    },
+    {
+      "bytes": 8619,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_booksim2/c-b55e273ccbc56f63.json",
+      "sha256": "ce3bd0a993651c992dde8483051628fa1bafe6ab1ac8e4a9efde36454bd239e9"
+    },
+    {
+      "bytes": 8531,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_booksim2/c-d9f523bafb91f813.json",
+      "sha256": "789e3d6dfc0bdf24fbb2889025b3474261cdf2edcca938366f4a8c9ec7c0f284"
+    },
+    {
+      "bytes": 8530,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_booksim2/c-e97eecbfdc438f8d.json",
+      "sha256": "527e8dff24404fe2e277f83f3e559230d65d2373072b994d4c494bd322d9944d"
+    },
+    {
+      "bytes": 8527,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_booksim2/c-f0312ce8296e6121.json",
+      "sha256": "cc09b525ab4b06bbc49e9d60747f383de45a20e51570cc81a9e86c87749752e1"
+    },
+    {
+      "bytes": 8521,
+      "path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_booksim2/c-fb6339889a1b3ab8.json",
+      "sha256": "a95cc613a3120034a636350b0f662beb39ded3e4e5e6485efc2ee5396fa4e9a9"
+    },
+    {
+      "bytes": 30730,
+      "path": "experiments/aspdac/results/final_20260716/summary/mnist_cnn_noc_runs.csv",
+      "sha256": "6a85e7345e3156e46eaf03cf46470574e6f2a5ea9935dafc33cee94a81254360"
+    },
+    {
+      "bytes": 4566,
+      "path": "experiments/aspdac/results/final_20260716/summary/mnist_cnn_noc_repeat_hashes.csv",
+      "sha256": "1951509c970050c6df826d824ad4369b06f9295d7638b6c797d5a906d545166d"
+    },
+    {
+      "bytes": 2303,
+      "path": "experiments/aspdac/results/final_20260716/summary/mnist_cnn_noc_cross_tool.csv",
+      "sha256": "ab687d7d30d03da79c1bac7854cf80ac72561a9659b619a84266649999fa862a"
+    },
+    {
+      "bytes": 1496,
+      "path": "experiments/aspdac/results/final_20260716/summary/mnist_cnn_noc_trace_summary.csv",
+      "sha256": "6060769d9213fd1b80dceaf40a95b212e93b6b1bd84e25ed10789f54882d871f"
+    },
+    {
+      "bytes": 20109,
+      "path": "experiments/aspdac/results/final_20260716/figures/fig_mnist_cnn_noc_booksim_stage.pdf",
+      "sha256": "567b07993e87399fbdca3868a9f5b69e47a07467fbda01c81d81d6610d808b38"
+    },
+    {
+      "bytes": 151426,
+      "path": "experiments/aspdac/results/final_20260716/figures/fig_mnist_cnn_noc_booksim_stage.png",
+      "sha256": "0672d891012ba9d9dca76c96d538d9225b11e3bcba4c080111d9f7105dd10c3f"
+    }
+  ],
+  "schema_version": "aspg-mnist-cnn-noc-output-manifest-1.0",
+  "status": "completed",
+  "validation": {
+    "all_exact_input_trace_matches": true,
+    "all_fully_drained": true,
+    "all_repeat_delivery_and_metrics_hashes_exact": true,
+    "booksim_dominant_layer": "fc1",
+    "candidate_count": 24,
+    "expected_candidate_count": 24,
+    "isolated_layer_makespan_spearman_rho": 0.9999999999999999,
+    "preregistered_rank_threshold": 0.8,
+    "repeat_groups": 12,
+    "sequential_network_packets": 18337,
+    "stage_dominant_layer": "fc1",
+    "trace_case_count": 6,
+    "trend_relationship_pass": true
+  }
+}

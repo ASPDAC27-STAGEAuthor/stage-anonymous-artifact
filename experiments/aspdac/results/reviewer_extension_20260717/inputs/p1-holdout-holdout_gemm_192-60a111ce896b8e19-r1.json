@@ -1,0 +1,16 @@
+{
+  "candidate_id": "p1-holdout-holdout_gemm_192-60a111ce896b8e19-r1",
+  "config_hash": "60a111ce896b8e196ca4878e7a9b419349cc80e211a64ef56b32d3f311f20551",
+  "resolved": {
+    "parameters": {
+      "K": 192,
+      "M": 192,
+      "N": 192,
+      "case_id": "holdout_gemm_192",
+      "precision_bits": 16,
+      "repeat": 1,
+      "seed": 40
+    }
+  },
+  "scenario": "reviewer_holdout_scalesim"
+}

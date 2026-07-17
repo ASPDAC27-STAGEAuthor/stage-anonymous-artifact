@@ -1,0 +1,75 @@
+{
+  "schema_version": "stage-reviewer-p2-observation-manifest-1.0",
+  "generated_utc": "2026-07-16T19:01:37.247668Z",
+  "preregistration_content_sha256": "64d01c386378c9028796704adaa81e7087e2fbd9ee8789c29fef3b3acb544708",
+  "candidate_manifest_content_sha256": "9399d5b206981c382c0774d81e85841c0366b946752ab2cc1352bc5b9bada264",
+  "candidate_count": 8,
+  "completed_count": 8,
+  "failed_count": 0,
+  "resumed_count": 0,
+  "outputs": [
+    {
+      "candidate_id": "p2-4f667ca23aa1efc0",
+      "runner_output_path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\manifests\\p2_runner_outputs\\p2-4f667ca23aa1efc0.json",
+      "runner_output_file_sha256": "0a8b9d60f2f985f3b34a2dd107a99f515421ee8197222dcb06e4724a45ae128a",
+      "observation_path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\raw\\p2_interventions\\p2-4f667ca23aa1efc0.json",
+      "observation_file_sha256": "e035b36620b912a47a7255516bb0c4a0f21e4ad76ac8a62cb5fcebe8979d8b55"
+    },
+    {
+      "candidate_id": "p2-b2c9b43932fc805c",
+      "runner_output_path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\manifests\\p2_runner_outputs\\p2-b2c9b43932fc805c.json",
+      "runner_output_file_sha256": "7bef877adbafbae5f779cd5015706525cc1dba1906d1cf3ba0b83fb14c97db2d",
+      "observation_path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\raw\\p2_interventions\\p2-b2c9b43932fc805c.json",
+      "observation_file_sha256": "ccb9ab5858f4f1854b0896ff18f8e0286566590c60a688ea8be24bfc47e12a35"
+    },
+    {
+      "candidate_id": "p2-d898e7b810de0b9f",
+      "runner_output_path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\manifests\\p2_runner_outputs\\p2-d898e7b810de0b9f.json",
+      "runner_output_file_sha256": "514decfb40d78e035e0110b9cf5746f751ebfd65d3beff76dfef5865216b0d95",
+      "observation_path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\raw\\p2_interventions\\p2-d898e7b810de0b9f.json",
+      "observation_file_sha256": "d404d5ee42a1d3d7f83e094a361bdf06d9cd012a7d9d3f93cd3d44754c1da906"
+    },
+    {
+      "candidate_id": "p2-8803bc6bf3f4caa8",
+      "runner_output_path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\manifests\\p2_runner_outputs\\p2-8803bc6bf3f4caa8.json",
+      "runner_output_file_sha256": "5b393e3d258ce68ff81b54dc928778e53c2f5db3fab5dc1e88fbb8c38a05d451",
+      "observation_path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\raw\\p2_interventions\\p2-8803bc6bf3f4caa8.json",
+      "observation_file_sha256": "631e60dba89529576119e4acbc9c790c2b37a6d5635d62f8bdad99022fa31865"
+    },
+    {
+      "candidate_id": "p2-fb395e9a12da508a",
+      "runner_output_path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\manifests\\p2_runner_outputs\\p2-fb395e9a12da508a.json",
+      "runner_output_file_sha256": "f16079e7dfa41eafd0fb3e3f4d19645bb0d2b7a538f2a9459aca3121888527f2",
+      "observation_path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\raw\\p2_interventions\\p2-fb395e9a12da508a.json",
+      "observation_file_sha256": "59eeb0314d14eb89465fbe75d020d0c3a9fb3d49d7c791d02109bead0c134e09"
+    },
+    {
+      "candidate_id": "p2-2c495d8d49d4e782",
+      "runner_output_path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\manifests\\p2_runner_outputs\\p2-2c495d8d49d4e782.json",
+      "runner_output_file_sha256": "3556f098ac315269df346699a63c2354183da992312ab1f3857d93869c154c34",
+      "observation_path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\raw\\p2_interventions\\p2-2c495d8d49d4e782.json",
+      "observation_file_sha256": "d58dd8c1ea6e47b4780274a4bb8d445e8b5042b8aa8798b622ecc479edd36ff2"
+    },
+    {
+      "candidate_id": "p2-64500505c864db3b",
+      "runner_output_path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\manifests\\p2_runner_outputs\\p2-64500505c864db3b.json",
+      "runner_output_file_sha256": "93d2dd5054cbd7d988c10ebe97d56837f60c74bf5c4257814d59b4a33db75106",
+      "observation_path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\raw\\p2_interventions\\p2-64500505c864db3b.json",
+      "observation_file_sha256": "550ca96217067ab67a42655ffe2eb1c1911c7cefc22f4e6c0c326da2b4d82a85"
+    },
+    {
+      "candidate_id": "p2-9d6cc6ed7905b7c7",
+      "runner_output_path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\manifests\\p2_runner_outputs\\p2-9d6cc6ed7905b7c7.json",
+      "runner_output_file_sha256": "f2649e41ed64669afe0b7a82d92d0abbe27668616999ee21004b297e39d06fdd",
+      "observation_path": "ARTIFACT_ROOT\\experiments\\aspdac\\results\\reviewer_extension_20260717\\raw\\p2_interventions\\p2-9d6cc6ed7905b7c7.json",
+      "observation_file_sha256": "c2addbe2b4d09218e8331194d35953ddeb09af8ee2708b3cd7d921d3439b7ecb"
+    }
+  ],
+  "measurement_source": "real HardwareSim.AspdacRunner outputs; no synthetic observations",
+  "integrity": {
+    "algorithm": "sha256",
+    "canonicalization": "sorted-key compact UTF-8 JSON",
+    "scope": "document excluding integrity",
+    "content_sha256": "e3d74801142a6d33c1b1c707c5fea3c71599794d6f173544c77f60b49beadb9f"
+  }
+}

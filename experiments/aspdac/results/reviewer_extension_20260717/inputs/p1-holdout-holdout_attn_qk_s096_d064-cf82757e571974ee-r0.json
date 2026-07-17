@@ -1,0 +1,16 @@
+{
+  "candidate_id": "p1-holdout-holdout_attn_qk_s096_d064-cf82757e571974ee-r0",
+  "config_hash": "cf82757e571974eedab4c8e76574e4514e01871543e2fdb39d7fd4b02130fb79",
+  "resolved": {
+    "parameters": {
+      "K": 64,
+      "M": 96,
+      "N": 96,
+      "case_id": "holdout_attn_qk_s096_d064",
+      "precision_bits": 16,
+      "repeat": 0,
+      "seed": 40
+    }
+  },
+  "scenario": "reviewer_holdout_ws"
+}

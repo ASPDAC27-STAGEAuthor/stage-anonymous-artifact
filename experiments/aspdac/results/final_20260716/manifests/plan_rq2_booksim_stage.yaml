@@ -1,0 +1,35 @@
+schema_version: aspg-experiment-plan-1.0
+name: rq2_booksim_stage
+bundle_root: experiments/aspdac/results/final_20260716
+configs:
+  - experiments/aspdac/specs/final_configs/v_bs.yaml
+experiments:
+  - name: rq2_stage_vbs
+    provider: stage
+    scenario: vbs_noc
+    evidence_level: numerical
+    base_config: V-BS
+    fixed:
+      warmup_cycles: 3000
+      measurement_cycles: 10000
+      drain_cycles: 2000
+      trace_mode: metrics_only
+    axes:
+      traffic: [uniform, transpose, bit_complement, hotspot_node5]
+      injection_rate: [0.005, 0.010, 0.020, 0.040, 0.060, 0.080, 0.10, 0.12, 0.16, 0.20, 0.24, 0.28, 0.32]
+      seed: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  - name: rq2_stage_uniform_extension
+    provider: stage
+    scenario: vbs_noc
+    evidence_level: numerical
+    base_config: V-BS
+    fixed:
+      traffic: uniform
+      warmup_cycles: 3000
+      measurement_cycles: 10000
+      drain_cycles: 2000
+      trace_mode: metrics_only
+    axes:
+      injection_rate: [0.36, 0.40, 0.44, 0.48, 0.52, 0.56, 0.60]
+      seed: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+

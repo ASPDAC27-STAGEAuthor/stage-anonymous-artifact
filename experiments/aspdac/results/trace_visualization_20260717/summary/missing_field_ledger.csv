@@ -1,0 +1,6 @@
+field,scope,status,impact,disposition
+STAGE per-packet CNN delivery cycle,terminal sequential_network CNN result,not captured,No packet-by-packet STAGE/BookSim2 latency overlay is produced.,Use STAGE aggregate latency/makespan only; retain Numerical descriptive boundary.
+BookSim2 per-router queue occupancy and stall reason,finite CNN trace adapter output,not captured,Spatial map cannot claim observed BookSim2 congestion.,Plot exact shared-input route demand and BookSim2 delivery backlog separately.
+Cross-tool common cycle semantics,BookSim2 versus STAGE CNN runtime,not defined,Absolute cycle difference is not an accuracy percentage.,Report native metrics side by side and compare layer ranking only.
+SCALE-Sim packet/event identity,4x4 WS hold-out,not available,No exact event trace join with STAGE is possible.,Keep total-cycle and utilization comparisons at Trend level.
+Unity trace visualization,current external-visualization goal,out of scope,No Unity production/schema/UI files are modified.,Deliver PDF/PNG and standalone offline HTML only.

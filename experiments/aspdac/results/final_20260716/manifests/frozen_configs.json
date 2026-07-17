@@ -1,0 +1,50 @@
+[
+  {
+    "config_id": "S-CIM",
+    "source": "experiments/aspdac/specs/final_configs/s_cim.yaml",
+    "source_sha256": "4d2907d29671cb864e82e3602a4052086cf7da2629511ab5e5c495ec64246e9b",
+    "resolved_sha256": "0421c8b4d5262821674b9483e59f97b2dbb359a707b62540d5f5d4134ae5b27f",
+    "resolved_yaml": "experiments/aspdac/results/final_20260716/config/s_cim.resolved.yaml",
+    "resolved_json": "experiments/aspdac/results/final_20260716/config/s_cim.resolved.json"
+  },
+  {
+    "config_id": "S-Native",
+    "source": "experiments/aspdac/specs/final_configs/s_native.yaml",
+    "source_sha256": "09dd04c5e456d733e2dcdf5c868b4b538352adf0373d241d5f0eb2798b395398",
+    "resolved_sha256": "a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd",
+    "resolved_yaml": "experiments/aspdac/results/final_20260716/config/s_native.resolved.yaml",
+    "resolved_json": "experiments/aspdac/results/final_20260716/config/s_native.resolved.json"
+  },
+  {
+    "config_id": "V-BS",
+    "source": "experiments/aspdac/specs/final_configs/v_bs.yaml",
+    "source_sha256": "b234ee9a107b8f51b1d57407e82d1e4734b049acf8813954dda47de601bf92c5",
+    "resolved_sha256": "f044b2ade101f263af9329ca1bf519e4a20049ec4db15f9bd7b4a133e6ec813a",
+    "resolved_yaml": "experiments/aspdac/results/final_20260716/config/v_bs.resolved.yaml",
+    "resolved_json": "experiments/aspdac/results/final_20260716/config/v_bs.resolved.json"
+  },
+  {
+    "config_id": "V-BS-CNN",
+    "source": "experiments/aspdac/specs/final_configs/v_bs_cnn.yaml",
+    "source_sha256": "049c4f5ddf799c996078930b229dae95ee033330a8ec74a765031ad5dc33ebaf",
+    "resolved_sha256": "7b0ce4c673608edcf7acc31b7795265d6130375843ca079a055d5d5abb97300c",
+    "resolved_yaml": "experiments/aspdac/results/final_20260716/config/v_bs_cnn.resolved.yaml",
+    "resolved_json": "experiments/aspdac/results/final_20260716/config/v_bs_cnn.resolved.json"
+  },
+  {
+    "config_id": "V-SS",
+    "source": "experiments/aspdac/specs/final_configs/v_ss.yaml",
+    "source_sha256": "b9c74f63a15f5e6625bd6f0037211bcf20fddc9948f8e9cd0a1e48861ed770c4",
+    "resolved_sha256": "31c924deb3b71967f90237fd5a6f33c502046d5613e349136fd8c673e9537f79",
+    "resolved_yaml": "experiments/aspdac/results/final_20260716/config/v_ss.resolved.yaml",
+    "resolved_json": "experiments/aspdac/results/final_20260716/config/v_ss.resolved.json"
+  },
+  {
+    "config_id": "V-TL",
+    "source": "experiments/aspdac/specs/final_configs/v_tl.yaml",
+    "source_sha256": "ef38d9979c1b380ade8a4653a5bab31f956fabea21f295395462295ef7c3b0e3",
+    "resolved_sha256": "66be1a4a59df2fe1a6350bb6ee6ed017e519381af04e93a1d8aab8b1e5032afe",
+    "resolved_yaml": "experiments/aspdac/results/final_20260716/config/v_tl.resolved.yaml",
+    "resolved_json": "experiments/aspdac/results/final_20260716/config/v_tl.resolved.json"
+  }
+]

@@ -1,0 +1,71 @@
+{
+  "schema_version": "aspg-final-regression-extension-1.1",
+  "phase": "Phase 10 IN_PROGRESS",
+  "recorded_utc": "2026-07-16T15:00:25Z",
+  "repo_commit": "1e57371524a7a2cde2bcfdd07f05197a9181a73a",
+  "worktree_note": "The final run intentionally includes the user's uncommitted Phase 10 data and paper changes; no unrelated change was reset or cleaned.",
+  "sequence": [
+    {
+      "ordinal": 1,
+      "command": "dotnet build VisualHardwareAiCoDesignSimulator.sln -c Release -m:1",
+      "status": "passed",
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "ordinal": 2,
+      "command": "dotnet run --project tests\\HardwareSim.Tests\\HardwareSim.Tests.csproj -c Release --no-build -- --group phase1c-golden --results experiments\\aspdac\\results\\final_20260716\\raw\\regression\\required-golden-final-cnn-noc.json",
+      "status": "passed",
+      "passed": 7,
+      "total": 7,
+      "approved_hashes_modified": false
+    },
+    {
+      "ordinal": 3,
+      "command": "dotnet run --project tests\\HardwareSim.Tests\\HardwareSim.Tests.csproj -c Release --no-build -- --group phase8a --results experiments\\aspdac\\results\\final_20260716\\raw\\regression\\phase8a-final-cnn-noc.json",
+      "status": "passed",
+      "passed": 154,
+      "total": 154
+    },
+    {
+      "ordinal": 4,
+      "command": "dotnet run --project tests\\HardwareSim.Tests\\HardwareSim.Tests.csproj -c Release --no-build -- --group phase9 --results experiments\\aspdac\\results\\final_20260716\\raw\\regression\\phase9-final-cnn-noc.json",
+      "status": "passed",
+      "passed": 24,
+      "total": 24
+    },
+    {
+      "ordinal": 5,
+      "command": "dotnet run --project tests\\HardwareSim.Tests\\HardwareSim.Tests.csproj -c Release --no-build -- --results experiments\\aspdac\\results\\final_20260716\\raw\\regression\\full-release-final-cnn-noc.json",
+      "status": "passed",
+      "passed": 478,
+      "total": 478
+    },
+    {
+      "ordinal": 6,
+      "command": "dotnet run --project tests\\HardwareSim.Tests\\HardwareSim.Tests.csproj -c Release --no-build -- --group phase10 --results experiments\\aspdac\\results\\final_20260716\\raw\\regression\\phase10-final-cnn-noc.json",
+      "status": "passed",
+      "passed": 11,
+      "total": 11
+    },
+    {
+      "ordinal": 7,
+      "command": "python -m unittest discover -s experiments\\aspdac\\tests -p test_*.py -v",
+      "status": "passed",
+      "passed": 9,
+      "total": 9
+    }
+  ],
+  "result_copies": [
+    "raw/regression/required-golden-final-cnn-noc.json",
+    "raw/regression/phase8a-final-cnn-noc.json",
+    "raw/regression/phase9-final-cnn-noc.json",
+    "raw/regression/full-release-final-cnn-noc.json",
+    "raw/regression/phase10-final-cnn-noc.json"
+  ],
+  "phase_gate": {
+    "phase10": "IN_PROGRESS",
+    "phase10a": "LOCKED",
+    "automatic_approval": false
+  }
+}

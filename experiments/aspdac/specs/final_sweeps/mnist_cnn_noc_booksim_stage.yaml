@@ -1,0 +1,42 @@
+schema_version: aspg-experiment-plan-1.0
+name: mnist_cnn_noc_booksim_stage_v2
+bundle_root: experiments/aspdac/results/final_20260716
+configs:
+  - experiments/aspdac/specs/final_configs/v_bs_cnn.yaml
+experiments:
+  - name: mnist_cnn_noc_stage
+    provider: stage
+    scenario: vbs_cnn_trace
+    evidence_level: numerical
+    base_config: V-BS-CNN
+    fixed:
+      model_hash: 0aa004a4bd1bbbdaf550a115ad0ed5cda16b6269b8753b97bd076cd1fc55d662
+      dataset_hash: 58481a24c582fffdb3ee63a052ea16ea08c1d0f8e90b2abbdb24a96c77055ad3
+      prediction_hash: 9d56dbfd0611130a20aec9638bb9ce935dc023c17f6b0815e83b4b3a27efaa26
+      lowering_hash: 98311305665da9094b2d693a241b76172e8d7e4a0533a0242bb62c9a9706f7a9
+      trace_contract: materialized_im2col_cold_start_one_copy
+    cases: &cnn_noc_cases
+      - {case_id: fc3, trace_csv_path: experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_traces/fc3.csv, trace_sha256: 362681f361bf9f428ff9c8b3a583939b9e03b3ef9f15975447902550628109e4, packet_count: 234, logical_bits: 29888, wire_bits: 29952, padding_bits: 64, drain_cycles: 4096}
+      - {case_id: conv1, trace_csv_path: experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_traces/conv1.csv, trace_sha256: 565694a7c3e374f195a2bf8e845f7f55d423ae331a11d8f6b4126b5a4123723f, packet_count: 4502, logical_bits: 576192, wire_bits: 576256, padding_bits: 64, drain_cycles: 37040}
+      - {case_id: conv2, trace_csv_path: experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_traces/conv2.csv, trace_sha256: 58ddd0650d9302d4f09f02f4745492b87a042aedc330c8c3f482177f1a53ef2c, packet_count: 3256, logical_bits: 416768, wire_bits: 416768, padding_bits: 0, drain_cycles: 27072}
+      - {case_id: fc1, trace_csv_path: experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_traces/fc1.csv, trace_sha256: ceb882f04d373e9c8a032be13e9ab9929c1305f3037c223797334947a67b94af, packet_count: 7774, logical_bits: 995072, wire_bits: 995072, padding_bits: 0, drain_cycles: 63216}
+      - {case_id: fc2, trace_csv_path: experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_traces/fc2.csv, trace_sha256: c98d40d44ed997d5f49c1470553e4adf923c20f1f2cedaeea412ff012cdcaefb, packet_count: 2571, logical_bits: 329088, wire_bits: 329088, padding_bits: 0, drain_cycles: 21592}
+      - {case_id: sequential_network, trace_csv_path: experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_traces/sequential_network.csv, trace_sha256: 7844f237c4b3461cf0ed1df81aecce1b664d3abb6a6da77861173cc01f4c145a, packet_count: 18337, logical_bits: 2347008, wire_bits: 2347136, padding_bits: 128, drain_cycles: 147720}
+    axes:
+      repeat: [0, 1]
+      seed: [40]
+  - name: mnist_cnn_noc_booksim2
+    provider: booksim2_trace
+    scenario: vbs_cnn_trace
+    evidence_level: numerical
+    base_config: V-BS-CNN
+    fixed:
+      model_hash: 0aa004a4bd1bbbdaf550a115ad0ed5cda16b6269b8753b97bd076cd1fc55d662
+      dataset_hash: 58481a24c582fffdb3ee63a052ea16ea08c1d0f8e90b2abbdb24a96c77055ad3
+      prediction_hash: 9d56dbfd0611130a20aec9638bb9ce935dc023c17f6b0815e83b4b3a27efaa26
+      lowering_hash: 98311305665da9094b2d693a241b76172e8d7e4a0533a0242bb62c9a9706f7a9
+      trace_contract: materialized_im2col_cold_start_one_copy
+    cases: *cnn_noc_cases
+    axes:
+      repeat: [0, 1]
+      seed: [40]

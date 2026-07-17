@@ -1,0 +1,39 @@
+schema: aspdac.workload_config.v1
+name: aspdac_core_workloads
+status: planning_spec
+workloads:
+  - name: GEMM_256
+    type: GEMM
+    dimensions:
+      M: 256
+      N: 256
+      K: 256
+    precision_default: FP16
+    evidence_role: dense_ai_baseline
+  - name: Attention_128_64
+    type: TransformerAttention
+    seq_len: 128
+    hidden_dim: 64
+    stages:
+      - QK
+      - Softmax
+      - V
+    precision_default: FP16
+    evidence_role: bottleneck_migration_case
+  - name: MLP_512_256_128
+    type: MLP
+    layers:
+      - 512
+      - 256
+      - 128
+    precision_default: FP16
+    evidence_role: dense_ai_baseline
+reporting_requirements:
+  - operation_count
+  - bytes_or_bits_transferred
+  - total_cycles
+  - active_idle_stall_cycles
+  - stall_cycles_by_reason
+  - canonical_trace_hash
+  - skip_or_failure_reason
+

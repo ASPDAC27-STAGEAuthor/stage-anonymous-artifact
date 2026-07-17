@@ -1,0 +1,10 @@
+# Reviewer-extension execution disposition
+
+Failure, skip, timeout, pending, running, and not-supported states are reported separately. A newer observation manifest takes precedence over a preregistration-only checkpoint for P2.
+
+| Phase | Source | Basis | Completed | Failed | Skipped | Timeout | Pending | Running | Not supported | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| P0 | manifests/p0_checkpoint.json | checkpoint | 120 | 0 | 0 | 0 | 0 | 0 | 0 | Current P0 checkpoint candidate states. |
+| P1 | manifests/p1_checkpoint.json | checkpoint | 46 | 0 | 0 | 0 | 0 | 0 | 4 | Live checkpoint; published bundle snapshot={"completed":46,"failed":0,"not_supported":4,"pending":0,"running":0,"skipped":0} |
+| P2 | manifests/p2_observation_manifest.json | observation_manifest | 8 | 0 | 0 | 0 | 0 | 0 | 0 | Observation manifest supersedes the preregistration-only checkpoint for measured execution state. |
+| bundle | failures/ | preserved_failure_artifacts | 0 | 0 | 0 | 0 | 0 | 0 | 0 | Count of preserved files under failures/; zero means no preserved failure artifact is present. |

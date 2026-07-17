@@ -1,0 +1,81 @@
+mapper:
+  algorithm: random-pruned
+  optimization_metrics:
+  - energy
+  - delay
+  search_size: 256
+  victory_condition: 32
+  timeout: 60
+  num_threads: 4
+
+arch:
+  arithmetic:
+    instances: 16
+    meshX: 4
+    word_bits: 16
+  storage:
+  - name: Registers
+    entries: 1
+    instances: 16
+    meshX: 4
+    word_bits: 16
+    cluster_size: 1
+  - name: LocalBuffer
+    entries: 512
+    instances: 16
+    meshX: 4
+    word_bits: 16
+    block_size: 1
+    cluster_size: 1
+  - name: GlobalBuffer
+    sizeKB: 256
+    instances: 1
+    word_bits: 16
+    block_size: 16
+    bandwidth: 32.0
+  - name: DRAM
+    technology: DRAM
+    instances: 1
+    word_bits: 16
+    block_size: 16
+    bandwidth: 16.0
+
+mapspace:
+  constraints:
+  - target: Registers
+    type: datatype
+    keep: [Z]
+    bypass: [A, B]
+  - target: LocalBuffer
+    type: datatype
+    keep: [A, B, Z]
+    bypass: []
+  - target: GlobalBuffer
+    type: datatype
+    keep: [A, B, Z]
+    bypass: []
+  - target: GlobalBuffer
+    type: spatial
+    factors: M4 N4 K1
+    permutation: MNK
+  - target: Registers
+    type: temporal
+    factors: M1 N1 K1
+    permutation: MNK
+  - target: LocalBuffer
+    type: temporal
+    factors: M1 N1 K16
+    permutation: KMN
+  - target: GlobalBuffer
+    type: temporal
+    factors: M1 N1 K1
+    permutation: MNK
+  - target: Registers
+    type: utilization
+    min: 0.01
+
+problem:
+  shape: gemm_ABZ
+  M: 128
+  N: 64
+  K: 128

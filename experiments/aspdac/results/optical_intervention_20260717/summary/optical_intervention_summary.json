@@ -1,0 +1,9 @@
+{
+  "cycle_reduction_pct": 74.9908458440132,
+  "latency_reduction_pct": 71.9014962116868,
+  "backpressure_reduction_pct": 85.7573421181748,
+  "energy_ratio": 13.400953674316407,
+  "effective_payload_rate_ratio": 4.0,
+  "repeat_hashes_identical": true,
+  "paired_non_transport_hashes_identical": true
+}

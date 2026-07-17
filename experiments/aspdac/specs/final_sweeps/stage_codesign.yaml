@@ -1,0 +1,164 @@
+schema_version: aspg-experiment-plan-1.0
+name: stage_codesign
+bundle_root: experiments/aspdac/results/final_20260716
+configs:
+  - experiments/aspdac/specs/final_configs/s_native.yaml
+  - experiments/aspdac/specs/final_configs/s_cim.yaml
+experiments:
+  - name: stage_bottleneck_attention
+    provider: stage
+    scenario: codesign_bottleneck
+    evidence_level: measured
+    base_config: S-Native
+    fixed:
+      workload_id: attention_128_64
+      mac_count: 2097152
+      packet_count: 8192
+      memory_requests: 256
+      macs_per_pe_per_cycle: 256
+      link_bits_per_cycle: 128
+      memory_ports: 1
+      queue_depth: 4
+      graph_hash: bf10f69d94b3ad849c1317ccb75ca98e01f67de0ed54b3d19411f1ac344ecdf0
+      workload_hash: fbe0d419e11d7eec23c613659c5bb85a287de71e1ecb8e63b58488287edd5272
+      mapping_hash: 385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597
+      model_hash: a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd
+    cases:
+      - {case_id: attention_pe64, axis: pe_rate, axis_value: 64, macs_per_pe_per_cycle: 64}
+      - {case_id: attention_pe128, axis: pe_rate, axis_value: 128, macs_per_pe_per_cycle: 128}
+      - {case_id: attention_pe256, axis: pe_rate, axis_value: 256, macs_per_pe_per_cycle: 256}
+      - {case_id: attention_pe512, axis: pe_rate, axis_value: 512, macs_per_pe_per_cycle: 512}
+      - {case_id: attention_link64, axis: link_width, axis_value: 64, link_bits_per_cycle: 64}
+      - {case_id: attention_link128, axis: link_width, axis_value: 128, link_bits_per_cycle: 128}
+      - {case_id: attention_link256, axis: link_width, axis_value: 256, link_bits_per_cycle: 256}
+      - {case_id: attention_link512, axis: link_width, axis_value: 512, link_bits_per_cycle: 512}
+      - {case_id: attention_mem1, axis: memory_ports, axis_value: 1, memory_ports: 1}
+      - {case_id: attention_mem2, axis: memory_ports, axis_value: 2, memory_ports: 2}
+      - {case_id: attention_mem4, axis: memory_ports, axis_value: 4, memory_ports: 4}
+    axes: {}
+  - name: stage_bottleneck_gemm
+    provider: stage
+    scenario: codesign_bottleneck
+    evidence_level: measured
+    base_config: S-Native
+    fixed:
+      workload_id: gemm_256
+      mac_count: 16777216
+      packet_count: 24576
+      memory_requests: 512
+      macs_per_pe_per_cycle: 256
+      link_bits_per_cycle: 128
+      memory_ports: 1
+      queue_depth: 4
+      graph_hash: bf10f69d94b3ad849c1317ccb75ca98e01f67de0ed54b3d19411f1ac344ecdf0
+      workload_hash: c0157ff08f95018c890c4d63493f6389196193885b81cc90bb3282e7227060a3
+      mapping_hash: 385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597
+      model_hash: a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd
+    cases:
+      - {case_id: gemm_pe64, axis: pe_rate, axis_value: 64, macs_per_pe_per_cycle: 64}
+      - {case_id: gemm_pe128, axis: pe_rate, axis_value: 128, macs_per_pe_per_cycle: 128}
+      - {case_id: gemm_pe256, axis: pe_rate, axis_value: 256, macs_per_pe_per_cycle: 256}
+      - {case_id: gemm_pe512, axis: pe_rate, axis_value: 512, macs_per_pe_per_cycle: 512}
+      - {case_id: gemm_link64, axis: link_width, axis_value: 64, link_bits_per_cycle: 64}
+      - {case_id: gemm_link128, axis: link_width, axis_value: 128, link_bits_per_cycle: 128}
+      - {case_id: gemm_link256, axis: link_width, axis_value: 256, link_bits_per_cycle: 256}
+      - {case_id: gemm_link512, axis: link_width, axis_value: 512, link_bits_per_cycle: 512}
+      - {case_id: gemm_mem1, axis: memory_ports, axis_value: 1, memory_ports: 1}
+      - {case_id: gemm_mem2, axis: memory_ports, axis_value: 2, memory_ports: 2}
+      - {case_id: gemm_mem4, axis: memory_ports, axis_value: 4, memory_ports: 4}
+    axes: {}
+  - name: stage_precision_attention
+    provider: stage
+    scenario: codesign_precision
+    evidence_level: measured
+    base_config: S-Native
+    fixed:
+      workload_id: attention_128_64
+      mac_count: 2097152
+      packet_count: 8192
+      memory_requests: 256
+      macs_per_pe_per_cycle: 256
+      link_bits_per_cycle: 128
+      memory_ports: 1
+      queue_depth: 4
+      element_count: 65536
+      graph_hash: bf10f69d94b3ad849c1317ccb75ca98e01f67de0ed54b3d19411f1ac344ecdf0
+      workload_hash: fbe0d419e11d7eec23c613659c5bb85a287de71e1ecb8e63b58488287edd5272
+      mapping_hash: 385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597
+      model_hash: a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd
+    cases:
+      - {case_id: fp16, precision: FP16, bits_per_element: 16, conversion_passes: 0}
+      - {case_id: bf16, precision: BF16, bits_per_element: 16, conversion_passes: 1}
+      - {case_id: int8, precision: INT8, bits_per_element: 8, conversion_passes: 2}
+      - {case_id: int4, precision: INT4, bits_per_element: 4, conversion_passes: 2}
+    axes: {}
+  - name: stage_digital_functional
+    provider: stage
+    scenario: cim_template_comparison
+    evidence_level: trend
+    base_config: S-CIM
+    fixed:
+      device: digital
+      mode: functional_exact
+      seed: 42
+      operation_count: 16777216
+      catalog_path: data/characterization/phase7c-literature-catalog-v1.json
+      workload_hash: c0157ff08f95018c890c4d63493f6389196193885b81cc90bb3282e7227060a3
+      mapping_hash: 385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597
+    axes:
+      repeat: [0, 1]
+  - name: stage_cim_functional
+    provider: stage
+    scenario: cim_template_comparison
+    evidence_level: trend
+    base_config: S-CIM
+    fixed:
+      device: cim
+      mode: functional_exact
+      seed: 42
+      operation_count: 16777216
+      catalog_path: data/characterization/phase7c-literature-catalog-v1.json
+      workload_hash: c0157ff08f95018c890c4d63493f6389196193885b81cc90bb3282e7227060a3
+      mapping_hash: 385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597
+    axes:
+      repeat: [0, 1]
+  - name: stage_cim_characterization_fixed
+    provider: stage
+    scenario: cim_template_comparison
+    evidence_level: trend
+    base_config: S-CIM
+    fixed:
+      device: cim
+      mode: characterization_fixed_seed
+      seed: 42
+      operation_count: 16777216
+      catalog_path: data/characterization/phase7c-literature-catalog-v1.json
+      workload_hash: c0157ff08f95018c890c4d63493f6389196193885b81cc90bb3282e7227060a3
+      mapping_hash: 385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597
+    axes:
+      repeat: [0, 1]
+  - name: stage_cim_characterization_multiseed
+    provider: stage
+    scenario: cim_template_comparison
+    evidence_level: trend
+    base_config: S-CIM
+    fixed:
+      device: cim
+      mode: characterization_multi_seed
+      repeat: 0
+      operation_count: 16777216
+      catalog_path: data/characterization/phase7c-literature-catalog-v1.json
+      workload_hash: c0157ff08f95018c890c4d63493f6389196193885b81cc90bb3282e7227060a3
+      mapping_hash: 385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597
+    cases:
+      - {case_id: seed0, seed: 0}
+      - {case_id: seed1, seed: 1}
+      - {case_id: seed2, seed: 2}
+      - {case_id: seed3, seed: 3}
+      - {case_id: seed4, seed: 4}
+      - {case_id: seed5, seed: 5}
+      - {case_id: seed6, seed: 6}
+      - {case_id: seed7, seed: 7}
+      - {case_id: seed8, seed: 8}
+      - {case_id: seed9, seed: 9}
+    axes: {}

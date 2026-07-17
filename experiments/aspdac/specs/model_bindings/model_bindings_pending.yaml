@@ -1,0 +1,28 @@
+schema: aspdac.model_binding_config.v1
+name: aspdac_model_bindings_pending
+status: planning_spec
+bindings:
+  - name: digital_baseline_energy
+    target: compute_memory_noc
+    source: Phase 3D approved metrics plus external parameter table where needed
+    gate: approved_for_existing_metrics_only
+    evidence_role: energy_trend_candidate
+  - name: route_derived_physical
+    target: physical_route_length_and_bend
+    source: Phase 6A approved placement and Phase 6B awaiting approval routing
+    gate: awaiting_phase_6B_user_approval
+    evidence_role: physical_tradeoff_candidate
+  - name: optical_loss_power
+    target: optical_runtime
+    source: reference_data/parameter_table.csv
+    gate: locked_pending_phase_8
+    evidence_role: parameter_planning_only
+  - name: cim_adc_dac
+    target: cim_analog_runtime
+    source: reference_data/parameter_table.csv
+    gate: locked_pending_phase_9
+    evidence_role: parameter_planning_only
+rules:
+  - Never present locked_pending bindings as implemented capability.
+  - Record source, version, unit, valid range, conversion formula, and confidence before using any external parameter.
+

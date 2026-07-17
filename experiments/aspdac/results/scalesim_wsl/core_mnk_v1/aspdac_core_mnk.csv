@@ -1,0 +1,6 @@
+Layer Name, M, N, K,
+GEMM_256,256,256,256,
+MLP_512_256_L1_batch128,128,256,512,
+MLP_512_256_L2_batch128,128,128,256,
+Attention_128_64_QK,128,128,64,
+Attention_128_64_ProbV,128,64,128,

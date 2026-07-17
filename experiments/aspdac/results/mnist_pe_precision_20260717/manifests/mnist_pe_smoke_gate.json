@@ -1,0 +1,17 @@
+{
+  "candidate_ids": [
+    "c-6891f99ce00c41c7",
+    "c-9a817f1c074eaa37",
+    "c-c79c8b91c7288a91",
+    "c-c9b6e8d8e3f9a129"
+  ],
+  "checks": {
+    "all_completed": true,
+    "all_gate_checks": true,
+    "all_profiles": true,
+    "all_repeat_exact": true,
+    "candidate_count_4": true
+  },
+  "schema_version": "aspg-mnist-pe-smoke-gate-1.0",
+  "status": "passed"
+}

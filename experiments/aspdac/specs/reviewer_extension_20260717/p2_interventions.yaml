@@ -1,0 +1,216 @@
+schema_version: stage-reviewer-p2-spec-1.0
+experiment_id: reviewer_extension_p2_trace_guided_interventions_20260717
+classification: prospective_preregistered_replication
+prior_observation_disclosure:
+  prior_result_known: true
+  disclosure: >-
+    The memory_ports 1-to-2 outcome is already present in final_20260716 and in
+    the paper draft. This registration is a prospective exact replication, not
+    a blind discovery claim. The link-width intervention is also registered
+    against baseline-only raw evidence before new intervention candidates run.
+baseline_bundle:
+  root: experiments/aspdac/results/final_20260716
+  final_manifest_index: experiments/aspdac/results/final_20260716/manifests/final_manifest_index.json
+runtime_contract:
+  provider: stage
+  scenario: codesign_bottleneck
+  runtime: HardwareSim.Core.AspdacCodesignRuntime
+  deterministic: true
+  seed_contract:
+    kind: seedless_deterministic
+    canonical_value: aspg-codesign-runtime-no-rng-input-v1
+    limitation: >-
+      The current runtime exposes no seed input. Reproducibility is therefore
+      enforced by two exact repeats and canonical trace equality, not by a
+      statistical seeded ensemble.
+  constants:
+    attention_phase_count: 2
+    processing_elements: 16
+    packet_bits: 128
+    parallel_transport_paths: 8
+    memory_latency_cycles: 5
+    reduction_latency_cycles: 2
+    softmax_latency_cycles: 8
+repeat_contract:
+  repeat_indices: [0, 1]
+  mismatch_disposition: fail_pair_no_averaging
+  exact_metric_fields:
+    - TotalCycles
+    - ComputeServiceDemandCycles
+    - MemoryServiceDemandCycles
+    - NocServiceDemandCycles
+    - ComputeCriticalCycles
+    - MemoryCriticalCycles
+    - NocCriticalCycles
+    - ReductionCriticalCycles
+    - SoftmaxCriticalCycles
+    - ConversionCriticalCycles
+    - DominantBottleneck
+    - CanonicalTraceSha256
+execution_integrity_contract:
+  run_authorization: only_after_preregistration_content_sha256_is_frozen
+  candidate_manifest_required: true
+  resume_contract:
+    checkpoint_schema_version: stage-reviewer-p2-checkpoint-1.0
+    required_match_fields:
+      - preregistration_content_sha256
+      - candidate_id
+      - candidate_identity_sha256
+      - invariant_pair_hash
+      - intervention_pair_hash
+      - repeat
+      - completed_raw_file_sha256
+    mismatch_disposition: reject_resume_and_preserve_existing_artifact
+  checkpoint_contract:
+    required_counts: [planned, completed, failed, pending]
+    completed_candidate_ids_must_be_unique: true
+    completed_plus_failed_plus_pending_must_equal_planned: true
+  failure_contract:
+    schema_version: stage-reviewer-p2-failure-1.0
+    preserve_command_stdout_stderr_and_candidate_bindings: true
+    failed_candidates_are_excluded_from_measured_analysis: true
+    no_synthetic_or_placeholder_observations: true
+invariant_parameter_fields:
+  - workload_id
+  - mac_count
+  - packet_count
+  - memory_requests
+  - macs_per_pe_per_cycle
+  - link_bits_per_cycle
+  - memory_ports
+  - queue_depth
+  - graph_hash
+  - workload_hash
+  - mapping_hash
+  - model_hash
+attribution_contract:
+  concurrent_service_classes: [compute, memory, noc]
+  per_attention_phase_rule: max_service_demand
+  selected_dominant_tie_break: ordinal_category_name
+  sequential_classes: [reduction, softmax, conversion]
+  dominant_set_rule: all_categories_equal_to_largest_attributed_critical_cycles
+  critical_sum_rule: >-
+    ComputeCriticalCycles + MemoryCriticalCycles + NocCriticalCycles +
+    ReductionCriticalCycles + SoftmaxCriticalCycles +
+    ConversionCriticalCycles must equal TotalCycles.
+  overlap_rule: >-
+    Concurrent non-limiting service demand remains reported but receives zero
+    attributed critical cycles. Critical categories are mutually exclusive and
+    must not be summed as if all concurrent service demands were sequential.
+error_contract:
+  interval_kind: registered_acceptance_interval_not_statistical_confidence_interval
+  interval_inclusive: true
+  measured_delta: after_minus_before
+  measured_relative_delta: measured_delta_divided_by_max_abs_before_or_1
+  absolute_prediction_error: abs_measured_delta_minus_registered_delta_point
+  relative_prediction_error: absolute_error_divided_by_max_abs_registered_delta_or_1
+claim_boundary: >-
+  Deterministic within-model counterfactual evidence only. It is not general
+  causal identification, hardware accuracy, or a cross-tool timing claim.
+interventions:
+  - pair_id: p2_mem_ports_1_to_2
+    axis:
+      name: memory_ports
+      parameter: memory_ports
+      baseline_value: 1
+      intervention_value: 2
+    baseline:
+      raw_path: experiments/aspdac/results/final_20260716/raw/stage_bottleneck_attention/c-37182b0c1afbea68.json
+      candidate_id: c-37182b0c1afbea68
+    target:
+      category: memory
+      service_metric: MemoryServiceDemandCycles
+      critical_metric: MemoryCriticalCycles
+      component_id: memory0
+      link_id: memory0.port[0]
+      reason: memory_port_busy
+    registered_metrics:
+      baseline:
+        TotalCycles: 2560
+        ComputeServiceDemandCycles: 512
+        MemoryServiceDemandCycles: 1280
+        NocServiceDemandCycles: 1024
+        ComputeCriticalCycles: 0
+        MemoryCriticalCycles: 1280
+        NocCriticalCycles: 0
+        ReductionCriticalCycles: 256
+        SoftmaxCriticalCycles: 1024
+        ConversionCriticalCycles: 0
+        DominantBottleneck: memory
+      intervention:
+        TotalCycles: 2304
+        ComputeServiceDemandCycles: 512
+        MemoryServiceDemandCycles: 640
+        NocServiceDemandCycles: 1024
+        ComputeCriticalCycles: 0
+        MemoryCriticalCycles: 0
+        NocCriticalCycles: 1024
+        ReductionCriticalCycles: 256
+        SoftmaxCriticalCycles: 1024
+        ConversionCriticalCycles: 0
+        DominantBottleneck: noc
+    registered_prediction:
+      total_after_point: 2304
+      total_after_interval: [2304, 2304]
+      total_delta_point: -256
+      total_delta_interval: [-256, -256]
+      target_service_delta_point: -640
+      target_service_delta_interval: [-640, -640]
+      target_critical_delta_point: -1280
+      target_critical_delta_interval: [-1280, -1280]
+      baseline_dominant_set: [memory]
+      intervention_dominant_set: [noc, softmax]
+      intervention_selected_dominant: noc
+  - pair_id: p2_link_bits_64_to_128
+    axis:
+      name: link_width
+      parameter: link_bits_per_cycle
+      baseline_value: 64
+      intervention_value: 128
+    baseline:
+      raw_path: experiments/aspdac/results/final_20260716/raw/stage_bottleneck_attention/c-5b5e75e79ef649d9.json
+      candidate_id: c-5b5e75e79ef649d9
+    target:
+      category: noc
+      service_metric: NocServiceDemandCycles
+      critical_metric: NocCriticalCycles
+      component_id: router[0..15]
+      link_id: mesh.transport
+      reason: link_serialization_or_arbitration
+    registered_metrics:
+      baseline:
+        TotalCycles: 3328
+        ComputeServiceDemandCycles: 512
+        MemoryServiceDemandCycles: 1280
+        NocServiceDemandCycles: 2048
+        ComputeCriticalCycles: 0
+        MemoryCriticalCycles: 0
+        NocCriticalCycles: 2048
+        ReductionCriticalCycles: 256
+        SoftmaxCriticalCycles: 1024
+        ConversionCriticalCycles: 0
+        DominantBottleneck: noc
+      intervention:
+        TotalCycles: 2560
+        ComputeServiceDemandCycles: 512
+        MemoryServiceDemandCycles: 1280
+        NocServiceDemandCycles: 1024
+        ComputeCriticalCycles: 0
+        MemoryCriticalCycles: 1280
+        NocCriticalCycles: 0
+        ReductionCriticalCycles: 256
+        SoftmaxCriticalCycles: 1024
+        ConversionCriticalCycles: 0
+        DominantBottleneck: memory
+    registered_prediction:
+      total_after_point: 2560
+      total_after_interval: [2560, 2560]
+      total_delta_point: -768
+      total_delta_interval: [-768, -768]
+      target_service_delta_point: -1024
+      target_service_delta_interval: [-1024, -1024]
+      target_critical_delta_point: -2048
+      target_critical_delta_interval: [-2048, -2048]
+      baseline_dominant_set: [noc]
+      intervention_dominant_set: [memory]
+      intervention_selected_dominant: memory

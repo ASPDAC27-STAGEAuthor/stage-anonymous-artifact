@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://stage.local/schemas/aspg-experiment-plan-1.0.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "name", "bundle_root", "configs", "experiments"],
+  "properties": {
+    "schema_version": {"const": "aspg-experiment-plan-1.0"},
+    "name": {"type": "string", "minLength": 1},
+    "bundle_root": {"type": "string", "minLength": 1},
+    "configs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string"},
+      "uniqueItems": true
+    },
+    "experiments": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "provider", "scenario", "evidence_level", "base_config", "fixed", "axes"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "provider": {"type": "string", "minLength": 1},
+          "scenario": {"type": "string", "minLength": 1},
+          "evidence_level": {"enum": ["exact", "numerical", "trend", "measured", "pending"]},
+          "base_config": {"type": "string", "minLength": 1},
+          "fixed": {"type": "object"},
+          "cases": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["case_id"],
+              "properties": {"case_id": {"type": "string", "minLength": 1}}
+            }
+          },
+          "axes": {
+            "type": "object",
+            "additionalProperties": {"type": "array", "minItems": 1}
+          }
+        }
+      }
+    }
+  }
+}
+

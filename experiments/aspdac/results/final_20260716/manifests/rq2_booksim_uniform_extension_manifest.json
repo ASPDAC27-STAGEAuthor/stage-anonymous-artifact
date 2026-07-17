@@ -1,0 +1,110 @@
+{
+  "schema_version": "aspg-external-run-manifest-1.0",
+  "created_utc": "2026-07-16T09:12:26.132419Z",
+  "tool": "BookSim2",
+  "tool_path": "/opt/stage-baselines/tools/booksim2/src/booksim",
+  "tool_git_commit": "28f43299f1706a3160ffac721ca461d74eb6e618",
+  "traffic": "uniform",
+  "rates": [
+    0.36
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "topology": "4x4 mesh; XY; 1 VC; 16 flits/VC; one-flit packet",
+  "commands": [
+    {
+      "candidate": "uniform_inj_0.360_seed_0",
+      "command": [
+        "/opt/stage-baselines/tools/booksim2/src/booksim",
+        "/tmp/aspdac_final_20260716/raw/external_booksim_uniform_extension/configs/uniform_inj_0.360_seed_0.cfg"
+      ],
+      "elapsed_seconds": 0.0779487759999995
+    },
+    {
+      "candidate": "uniform_inj_0.360_seed_1",
+      "command": [
+        "/opt/stage-baselines/tools/booksim2/src/booksim",
+        "/tmp/aspdac_final_20260716/raw/external_booksim_uniform_extension/configs/uniform_inj_0.360_seed_1.cfg"
+      ],
+      "elapsed_seconds": 0.05128069599999918
+    },
+    {
+      "candidate": "uniform_inj_0.360_seed_2",
+      "command": [
+        "/opt/stage-baselines/tools/booksim2/src/booksim",
+        "/tmp/aspdac_final_20260716/raw/external_booksim_uniform_extension/configs/uniform_inj_0.360_seed_2.cfg"
+      ],
+      "elapsed_seconds": 0.05163908999999478
+    },
+    {
+      "candidate": "uniform_inj_0.360_seed_3",
+      "command": [
+        "/opt/stage-baselines/tools/booksim2/src/booksim",
+        "/tmp/aspdac_final_20260716/raw/external_booksim_uniform_extension/configs/uniform_inj_0.360_seed_3.cfg"
+      ],
+      "elapsed_seconds": 0.05250868800000319
+    },
+    {
+      "candidate": "uniform_inj_0.360_seed_4",
+      "command": [
+        "/opt/stage-baselines/tools/booksim2/src/booksim",
+        "/tmp/aspdac_final_20260716/raw/external_booksim_uniform_extension/configs/uniform_inj_0.360_seed_4.cfg"
+      ],
+      "elapsed_seconds": 0.06907231099999933
+    },
+    {
+      "candidate": "uniform_inj_0.360_seed_5",
+      "command": [
+        "/opt/stage-baselines/tools/booksim2/src/booksim",
+        "/tmp/aspdac_final_20260716/raw/external_booksim_uniform_extension/configs/uniform_inj_0.360_seed_5.cfg"
+      ],
+      "elapsed_seconds": 0.051002029000002835
+    },
+    {
+      "candidate": "uniform_inj_0.360_seed_6",
+      "command": [
+        "/opt/stage-baselines/tools/booksim2/src/booksim",
+        "/tmp/aspdac_final_20260716/raw/external_booksim_uniform_extension/configs/uniform_inj_0.360_seed_6.cfg"
+      ],
+      "elapsed_seconds": 0.05073804899999601
+    },
+    {
+      "candidate": "uniform_inj_0.360_seed_7",
+      "command": [
+        "/opt/stage-baselines/tools/booksim2/src/booksim",
+        "/tmp/aspdac_final_20260716/raw/external_booksim_uniform_extension/configs/uniform_inj_0.360_seed_7.cfg"
+      ],
+      "elapsed_seconds": 0.06921441899999792
+    },
+    {
+      "candidate": "uniform_inj_0.360_seed_8",
+      "command": [
+        "/opt/stage-baselines/tools/booksim2/src/booksim",
+        "/tmp/aspdac_final_20260716/raw/external_booksim_uniform_extension/configs/uniform_inj_0.360_seed_8.cfg"
+      ],
+      "elapsed_seconds": 0.04980593899999519
+    },
+    {
+      "candidate": "uniform_inj_0.360_seed_9",
+      "command": [
+        "/opt/stage-baselines/tools/booksim2/src/booksim",
+        "/tmp/aspdac_final_20260716/raw/external_booksim_uniform_extension/configs/uniform_inj_0.360_seed_9.cfg"
+      ],
+      "elapsed_seconds": 0.06727624300000201
+    }
+  ],
+  "result_csv": "/tmp/aspdac_final_20260716/summary/rq2_booksim_uniform_extension_raw.csv",
+  "result_csv_sha256": "9b3609dab45e6bca72b748a2c51ca72eae327b1b2e3450340bbbaec6b3c3d748",
+  "case_count": 10,
+  "failed_count": 0
+}

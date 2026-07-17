@@ -1,0 +1,29 @@
+schema_version: aspg-final-config-1.0
+config_id: V-TL
+purpose: Timeloop-matched compute and memory hierarchy
+evidence_level: numerical
+compute:
+  units: 16
+  macs_per_unit_per_cycle: 1
+  aggregate_macs_per_cycle: 16
+  schedule: frozen_timeloop_mapping
+  dataflow: workload_mapping_defined
+memory:
+  register_semantics: timeloop_scalar_register
+  local_semantics: timeloop_local_sram
+  global_semantics: timeloop_global_buffer
+  dram_semantics: timeloop_dram
+reference:
+  tool: timeloop-model
+  mapping_root: experiments/aspdac/results/external_draft_20260716/timeloop
+workloads:
+  - gemm_256
+  - mlp_l1
+  - mlp_l2
+  - attention_qk
+  - attention_pv
+runtime_modes:
+  - compute_only
+  - full_system
+comparison_guard: Never compare absolute V-TL cycles against S-Native 16x256 MAC/cycle throughput.
+

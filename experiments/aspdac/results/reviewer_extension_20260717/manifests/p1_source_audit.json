@@ -1,0 +1,23 @@
+{
+  "audited_utc": "2026-07-16T18:58:52.727171+00:00",
+  "forbidden_tokens": [
+    "aspdacmatchedworkload",
+    "runscalesimmatched",
+    "scalesim",
+    "scale-sim",
+    "timeloop",
+    "reference_",
+    "external_",
+    "raw_path",
+    "schedule_csv",
+    "access_count_csv"
+  ],
+  "hits": [],
+  "holdout_stage_candidates": 16,
+  "noc_stage_candidates": 18,
+  "passed": true,
+  "schema_version": "reviewer-extension-p1-source-audit/1.0",
+  "source": "src/HardwareSim.Core/AspdacReviewerHoldoutRuntime.cs",
+  "source_sha256": "10a60f6af0a2b252815c77397d444525335a8c2057454542cf570281c4a8e882",
+  "stable_candidate_ids": true
+}

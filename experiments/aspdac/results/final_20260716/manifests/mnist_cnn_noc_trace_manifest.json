@@ -1,0 +1,335 @@
+{
+  "cases": [
+    {
+      "K": 25,
+      "M": 576,
+      "N": 6,
+      "case_id": "conv1",
+      "drain_cycles": 37040,
+      "element_counts": {
+        "input": 14400,
+        "output": 3456,
+        "weight": 150
+      },
+      "first_release_cycle": 0,
+      "last_release_cycle": 3701,
+      "layer_id": "conv1",
+      "layer_kind": "conv",
+      "logical_bits": 576192,
+      "macs_per_image": 86400,
+      "packet_count": 4502,
+      "packet_counts": {
+        "input": 3600,
+        "output": 864,
+        "weight": 38
+      },
+      "padding_bits": 64,
+      "trace_csv_path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_traces/conv1.csv",
+      "trace_sha256": "565694a7c3e374f195a2bf8e845f7f55d423ae331a11d8f6b4126b5a4123723f",
+      "wire_bits": 576256
+    },
+    {
+      "K": 150,
+      "M": 64,
+      "N": 16,
+      "case_id": "conv2",
+      "drain_cycles": 27072,
+      "element_counts": {
+        "input": 9600,
+        "output": 1024,
+        "weight": 2400
+      },
+      "first_release_cycle": 0,
+      "last_release_cycle": 3023,
+      "layer_id": "conv2",
+      "layer_kind": "conv",
+      "logical_bits": 416768,
+      "macs_per_image": 153600,
+      "packet_count": 3256,
+      "packet_counts": {
+        "input": 2400,
+        "output": 256,
+        "weight": 600
+      },
+      "padding_bits": 0,
+      "trace_csv_path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_traces/conv2.csv",
+      "trace_sha256": "58ddd0650d9302d4f09f02f4745492b87a042aedc330c8c3f482177f1a53ef2c",
+      "wire_bits": 416768
+    },
+    {
+      "K": 256,
+      "M": 1,
+      "N": 120,
+      "case_id": "fc1",
+      "drain_cycles": 63216,
+      "element_counts": {
+        "input": 256,
+        "output": 120,
+        "weight": 30720
+      },
+      "first_release_cycle": 0,
+      "last_release_cycle": 7751,
+      "layer_id": "fc1",
+      "layer_kind": "linear",
+      "logical_bits": 995072,
+      "macs_per_image": 30720,
+      "packet_count": 7774,
+      "packet_counts": {
+        "input": 64,
+        "output": 30,
+        "weight": 7680
+      },
+      "padding_bits": 0,
+      "trace_csv_path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_traces/fc1.csv",
+      "trace_sha256": "ceb882f04d373e9c8a032be13e9ab9929c1305f3037c223797334947a67b94af",
+      "wire_bits": 995072
+    },
+    {
+      "K": 120,
+      "M": 1,
+      "N": 84,
+      "case_id": "fc2",
+      "drain_cycles": 21592,
+      "element_counts": {
+        "input": 120,
+        "output": 84,
+        "weight": 10080
+      },
+      "first_release_cycle": 0,
+      "last_release_cycle": 2557,
+      "layer_id": "fc2",
+      "layer_kind": "linear",
+      "logical_bits": 329088,
+      "macs_per_image": 10080,
+      "packet_count": 2571,
+      "packet_counts": {
+        "input": 30,
+        "output": 21,
+        "weight": 2520
+      },
+      "padding_bits": 0,
+      "trace_csv_path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_traces/fc2.csv",
+      "trace_sha256": "c98d40d44ed997d5f49c1470553e4adf923c20f1f2cedaeea412ff012cdcaefb",
+      "wire_bits": 329088
+    },
+    {
+      "K": 84,
+      "M": 1,
+      "N": 10,
+      "case_id": "fc3",
+      "drain_cycles": 4096,
+      "element_counts": {
+        "input": 84,
+        "output": 10,
+        "weight": 840
+      },
+      "first_release_cycle": 0,
+      "last_release_cycle": 237,
+      "layer_id": "fc3",
+      "layer_kind": "linear",
+      "logical_bits": 29888,
+      "macs_per_image": 840,
+      "packet_count": 234,
+      "packet_counts": {
+        "input": 21,
+        "output": 3,
+        "weight": 210
+      },
+      "padding_bits": 64,
+      "trace_csv_path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_traces/fc3.csv",
+      "trace_sha256": "362681f361bf9f428ff9c8b3a583939b9e03b3ef9f15975447902550628109e4",
+      "wire_bits": 29952
+    },
+    {
+      "case_id": "sequential_network",
+      "drain_cycles": 147720,
+      "first_release_cycle": 0,
+      "last_release_cycle": 18532,
+      "layer_id": "all",
+      "layer_kind": "sequential_cold_start_network",
+      "layers": [
+        {
+          "K": 25,
+          "M": 576,
+          "N": 6,
+          "case_id": "sequential_network",
+          "drain_cycles": 37040,
+          "element_counts": {
+            "input": 14400,
+            "output": 3456,
+            "weight": 150
+          },
+          "first_release_cycle": 0,
+          "last_release_cycle": 3701,
+          "layer_id": "conv1",
+          "layer_kind": "conv",
+          "logical_bits": 576192,
+          "macs_per_image": 86400,
+          "packet_count": 4502,
+          "packet_counts": {
+            "input": 3600,
+            "output": 864,
+            "weight": 38
+          },
+          "padding_bits": 64,
+          "wire_bits": 576256
+        },
+        {
+          "K": 150,
+          "M": 64,
+          "N": 16,
+          "case_id": "sequential_network",
+          "drain_cycles": 27072,
+          "element_counts": {
+            "input": 9600,
+            "output": 1024,
+            "weight": 2400
+          },
+          "first_release_cycle": 4588,
+          "last_release_cycle": 7611,
+          "layer_id": "conv2",
+          "layer_kind": "conv",
+          "logical_bits": 416768,
+          "macs_per_image": 153600,
+          "packet_count": 3256,
+          "packet_counts": {
+            "input": 2400,
+            "output": 256,
+            "weight": 600
+          },
+          "padding_bits": 0,
+          "wire_bits": 416768
+        },
+        {
+          "K": 256,
+          "M": 1,
+          "N": 120,
+          "case_id": "sequential_network",
+          "drain_cycles": 63216,
+          "element_counts": {
+            "input": 256,
+            "output": 120,
+            "weight": 30720
+          },
+          "first_release_cycle": 7890,
+          "last_release_cycle": 15641,
+          "layer_id": "fc1",
+          "layer_kind": "linear",
+          "logical_bits": 995072,
+          "macs_per_image": 30720,
+          "packet_count": 7774,
+          "packet_counts": {
+            "input": 64,
+            "output": 30,
+            "weight": 7680
+          },
+          "padding_bits": 0,
+          "wire_bits": 995072
+        },
+        {
+          "K": 120,
+          "M": 1,
+          "N": 84,
+          "case_id": "sequential_network",
+          "drain_cycles": 21592,
+          "element_counts": {
+            "input": 120,
+            "output": 84,
+            "weight": 10080
+          },
+          "first_release_cycle": 15694,
+          "last_release_cycle": 18251,
+          "layer_id": "fc2",
+          "layer_kind": "linear",
+          "logical_bits": 329088,
+          "macs_per_image": 10080,
+          "packet_count": 2571,
+          "packet_counts": {
+            "input": 30,
+            "output": 21,
+            "weight": 2520
+          },
+          "padding_bits": 0,
+          "wire_bits": 329088
+        },
+        {
+          "K": 84,
+          "M": 1,
+          "N": 10,
+          "case_id": "sequential_network",
+          "drain_cycles": 4096,
+          "element_counts": {
+            "input": 84,
+            "output": 10,
+            "weight": 840
+          },
+          "first_release_cycle": 18295,
+          "last_release_cycle": 18532,
+          "layer_id": "fc3",
+          "layer_kind": "linear",
+          "logical_bits": 29888,
+          "macs_per_image": 840,
+          "packet_count": 234,
+          "packet_counts": {
+            "input": 21,
+            "output": 3,
+            "weight": 210
+          },
+          "padding_bits": 64,
+          "wire_bits": 29952
+        }
+      ],
+      "logical_bits": 2347008,
+      "packet_count": 18337,
+      "padding_bits": 128,
+      "trace_csv_path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn_noc_traces/sequential_network.csv",
+      "trace_sha256": "7844f237c4b3461cf0ed1df81aecce1b664d3abb6a6da77861173cc01f4c145a",
+      "wire_bits": 2347136
+    }
+  ],
+  "claim_boundary": "CNN-shape-derived transport trace only; BookSim2 does not execute CNN arithmetic or accuracy, and this is not a native STAGE numerical tensor trace.",
+  "schema_version": "aspg-mnist-cnn-noc-trace-manifest-1.0",
+  "source": {
+    "dataset_set_sha256": "439fa59705d9bf0e856beed6d498fc2a8c76d5004d3f497a0e1cf3c27f5db7dd",
+    "functional_summary_path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn/summary.json",
+    "functional_summary_sha256": "b8fad9f23a79a113f130d4795a131222dec7e994e19b69e9b3afe2c82c9b6782",
+    "layer_profiles_path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn/layer_profiles.csv",
+    "layer_profiles_sha256": "7ae1f2dcbbb5a8b2f9cf710bfd82edab9e20ba0192b1b20f8f5ad010b19ce7a5",
+    "lowering_sha256": "98311305665da9094b2d693a241b76172e8d7e4a0533a0242bb62c9a9706f7a9",
+    "model_sha256": "0aa004a4bd1bbbdaf550a115ad0ed5cda16b6269b8753b97bd076cd1fc55d662",
+    "prediction_sha256": "9d56dbfd0611130a20aec9638bb9ce935dc023c17f6b0815e83b4b3a27efaa26"
+  },
+  "status": "completed",
+  "trace_contract": {
+    "csv_header": [
+      "packet_id",
+      "release_cycle",
+      "source",
+      "destination",
+      "flits",
+      "traffic_class",
+      "layer_id",
+      "tensor_role",
+      "payload_bits"
+    ],
+    "flit_bits": 128,
+    "flits_per_packet": 1,
+    "mapping": "materialized-im2col cold-start; one-copy input/weight striping and output gather",
+    "packet_bits": 128,
+    "release_rule": "one packet per source per cycle; fixed mesh-flight and inter-layer guards",
+    "topology": "V-BS-CNN 4x4 mesh, XY, endpoint 0 memory, endpoints 1..15 compute",
+    "traffic_class": 0
+  },
+  "validation": {
+    "all_one_flit_128_bit": true,
+    "case_count": 6,
+    "endpoint_range": [
+      0,
+      15
+    ],
+    "expected_packet_count": 18337,
+    "isolated_layer_packet_count": 18337,
+    "same_source_release_collisions": 0,
+    "sequential_network_packet_count": 18337
+  }
+}

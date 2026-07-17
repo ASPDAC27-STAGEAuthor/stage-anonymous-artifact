@@ -1,0 +1,977 @@
+{
+  "schema_version": "stage-reviewer-p2-preregistration-1.0",
+  "preregistration_id": "reviewer_extension_p2_trace_guided_interventions_20260717",
+  "created_utc": "2026-07-16T18:43:20.081017Z",
+  "status": "frozen_before_intervention",
+  "classification": "prospective_preregistered_replication",
+  "prior_observation_disclosure": {
+    "prior_result_known": true,
+    "disclosure": "The memory_ports 1-to-2 outcome is already present in final_20260716 and in the paper draft. This registration is a prospective exact replication, not a blind discovery claim. The link-width intervention is also registered against baseline-only raw evidence before new intervention candidates run."
+  },
+  "spec": {
+    "path": "experiments/aspdac/specs/reviewer_extension_20260717/p2_interventions.yaml",
+    "file_sha256": "d143ff5a7e53eb8e918134a3c1380deaabb111c6cff7d00aad5350e868345a0d"
+  },
+  "source_baseline_bundle": {
+    "root": "experiments/aspdac/results/final_20260716",
+    "baseline_only_index": {
+      "schema_version": "stage-reviewer-p2-baseline-index-1.0",
+      "source_bundle_root": "experiments/aspdac/results/final_20260716",
+      "source_final_manifest_index": {
+        "path": "experiments/aspdac/results/final_20260716/manifests/final_manifest_index.json",
+        "file_sha256": "943ba61723201b026ce31aaef25b3e72d03a12909d47c6c06c7e8d455a7b40b6"
+      },
+      "selection_rule": "only the two registered pre-intervention baseline raw artifacts",
+      "prior_result_known": true,
+      "artifacts": [
+        {
+          "pair_id": "p2_link_bits_64_to_128",
+          "role": "baseline_only_source",
+          "path": "experiments/aspdac/results/final_20260716/raw/stage_bottleneck_attention/c-5b5e75e79ef649d9.json",
+          "file_sha256": "3632c97262a89b50fef34dece58275a6f1f2a4c41d8b7b203b37e9a4f0fe77ba",
+          "candidate_id": "c-5b5e75e79ef649d9",
+          "canonical_trace_sha256": "085e00d99947b361f6afbe2986b7f1dab3e5b5cf27f926eea14292dff1a4f537"
+        },
+        {
+          "pair_id": "p2_mem_ports_1_to_2",
+          "role": "baseline_only_source",
+          "path": "experiments/aspdac/results/final_20260716/raw/stage_bottleneck_attention/c-37182b0c1afbea68.json",
+          "file_sha256": "8a6e643b055fd4fae8bd407edeced8f56073533c6642987f9d38c3339241294e",
+          "candidate_id": "c-37182b0c1afbea68",
+          "canonical_trace_sha256": "bde09f4cd62aeab0467758402fa20630e3837f205f1134777a45b979f29fbe4a"
+        }
+      ]
+    },
+    "baseline_only_index_sha256": "99e355b5b696705ee0d21370e7e4d6ecb724c4fed0ef4e804c21d88da79e9873"
+  },
+  "runtime_contract": {
+    "provider": "stage",
+    "scenario": "codesign_bottleneck",
+    "runtime": "HardwareSim.Core.AspdacCodesignRuntime",
+    "deterministic": true,
+    "seed_contract": {
+      "kind": "seedless_deterministic",
+      "canonical_value": "aspg-codesign-runtime-no-rng-input-v1",
+      "limitation": "The current runtime exposes no seed input. Reproducibility is therefore enforced by two exact repeats and canonical trace equality, not by a statistical seeded ensemble."
+    },
+    "constants": {
+      "attention_phase_count": 2,
+      "processing_elements": 16,
+      "packet_bits": 128,
+      "parallel_transport_paths": 8,
+      "memory_latency_cycles": 5,
+      "reduction_latency_cycles": 2,
+      "softmax_latency_cycles": 8
+    }
+  },
+  "seed_contract_hash": "10819c1d7a9edf39f5ce6d59c30501cdbf212c8fcf0bfc3f7bb2ebf14f8a89d7",
+  "repeat_contract": {
+    "repeat_indices": [
+      0,
+      1
+    ],
+    "mismatch_disposition": "fail_pair_no_averaging",
+    "exact_metric_fields": [
+      "TotalCycles",
+      "ComputeServiceDemandCycles",
+      "MemoryServiceDemandCycles",
+      "NocServiceDemandCycles",
+      "ComputeCriticalCycles",
+      "MemoryCriticalCycles",
+      "NocCriticalCycles",
+      "ReductionCriticalCycles",
+      "SoftmaxCriticalCycles",
+      "ConversionCriticalCycles",
+      "DominantBottleneck",
+      "CanonicalTraceSha256"
+    ]
+  },
+  "execution_integrity_contract": {
+    "run_authorization": "only_after_preregistration_content_sha256_is_frozen",
+    "candidate_manifest_required": true,
+    "resume_contract": {
+      "checkpoint_schema_version": "stage-reviewer-p2-checkpoint-1.0",
+      "required_match_fields": [
+        "preregistration_content_sha256",
+        "candidate_id",
+        "candidate_identity_sha256",
+        "invariant_pair_hash",
+        "intervention_pair_hash",
+        "repeat",
+        "completed_raw_file_sha256"
+      ],
+      "mismatch_disposition": "reject_resume_and_preserve_existing_artifact"
+    },
+    "checkpoint_contract": {
+      "required_counts": [
+        "planned",
+        "completed",
+        "failed",
+        "pending"
+      ],
+      "completed_candidate_ids_must_be_unique": true,
+      "completed_plus_failed_plus_pending_must_equal_planned": true
+    },
+    "failure_contract": {
+      "schema_version": "stage-reviewer-p2-failure-1.0",
+      "preserve_command_stdout_stderr_and_candidate_bindings": true,
+      "failed_candidates_are_excluded_from_measured_analysis": true,
+      "no_synthetic_or_placeholder_observations": true
+    }
+  },
+  "attribution_contract": {
+    "concurrent_service_classes": [
+      "compute",
+      "memory",
+      "noc"
+    ],
+    "per_attention_phase_rule": "max_service_demand",
+    "selected_dominant_tie_break": "ordinal_category_name",
+    "sequential_classes": [
+      "reduction",
+      "softmax",
+      "conversion"
+    ],
+    "dominant_set_rule": "all_categories_equal_to_largest_attributed_critical_cycles",
+    "critical_sum_rule": "ComputeCriticalCycles + MemoryCriticalCycles + NocCriticalCycles + ReductionCriticalCycles + SoftmaxCriticalCycles + ConversionCriticalCycles must equal TotalCycles.",
+    "overlap_rule": "Concurrent non-limiting service demand remains reported but receives zero attributed critical cycles. Critical categories are mutually exclusive and must not be summed as if all concurrent service demands were sequential."
+  },
+  "error_contract": {
+    "interval_kind": "registered_acceptance_interval_not_statistical_confidence_interval",
+    "interval_inclusive": true,
+    "measured_delta": "after_minus_before",
+    "measured_relative_delta": "measured_delta_divided_by_max_abs_before_or_1",
+    "absolute_prediction_error": "abs_measured_delta_minus_registered_delta_point",
+    "relative_prediction_error": "absolute_error_divided_by_max_abs_registered_delta_or_1"
+  },
+  "hash_contract": {
+    "canonicalization": "sorted-key compact UTF-8 JSON",
+    "candidate_identity_sha256": "sha256(canonical candidate identity object)",
+    "invariant_pair_hash": "sha256(canonical invariant values excluding the intervention axis and repeat)",
+    "intervention_pair_hash": "sha256(canonical invariant hash plus pair axis and before/after values)"
+  },
+  "pairs": [
+    {
+      "pair_id": "p2_mem_ports_1_to_2",
+      "axis": {
+        "name": "memory_ports",
+        "parameter": "memory_ports",
+        "baseline_value": 1,
+        "intervention_value": 2
+      },
+      "target": {
+        "category": "memory",
+        "service_metric": "MemoryServiceDemandCycles",
+        "critical_metric": "MemoryCriticalCycles",
+        "component_id": "memory0",
+        "link_id": "memory0.port[0]",
+        "reason": "memory_port_busy"
+      },
+      "source_baseline": {
+        "pair_id": "p2_mem_ports_1_to_2",
+        "role": "baseline_only_source",
+        "path": "experiments/aspdac/results/final_20260716/raw/stage_bottleneck_attention/c-37182b0c1afbea68.json",
+        "file_sha256": "8a6e643b055fd4fae8bd407edeced8f56073533c6642987f9d38c3339241294e",
+        "candidate_id": "c-37182b0c1afbea68",
+        "canonical_trace_sha256": "bde09f4cd62aeab0467758402fa20630e3837f205f1134777a45b979f29fbe4a"
+      },
+      "invariant_contract": {
+        "excluded_axis_parameter": "memory_ports",
+        "parameter_fields": [
+          "workload_id",
+          "mac_count",
+          "packet_count",
+          "memory_requests",
+          "macs_per_pe_per_cycle",
+          "link_bits_per_cycle",
+          "queue_depth",
+          "graph_hash",
+          "workload_hash",
+          "mapping_hash",
+          "model_hash"
+        ],
+        "values": {
+          "parameters": {
+            "workload_id": "attention_128_64",
+            "mac_count": 2097152,
+            "packet_count": 8192,
+            "memory_requests": 256,
+            "macs_per_pe_per_cycle": 256,
+            "link_bits_per_cycle": 128,
+            "queue_depth": 4,
+            "graph_hash": "bf10f69d94b3ad849c1317ccb75ca98e01f67de0ed54b3d19411f1ac344ecdf0",
+            "workload_hash": "fbe0d419e11d7eec23c613659c5bb85a287de71e1ecb8e63b58488287edd5272",
+            "mapping_hash": "385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597",
+            "model_hash": "a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd"
+          },
+          "runtime_identity": {
+            "provider": "stage",
+            "scenario": "codesign_bottleneck",
+            "runtime": "HardwareSim.Core.AspdacCodesignRuntime",
+            "deterministic": true
+          },
+          "seed_contract_hash": "10819c1d7a9edf39f5ce6d59c30501cdbf212c8fcf0bfc3f7bb2ebf14f8a89d7",
+          "runtime_constants": {
+            "attention_phase_count": 2,
+            "processing_elements": 16,
+            "packet_bits": 128,
+            "parallel_transport_paths": 8,
+            "memory_latency_cycles": 5,
+            "reduction_latency_cycles": 2,
+            "softmax_latency_cycles": 8
+          }
+        },
+        "invariant_pair_hash": "ecc304ac6307d08f27eff6c9f3c3d84e2772eda50b1028472d743a380612eccb"
+      },
+      "pair_identity": {
+        "experiment_id": "reviewer_extension_p2_trace_guided_interventions_20260717",
+        "pair_id": "p2_mem_ports_1_to_2",
+        "invariant_pair_hash": "ecc304ac6307d08f27eff6c9f3c3d84e2772eda50b1028472d743a380612eccb",
+        "axis_name": "memory_ports",
+        "axis_parameter": "memory_ports",
+        "baseline_value": 1,
+        "intervention_value": 2
+      },
+      "intervention_pair_hash": "5420018201b4fe4207fa7ea4d4e67215f819b096ad9b12ba552f2bec04e7764d",
+      "registered_metrics": {
+        "baseline": {
+          "TotalCycles": 2560,
+          "ComputeServiceDemandCycles": 512,
+          "MemoryServiceDemandCycles": 1280,
+          "NocServiceDemandCycles": 1024,
+          "ComputeCriticalCycles": 0,
+          "MemoryCriticalCycles": 1280,
+          "NocCriticalCycles": 0,
+          "ReductionCriticalCycles": 256,
+          "SoftmaxCriticalCycles": 1024,
+          "ConversionCriticalCycles": 0,
+          "DominantBottleneck": "memory"
+        },
+        "intervention": {
+          "TotalCycles": 2304,
+          "ComputeServiceDemandCycles": 512,
+          "MemoryServiceDemandCycles": 640,
+          "NocServiceDemandCycles": 1024,
+          "ComputeCriticalCycles": 0,
+          "MemoryCriticalCycles": 0,
+          "NocCriticalCycles": 1024,
+          "ReductionCriticalCycles": 256,
+          "SoftmaxCriticalCycles": 1024,
+          "ConversionCriticalCycles": 0,
+          "DominantBottleneck": "noc"
+        }
+      },
+      "registered_prediction": {
+        "total_after_point": 2304,
+        "total_after_interval": [
+          2304,
+          2304
+        ],
+        "total_delta_point": -256,
+        "total_delta_interval": [
+          -256,
+          -256
+        ],
+        "target_service_delta_point": -640,
+        "target_service_delta_interval": [
+          -640,
+          -640
+        ],
+        "target_critical_delta_point": -1280,
+        "target_critical_delta_interval": [
+          -1280,
+          -1280
+        ],
+        "baseline_dominant_set": [
+          "memory"
+        ],
+        "intervention_dominant_set": [
+          "noc",
+          "softmax"
+        ],
+        "intervention_selected_dominant": "noc"
+      },
+      "runner_contract": {
+        "experiment_name": "reviewer_extension_p2_trace_guided_interventions_20260717",
+        "provider": "stage",
+        "scenario": "codesign_bottleneck",
+        "evidence_level": "measured",
+        "config_id": "S-Native",
+        "config_hash": "a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd",
+        "base_config": {
+          "schema_version": "aspg-final-config-1.0",
+          "config_id": "S-Native",
+          "purpose": "STAGE-native heterogeneous system for bottleneck migration and co-design",
+          "evidence_level": "measured",
+          "compute": {
+            "processing_elements": 16,
+            "macs_per_pe_per_cycle": 256,
+            "aggregate_macs_per_cycle": 4096
+          },
+          "transport": {
+            "topology": "mesh_4x4",
+            "router_count": 16,
+            "endpoint_count": 16,
+            "link_bits_per_cycle": 128,
+            "packet_bits": 128
+          },
+          "memory": {
+            "ports": 1,
+            "latency_cycles": 5
+          },
+          "special_units": {
+            "reduction_latency_cycles": 2,
+            "softmax_latency_cycles": 8
+          },
+          "queue_capacity_packets": 4,
+          "workloads": {
+            "primary": "Attention_128_64",
+            "auxiliary": "GEMM_256"
+          }
+        }
+      },
+      "candidates": [
+        {
+          "candidate_id": "p2-4f667ca23aa1efc0",
+          "candidate_identity_sha256": "4f667ca23aa1efc040cf71919d4f6f0960dbf1fdd87781205de80d6686148db1",
+          "identity": {
+            "schema_version": "stage-reviewer-p2-candidate-1.0",
+            "experiment_id": "reviewer_extension_p2_trace_guided_interventions_20260717",
+            "pair_id": "p2_mem_ports_1_to_2",
+            "role": "baseline",
+            "repeat": 0,
+            "parameters": {
+              "workload_id": "attention_128_64",
+              "mac_count": 2097152,
+              "packet_count": 8192,
+              "memory_requests": 256,
+              "macs_per_pe_per_cycle": 256,
+              "link_bits_per_cycle": 128,
+              "memory_ports": 1,
+              "queue_depth": 4,
+              "graph_hash": "bf10f69d94b3ad849c1317ccb75ca98e01f67de0ed54b3d19411f1ac344ecdf0",
+              "workload_hash": "fbe0d419e11d7eec23c613659c5bb85a287de71e1ecb8e63b58488287edd5272",
+              "mapping_hash": "385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597",
+              "model_hash": "a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd",
+              "case_id": "p2_mem_ports_1_to_2_baseline_r0",
+              "axis": "memory_ports",
+              "axis_value": 1,
+              "repeat": 0
+            },
+            "invariant_pair_hash": "ecc304ac6307d08f27eff6c9f3c3d84e2772eda50b1028472d743a380612eccb",
+            "intervention_pair_hash": "5420018201b4fe4207fa7ea4d4e67215f819b096ad9b12ba552f2bec04e7764d",
+            "seed_contract_hash": "10819c1d7a9edf39f5ce6d59c30501cdbf212c8fcf0bfc3f7bb2ebf14f8a89d7"
+          },
+          "pair_id": "p2_mem_ports_1_to_2",
+          "role": "baseline",
+          "repeat": 0,
+          "parameters": {
+            "workload_id": "attention_128_64",
+            "mac_count": 2097152,
+            "packet_count": 8192,
+            "memory_requests": 256,
+            "macs_per_pe_per_cycle": 256,
+            "link_bits_per_cycle": 128,
+            "memory_ports": 1,
+            "queue_depth": 4,
+            "graph_hash": "bf10f69d94b3ad849c1317ccb75ca98e01f67de0ed54b3d19411f1ac344ecdf0",
+            "workload_hash": "fbe0d419e11d7eec23c613659c5bb85a287de71e1ecb8e63b58488287edd5272",
+            "mapping_hash": "385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597",
+            "model_hash": "a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd",
+            "case_id": "p2_mem_ports_1_to_2_baseline_r0",
+            "axis": "memory_ports",
+            "axis_value": 1,
+            "repeat": 0
+          },
+          "invariant_pair_hash": "ecc304ac6307d08f27eff6c9f3c3d84e2772eda50b1028472d743a380612eccb",
+          "intervention_pair_hash": "5420018201b4fe4207fa7ea4d4e67215f819b096ad9b12ba552f2bec04e7764d"
+        },
+        {
+          "candidate_id": "p2-b2c9b43932fc805c",
+          "candidate_identity_sha256": "b2c9b43932fc805c2a9822926712a9b6897d1d46694d726f29cf2d85fabf58c8",
+          "identity": {
+            "schema_version": "stage-reviewer-p2-candidate-1.0",
+            "experiment_id": "reviewer_extension_p2_trace_guided_interventions_20260717",
+            "pair_id": "p2_mem_ports_1_to_2",
+            "role": "baseline",
+            "repeat": 1,
+            "parameters": {
+              "workload_id": "attention_128_64",
+              "mac_count": 2097152,
+              "packet_count": 8192,
+              "memory_requests": 256,
+              "macs_per_pe_per_cycle": 256,
+              "link_bits_per_cycle": 128,
+              "memory_ports": 1,
+              "queue_depth": 4,
+              "graph_hash": "bf10f69d94b3ad849c1317ccb75ca98e01f67de0ed54b3d19411f1ac344ecdf0",
+              "workload_hash": "fbe0d419e11d7eec23c613659c5bb85a287de71e1ecb8e63b58488287edd5272",
+              "mapping_hash": "385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597",
+              "model_hash": "a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd",
+              "case_id": "p2_mem_ports_1_to_2_baseline_r1",
+              "axis": "memory_ports",
+              "axis_value": 1,
+              "repeat": 1
+            },
+            "invariant_pair_hash": "ecc304ac6307d08f27eff6c9f3c3d84e2772eda50b1028472d743a380612eccb",
+            "intervention_pair_hash": "5420018201b4fe4207fa7ea4d4e67215f819b096ad9b12ba552f2bec04e7764d",
+            "seed_contract_hash": "10819c1d7a9edf39f5ce6d59c30501cdbf212c8fcf0bfc3f7bb2ebf14f8a89d7"
+          },
+          "pair_id": "p2_mem_ports_1_to_2",
+          "role": "baseline",
+          "repeat": 1,
+          "parameters": {
+            "workload_id": "attention_128_64",
+            "mac_count": 2097152,
+            "packet_count": 8192,
+            "memory_requests": 256,
+            "macs_per_pe_per_cycle": 256,
+            "link_bits_per_cycle": 128,
+            "memory_ports": 1,
+            "queue_depth": 4,
+            "graph_hash": "bf10f69d94b3ad849c1317ccb75ca98e01f67de0ed54b3d19411f1ac344ecdf0",
+            "workload_hash": "fbe0d419e11d7eec23c613659c5bb85a287de71e1ecb8e63b58488287edd5272",
+            "mapping_hash": "385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597",
+            "model_hash": "a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd",
+            "case_id": "p2_mem_ports_1_to_2_baseline_r1",
+            "axis": "memory_ports",
+            "axis_value": 1,
+            "repeat": 1
+          },
+          "invariant_pair_hash": "ecc304ac6307d08f27eff6c9f3c3d84e2772eda50b1028472d743a380612eccb",
+          "intervention_pair_hash": "5420018201b4fe4207fa7ea4d4e67215f819b096ad9b12ba552f2bec04e7764d"
+        },
+        {
+          "candidate_id": "p2-d898e7b810de0b9f",
+          "candidate_identity_sha256": "d898e7b810de0b9fb7fa0f5aa26d1a253f1947a115d86513fab779e3bf291705",
+          "identity": {
+            "schema_version": "stage-reviewer-p2-candidate-1.0",
+            "experiment_id": "reviewer_extension_p2_trace_guided_interventions_20260717",
+            "pair_id": "p2_mem_ports_1_to_2",
+            "role": "intervention",
+            "repeat": 0,
+            "parameters": {
+              "workload_id": "attention_128_64",
+              "mac_count": 2097152,
+              "packet_count": 8192,
+              "memory_requests": 256,
+              "macs_per_pe_per_cycle": 256,
+              "link_bits_per_cycle": 128,
+              "memory_ports": 2,
+              "queue_depth": 4,
+              "graph_hash": "bf10f69d94b3ad849c1317ccb75ca98e01f67de0ed54b3d19411f1ac344ecdf0",
+              "workload_hash": "fbe0d419e11d7eec23c613659c5bb85a287de71e1ecb8e63b58488287edd5272",
+              "mapping_hash": "385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597",
+              "model_hash": "a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd",
+              "case_id": "p2_mem_ports_1_to_2_intervention_r0",
+              "axis": "memory_ports",
+              "axis_value": 2,
+              "repeat": 0
+            },
+            "invariant_pair_hash": "ecc304ac6307d08f27eff6c9f3c3d84e2772eda50b1028472d743a380612eccb",
+            "intervention_pair_hash": "5420018201b4fe4207fa7ea4d4e67215f819b096ad9b12ba552f2bec04e7764d",
+            "seed_contract_hash": "10819c1d7a9edf39f5ce6d59c30501cdbf212c8fcf0bfc3f7bb2ebf14f8a89d7"
+          },
+          "pair_id": "p2_mem_ports_1_to_2",
+          "role": "intervention",
+          "repeat": 0,
+          "parameters": {
+            "workload_id": "attention_128_64",
+            "mac_count": 2097152,
+            "packet_count": 8192,
+            "memory_requests": 256,
+            "macs_per_pe_per_cycle": 256,
+            "link_bits_per_cycle": 128,
+            "memory_ports": 2,
+            "queue_depth": 4,
+            "graph_hash": "bf10f69d94b3ad849c1317ccb75ca98e01f67de0ed54b3d19411f1ac344ecdf0",
+            "workload_hash": "fbe0d419e11d7eec23c613659c5bb85a287de71e1ecb8e63b58488287edd5272",
+            "mapping_hash": "385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597",
+            "model_hash": "a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd",
+            "case_id": "p2_mem_ports_1_to_2_intervention_r0",
+            "axis": "memory_ports",
+            "axis_value": 2,
+            "repeat": 0
+          },
+          "invariant_pair_hash": "ecc304ac6307d08f27eff6c9f3c3d84e2772eda50b1028472d743a380612eccb",
+          "intervention_pair_hash": "5420018201b4fe4207fa7ea4d4e67215f819b096ad9b12ba552f2bec04e7764d"
+        },
+        {
+          "candidate_id": "p2-8803bc6bf3f4caa8",
+          "candidate_identity_sha256": "8803bc6bf3f4caa8be47c88d48669b47ac417f4f5dc4c7a1beac6607c0c391fe",
+          "identity": {
+            "schema_version": "stage-reviewer-p2-candidate-1.0",
+            "experiment_id": "reviewer_extension_p2_trace_guided_interventions_20260717",
+            "pair_id": "p2_mem_ports_1_to_2",
+            "role": "intervention",
+            "repeat": 1,
+            "parameters": {
+              "workload_id": "attention_128_64",
+              "mac_count": 2097152,
+              "packet_count": 8192,
+              "memory_requests": 256,
+              "macs_per_pe_per_cycle": 256,
+              "link_bits_per_cycle": 128,
+              "memory_ports": 2,
+              "queue_depth": 4,
+              "graph_hash": "bf10f69d94b3ad849c1317ccb75ca98e01f67de0ed54b3d19411f1ac344ecdf0",
+              "workload_hash": "fbe0d419e11d7eec23c613659c5bb85a287de71e1ecb8e63b58488287edd5272",
+              "mapping_hash": "385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597",
+              "model_hash": "a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd",
+              "case_id": "p2_mem_ports_1_to_2_intervention_r1",
+              "axis": "memory_ports",
+              "axis_value": 2,
+              "repeat": 1
+            },
+            "invariant_pair_hash": "ecc304ac6307d08f27eff6c9f3c3d84e2772eda50b1028472d743a380612eccb",
+            "intervention_pair_hash": "5420018201b4fe4207fa7ea4d4e67215f819b096ad9b12ba552f2bec04e7764d",
+            "seed_contract_hash": "10819c1d7a9edf39f5ce6d59c30501cdbf212c8fcf0bfc3f7bb2ebf14f8a89d7"
+          },
+          "pair_id": "p2_mem_ports_1_to_2",
+          "role": "intervention",
+          "repeat": 1,
+          "parameters": {
+            "workload_id": "attention_128_64",
+            "mac_count": 2097152,
+            "packet_count": 8192,
+            "memory_requests": 256,
+            "macs_per_pe_per_cycle": 256,
+            "link_bits_per_cycle": 128,
+            "memory_ports": 2,
+            "queue_depth": 4,
+            "graph_hash": "bf10f69d94b3ad849c1317ccb75ca98e01f67de0ed54b3d19411f1ac344ecdf0",
+            "workload_hash": "fbe0d419e11d7eec23c613659c5bb85a287de71e1ecb8e63b58488287edd5272",
+            "mapping_hash": "385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597",
+            "model_hash": "a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd",
+            "case_id": "p2_mem_ports_1_to_2_intervention_r1",
+            "axis": "memory_ports",
+            "axis_value": 2,
+            "repeat": 1
+          },
+          "invariant_pair_hash": "ecc304ac6307d08f27eff6c9f3c3d84e2772eda50b1028472d743a380612eccb",
+          "intervention_pair_hash": "5420018201b4fe4207fa7ea4d4e67215f819b096ad9b12ba552f2bec04e7764d"
+        }
+      ]
+    },
+    {
+      "pair_id": "p2_link_bits_64_to_128",
+      "axis": {
+        "name": "link_width",
+        "parameter": "link_bits_per_cycle",
+        "baseline_value": 64,
+        "intervention_value": 128
+      },
+      "target": {
+        "category": "noc",
+        "service_metric": "NocServiceDemandCycles",
+        "critical_metric": "NocCriticalCycles",
+        "component_id": "router[0..15]",
+        "link_id": "mesh.transport",
+        "reason": "link_serialization_or_arbitration"
+      },
+      "source_baseline": {
+        "pair_id": "p2_link_bits_64_to_128",
+        "role": "baseline_only_source",
+        "path": "experiments/aspdac/results/final_20260716/raw/stage_bottleneck_attention/c-5b5e75e79ef649d9.json",
+        "file_sha256": "3632c97262a89b50fef34dece58275a6f1f2a4c41d8b7b203b37e9a4f0fe77ba",
+        "candidate_id": "c-5b5e75e79ef649d9",
+        "canonical_trace_sha256": "085e00d99947b361f6afbe2986b7f1dab3e5b5cf27f926eea14292dff1a4f537"
+      },
+      "invariant_contract": {
+        "excluded_axis_parameter": "link_bits_per_cycle",
+        "parameter_fields": [
+          "workload_id",
+          "mac_count",
+          "packet_count",
+          "memory_requests",
+          "macs_per_pe_per_cycle",
+          "memory_ports",
+          "queue_depth",
+          "graph_hash",
+          "workload_hash",
+          "mapping_hash",
+          "model_hash"
+        ],
+        "values": {
+          "parameters": {
+            "workload_id": "attention_128_64",
+            "mac_count": 2097152,
+            "packet_count": 8192,
+            "memory_requests": 256,
+            "macs_per_pe_per_cycle": 256,
+            "memory_ports": 1,
+            "queue_depth": 4,
+            "graph_hash": "bf10f69d94b3ad849c1317ccb75ca98e01f67de0ed54b3d19411f1ac344ecdf0",
+            "workload_hash": "fbe0d419e11d7eec23c613659c5bb85a287de71e1ecb8e63b58488287edd5272",
+            "mapping_hash": "385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597",
+            "model_hash": "a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd"
+          },
+          "runtime_identity": {
+            "provider": "stage",
+            "scenario": "codesign_bottleneck",
+            "runtime": "HardwareSim.Core.AspdacCodesignRuntime",
+            "deterministic": true
+          },
+          "seed_contract_hash": "10819c1d7a9edf39f5ce6d59c30501cdbf212c8fcf0bfc3f7bb2ebf14f8a89d7",
+          "runtime_constants": {
+            "attention_phase_count": 2,
+            "processing_elements": 16,
+            "packet_bits": 128,
+            "parallel_transport_paths": 8,
+            "memory_latency_cycles": 5,
+            "reduction_latency_cycles": 2,
+            "softmax_latency_cycles": 8
+          }
+        },
+        "invariant_pair_hash": "9bf2441191d9cde8ba6ab1e8ec69976aa044e15457b7c848bb1a0ab8b9adc259"
+      },
+      "pair_identity": {
+        "experiment_id": "reviewer_extension_p2_trace_guided_interventions_20260717",
+        "pair_id": "p2_link_bits_64_to_128",
+        "invariant_pair_hash": "9bf2441191d9cde8ba6ab1e8ec69976aa044e15457b7c848bb1a0ab8b9adc259",
+        "axis_name": "link_width",
+        "axis_parameter": "link_bits_per_cycle",
+        "baseline_value": 64,
+        "intervention_value": 128
+      },
+      "intervention_pair_hash": "c08dc27fe4fe7837c35190a8918f7b48e64629236d9d299fdfc4fde894b67d7c",
+      "registered_metrics": {
+        "baseline": {
+          "TotalCycles": 3328,
+          "ComputeServiceDemandCycles": 512,
+          "MemoryServiceDemandCycles": 1280,
+          "NocServiceDemandCycles": 2048,
+          "ComputeCriticalCycles": 0,
+          "MemoryCriticalCycles": 0,
+          "NocCriticalCycles": 2048,
+          "ReductionCriticalCycles": 256,
+          "SoftmaxCriticalCycles": 1024,
+          "ConversionCriticalCycles": 0,
+          "DominantBottleneck": "noc"
+        },
+        "intervention": {
+          "TotalCycles": 2560,
+          "ComputeServiceDemandCycles": 512,
+          "MemoryServiceDemandCycles": 1280,
+          "NocServiceDemandCycles": 1024,
+          "ComputeCriticalCycles": 0,
+          "MemoryCriticalCycles": 1280,
+          "NocCriticalCycles": 0,
+          "ReductionCriticalCycles": 256,
+          "SoftmaxCriticalCycles": 1024,
+          "ConversionCriticalCycles": 0,
+          "DominantBottleneck": "memory"
+        }
+      },
+      "registered_prediction": {
+        "total_after_point": 2560,
+        "total_after_interval": [
+          2560,
+          2560
+        ],
+        "total_delta_point": -768,
+        "total_delta_interval": [
+          -768,
+          -768
+        ],
+        "target_service_delta_point": -1024,
+        "target_service_delta_interval": [
+          -1024,
+          -1024
+        ],
+        "target_critical_delta_point": -2048,
+        "target_critical_delta_interval": [
+          -2048,
+          -2048
+        ],
+        "baseline_dominant_set": [
+          "noc"
+        ],
+        "intervention_dominant_set": [
+          "memory"
+        ],
+        "intervention_selected_dominant": "memory"
+      },
+      "runner_contract": {
+        "experiment_name": "reviewer_extension_p2_trace_guided_interventions_20260717",
+        "provider": "stage",
+        "scenario": "codesign_bottleneck",
+        "evidence_level": "measured",
+        "config_id": "S-Native",
+        "config_hash": "a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd",
+        "base_config": {
+          "schema_version": "aspg-final-config-1.0",
+          "config_id": "S-Native",
+          "purpose": "STAGE-native heterogeneous system for bottleneck migration and co-design",
+          "evidence_level": "measured",
+          "compute": {
+            "processing_elements": 16,
+            "macs_per_pe_per_cycle": 256,
+            "aggregate_macs_per_cycle": 4096
+          },
+          "transport": {
+            "topology": "mesh_4x4",
+            "router_count": 16,
+            "endpoint_count": 16,
+            "link_bits_per_cycle": 128,
+            "packet_bits": 128
+          },
+          "memory": {
+            "ports": 1,
+            "latency_cycles": 5
+          },
+          "special_units": {
+            "reduction_latency_cycles": 2,
+            "softmax_latency_cycles": 8
+          },
+          "queue_capacity_packets": 4,
+          "workloads": {
+            "primary": "Attention_128_64",
+            "auxiliary": "GEMM_256"
+          }
+        }
+      },
+      "candidates": [
+        {
+          "candidate_id": "p2-fb395e9a12da508a",
+          "candidate_identity_sha256": "fb395e9a12da508adca1fd5388227b43d0c7c5dba88acc3296c25a05ca8456a7",
+          "identity": {
+            "schema_version": "stage-reviewer-p2-candidate-1.0",
+            "experiment_id": "reviewer_extension_p2_trace_guided_interventions_20260717",
+            "pair_id": "p2_link_bits_64_to_128",
+            "role": "baseline",
+            "repeat": 0,
+            "parameters": {
+              "workload_id": "attention_128_64",
+              "mac_count": 2097152,
+              "packet_count": 8192,
+              "memory_requests": 256,
+              "macs_per_pe_per_cycle": 256,
+              "link_bits_per_cycle": 64,
+              "memory_ports": 1,
+              "queue_depth": 4,
+              "graph_hash": "bf10f69d94b3ad849c1317ccb75ca98e01f67de0ed54b3d19411f1ac344ecdf0",
+              "workload_hash": "fbe0d419e11d7eec23c613659c5bb85a287de71e1ecb8e63b58488287edd5272",
+              "mapping_hash": "385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597",
+              "model_hash": "a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd",
+              "case_id": "p2_link_bits_64_to_128_baseline_r0",
+              "axis": "link_width",
+              "axis_value": 64,
+              "repeat": 0
+            },
+            "invariant_pair_hash": "9bf2441191d9cde8ba6ab1e8ec69976aa044e15457b7c848bb1a0ab8b9adc259",
+            "intervention_pair_hash": "c08dc27fe4fe7837c35190a8918f7b48e64629236d9d299fdfc4fde894b67d7c",
+            "seed_contract_hash": "10819c1d7a9edf39f5ce6d59c30501cdbf212c8fcf0bfc3f7bb2ebf14f8a89d7"
+          },
+          "pair_id": "p2_link_bits_64_to_128",
+          "role": "baseline",
+          "repeat": 0,
+          "parameters": {
+            "workload_id": "attention_128_64",
+            "mac_count": 2097152,
+            "packet_count": 8192,
+            "memory_requests": 256,
+            "macs_per_pe_per_cycle": 256,
+            "link_bits_per_cycle": 64,
+            "memory_ports": 1,
+            "queue_depth": 4,
+            "graph_hash": "bf10f69d94b3ad849c1317ccb75ca98e01f67de0ed54b3d19411f1ac344ecdf0",
+            "workload_hash": "fbe0d419e11d7eec23c613659c5bb85a287de71e1ecb8e63b58488287edd5272",
+            "mapping_hash": "385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597",
+            "model_hash": "a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd",
+            "case_id": "p2_link_bits_64_to_128_baseline_r0",
+            "axis": "link_width",
+            "axis_value": 64,
+            "repeat": 0
+          },
+          "invariant_pair_hash": "9bf2441191d9cde8ba6ab1e8ec69976aa044e15457b7c848bb1a0ab8b9adc259",
+          "intervention_pair_hash": "c08dc27fe4fe7837c35190a8918f7b48e64629236d9d299fdfc4fde894b67d7c"
+        },
+        {
+          "candidate_id": "p2-2c495d8d49d4e782",
+          "candidate_identity_sha256": "2c495d8d49d4e782b7a90a445019a8a5d36c6e4d2c3c8d7609da1378e58f3d69",
+          "identity": {
+            "schema_version": "stage-reviewer-p2-candidate-1.0",
+            "experiment_id": "reviewer_extension_p2_trace_guided_interventions_20260717",
+            "pair_id": "p2_link_bits_64_to_128",
+            "role": "baseline",
+            "repeat": 1,
+            "parameters": {
+              "workload_id": "attention_128_64",
+              "mac_count": 2097152,
+              "packet_count": 8192,
+              "memory_requests": 256,
+              "macs_per_pe_per_cycle": 256,
+              "link_bits_per_cycle": 64,
+              "memory_ports": 1,
+              "queue_depth": 4,
+              "graph_hash": "bf10f69d94b3ad849c1317ccb75ca98e01f67de0ed54b3d19411f1ac344ecdf0",
+              "workload_hash": "fbe0d419e11d7eec23c613659c5bb85a287de71e1ecb8e63b58488287edd5272",
+              "mapping_hash": "385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597",
+              "model_hash": "a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd",
+              "case_id": "p2_link_bits_64_to_128_baseline_r1",
+              "axis": "link_width",
+              "axis_value": 64,
+              "repeat": 1
+            },
+            "invariant_pair_hash": "9bf2441191d9cde8ba6ab1e8ec69976aa044e15457b7c848bb1a0ab8b9adc259",
+            "intervention_pair_hash": "c08dc27fe4fe7837c35190a8918f7b48e64629236d9d299fdfc4fde894b67d7c",
+            "seed_contract_hash": "10819c1d7a9edf39f5ce6d59c30501cdbf212c8fcf0bfc3f7bb2ebf14f8a89d7"
+          },
+          "pair_id": "p2_link_bits_64_to_128",
+          "role": "baseline",
+          "repeat": 1,
+          "parameters": {
+            "workload_id": "attention_128_64",
+            "mac_count": 2097152,
+            "packet_count": 8192,
+            "memory_requests": 256,
+            "macs_per_pe_per_cycle": 256,
+            "link_bits_per_cycle": 64,
+            "memory_ports": 1,
+            "queue_depth": 4,
+            "graph_hash": "bf10f69d94b3ad849c1317ccb75ca98e01f67de0ed54b3d19411f1ac344ecdf0",
+            "workload_hash": "fbe0d419e11d7eec23c613659c5bb85a287de71e1ecb8e63b58488287edd5272",
+            "mapping_hash": "385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597",
+            "model_hash": "a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd",
+            "case_id": "p2_link_bits_64_to_128_baseline_r1",
+            "axis": "link_width",
+            "axis_value": 64,
+            "repeat": 1
+          },
+          "invariant_pair_hash": "9bf2441191d9cde8ba6ab1e8ec69976aa044e15457b7c848bb1a0ab8b9adc259",
+          "intervention_pair_hash": "c08dc27fe4fe7837c35190a8918f7b48e64629236d9d299fdfc4fde894b67d7c"
+        },
+        {
+          "candidate_id": "p2-64500505c864db3b",
+          "candidate_identity_sha256": "64500505c864db3bf80883a1b4ed2ac58f70bd3df6b1d5d23a0143c6e2b648ff",
+          "identity": {
+            "schema_version": "stage-reviewer-p2-candidate-1.0",
+            "experiment_id": "reviewer_extension_p2_trace_guided_interventions_20260717",
+            "pair_id": "p2_link_bits_64_to_128",
+            "role": "intervention",
+            "repeat": 0,
+            "parameters": {
+              "workload_id": "attention_128_64",
+              "mac_count": 2097152,
+              "packet_count": 8192,
+              "memory_requests": 256,
+              "macs_per_pe_per_cycle": 256,
+              "link_bits_per_cycle": 128,
+              "memory_ports": 1,
+              "queue_depth": 4,
+              "graph_hash": "bf10f69d94b3ad849c1317ccb75ca98e01f67de0ed54b3d19411f1ac344ecdf0",
+              "workload_hash": "fbe0d419e11d7eec23c613659c5bb85a287de71e1ecb8e63b58488287edd5272",
+              "mapping_hash": "385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597",
+              "model_hash": "a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd",
+              "case_id": "p2_link_bits_64_to_128_intervention_r0",
+              "axis": "link_width",
+              "axis_value": 128,
+              "repeat": 0
+            },
+            "invariant_pair_hash": "9bf2441191d9cde8ba6ab1e8ec69976aa044e15457b7c848bb1a0ab8b9adc259",
+            "intervention_pair_hash": "c08dc27fe4fe7837c35190a8918f7b48e64629236d9d299fdfc4fde894b67d7c",
+            "seed_contract_hash": "10819c1d7a9edf39f5ce6d59c30501cdbf212c8fcf0bfc3f7bb2ebf14f8a89d7"
+          },
+          "pair_id": "p2_link_bits_64_to_128",
+          "role": "intervention",
+          "repeat": 0,
+          "parameters": {
+            "workload_id": "attention_128_64",
+            "mac_count": 2097152,
+            "packet_count": 8192,
+            "memory_requests": 256,
+            "macs_per_pe_per_cycle": 256,
+            "link_bits_per_cycle": 128,
+            "memory_ports": 1,
+            "queue_depth": 4,
+            "graph_hash": "bf10f69d94b3ad849c1317ccb75ca98e01f67de0ed54b3d19411f1ac344ecdf0",
+            "workload_hash": "fbe0d419e11d7eec23c613659c5bb85a287de71e1ecb8e63b58488287edd5272",
+            "mapping_hash": "385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597",
+            "model_hash": "a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd",
+            "case_id": "p2_link_bits_64_to_128_intervention_r0",
+            "axis": "link_width",
+            "axis_value": 128,
+            "repeat": 0
+          },
+          "invariant_pair_hash": "9bf2441191d9cde8ba6ab1e8ec69976aa044e15457b7c848bb1a0ab8b9adc259",
+          "intervention_pair_hash": "c08dc27fe4fe7837c35190a8918f7b48e64629236d9d299fdfc4fde894b67d7c"
+        },
+        {
+          "candidate_id": "p2-9d6cc6ed7905b7c7",
+          "candidate_identity_sha256": "9d6cc6ed7905b7c79e4bd41f7748e7c470d48cfca4126a467660eed61ba84543",
+          "identity": {
+            "schema_version": "stage-reviewer-p2-candidate-1.0",
+            "experiment_id": "reviewer_extension_p2_trace_guided_interventions_20260717",
+            "pair_id": "p2_link_bits_64_to_128",
+            "role": "intervention",
+            "repeat": 1,
+            "parameters": {
+              "workload_id": "attention_128_64",
+              "mac_count": 2097152,
+              "packet_count": 8192,
+              "memory_requests": 256,
+              "macs_per_pe_per_cycle": 256,
+              "link_bits_per_cycle": 128,
+              "memory_ports": 1,
+              "queue_depth": 4,
+              "graph_hash": "bf10f69d94b3ad849c1317ccb75ca98e01f67de0ed54b3d19411f1ac344ecdf0",
+              "workload_hash": "fbe0d419e11d7eec23c613659c5bb85a287de71e1ecb8e63b58488287edd5272",
+              "mapping_hash": "385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597",
+              "model_hash": "a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd",
+              "case_id": "p2_link_bits_64_to_128_intervention_r1",
+              "axis": "link_width",
+              "axis_value": 128,
+              "repeat": 1
+            },
+            "invariant_pair_hash": "9bf2441191d9cde8ba6ab1e8ec69976aa044e15457b7c848bb1a0ab8b9adc259",
+            "intervention_pair_hash": "c08dc27fe4fe7837c35190a8918f7b48e64629236d9d299fdfc4fde894b67d7c",
+            "seed_contract_hash": "10819c1d7a9edf39f5ce6d59c30501cdbf212c8fcf0bfc3f7bb2ebf14f8a89d7"
+          },
+          "pair_id": "p2_link_bits_64_to_128",
+          "role": "intervention",
+          "repeat": 1,
+          "parameters": {
+            "workload_id": "attention_128_64",
+            "mac_count": 2097152,
+            "packet_count": 8192,
+            "memory_requests": 256,
+            "macs_per_pe_per_cycle": 256,
+            "link_bits_per_cycle": 128,
+            "memory_ports": 1,
+            "queue_depth": 4,
+            "graph_hash": "bf10f69d94b3ad849c1317ccb75ca98e01f67de0ed54b3d19411f1ac344ecdf0",
+            "workload_hash": "fbe0d419e11d7eec23c613659c5bb85a287de71e1ecb8e63b58488287edd5272",
+            "mapping_hash": "385d4a3ce97fce9d99930055b3a9f005d8af2623eeb227d53bbbabb476595597",
+            "model_hash": "a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd",
+            "case_id": "p2_link_bits_64_to_128_intervention_r1",
+            "axis": "link_width",
+            "axis_value": 128,
+            "repeat": 1
+          },
+          "invariant_pair_hash": "9bf2441191d9cde8ba6ab1e8ec69976aa044e15457b7c848bb1a0ab8b9adc259",
+          "intervention_pair_hash": "c08dc27fe4fe7837c35190a8918f7b48e64629236d9d299fdfc4fde894b67d7c"
+        }
+      ]
+    }
+  ],
+  "candidate_count": 8,
+  "output_contract": {
+    "observation_schema": "experiments/aspdac/specs/reviewer_extension_20260717/p2_observation.schema.json",
+    "expected_raw_directory": "experiments/aspdac/results/reviewer_extension_20260717/raw/p2_interventions",
+    "analysis_manifest": "experiments/aspdac/results/reviewer_extension_20260717/manifests/p2_intervention_analysis.json",
+    "candidate_manifest": "experiments/aspdac/results/reviewer_extension_20260717/manifests/p2_candidate_manifest.json",
+    "checkpoint": "experiments/aspdac/results/reviewer_extension_20260717/manifests/p2_checkpoint.json",
+    "runner_input_directory": "experiments/aspdac/results/reviewer_extension_20260717/manifests/p2_runner_inputs",
+    "runner_output_directory": "experiments/aspdac/results/reviewer_extension_20260717/manifests/p2_runner_outputs",
+    "observation_producer": "reviewer_extension_p2.py observe",
+    "no_measurement_generated_by_preregistration": true
+  },
+  "claim_boundary": "Deterministic within-model counterfactual evidence only. It is not general causal identification, hardware accuracy, or a cross-tool timing claim.",
+  "integrity": {
+    "algorithm": "sha256",
+    "canonicalization": "sorted-key compact UTF-8 JSON",
+    "scope": "document excluding integrity",
+    "content_sha256": "64d01c386378c9028796704adaa81e7087e2fbd9ee8789c29fef3b3acb544708"
+  }
+}

@@ -1,0 +1,33 @@
+schema_version: aspg-reviewer-p0-plan-1.0
+name: reviewer_p0_specialist_runtime_context
+bundle_root: experiments/aspdac/results/reviewer_extension_20260717
+policy:
+  timeout_seconds: 1800
+  max_peak_working_set_bytes: 25769803776
+experiments:
+  - name: booksim2_wall_clock_context
+    provider: booksim2_reviewer_context
+    scenario: reviewer_specialist_runtime
+    fixed:
+      tool: BookSim2
+      mesh_dimension: 4
+      seed: 40
+      denominator_kind: packets
+    axes:
+      traffic: [uniform, hotspot]
+      injection_rate: [0.02, 0.08]
+      packet_count: [10000, 100000, 1000000]
+      repeat: [0, 1, 2]
+  - name: scalesim_wall_clock_context
+    provider: scalesim_reviewer_context
+    scenario: reviewer_specialist_runtime
+    fixed:
+      tool: SCALE-Sim
+      mesh_dimension: 4
+      dataflow: WS
+      denominator_kind: external_native_workload
+    cases:
+      - {case: small_gemm}
+      - {case: attention_qk}
+    axes:
+      repeat: [0, 1, 2]

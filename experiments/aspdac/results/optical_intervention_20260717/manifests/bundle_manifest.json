@@ -1,0 +1,25 @@
+{
+  "schema_version": "aspg-final-bundle-manifest-1.0",
+  "bundle_root": "experiments/aspdac/results/optical_intervention_20260717",
+  "created_or_refreshed_utc": "2026-07-17T09:09:12.730414Z",
+  "plans": {
+    "optical_intervention": {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/manifests/plan_optical_intervention.yaml",
+      "sha256": "ce0f57244d087b379f5ac680dd4f51cb3fe56f0e49e02afaef1572e4d45ddbe5"
+    }
+  },
+  "external_draft_policy": "read_only",
+  "environment": {
+    "captured_utc": "2026-07-17T09:09:12.523041Z",
+    "manager_version": "aspg-experiment-manager-1.0",
+    "git_commit": "a5e44fdd4899324b4d1b4730d77a91c1ca640ff2",
+    "git_status_porcelain_sha256": "ab3b045a71edcf0bb9fa8383417959bac48b6f6b2d036c3c2a52303e77205a93",
+    "host": "anonymous-host",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.10.6",
+    "dotnet": "9.0.315"
+  },
+  "config_hashes": {
+    "S-Native": "a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd"
+  }
+}

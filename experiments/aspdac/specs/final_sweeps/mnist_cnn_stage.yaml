@@ -1,0 +1,27 @@
+schema_version: aspg-experiment-plan-1.0
+name: mnist_cnn_stage
+bundle_root: experiments/aspdac/results/final_20260716
+configs:
+  - experiments/aspdac/specs/final_configs/s_native.yaml
+experiments:
+  - name: mnist_cnn_stage_layers
+    provider: stage
+    scenario: mnist_cnn_layer
+    evidence_level: trend
+    base_config: S-Native
+    fixed:
+      image_count: 1
+      precision_bits: 32
+      model_hash: 0aa004a4bd1bbbdaf550a115ad0ed5cda16b6269b8753b97bd076cd1fc55d662
+      dataset_hash: 58481a24c582fffdb3ee63a052ea16ea08c1d0f8e90b2abbdb24a96c77055ad3
+      prediction_hash: 9d56dbfd0611130a20aec9638bb9ce935dc023c17f6b0815e83b4b3a27efaa26
+      lowering_hash: 98311305665da9094b2d693a241b76172e8d7e4a0533a0242bb62c9a9706f7a9
+    cases:
+      - {case_id: conv1, layer_id: conv1, layer_kind: conv2d_im2col, M: 576, N: 6, K: 25, post_op_elements_per_image: 4320}
+      - {case_id: conv2, layer_id: conv2, layer_kind: conv2d_im2col, M: 64, N: 16, K: 150, post_op_elements_per_image: 1280}
+      - {case_id: fc1, layer_id: fc1, layer_kind: fully_connected, M: 1, N: 120, K: 256, post_op_elements_per_image: 120}
+      - {case_id: fc2, layer_id: fc2, layer_kind: fully_connected, M: 1, N: 84, K: 120, post_op_elements_per_image: 84}
+      - {case_id: fc3, layer_id: fc3, layer_kind: fully_connected, M: 1, N: 10, K: 84, post_op_elements_per_image: 0}
+    axes:
+      mode: [compute_only, full_system]
+      repeat: [0, 1]

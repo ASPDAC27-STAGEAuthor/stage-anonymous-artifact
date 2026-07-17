@@ -1,0 +1,48 @@
+schema: aspdac.baseline_tool_config.v1
+tool: Timeloop_Accelergy
+case_id: timeloop_accelergy_core_workloads
+status: completed
+evidence_label: reference_model_energy_and_access_trend
+runner: experiments/aspdac/scripts/run_accelergy_core_workloads.py
+input_template: experiments/aspdac/baseline_tools/timeloop_accelergy/gemm_256_16pe_accelergy.yaml
+normalization_target:
+  workloads:
+    - gemm_256
+    - mlp_l1
+    - mlp_l2
+    - attention_qk
+    - attention_pv
+  precision: INT16
+  processing_elements: 16
+  technology: 45nm
+  architecture: 4x4 spatial mapping with DRAM, global SRAM, local SRAM, MAC, and register levels
+estimators:
+  DRAM: CactiDRAM
+  SRAM: CactiSRAM
+  MAC: Aladdin_table
+  registers: Aladdin_table
+metrics:
+  - cycles
+  - utilization_pct
+  - energy_uj
+  - computes
+  - register_accesses
+  - local_buffer_accesses
+  - global_buffer_accesses
+  - dram_accesses
+outputs:
+  raw_dir: experiments/aspdac/results/accelergy_wsl/core_workloads_v1
+  processed_metrics: experiments/aspdac/results/accelergy_wsl/core_workloads_v1/timeloop_accelergy_summary.csv
+  action_reference: experiments/aspdac/results/accelergy_wsl/core_workloads_v1/action_reference.csv
+  manifest: experiments/aspdac/results/accelergy_wsl/core_workloads_v1/manifest.json
+validation:
+  completed_cases: 5
+  expected_cases: 5
+  ert_tables_per_case: 5
+  dummy_action_estimates: false
+  schema_error_key_not_found_tables: false
+notes:
+  - STAGE columns remain blank until matched STAGE runs are available.
+  - Compare access and energy trends only where architecture, mapping, precision, and action semantics match.
+  - Values are CACTI/Aladdin reference-model estimates, not silicon-calibrated absolute power evidence.
+  - Timeloop/Accelergy does not provide STAGE graph-linked trace provenance.

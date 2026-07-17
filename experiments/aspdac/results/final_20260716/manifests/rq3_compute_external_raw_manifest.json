@@ -1,0 +1,237 @@
+{
+  "schema_version": "aspg-external-raw-manifest-1.0",
+  "source_policy": "Timeloop final model run plus immutable SCALE-Sim external copy",
+  "files": [
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_scalesim/aspdac_4x4_ws.cfg",
+      "sha256": "e00ddda32f020bcf713f3afc22539243a5b4250786d1e9b90999df23177ed0bd",
+      "bytes": 740
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_scalesim/aspdac_core_mnk.csv",
+      "sha256": "28812a37634bce20eb04350bc81f51f29e0fecc52fd1f79995c1f91455a123d1",
+      "bytes": 190
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_scalesim/raw_outputs/aspdac_4x4_ws_core_mnk/BANDWIDTH_REPORT.csv",
+      "sha256": "3e4d2c515da10d7a0bafb4637768cb2f36d9c4c68197784c277ad3952f815606",
+      "bytes": 727
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_scalesim/raw_outputs/aspdac_4x4_ws_core_mnk/COMPUTE_REPORT.csv",
+      "sha256": "cbdcc5e8d79ac0deb78fd19c30567525dc38f0a66d4a469179470f0cf60db940",
+      "bytes": 472
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_scalesim/raw_outputs/aspdac_4x4_ws_core_mnk/DETAILED_ACCESS_REPORT.csv",
+      "sha256": "b3e1a6b8b17aad291f95f5c65326968a5cc52b1640e42318befa4b929ad58cc4",
+      "bytes": 1159
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_scalesim/raw_outputs/aspdac_4x4_ws_core_mnk/TIME_REPORT.csv",
+      "sha256": "a6eaa1e214504ea962f46c933ea432e236eae0f9c921175a6c9703ad22b5f3bd",
+      "bytes": 75
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_scalesim/run_metadata.json",
+      "sha256": "05017b2f292e4d0b39793cb09e851429f61d13aab7eced290fecfce5936b34e4",
+      "bytes": 195
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_scalesim/scalesim.stdout.log",
+      "sha256": "954ce42e578951567dda862b7c52e60b98ae24459a4ce8659967444d6b9edf1a",
+      "bytes": 96823
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_scalesim/scalesim_summary.csv",
+      "sha256": "77e792ea8a82e38ac22940ced6faa61f10e03007f0d95ff5f8d1b314837d1c48",
+      "bytes": 1635
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/attention_pv/attention_128_64_prob_v.yaml",
+      "sha256": "15671a4cf3f3652546bb3d80c8078fd4b146275771de39be5b7e3b98cb912852",
+      "bytes": 1401
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/attention_pv/timeloop-mapper.map.yaml",
+      "sha256": "7ddd1e4398bc58c51d7caadb902ce3cc88ae26ac16a67ede9cec71617aa008da",
+      "bytes": 845
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/attention_pv/timeloop-model.map+stats.xml",
+      "sha256": "006edf28479771acfd504f4c4623834bb31e62693fc8476ad5ddf9e1126dc5b7",
+      "bytes": 83308
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/attention_pv/timeloop-model.map.tensella.txt",
+      "sha256": "a1af7a6913ae6b4cb2e6cace83bcfaf15cf83e723cc5114bec0236fa2df9833f",
+      "bytes": 182
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/attention_pv/timeloop-model.map.txt",
+      "sha256": "a5343b7811d8414bb79f2a7db542cb40a47e123f34cbc6d9d3710ea0cfa008b2",
+      "bytes": 526
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/attention_pv/timeloop-model.stats.txt",
+      "sha256": "a8c4a040e3be342fd23cf1ac5662f407d60d14490f83951af1a9d3245b109229",
+      "bytes": 19795
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/attention_pv/timeloop-model.stdout.log",
+      "sha256": "4df884220ead095f7f2172f4b8ef1107aaeeeaec37b24e3431b00e6a5aa393b4",
+      "bytes": 937
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/attention_qk/attention_128_64_qk.yaml",
+      "sha256": "94d642c59a906e6e00af05d64e17f9c40e5b885d9a898db408fa6770bcccd209",
+      "bytes": 1401
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/attention_qk/timeloop-mapper.map.yaml",
+      "sha256": "4256893eccbdc0154e3cd3ba01e1e7453cb6418d32b92bffcaf8e65caebb69b5",
+      "bytes": 845
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/attention_qk/timeloop-model.map+stats.xml",
+      "sha256": "41fe3ddffc6adff3c543f66c37bfc452fd9ec1a120f2a8de256ab051ed17af65",
+      "bytes": 83310
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/attention_qk/timeloop-model.map.tensella.txt",
+      "sha256": "2adf480ff1d20d8a680c30c4cb05cb314666e0f05a92fbaa1b965d1638a84cdb",
+      "bytes": 182
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/attention_qk/timeloop-model.map.txt",
+      "sha256": "0f0dc9d1bcfb86ff7807edc744fc0e5084a65988b8093eb1a5913cf58fdb5f53",
+      "bytes": 526
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/attention_qk/timeloop-model.stats.txt",
+      "sha256": "bf416ba43cb910a9056e08e773df8866502d44e1381d8dbbdd0f97db72c54e8c",
+      "bytes": 19797
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/attention_qk/timeloop-model.stdout.log",
+      "sha256": "b39d0d33b540d2457120295db39cc4e9c528f11f64b95dbca2d102f56eac628f",
+      "bytes": 933
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/gemm_256/gemm_256_16pe.yaml",
+      "sha256": "802fed04fcc914586ed8bcd954330ac9db364e0ba120b6e7efa3e6f86c05e635",
+      "bytes": 1402
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/gemm_256/timeloop-mapper.map.yaml",
+      "sha256": "316205a0e7ee2820ffd292016c92aa8036264b87c80c192412be75777b160962",
+      "bytes": 846
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/gemm_256/timeloop-model.map+stats.xml",
+      "sha256": "feeb697185c4da10a926186c4d78b20ad5999fc8afc46c1cade4be14bb6c2c1a",
+      "bytes": 83407
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/gemm_256/timeloop-model.map.tensella.txt",
+      "sha256": "e478ad44fb3d8d38c74969f63ed9903acc885899c3c61a10a74233538abd1f0d",
+      "bytes": 183
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/gemm_256/timeloop-model.map.txt",
+      "sha256": "953cf2fcdfaa8cfbf7c9b34aaf28ebea91a6c5c005788ee914755d8634088f09",
+      "bytes": 535
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/gemm_256/timeloop-model.stats.txt",
+      "sha256": "768745b71cc61ee01113b82ef7166ad9312ef56aa5e4058e6ab66e0a1a438b84",
+      "bytes": 19901
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/gemm_256/timeloop-model.stdout.log",
+      "sha256": "a3f0433e79844bee7188e3d708c20d630957c42e613b8316e763b4f22bc6dd84",
+      "bytes": 921
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/mlp_l1/mlp_512_256_batch128_layer1.yaml",
+      "sha256": "6336b59a5b8b4637fb6287f3ab464c7c12a7efec1db3c93b9224010cb16b373d",
+      "bytes": 1402
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/mlp_l1/timeloop-mapper.map.yaml",
+      "sha256": "395de683f77f68bd5315b1537ea047a5590621757539e89d413773b3fb5e2427",
+      "bytes": 846
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/mlp_l1/timeloop-model.map+stats.xml",
+      "sha256": "dc01a04f5ed79793e17477ddaa7e220aa5dd381e1819970b5547b93099dfc158",
+      "bytes": 83418
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/mlp_l1/timeloop-model.map.tensella.txt",
+      "sha256": "54b50c668c0e73db51e20efc7c48123502d175aba3b2020d24c34866782be985",
+      "bytes": 183
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/mlp_l1/timeloop-model.map.txt",
+      "sha256": "b48badf34a4f93f3e90ad80fbe7b554d71547c8b68bebceafbd575cd4c32664a",
+      "bytes": 539
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/mlp_l1/timeloop-model.stats.txt",
+      "sha256": "053e94662c409a2a991a3e439918dad511f3468a8d2a22585da2caf6b2ab6647",
+      "bytes": 19909
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/mlp_l1/timeloop-model.stdout.log",
+      "sha256": "6ad024cc0d1c8aa5acb9183f64c01607191f9d748ef0f7365e413ca4a3d7e96b",
+      "bytes": 931
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/mlp_l2/mlp_512_256_batch128_layer2.yaml",
+      "sha256": "ec25d9ac1111918ec964a98acf6eb3f08d97c6afc833485f3690358faaaa6ecf",
+      "bytes": 1402
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/mlp_l2/timeloop-mapper.map.yaml",
+      "sha256": "e2afa91cdd07694e0773abe11b09cffa4678f7cbb0573bc8d15e028641898b98",
+      "bytes": 846
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/mlp_l2/timeloop-model.map+stats.xml",
+      "sha256": "b0bbb11b031b22de8c85fb416a09c42f1af0ff4f61541a6ddcf50e83ba34d3a8",
+      "bytes": 83374
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/mlp_l2/timeloop-model.map.tensella.txt",
+      "sha256": "63b45ec791469510e0c4db118cf778ff5ddd915a4852c7d77dbb37604be3041a",
+      "bytes": 183
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/mlp_l2/timeloop-model.map.txt",
+      "sha256": "5294490b3b8bb4e88ca42f134a6df6f3eaf790eb70817965125eea8d925658f1",
+      "bytes": 535
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/mlp_l2/timeloop-model.stats.txt",
+      "sha256": "2babd7eda7da17d196f2749ce11b13c42c8d47fba2efb13b1cf71a7474256a15",
+      "bytes": 19853
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/mlp_l2/timeloop-model.stdout.log",
+      "sha256": "eb9a1bcd0513e7674548eaa4350539ab81d77aaee0b4ab7ff6df8eabf8438e88",
+      "bytes": 930
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/timeloop_model_manifest.json",
+      "sha256": "ce5f42d4c1550f483d41dcb8ce6e08a88dc87c6bafaef923a6962e0bf4b2e7a7",
+      "bytes": 9108
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_timeloop_model/timeloop_model_summary.csv",
+      "sha256": "89fceaaef7090f6a3fe09e1516f9a862edebde2bc4ca3cf8c4ccde0933980007",
+      "bytes": 1898
+    }
+  ],
+  "file_count": 46
+}

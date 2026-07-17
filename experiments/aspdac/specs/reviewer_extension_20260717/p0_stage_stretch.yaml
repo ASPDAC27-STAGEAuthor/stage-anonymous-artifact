@@ -1,0 +1,21 @@
+schema_version: aspg-reviewer-p0-plan-1.0
+name: reviewer_p0_stage_stretch
+bundle_root: experiments/aspdac/results/reviewer_extension_20260717
+policy:
+  timeout_seconds: 1800
+  max_peak_working_set_bytes: 25769803776
+experiments:
+  - name: stage_10m_stretch
+    provider: stage_reviewer_scaling
+    scenario: reviewer_scalability
+    fixed:
+      packet_count: 10000000
+      seed: 40
+      injection_rate: 0.02
+      input_buffer_depth: 16
+      compress_trace: true
+      stretch_point: true
+    axes:
+      mesh_dimension: [4, 8, 16, 32]
+      trace_mode: [metrics_only, full]
+      repeat: [0, 1, 2]

@@ -1,0 +1,51 @@
+{
+  "schema_version": "aspdac-stage-mot-mapping-output-1.0",
+  "generated_utc": "2026-07-16T16:17:02.382640Z",
+  "experiment": "same-workload hierarchical mapping and topology-geometry sweep",
+  "workload": {
+    "M": 1,
+    "K": 256,
+    "N": 256
+  },
+  "matrix": {
+    "partition_width_d": [
+      32,
+      64,
+      128,
+      256
+    ],
+    "cluster_size_c": [
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ]
+  },
+  "case_count": 24,
+  "repeat_count_per_case": 2,
+  "exact_cases": 24,
+  "deterministic_cases": 24,
+  "claim_boundary": "D and C jointly change the resolved hierarchical mapping and mesh geometry; this is not an isolated topology-only experiment",
+  "files": [
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_mot_mapping/phase8a-256-dc-sweep-static-weights-mot-inr-v4.csv",
+      "sha256": "442d9ee0cc4ceec1133693c42ebab567ef634a904b0746ea74511c8a0d46b6d8",
+      "bytes": 20084,
+      "role": "immutable raw CSV"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/stage_mot_mapping/phase8a-256-dc-sweep-static-weights-mot-inr-v4.json",
+      "sha256": "9cc56a6c0beb70633f41fbfe2ec20f0db047adb9142b89363cae39e3d9c6eaae",
+      "bytes": 81400,
+      "role": "immutable raw JSON"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/stage_mot_mapping.csv",
+      "sha256": "ebb3aa313b8c83ab6195da1a1ce6a26d1eeba30246885dd4966852caf8ee6b2a",
+      "bytes": 12465,
+      "role": "tidy paper CSV"
+    }
+  ]
+}

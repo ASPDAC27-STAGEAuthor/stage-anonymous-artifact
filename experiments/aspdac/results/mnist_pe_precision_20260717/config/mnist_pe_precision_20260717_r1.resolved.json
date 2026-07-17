@@ -1,0 +1,320 @@
+{
+  "arithmetic_profiles": [
+    {
+      "accumulate_dtype": "fp32",
+      "conversion_passes": 0,
+      "input_dtype": "fp32",
+      "output_dtype": "fp32",
+      "payload_bits": 32,
+      "profile_hash": "d6bc3bc19dbaf462913fa17a720130755ac9e00ae3684979f2900b9641d9b008",
+      "profile_id": "fp32_a32",
+      "weight_dtype": "fp32"
+    },
+    {
+      "accumulate_dtype": "fp16",
+      "conversion_passes": 2,
+      "input_dtype": "fp16",
+      "output_dtype": "fp16",
+      "payload_bits": 16,
+      "profile_hash": "9196e177d37aac9db152e9d397bb83e19c19e0aa5e2740a47fee1bc4caabb476",
+      "profile_id": "fp16_a16",
+      "weight_dtype": "fp16"
+    },
+    {
+      "accumulate_dtype": "fp16",
+      "conversion_passes": 2,
+      "input_dtype": "fp8",
+      "output_dtype": "fp8",
+      "payload_bits": 8,
+      "profile_hash": "f7b7a2441d48d596fb2d80f6309bf0556122ebe908e468f398921aa5040597a1",
+      "profile_id": "fp8_a16",
+      "weight_dtype": "fp8"
+    },
+    {
+      "accumulate_dtype": "fp8",
+      "conversion_passes": 2,
+      "input_dtype": "fp8",
+      "output_dtype": "fp8",
+      "payload_bits": 8,
+      "profile_hash": "bfbe2411c0a847e4fa8620482ad4d9fb00dc144ca7de3a7efe8e1e82419d4769",
+      "profile_id": "fp8_a8",
+      "weight_dtype": "fp8"
+    }
+  ],
+  "claim_boundary": {
+    "accuracy_evidence": "Measured functional bridge",
+    "c_mnist_stage_endtoend": "not_supported",
+    "native_stage_full_cnn": false
+  },
+  "config_id": "MNIST-PE-PRECISION-20260717-R1",
+  "contracts": {
+    "accumulator": "quantize after every MAC",
+    "lowering": {
+      "conv": "materialized-im2col",
+      "fc": "row-major X@W.T",
+      "kernel_order": "channel-row-column",
+      "mac_order": "row-major K ascending",
+      "weight_flatten": "out-in-kh-kw transposed to KxN"
+    },
+    "lowering_sha256": "d2cf194a94ceadff199234521a0a2767d524bf9029ccb897071c4c8a2eeb7adb",
+    "post_op_sha256": "47822c0eaeb0089a287b1c07079c4326c099c9c3e1d090ab4bedbbd7242622ac",
+    "post_ops": {
+      "argmax": "first-index-on-tie over quantized fc3 PE output",
+      "avgpool": "fp32 2x2 stride2 no-padding",
+      "bias": "fp32",
+      "next_layer_ingress": "arithmetic-profile quantization",
+      "relu": "fp32 max(0,x)"
+    },
+    "rounding": "nearest-even",
+    "saturation": "finite"
+  },
+  "dataset": {
+    "dataset_manifest_sha256": "966dd94342cd0fe7cdd440e38d300a44dbd251332ad1676a20d9aed674435791",
+    "files": [
+      {
+        "bytes": 7840016,
+        "path": "experiments/aspdac/data/MNIST/raw/t10k-images-idx3-ubyte",
+        "sha256": "0fa7898d509279e482958e8ce81c8e77db3f2f8254e26661ceb7762c4d494ce7"
+      },
+      {
+        "bytes": 1648877,
+        "path": "experiments/aspdac/data/MNIST/raw/t10k-images-idx3-ubyte.gz",
+        "sha256": "8d422c7b0a1c1c79245a5bcf07fe86e33eeafee792b84584aec276f5a2dbc4e6"
+      },
+      {
+        "bytes": 10008,
+        "path": "experiments/aspdac/data/MNIST/raw/t10k-labels-idx1-ubyte",
+        "sha256": "ff7bcfd416de33731a308c3f266cc351222c34898ecbeaf847f06e48f7ec33f2"
+      },
+      {
+        "bytes": 4542,
+        "path": "experiments/aspdac/data/MNIST/raw/t10k-labels-idx1-ubyte.gz",
+        "sha256": "f7ae60f92e00ec6debd23a6088c31dbd2371eca3ffa0defaefb259924204aec6"
+      },
+      {
+        "bytes": 47040016,
+        "path": "experiments/aspdac/data/MNIST/raw/train-images-idx3-ubyte",
+        "sha256": "ba891046e6505d7aadcbbe25680a0738ad16aec93bde7f9b65e87a2fc25776db"
+      },
+      {
+        "bytes": 9912422,
+        "path": "experiments/aspdac/data/MNIST/raw/train-images-idx3-ubyte.gz",
+        "sha256": "440fcabf73cc546fa21475e81ea370265605f56be210a4024d2ca8f203523609"
+      },
+      {
+        "bytes": 60008,
+        "path": "experiments/aspdac/data/MNIST/raw/train-labels-idx1-ubyte",
+        "sha256": "65a50cbbf4e906d70832878ad85ccda5333a97f0f4c3dd2ef09a8a9eef7101c5"
+      },
+      {
+        "bytes": 28881,
+        "path": "experiments/aspdac/data/MNIST/raw/train-labels-idx1-ubyte.gz",
+        "sha256": "3552534a0a558bbed6aed32b30c495cca23d567ec52cac8be1a0730e8010255c"
+      }
+    ],
+    "normalization": {
+      "dtype": "fp32",
+      "input": "uint8/255",
+      "mean": [
+        0.1307
+      ],
+      "std": [
+        0.3081
+      ]
+    },
+    "normalization_sha256": "77715228f6c8710c04754673d56a1e665b1b045f20b1d3606677248e834df60d",
+    "root": "experiments/aspdac/data",
+    "sample_order": "ascending_dataset_index_0_to_9999",
+    "sample_order_sha256": "a74675bfed3834ac1c3140b2d7fb7d93d90a76608cc08515a5019a1cb2075ff4",
+    "smoke_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99
+    ],
+    "smoke_order_sha256": "9dd50adbd73bc58bb391efca85d1436fcc4c19cb0bc2495ec0eeb4c1e42f6952",
+    "test_samples": 10000
+  },
+  "functional_bridge": {
+    "backend": "torch-vectorized-explicit-per-mac",
+    "batch_size": 128,
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 20260717,
+    "checkpoint_every_batches": 1,
+    "device": "cuda",
+    "full_repeats": 2,
+    "seed": 20260716,
+    "smoke_internal_repeats": 2,
+    "source_of_truth": "HardwareSim.Core.DigitalNumericFormats plus DigitalVmmReferenceEvaluator"
+  },
+  "model": {
+    "architecture": "Conv1(1->6,5x5)-ReLU-AvgPool2-Conv2(6->16,5x5)-ReLU-AvgPool2-FC256-120-84-10",
+    "architecture_sha256": "0b72aff121466e7020b2087ae909e21988b5d64278cc2090b42f065de51ecdfd",
+    "checkpoint_path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn/small_mnist_cnn_state.pt",
+    "checkpoint_sha256": "0aa004a4bd1bbbdaf550a115ad0ed5cda16b6269b8753b97bd076cd1fc55d662",
+    "name": "SmallMnistCnn/LeNet-style",
+    "original_accuracy": 0.9839,
+    "original_correct": 9839,
+    "original_prediction_file_sha256": "22a6341fd32a5468ddafd217cb2eff746a2f07d5e2578e117085e2c7f9403970",
+    "original_prediction_path": "experiments/aspdac/results/final_20260716/raw/mnist_cnn/test_predictions.csv",
+    "original_prediction_semantic_sha256": "9d56dbfd0611130a20aec9638bb9ce935dc023c17f6b0815e83b4b3a27efaa26"
+  },
+  "purpose": "Paired MNIST functional-bridge accuracy and STAGE PE traffic/cycle sensitivity",
+  "result": {
+    "bundle_root": "experiments/aspdac/results/mnist_pe_precision_20260717",
+    "old_bundles_read_only": true
+  },
+  "schema_version": "aspg-mnist-pe-precision-config-1.0",
+  "stage": {
+    "compute_profile_distinguishes_arithmetic": false,
+    "converter_contract": "Phase7C precision-converter 1-cycle packet service across 16 PEs, 0.02 pJ/bit/pass",
+    "layers": [
+      {
+        "K": 25,
+        "M": 576,
+        "N": 6,
+        "layer_id": "conv1",
+        "layer_kind": "conv2d_im2col",
+        "post_op_elements_per_image": 4320
+      },
+      {
+        "K": 150,
+        "M": 64,
+        "N": 16,
+        "layer_id": "conv2",
+        "layer_kind": "conv2d_im2col",
+        "post_op_elements_per_image": 1280
+      },
+      {
+        "K": 256,
+        "M": 1,
+        "N": 120,
+        "layer_id": "fc1",
+        "layer_kind": "linear",
+        "post_op_elements_per_image": 120
+      },
+      {
+        "K": 120,
+        "M": 1,
+        "N": 84,
+        "layer_id": "fc2",
+        "layer_kind": "linear",
+        "post_op_elements_per_image": 84
+      },
+      {
+        "K": 84,
+        "M": 1,
+        "N": 10,
+        "layer_id": "fc3",
+        "layer_kind": "linear",
+        "post_op_elements_per_image": 0
+      }
+    ],
+    "link_bits_per_cycle": 128,
+    "macs_per_pe_per_cycle": 256,
+    "mapping_sha256": "1ab0c62fdab06a43ac0f8b29e8c8dc9fe3f80f6928b3257402670f799948c3a5",
+    "memory_latency_cycles": 5,
+    "memory_ports": 1,
+    "packet_bits": 128,
+    "post_op_elements_per_cycle": 16,
+    "processing_elements": 16,
+    "transport_sha256": "0db37a43e7fd987f613d82cd84c81b1dc37a34fb008fcc3ccece6cdcf0d56e78",
+    "workload_sha256": "52a866d12f0d58d5214ba4d0e8cdbc9545d18198f0b434559907a5298c4af0be"
+  }
+}

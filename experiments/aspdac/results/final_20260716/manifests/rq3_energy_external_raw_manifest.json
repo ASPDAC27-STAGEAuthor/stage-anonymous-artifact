@@ -1,0 +1,411 @@
+{
+  "schema_version": "aspg-external-raw-manifest-1.0",
+  "source_policy": "immutable copy of completed five-workload Accelergy bundle",
+  "files": [
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/action_reference.csv",
+      "sha256": "c61bbe3043b81928b683114f6cb3d02c081b2516aa57c49de18550b0def1215d",
+      "bytes": 950
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_pv/attention_pv_timeloop_accelergy.yaml",
+      "sha256": "579aadeaf23ee8308558d9dd9f757b2af90ea5ac19751f227948e1c553c05e8d",
+      "bytes": 4563
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_pv/timeloop-mapper.accelergy.log",
+      "sha256": "858793d6040dd34047fe93a75fd0ed74344c2a96c7dd9503c06120ac4f844400",
+      "bytes": 37293
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_pv/timeloop-mapper.ART.yaml",
+      "sha256": "5930eec6b3a8fdfdc04c8021f54cb8f08602312493cb9e8612b48996603a5228",
+      "bytes": 309
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_pv/timeloop-mapper.ART_summary.yaml",
+      "sha256": "c464eac67f9dba2d8b8d8ede8498f399439dcdc485f23eb0ee07dafaf41a001f",
+      "bytes": 639
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_pv/timeloop-mapper.ERT.yaml",
+      "sha256": "5f86d648b6e655d254a31dd3a619bd2476adf3dfae81ae7278a34feb2307d9da",
+      "bytes": 2815
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_pv/timeloop-mapper.ERT_summary.yaml",
+      "sha256": "a87fdf5b43047902f6f60b3ddd91ae58f68607673e7c66a315eb6f62fde95444",
+      "bytes": 1832
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_pv/timeloop-mapper.flattened_architecture.yaml",
+      "sha256": "a83d17fd98c58f2afea6c157f89319cab3d44b6d9403b4271bea75cc393ece50",
+      "bytes": 2698
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_pv/timeloop-mapper.map+stats.xml",
+      "sha256": "4120d7be775409b091aa0dde492fcc9a34ab0040db9302adeda4c6333976c66e",
+      "bytes": 83450
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_pv/timeloop-mapper.map.cpp",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_pv/timeloop-mapper.map.tensella.txt",
+      "sha256": "a1af7a6913ae6b4cb2e6cace83bcfaf15cf83e723cc5114bec0236fa2df9833f",
+      "bytes": 182
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_pv/timeloop-mapper.map.txt",
+      "sha256": "a5343b7811d8414bb79f2a7db542cb40a47e123f34cbc6d9d3710ea0cfa008b2",
+      "bytes": 526
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_pv/timeloop-mapper.map.yaml",
+      "sha256": "7ddd1e4398bc58c51d7caadb902ce3cc88ae26ac16a67ede9cec71617aa008da",
+      "bytes": 845
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_pv/timeloop-mapper.orojenesis.csv",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_pv/timeloop-mapper.stats.txt",
+      "sha256": "066399bfb4db89941b60e884aca4ca28881fb1e4aaf5f530acf0b1dc7feb9dcc",
+      "bytes": 19796
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_pv/timeloop_mapper.stdout.log",
+      "sha256": "73ae639ec74307bf8eead27f621a02a59f8cfb1da5d87f6feec26f81322483e1",
+      "bytes": 2572
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_qk/attention_qk_timeloop_accelergy.yaml",
+      "sha256": "22b0fd289d3abaaeb241b79654e1082e7ac45ef59dfde111ce884da92ef523cd",
+      "bytes": 4563
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_qk/timeloop-mapper.accelergy.log",
+      "sha256": "0ef77eb221ccd2008440ca07c61c025d164db10955ea2d04dbc69a9666b0683e",
+      "bytes": 37293
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_qk/timeloop-mapper.ART.yaml",
+      "sha256": "5930eec6b3a8fdfdc04c8021f54cb8f08602312493cb9e8612b48996603a5228",
+      "bytes": 309
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_qk/timeloop-mapper.ART_summary.yaml",
+      "sha256": "c464eac67f9dba2d8b8d8ede8498f399439dcdc485f23eb0ee07dafaf41a001f",
+      "bytes": 639
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_qk/timeloop-mapper.ERT.yaml",
+      "sha256": "5f86d648b6e655d254a31dd3a619bd2476adf3dfae81ae7278a34feb2307d9da",
+      "bytes": 2815
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_qk/timeloop-mapper.ERT_summary.yaml",
+      "sha256": "a87fdf5b43047902f6f60b3ddd91ae58f68607673e7c66a315eb6f62fde95444",
+      "bytes": 1832
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_qk/timeloop-mapper.flattened_architecture.yaml",
+      "sha256": "a83d17fd98c58f2afea6c157f89319cab3d44b6d9403b4271bea75cc393ece50",
+      "bytes": 2698
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_qk/timeloop-mapper.map+stats.xml",
+      "sha256": "0080c631842d2193d48c609a32925b6d8ae2ee2de74675a95e1c1500b596e745",
+      "bytes": 83452
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_qk/timeloop-mapper.map.cpp",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_qk/timeloop-mapper.map.tensella.txt",
+      "sha256": "2adf480ff1d20d8a680c30c4cb05cb314666e0f05a92fbaa1b965d1638a84cdb",
+      "bytes": 182
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_qk/timeloop-mapper.map.txt",
+      "sha256": "0f0dc9d1bcfb86ff7807edc744fc0e5084a65988b8093eb1a5913cf58fdb5f53",
+      "bytes": 526
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_qk/timeloop-mapper.map.yaml",
+      "sha256": "4256893eccbdc0154e3cd3ba01e1e7453cb6418d32b92bffcaf8e65caebb69b5",
+      "bytes": 845
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_qk/timeloop-mapper.orojenesis.csv",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_qk/timeloop-mapper.stats.txt",
+      "sha256": "77cb0874dc9bd1379ffd20baa1f8af477efab98463673a7766cb54d54a3f48a9",
+      "bytes": 19798
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/attention_qk/timeloop_mapper.stdout.log",
+      "sha256": "2695aec7b88f50c04e2c5453ce0884d670930e1f0198d398cfa76a8ab2437b57",
+      "bytes": 2572
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/gemm_256/gemm_256_timeloop_accelergy.yaml",
+      "sha256": "61376643ac31a04df175aee1b94b51d0b08a82b82584dd2fbef339e68200d6a4",
+      "bytes": 4564
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/gemm_256/timeloop-mapper.accelergy.log",
+      "sha256": "5a340330577364949abab83ed1967d2994dd6714362ed908dd37b58ea2236b1e",
+      "bytes": 37269
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/gemm_256/timeloop-mapper.ART.yaml",
+      "sha256": "5930eec6b3a8fdfdc04c8021f54cb8f08602312493cb9e8612b48996603a5228",
+      "bytes": 309
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/gemm_256/timeloop-mapper.ART_summary.yaml",
+      "sha256": "c464eac67f9dba2d8b8d8ede8498f399439dcdc485f23eb0ee07dafaf41a001f",
+      "bytes": 639
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/gemm_256/timeloop-mapper.ERT.yaml",
+      "sha256": "5f86d648b6e655d254a31dd3a619bd2476adf3dfae81ae7278a34feb2307d9da",
+      "bytes": 2815
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/gemm_256/timeloop-mapper.ERT_summary.yaml",
+      "sha256": "a87fdf5b43047902f6f60b3ddd91ae58f68607673e7c66a315eb6f62fde95444",
+      "bytes": 1832
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/gemm_256/timeloop-mapper.flattened_architecture.yaml",
+      "sha256": "a83d17fd98c58f2afea6c157f89319cab3d44b6d9403b4271bea75cc393ece50",
+      "bytes": 2698
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/gemm_256/timeloop-mapper.map+stats.xml",
+      "sha256": "627183c71bd392e88451a0171c1ca112cfc350b9fc512b04f73a5d96edb5841e",
+      "bytes": 83549
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/gemm_256/timeloop-mapper.map.cpp",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/gemm_256/timeloop-mapper.map.tensella.txt",
+      "sha256": "e478ad44fb3d8d38c74969f63ed9903acc885899c3c61a10a74233538abd1f0d",
+      "bytes": 183
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/gemm_256/timeloop-mapper.map.txt",
+      "sha256": "953cf2fcdfaa8cfbf7c9b34aaf28ebea91a6c5c005788ee914755d8634088f09",
+      "bytes": 535
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/gemm_256/timeloop-mapper.map.yaml",
+      "sha256": "316205a0e7ee2820ffd292016c92aa8036264b87c80c192412be75777b160962",
+      "bytes": 846
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/gemm_256/timeloop-mapper.orojenesis.csv",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/gemm_256/timeloop-mapper.stats.txt",
+      "sha256": "65377f5f27a7c68962bdcc4ba4840b4ad9a5e0b32a1b78ef94344436b20853fa",
+      "bytes": 19899
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/gemm_256/timeloop_mapper.stdout.log",
+      "sha256": "6c75018c10ead3e8e820d1835359da1b6655cbd6be395bee730e3f48204d3101",
+      "bytes": 2561
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/manifest.json",
+      "sha256": "2d8cafbe8c23f1b2618ca83c8761adb00a15475600263ed2189756ec98d79ef1",
+      "bytes": 1187
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l1/mlp_l1_timeloop_accelergy.yaml",
+      "sha256": "e9831716c23b078aba3bd32f954ec8f5589793c9c39f36e17c4df1aea037790c",
+      "bytes": 4564
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l1/timeloop-mapper.accelergy.log",
+      "sha256": "d7bf0b634afd94801253af21e59a722cbbed222ab8471ef9a58ae0c40189e22e",
+      "bytes": 37257
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l1/timeloop-mapper.ART.yaml",
+      "sha256": "5930eec6b3a8fdfdc04c8021f54cb8f08602312493cb9e8612b48996603a5228",
+      "bytes": 309
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l1/timeloop-mapper.ART_summary.yaml",
+      "sha256": "c464eac67f9dba2d8b8d8ede8498f399439dcdc485f23eb0ee07dafaf41a001f",
+      "bytes": 639
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l1/timeloop-mapper.ERT.yaml",
+      "sha256": "5f86d648b6e655d254a31dd3a619bd2476adf3dfae81ae7278a34feb2307d9da",
+      "bytes": 2815
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l1/timeloop-mapper.ERT_summary.yaml",
+      "sha256": "a87fdf5b43047902f6f60b3ddd91ae58f68607673e7c66a315eb6f62fde95444",
+      "bytes": 1832
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l1/timeloop-mapper.flattened_architecture.yaml",
+      "sha256": "a83d17fd98c58f2afea6c157f89319cab3d44b6d9403b4271bea75cc393ece50",
+      "bytes": 2698
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l1/timeloop-mapper.map+stats.xml",
+      "sha256": "3e39cf00e2d2dfd5c658896877b7fb26dfef14868ed5cde0e4c2e089cb2f20e5",
+      "bytes": 83560
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l1/timeloop-mapper.map.cpp",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l1/timeloop-mapper.map.tensella.txt",
+      "sha256": "54b50c668c0e73db51e20efc7c48123502d175aba3b2020d24c34866782be985",
+      "bytes": 183
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l1/timeloop-mapper.map.txt",
+      "sha256": "b48badf34a4f93f3e90ad80fbe7b554d71547c8b68bebceafbd575cd4c32664a",
+      "bytes": 539
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l1/timeloop-mapper.map.yaml",
+      "sha256": "395de683f77f68bd5315b1537ea047a5590621757539e89d413773b3fb5e2427",
+      "bytes": 846
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l1/timeloop-mapper.orojenesis.csv",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l1/timeloop-mapper.stats.txt",
+      "sha256": "6173f902da46c0a0deaa3c7cb215e9bde37aea73e83e43b2d3f0ba407de589ec",
+      "bytes": 19907
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l1/timeloop_mapper.stdout.log",
+      "sha256": "4a4cd9104ed8dd2a84c8153abdf7686b32b7bdbd047cb2e6f01c78003606c9f3",
+      "bytes": 2690
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l2/mlp_l2_timeloop_accelergy.yaml",
+      "sha256": "034bf9f2841fdd869b7ee16b69bcb8d5323039de608ea34f91422f1996d5eb69",
+      "bytes": 4564
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l2/timeloop-mapper.accelergy.log",
+      "sha256": "e39d079ad09b6faad590188eb0fca240bad63ae1b9a53cccb61722b9e4a83b96",
+      "bytes": 37257
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l2/timeloop-mapper.ART.yaml",
+      "sha256": "5930eec6b3a8fdfdc04c8021f54cb8f08602312493cb9e8612b48996603a5228",
+      "bytes": 309
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l2/timeloop-mapper.ART_summary.yaml",
+      "sha256": "c464eac67f9dba2d8b8d8ede8498f399439dcdc485f23eb0ee07dafaf41a001f",
+      "bytes": 639
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l2/timeloop-mapper.ERT.yaml",
+      "sha256": "5f86d648b6e655d254a31dd3a619bd2476adf3dfae81ae7278a34feb2307d9da",
+      "bytes": 2815
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l2/timeloop-mapper.ERT_summary.yaml",
+      "sha256": "a87fdf5b43047902f6f60b3ddd91ae58f68607673e7c66a315eb6f62fde95444",
+      "bytes": 1832
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l2/timeloop-mapper.flattened_architecture.yaml",
+      "sha256": "a83d17fd98c58f2afea6c157f89319cab3d44b6d9403b4271bea75cc393ece50",
+      "bytes": 2698
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l2/timeloop-mapper.map+stats.xml",
+      "sha256": "576c14fe0b7d6a855fbf4338aba4040eb376b2eeefcdea82e64a90f81f3a7371",
+      "bytes": 83516
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l2/timeloop-mapper.map.cpp",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l2/timeloop-mapper.map.tensella.txt",
+      "sha256": "63b45ec791469510e0c4db118cf778ff5ddd915a4852c7d77dbb37604be3041a",
+      "bytes": 183
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l2/timeloop-mapper.map.txt",
+      "sha256": "5294490b3b8bb4e88ca42f134a6df6f3eaf790eb70817965125eea8d925658f1",
+      "bytes": 535
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l2/timeloop-mapper.map.yaml",
+      "sha256": "e2afa91cdd07694e0773abe11b09cffa4678f7cbb0573bc8d15e028641898b98",
+      "bytes": 846
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l2/timeloop-mapper.orojenesis.csv",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l2/timeloop-mapper.stats.txt",
+      "sha256": "41555d1b88c520cf8149a6c7c7e7b97a2a6678b4aea85b6a8db8e6305eff5b7b",
+      "bytes": 19855
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/mlp_l2/timeloop_mapper.stdout.log",
+      "sha256": "79504a2dc58bdaa089dd64911bb2373a6a1af8fc60fb1755f0948f52efd9162a",
+      "bytes": 2551
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/repeat_manifest.json",
+      "sha256": "1131998b1cf9d02529765535cafb499a5d85851497486d39b0362a6ed91013ad",
+      "bytes": 937
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/repeat_timeloop_accelergy_summary.csv",
+      "sha256": "c1ce9d0c98eceeee00c600370b46a515872c520722dca942f1d13f096ba10007",
+      "bytes": 1384
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/external_accelergy_full/timeloop_accelergy_summary.csv",
+      "sha256": "6946ca77ce0cd1aba879e2fc3799432ccf4a6f5baaf35d4ad7b17a43862dbab0",
+      "bytes": 1383
+    }
+  ],
+  "file_count": 80,
+  "verified_cases": 5,
+  "nonempty_ert_cases": 5,
+  "dummy_action_cases": 0,
+  "schema_fallback_cases": 0
+}

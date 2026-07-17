@@ -1,0 +1,30 @@
+{
+  "schema_version": "aspg-final-bundle-manifest-1.0",
+  "bundle_root": "experiments/aspdac/results/mnist_pe_precision_20260717",
+  "created_or_refreshed_utc": "2026-07-17T08:37:10.654988Z",
+  "plans": {
+    "mnist_pe_precision": {
+      "path": "experiments/aspdac/specs/final_sweeps/mnist_pe_precision.yaml",
+      "sha256": "892c63eb562e7e085f690f213ed1a894242e639051d63102bd2d004325c053ca"
+    },
+    "mnist_pe_precision_r1": {
+      "path": "experiments/aspdac/specs/final_sweeps/mnist_pe_precision.yaml",
+      "sha256": "d93115ed27b50324e880ae84d32ce2a8126e297c4394331885da4bacaa3db962"
+    }
+  },
+  "external_draft_policy": "read_only",
+  "environment": {
+    "captured_utc": "2026-07-17T08:37:10.456985Z",
+    "manager_version": "aspg-experiment-manager-1.0",
+    "git_commit": "a5e44fdd4899324b4d1b4730d77a91c1ca640ff2",
+    "git_status_porcelain_sha256": "507f5f852bc84c685c64df3e2a435cc63fe0c49ae48ff398038c0eb95db87bdc",
+    "host": "anonymous-host",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.10.6",
+    "dotnet": "9.0.315"
+  },
+  "config_hashes": {
+    "MNIST-PE-PRECISION-20260717": "ddef5c3a066d4b40ce57809b4469a0b7211f41f29ff8caca4494df1e97230f41",
+    "MNIST-PE-PRECISION-20260717-R1": "408b5f7499205e9b4e645590e914f3a1b19723927af5a4080d90bc3c787a2a69"
+  }
+}

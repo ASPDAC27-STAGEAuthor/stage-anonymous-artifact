@@ -1,0 +1,10 @@
+accelergy_ert_energy_pj,action,action_count,candidate_id,case_id,component,ert_sha256,estimator,evidence_level,relative_error,stage_energy_pj
+3.275,read,1,c-bf9673b4d5ec1c74,mac_read,system.MAC[0..15],5f86d648b6e655d254a31dd3a619bd2476adf3dfae81ae7278a34feb2307d9da,Aladdin,Exact shared ERT action,0.0,3.275
+0.009,read,1,c-f26b423044389c1b,register_read,system.Registers[0..15],5f86d648b6e655d254a31dd3a619bd2476adf3dfae81ae7278a34feb2307d9da,Aladdin,Exact shared ERT action,0.0,0.009
+0.009,write,1,c-7c3621f77ec5d779,register_write,system.Registers[0..15],5f86d648b6e655d254a31dd3a619bd2476adf3dfae81ae7278a34feb2307d9da,Aladdin,Exact shared ERT action,0.0,0.009
+1.45068,read,1,c-f1b2943d16d85871,local_sram_read,system.LocalBuffer[0..15],5f86d648b6e655d254a31dd3a619bd2476adf3dfae81ae7278a34feb2307d9da,CACTI-SRAM,Exact shared ERT action,0.0,1.45068
+1.71282,write,1,c-acbb5488662953b8,local_sram_write,system.LocalBuffer[0..15],5f86d648b6e655d254a31dd3a619bd2476adf3dfae81ae7278a34feb2307d9da,CACTI-SRAM,Exact shared ERT action,0.0,1.71282
+124.61,read,1,c-6ee654aaecb6bec0,global_sram_read,system.GlobalBuffer,5f86d648b6e655d254a31dd3a619bd2476adf3dfae81ae7278a34feb2307d9da,CACTI-SRAM,Exact shared ERT action,0.0,124.61
+118.033,write,1,c-7b3851d763515aa7,global_sram_write,system.GlobalBuffer,5f86d648b6e655d254a31dd3a619bd2476adf3dfae81ae7278a34feb2307d9da,CACTI-SRAM,Exact shared ERT action,0.0,118.033
+2048.0,read,1,c-7818f6ef36dea00d,dram_read,system.DRAM,5f86d648b6e655d254a31dd3a619bd2476adf3dfae81ae7278a34feb2307d9da,CACTI-DRAM,Exact shared ERT action,0.0,2048.0
+2048.0,write,1,c-102e179921e4d3dc,dram_write,system.DRAM,5f86d648b6e655d254a31dd3a619bd2476adf3dfae81ae7278a34feb2307d9da,CACTI-DRAM,Exact shared ERT action,0.0,2048.0

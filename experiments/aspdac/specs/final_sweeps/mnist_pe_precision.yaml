@@ -1,0 +1,86 @@
+schema_version: aspg-experiment-plan-1.0
+name: mnist_pe_precision_r1
+bundle_root: experiments/aspdac/results/mnist_pe_precision_20260717
+configs:
+  - experiments/aspdac/specs/final_configs/mnist_pe_precision.yaml
+experiments:
+  - name: mnist_pe_kernel_conformance_r1
+    provider: stage
+    scenario: mnist_pe_kernel_conformance
+    evidence_level: exact
+    base_config: MNIST-PE-PRECISION-20260717-R1
+    fixed: &shared
+      model_hash: 0aa004a4bd1bbbdaf550a115ad0ed5cda16b6269b8753b97bd076cd1fc55d662
+      dataset_hash: 966dd94342cd0fe7cdd440e38d300a44dbd251332ad1676a20d9aed674435791
+      prediction_hash: functional_candidate_binding_deferred_to_pair_analysis
+      lowering_hash: d2cf194a94ceadff199234521a0a2767d524bf9029ccb897071c4c8a2eeb7adb
+      workload_hash: 52a866d12f0d58d5214ba4d0e8cdbc9545d18198f0b434559907a5298c4af0be
+      mapping_hash: 1ab0c62fdab06a43ac0f8b29e8c8dc9fe3f80f6928b3257402670f799948c3a5
+      transport_hash: 0db37a43e7fd987f613d82cd84c81b1dc37a34fb008fcc3ccece6cdcf0d56e78
+    cases:
+      - {case_id: normal_small_3x2, rows: 3, columns: 2, seed: 7400}
+      - {case_id: normal_mixed_5x3, rows: 5, columns: 3, seed: 7401}
+      - {case_id: half_subnormal_7x4, rows: 7, columns: 4, seed: 7402}
+      - {case_id: fp8_subnormal_8x5, rows: 8, columns: 5, seed: 7403}
+      - {case_id: half_tie_even_9x6, rows: 9, columns: 6, seed: 7404}
+      - {case_id: fp8_tie_even_10x7, rows: 10, columns: 7, seed: 7405}
+      - {case_id: fp8_finite_range_11x8, rows: 11, columns: 8, seed: 7406}
+      - {case_id: finite_saturation_12x9, rows: 12, columns: 9, seed: 7407}
+      - {case_id: negative_zero_1x1, rows: 1, columns: 1, seed: 7408}
+      - {case_id: rectangular_13x3, rows: 13, columns: 3, seed: 7409}
+      - {case_id: accumulation_15x10, rows: 15, columns: 10, seed: 7410}
+      - {case_id: wide_range_17x13, rows: 17, columns: 13, seed: 7411}
+    axes:
+      profile_id: [fp32_a32, fp16_a16, fp8_a16, fp8_a8]
+      repeat: [0, 1]
+  - name: mnist_pe_smoke_r1
+    provider: mnist_pe
+    scenario: mnist_pe_smoke
+    evidence_level: numerical
+    base_config: MNIST-PE-PRECISION-20260717-R1
+    fixed:
+      <<: *shared
+      image_count: 100
+      internal_repeats: 2
+    axes:
+      profile_id: [fp32_a32, fp16_a16, fp8_a16, fp8_a8]
+  - name: mnist_pe_functional_r1
+    provider: mnist_pe
+    scenario: mnist_pe_functional
+    evidence_level: numerical
+    base_config: MNIST-PE-PRECISION-20260717-R1
+    fixed:
+      <<: *shared
+      image_count: 10000
+    axes:
+      profile_id: [fp32_a32, fp16_a16, fp8_a16, fp8_a8]
+      repeat: [0, 1]
+  - name: mnist_pe_stage_layers_r1
+    provider: stage
+    scenario: mnist_pe_layer
+    evidence_level: measured
+    base_config: MNIST-PE-PRECISION-20260717-R1
+    fixed:
+      <<: *shared
+      image_count: 10000
+    cases:
+      - {case_id: conv1, layer_id: conv1, layer_kind: conv2d_im2col, M: 576, N: 6, K: 25, post_op_elements_per_image: 4320}
+      - {case_id: conv2, layer_id: conv2, layer_kind: conv2d_im2col, M: 64, N: 16, K: 150, post_op_elements_per_image: 1280}
+      - {case_id: fc1, layer_id: fc1, layer_kind: linear, M: 1, N: 120, K: 256, post_op_elements_per_image: 120}
+      - {case_id: fc2, layer_id: fc2, layer_kind: linear, M: 1, N: 84, K: 120, post_op_elements_per_image: 84}
+      - {case_id: fc3, layer_id: fc3, layer_kind: linear, M: 1, N: 10, K: 84, post_op_elements_per_image: 0}
+    axes:
+      mode: [compute_only, full_system]
+      profile_id: [fp32_a32, fp16_a16, fp8_a16, fp8_a8]
+      repeat: [0, 1]
+  - name: mnist_pe_stage_network_r1
+    provider: stage
+    scenario: mnist_pe_network
+    evidence_level: measured
+    base_config: MNIST-PE-PRECISION-20260717-R1
+    fixed:
+      <<: *shared
+      image_count: 10000
+    axes:
+      profile_id: [fp32_a32, fp16_a16, fp8_a16, fp8_a8]
+      repeat: [0, 1]

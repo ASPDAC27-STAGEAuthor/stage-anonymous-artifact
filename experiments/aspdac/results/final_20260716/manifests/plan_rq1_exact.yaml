@@ -1,0 +1,24 @@
+schema_version: aspg-experiment-plan-1.0
+name: rq1_exact
+bundle_root: experiments/aspdac/results/final_20260716
+configs:
+  - experiments/aspdac/specs/final_configs/s_native.yaml
+experiments:
+  - name: rq1_exact_oracles
+    provider: stage
+    scenario: rq1_exact
+    evidence_level: exact
+    base_config: S-Native
+    fixed: {}
+    axes:
+      case:
+        - graph_round_trip
+        - compile_non_mutation
+        - packet_serialization_132b
+        - current_next_visibility
+        - backpressure
+        - optical_loss_power_margin
+        - wavelength_arbitration
+        - reduction
+        - softmax
+      repeat: [0, 1]

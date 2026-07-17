@@ -1,0 +1,10 @@
+[
+  {
+    "config_id": "S-Native",
+    "source": "experiments/aspdac/specs/final_configs/s_native.yaml",
+    "source_sha256": "09dd04c5e456d733e2dcdf5c868b4b538352adf0373d241d5f0eb2798b395398",
+    "resolved_sha256": "a21641b69e085bb1afc147209ca703de820afe279a5870193dfcc325b14274bd",
+    "resolved_yaml": "experiments/aspdac/results/optical_intervention_20260717/config/s_native.resolved.yaml",
+    "resolved_json": "experiments/aspdac/results/optical_intervention_20260717/config/s_native.resolved.json"
+  }
+]

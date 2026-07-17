@@ -1,0 +1,7 @@
+# Optional GPU replay environment used for the MNIST precision experiment.
+# Install separately; it is intentionally not part of the default one-click path.
+# The frozen run used Python 3.10, torch 1.12.1+cu116, torchvision 0.13.1+cu116,
+# CUDA 11.6, and an NVIDIA GPU. Follow the PyTorch previous-versions page for
+# the platform-specific wheel index before running run_mnist_pe_precision.py.
+torch==1.12.1
+torchvision==0.13.1

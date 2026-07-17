@@ -1,0 +1,42 @@
+schema_version: reviewer-extension-p1-noc/1.0
+scenario: reviewer_noc_contract
+seed: 40
+repeats: [0, 1]
+input_allowlist: [case_id, repeat, seed]
+actual_runtime_authority: HardwareGraph_plus_SimulationGraphCompiler_plus_CycleSimulationEngine_exact_operands
+oracle_authority: independent_closed_form_artifact
+cases:
+  - {case_id: noc_n01_single_128, scenario: single_packet, packet_bits: 128, flit_bits: 128, virtual_channels: 1, vc_depth_flits: 1, input_count: 1, selected_virtual_channel: 0}
+  - {case_id: noc_n02_single_256_vc1, scenario: single_packet, packet_bits: 256, flit_bits: 128, virtual_channels: 2, vc_depth_flits: 4, input_count: 1, selected_virtual_channel: 1}
+  - {case_id: noc_n03_single_512_vc3, scenario: single_packet, packet_bits: 512, flit_bits: 128, virtual_channels: 4, vc_depth_flits: 16, input_count: 1, selected_virtual_channel: 3}
+  - {case_id: noc_n04_single_1024, scenario: single_packet, packet_bits: 1024, flit_bits: 128, virtual_channels: 1, vc_depth_flits: 16, input_count: 1, selected_virtual_channel: 0}
+  - {case_id: noc_n05_contend_128, scenario: same_output_contention, packet_bits: 128, flit_bits: 128, virtual_channels: 2, vc_depth_flits: 1, input_count: 2, selected_virtual_channel: 0}
+  - {case_id: noc_n06_contend_512, scenario: same_output_contention, packet_bits: 512, flit_bits: 128, virtual_channels: 4, vc_depth_flits: 4, input_count: 2, selected_virtual_channel: 0}
+  - {case_id: noc_n07_block_release_256, scenario: downstream_blocked, packet_bits: 256, flit_bits: 128, virtual_channels: 1, vc_depth_flits: 4, input_count: 1, selected_virtual_channel: 0, downstream_release_cycle: 8, stage_status: not_supported}
+  - {case_id: noc_n08_block_tail_1024, scenario: downstream_blocked_tail_visibility, packet_bits: 1024, flit_bits: 128, virtual_channels: 4, vc_depth_flits: 16, input_count: 1, selected_virtual_channel: 3, downstream_release_cycle: 14, stage_status: not_supported}
+  - {case_id: noc_n09_atomic_depth_boundary, scenario: atomic_admission_boundary, packet_bits: 256, flit_bits: 128, virtual_channels: 2, vc_depth_flits: 1, input_count: 1, selected_virtual_channel: 1, expected_status: expected_boundary}
+not_modeled:
+  - route_compute_stage
+  - route_compute_latency_cycles
+  - vc_allocation_stage
+  - vc_allocator
+  - vc_allocation_latency_cycles
+  - switch_allocation_stage
+  - switch_allocator
+  - switch_allocation_latency_cycles
+  - crossbar_traversal_stage
+  - crossbar_latency_cycles
+  - credit_return_stage
+  - credit_return_latency_cycles
+  - credit_count
+  - credit_available
+  - credit_release_cycle
+  - wormhole_head_reservation
+  - per_flit_router_pipeline
+  - vc_round_robin
+outputs:
+  - summary/noc_contract_microbench.csv
+  - summary/noc_cycle_timeline.csv
+  - summary/noc_oracle_timeline.csv
+  - summary/noc_feature_boundary.csv
+

@@ -1,0 +1,10 @@
+.venv/
+**/bin/
+**/obj/
+**/__pycache__/
+*.pyc
+output/*
+!output/.gitkeep
+*.zip
+.DS_Store
+Thumbs.db

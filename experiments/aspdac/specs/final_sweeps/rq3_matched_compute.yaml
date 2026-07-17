@@ -1,0 +1,48 @@
+schema_version: aspg-experiment-plan-1.0
+name: rq3_matched_compute
+bundle_root: experiments/aspdac/results/final_20260716
+configs:
+  - experiments/aspdac/specs/final_configs/v_tl.yaml
+  - experiments/aspdac/specs/final_configs/v_ss.yaml
+experiments:
+  - name: rq3_stage_vtl
+    provider: stage
+    scenario: vtl_workload
+    evidence_level: numerical
+    base_config: V-TL
+    fixed:
+      sram_ifmap_reads: 0
+      sram_filter_reads: 0
+      sram_ofmap_writes: 0
+      dram_ifmap_reads: 0
+      dram_filter_reads: 0
+      dram_ofmap_writes: 0
+      reference_cold_cycles: 0
+      reference_stall_cycles: 0
+    cases:
+      - {case_id: gemm_256, M: 256, N: 256, K: 256, expected_macs: 16777216, register_accesses: 34471936, local_buffer_accesses: 53608448, global_buffer_accesses: 11534336, dram_accesses: 6291456, reference_cycles: 1048576, reference_utilization_pct: 100.0, mapping_hash: 316205a0e7ee2820ffd292016c92aa8036264b87c80c192412be75777b160962, external_raw_path: experiments/aspdac/results/final_20260716/raw/external_timeloop_model/gemm_256}
+      - {case_id: mlp_l1, M: 128, N: 256, K: 512, expected_macs: 16777216, register_accesses: 34537472, local_buffer_accesses: 53673984, global_buffer_accesses: 11599872, dram_accesses: 6324224, reference_cycles: 1048576, reference_utilization_pct: 100.0, mapping_hash: 395de683f77f68bd5315b1537ea047a5590621757539e89d413773b3fb5e2427, external_raw_path: experiments/aspdac/results/final_20260716/raw/external_timeloop_model/mlp_l1}
+      - {case_id: mlp_l2, M: 128, N: 128, K: 256, expected_macs: 4194304, register_accesses: 8617984, local_buffer_accesses: 13467648, global_buffer_accesses: 2916352, dram_accesses: 1589248, reference_cycles: 262144, reference_utilization_pct: 100.0, mapping_hash: e2afa91cdd07694e0773abe11b09cffa4678f7cbb0573bc8d15e028641898b98, external_raw_path: experiments/aspdac/results/final_20260716/raw/external_timeloop_model/mlp_l2}
+      - {case_id: attention_qk, M: 128, N: 128, K: 64, expected_macs: 1048576, register_accesses: 2129920, local_buffer_accesses: 3342336, global_buffer_accesses: 704512, dram_accesses: 385024, reference_cycles: 65536, reference_utilization_pct: 100.0, mapping_hash: 4256893eccbdc0154e3cd3ba01e1e7453cb6418d32b92bffcaf8e65caebb69b5, external_raw_path: experiments/aspdac/results/final_20260716/raw/external_timeloop_model/attention_qk}
+      - {case_id: attention_pv, M: 128, N: 64, K: 128, expected_macs: 1048576, register_accesses: 2146304, local_buffer_accesses: 3358720, global_buffer_accesses: 720896, dram_accesses: 393216, reference_cycles: 65536, reference_utilization_pct: 100.0, mapping_hash: 7ddd1e4398bc58c51d7caadb902ce3cc88ae26ac16a67ede9cec71617aa008da, external_raw_path: experiments/aspdac/results/final_20260716/raw/external_timeloop_model/attention_pv}
+    axes:
+      mode: [compute_only, full_system]
+  - name: rq3_stage_vss
+    provider: stage
+    scenario: vss_workload
+    evidence_level: trend
+    base_config: V-SS
+    fixed:
+      register_accesses: 0
+      local_buffer_accesses: 0
+      global_buffer_accesses: 0
+      dram_accesses: 0
+      seed: 40
+    cases:
+      - {case_id: gemm_256, M: 256, N: 256, K: 256, expected_macs: 16777216, sram_ifmap_reads: 4194304, sram_filter_reads: 65536, sram_ofmap_writes: 4194304, dram_ifmap_reads: 8388608, dram_filter_reads: 851968, dram_ofmap_writes: 4194311, reference_cycles: 1097695, reference_cold_cycles: 1098719, reference_stall_cycles: 8160, reference_utilization_pct: 95.52525974883734, mapping_hash: 872fb8704cf60998845ac966f7b5c48c874c37dce667d54bea0d1111306d2980, external_raw_path: experiments/aspdac/results/final_20260716/raw/external_scalesim}
+      - {case_id: mlp_l1, M: 128, N: 256, K: 512, expected_macs: 16777216, sram_ifmap_reads: 4194304, sram_filter_reads: 131072, sram_ofmap_writes: 4194304, dram_ifmap_reads: 8388608, dram_filter_reads: 22138880, dram_ofmap_writes: 4194311, reference_cycles: 2794427, reference_cold_cycles: 2795451, reference_stall_cycles: 1663932, reference_utilization_pct: 37.52382867757862, mapping_hash: 0eccaa7ddf2eada67601657e1f67d69ef736d6c4bf0f4269246f387558b1203d, external_raw_path: experiments/aspdac/results/final_20260716/raw/external_scalesim}
+      - {case_id: mlp_l2, M: 128, N: 128, K: 256, expected_macs: 4194304, sram_ifmap_reads: 1048576, sram_filter_reads: 32768, sram_ofmap_writes: 1048576, dram_ifmap_reads: 2097152, dram_filter_reads: 229376, dram_ofmap_writes: 1048583, reference_cycles: 286639, reference_cold_cycles: 287663, reference_stall_cycles: 4016, reference_utilization_pct: 91.45440780912577, mapping_hash: 98bcaa0ae7c1542cf230af097653965e9ef896d84d0a10e39627f8e5771952c6, external_raw_path: experiments/aspdac/results/final_20260716/raw/external_scalesim}
+      - {case_id: attention_qk, M: 128, N: 128, K: 64, expected_macs: 1048576, sram_ifmap_reads: 262144, sram_filter_reads: 8192, sram_ofmap_writes: 262144, dram_ifmap_reads: 524288, dram_filter_reads: 16384, dram_ofmap_writes: 262151, reference_cycles: 71509, reference_cold_cycles: 72533, reference_stall_cycles: 854, reference_utilization_pct: 91.647205246892, mapping_hash: 7bb278b595924630e2593f94ce3b9ff4314ad85966aea5db04404d31bff1877c, external_raw_path: experiments/aspdac/results/final_20260716/raw/external_scalesim}
+      - {case_id: attention_pv, M: 128, N: 64, K: 128, expected_macs: 1048576, sram_ifmap_reads: 262144, sram_filter_reads: 8192, sram_ofmap_writes: 262144, dram_ifmap_reads: 524288, dram_filter_reads: 16384, dram_ofmap_writes: 262151, reference_cycles: 72619, reference_cold_cycles: 73643, reference_stall_cycles: 1964, reference_utilization_pct: 90.24635425990444, mapping_hash: fb3e215679956c66f21e551b160ead49c86d6f6f8cd9a3d33af775dfcf71b1ce, external_raw_path: experiments/aspdac/results/final_20260716/raw/external_scalesim}
+    axes:
+      mode: [warm_array, cold_start]

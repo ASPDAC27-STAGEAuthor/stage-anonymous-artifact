@@ -1,0 +1,100 @@
+{
+  "schema_version": "aspg-derived-output-manifest-1.0",
+  "rq": "RQ4",
+  "inputs": [
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/candidates_rq4_optical.json",
+      "sha256": "ec10dc0fec06879560938d46dec6ffa76ac07f7215bff080adaafc652d28a583"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq4_electrical/c-4e5b2ebe27d95936.json",
+      "sha256": "2a38547c7399b2ec9f62e44f13234e8ea4da1654e43d6069fb6ab9a414cc13b9"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq4_electrical/c-8ffa5bd8b88b6875.json",
+      "sha256": "8d72e0615ccd6e4471574a291629037ef1b9bbbe7796593a1f83ac8a5ca11a69"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq4_optical_conflict_free/c-2f8899c4063164da.json",
+      "sha256": "f58f7868c04da9ef85eb463913d7c7f413dc28f843a4e4411f9db2fa72bdeb2c"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq4_optical_conflict_free/c-33317e8613d83098.json",
+      "sha256": "d072804a72e6005476f41b99bb59fb504f54f4f1ac52fa10d967edb9f5a61810"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq4_optical_contended_attention/c-75b2ede3d9c1098e.json",
+      "sha256": "665af5e0e5ba4f3c66b3bebbad2f293ea67bab0727d9d02f600c43c951b07448"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq4_optical_contended_attention/c-94720273ca9de3a7.json",
+      "sha256": "9113213f96506bf21d076c1cf9f18db65b022a5f493fbe1e1a30cf886c9c4616"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq4_optical_contended_attention/c-e013cc6c1135886d.json",
+      "sha256": "4735357680802bf674a0014293e8161d1f1876e52e4e86b6e933c8ac58ffba82"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq4_optical_contended_attention/c-f824d10e082b9705.json",
+      "sha256": "a7f75695739f7a6d6b80ad9e3359ef51847af5af6a30e0b029f532c1b40895d5"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq4_optical_contended_gemm/c-048c74e7873b99cc.json",
+      "sha256": "ecfd652836e0421d0e62736e0bb92fc39a4ca520e02fa5cbfb11ccda6d7fc157"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq4_optical_contended_gemm/c-2b8d5110cae35869.json",
+      "sha256": "181cc68bc0647b01c24a770d0ba0002921186c7b60bac1463886414e4808c178"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq4_optical_contended_gemm/c-4030e1ba7f5d3475.json",
+      "sha256": "b5b528acc4ccedac443f9d57b871f4814aac17a9c32b7c8a5cbec5efe71e1b35"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq4_optical_contended_gemm/c-fdba8dfe72da891f.json",
+      "sha256": "55f5484242457c66421c3bdb9fbe16a397d99a8a871daae923d198ef6768cb1b"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq4_optical_oracle/c-58fa8813d80e4bfb.json",
+      "sha256": "d7180b72351c3c7af3e53d180fc0a0cedebafc6ccdda3544a1cb07f0ea607024"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/raw/rq4_optical_oracle/c-91fdd2d7d50c9aca.json",
+      "sha256": "bb7d92dac0d0a20c8978f596428d57186684a3c42ab31aac8bdba1df5536f943"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq4_optical_oracle.csv",
+      "sha256": "68076a9b009a83f9ca830fb240d0a56bddf6d8fbd11c0419b83d8f771192ef2a"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq4_matched_transport.csv",
+      "sha256": "c2ab7277e892abb6273e8a81c650168cdcc794d64c433ac84dff2b0614566650"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/figures/fig_rq4_electrical_optical.pdf",
+      "sha256": "6459fa3989b9d52af584cb3e1a9c330fd57f4a1ecb5f0cb537a2ddec6fd4bc02"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/figures/fig_rq4_electrical_optical.png",
+      "sha256": "c0bce63b095d7a418b3b51f26f544aa3e694be3c7d39215559170e0453f02aa6"
+    }
+  ],
+  "oracle_repeat_count": 2,
+  "oracle_hashes_identical": true,
+  "matched_transport_cases": 12,
+  "paired_invariants_verified": [
+    "graph",
+    "workload",
+    "mapping",
+    "compute",
+    "memory",
+    "endpoint",
+    "packet_count",
+    "flow_count"
+  ],
+  "capacity_relation_verified": "cycles/conflicts/backpressure non-increasing for capacities 1,2,4,8",
+  "ber_scope": "BER not modeled",
+  "energy_scope": "Phase 8 shared functional reference values; not silicon calibrated"
+}

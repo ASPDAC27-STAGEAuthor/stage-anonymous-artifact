@@ -1,0 +1,40 @@
+schema_version: aspg-final-config-1.0
+config_id: V-BS-CNN
+purpose: BookSim2/STAGE matched replay of the materialized-im2col MNIST CNN packet trace
+evidence_level: numerical
+topology:
+  kind: mesh
+  dimensions: [4, 4]
+  router_count: 16
+  endpoint_count: 16
+  endpoints_per_router: 1
+  routing: dimension_order_xy
+transport:
+  packet_bits: 128
+  flit_bits: 128
+  link_bits_per_cycle: 128
+  packet_flits: 1
+  virtual_channels: 1
+  flits_per_vc: 16
+  matched_capacity_bits_per_vc: 2048
+  link_latency_cycles: 1
+trace_contract:
+  csv_header: [packet_id, release_cycle, source, destination, flits, traffic_class, layer_id, tensor_role, payload_bits]
+  memory_endpoint: 0
+  compute_endpoints: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+  traffic_class: 0
+  precision_bits: 32
+  lowering: materialized_im2col_cold_start_one_copy
+  ingress_mapping: memory_to_compute_round_robin
+  egress_mapping: compute_to_memory_round_robin
+runtime:
+  stage_provider: HardwareSim.Core.AspdacVbsCnnTraceRuntime
+  booksim2_provider: trace_replay_adapter
+  drain_cycles: per_case_registered
+statistics:
+  seeds: [40]
+  repeats: [0, 1]
+notes:
+  - This configuration replays transport only; it does not execute CNN arithmetic or classification.
+  - The trace is shape-derived from the registered MNIST CNN and is not a native numerical tensor trace.
+  - Cross-tool packet latency and makespan are numerical observations, not cycle-exact equivalence claims.

@@ -1,0 +1,22 @@
+{
+  "schema_version": "stage-external-tool-identities-1.0",
+  "scope": "Path-free projection of frozen native-run manifests; source trees and binaries are not redistributed.",
+  "booksim2": {
+    "git_commit": "28f43299f1706a3160ffac721ca461d74eb6e618",
+    "binary_sha256": "44b617ec81bcdb7496ee86acab011f5d7d00c0716ae65150a11777a2b84c4cbd"
+  },
+  "scalesim": {
+    "git_commit": "9f98c4371055a54c75209c2e02b640b897550532",
+    "compatibility_diff_sha256": "ee0f1075ace7dc2b299e9cfaf4bc9f423b7fdfb9747ecff20f542dfa5f3dad1b"
+  },
+  "timeloop": {
+    "infrastructure_git_commit": "6e6186f9fe8f9a1f3990f78f57c7224d22cb8cfa",
+    "timeloop_model_sha256": "c3eb5d5f5717c701a46e57894a6ac5e24b581c27953cce483c2561913eb5194e",
+    "python_version": "3.12.3"
+  },
+  "accelergy": {
+    "version": "0.4",
+    "timeloop_infrastructure_git_commit": "6e6186f9fe8f9a1f3990f78f57c7224d22cb8cfa",
+    "ert_sha256": "5f86d648b6e655d254a31dd3a619bd2476adf3dfae81ae7278a34feb2307d9da"
+  }
+}

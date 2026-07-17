@@ -1,0 +1,28 @@
+{
+  "alignment_schema": "aspg-trace-alignment-1.0",
+  "causal_trace": {
+    "case_id": "noc_n06_contend_512",
+    "repeat": 0
+  },
+  "evidence_policy": [
+    "Never combine traffic bits and stall cycles into one heat score.",
+    "Shared-input route projection is not runtime queue occupancy.",
+    "Native cycles remain tool-specific unless an exact oracle contract exists.",
+    "Missing fields remain explicit and are never filled with zero."
+  ],
+  "mesh": {
+    "dimensions": [
+      4,
+      4
+    ],
+    "endpoint_count": 16,
+    "routing": "dimension_order_xy"
+  },
+  "schema_version": "stage-trace-visualization-config/1.0",
+  "shared_trace": {
+    "case_id": "sequential_network",
+    "window_cycles": 512
+  },
+  "source_evidence_sha256": "d8231fd185ac136019381e8ebb37fa29d1f8d9b526ee2206767d713d32bc52f3",
+  "temporal_bins": 64
+}

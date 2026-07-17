@@ -1,0 +1,2712 @@
+{
+  "schema": "stage-anonymous-artifact-manifest-1.0",
+  "hash_algorithm": "SHA-256",
+  "identity_fields_omitted": true,
+  "excluded_generated_roots": [
+    ".git",
+    ".venv",
+    "__pycache__",
+    "bin",
+    "obj",
+    "output"
+  ],
+  "file_count": 539,
+  "total_bytes": 26092856,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 90,
+      "sha256": "bcf1cb6adea8d455b1006c2adf31fe0f21b1c394bda9e63702a46c642faeb386"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 97,
+      "sha256": "96b50678824d4ff5dfe7c65edd0ffc7d0943985871aa6c701fea0b6af415b522"
+    },
+    {
+      "path": "data/characterization/phase7c-literature-catalog-v1.json",
+      "bytes": 478399,
+      "sha256": "2d7cdf9da89570629a9947393e3c3c6861252f677ad48998af520d296171f150"
+    },
+    {
+      "path": "data/mnist/checkpoint/manifest.json",
+      "bytes": 1429,
+      "sha256": "37f6ceea9807c01686f15d0421f722ef6873151b0521bfc2da49273fa951e441"
+    },
+    {
+      "path": "data/mnist/checkpoint/small_mnist_cnn_state.pt",
+      "bytes": 180679,
+      "sha256": "0aa004a4bd1bbbdaf550a115ad0ed5cda16b6269b8753b97bd076cd1fc55d662"
+    },
+    {
+      "path": "data/mnist/checkpoint/summary.json",
+      "bytes": 3707,
+      "sha256": "675af07121c6e60430c16ac860b5d1a8e4a985e492aad04e9937bbc6ada826db"
+    },
+    {
+      "path": "data/mnist/checkpoint/test_predictions.csv",
+      "bytes": 268031,
+      "sha256": "22a6341fd32a5468ddafd217cb2eff746a2f07d5e2578e117085e2c7f9403970"
+    },
+    {
+      "path": "data/mnist/raw/t10k-images-idx3-ubyte.gz",
+      "bytes": 1648877,
+      "sha256": "8d422c7b0a1c1c79245a5bcf07fe86e33eeafee792b84584aec276f5a2dbc4e6"
+    },
+    {
+      "path": "data/mnist/raw/t10k-labels-idx1-ubyte.gz",
+      "bytes": 4542,
+      "sha256": "f7ae60f92e00ec6debd23a6088c31dbd2371eca3ffa0defaefb259924204aec6"
+    },
+    {
+      "path": "data/mnist/raw/train-images-idx3-ubyte.gz",
+      "bytes": 9912422,
+      "sha256": "440fcabf73cc546fa21475e81ea370265605f56be210a4024d2ca8f203523609"
+    },
+    {
+      "path": "data/mnist/raw/train-labels-idx1-ubyte.gz",
+      "bytes": 28881,
+      "sha256": "3552534a0a558bbed6aed32b30c495cca23d567ec52cac8be1a0730e8010255c"
+    },
+    {
+      "path": "Dockerfile",
+      "bytes": 515,
+      "sha256": "a19940e312281ee381979c07507c034afa23009273920a3714f2761e87ce49a7"
+    },
+    {
+      "path": "docs/ANONYMIZATION.md",
+      "bytes": 1660,
+      "sha256": "7d742d203bb65b67eda96e755edd8c59b573b91a18b5efa270ea7b936a0c7ca2"
+    },
+    {
+      "path": "docs/ARTIFACT_EVALUATION.md",
+      "bytes": 3082,
+      "sha256": "e947859da67f65709f4fa54e7b7bb14bccd7da514f1a259690872be5c874e555"
+    },
+    {
+      "path": "docs/CANONICAL_TRACES.md",
+      "bytes": 6360,
+      "sha256": "5dc111bbac8669dce0d2c2d98e806f4d12a7eea3d50832ed50237a71da0d85ba"
+    },
+    {
+      "path": "docs/CLAIM_TO_ARTIFACT.md",
+      "bytes": 5157,
+      "sha256": "2c853bbcf8ff1c45f89f0048506debebca8012292e3254079a80564630b24943"
+    },
+    {
+      "path": "docs/DATA_LAYOUT.md",
+      "bytes": 1743,
+      "sha256": "f6db72e4a0f63caf5fd0011bf738615ea1a14ad9eca2cea85622c6a790bce055"
+    },
+    {
+      "path": "docs/EXTERNAL_TOOLS.md",
+      "bytes": 8017,
+      "sha256": "5af57a1a893c68c21f3349a2a9843e369c5092d34b1b7c6936911d8817173bb3"
+    },
+    {
+      "path": "expected/figures/STAGE_Figure1_Workflow.pdf",
+      "bytes": 152626,
+      "sha256": "0f833d0e7f4ea73e489afea7e91287988f4cb91c8d4804c4cd2cd161f73ac83e"
+    },
+    {
+      "path": "expected/figures/STAGE_Figure3_CrossTool_Validation.png",
+      "bytes": 246908,
+      "sha256": "0eefc6dab441dfc2f4f36b85e4defcc104456c89e0c92d5afe43662c030cc57b"
+    },
+    {
+      "path": "expected/figures/STAGE_Figure4_Optical_Transport.pdf",
+      "bytes": 24059,
+      "sha256": "8ed8e33a35d3d131d9f6af76f7b9428264edf733be58e4e88ef2a8cd60a7b52f"
+    },
+    {
+      "path": "expected/figures/STAGE_Figure5_Mapping_Codesign.png",
+      "bytes": 130333,
+      "sha256": "6b39f255f3f72e4fae4bccae6b83dfda676cd14986d3fcdd7ea5cd23938a47d2"
+    },
+    {
+      "path": "expected/figures/STAGE_Figure6_MNIST_Precision.png",
+      "bytes": 85224,
+      "sha256": "5f98bb139c4d5e238b58cb95422c824638ba2f4f36f9d1a8308c4cb4281a9272"
+    },
+    {
+      "path": "experiments/aspdac/baseline_tools/booksim/booksim_4x4_mesh_reference.yaml",
+      "bytes": 1063,
+      "sha256": "0191b30276b947ecf0594aae8cfcfe497941b8d93c974a2181af2dd37080b687"
+    },
+    {
+      "path": "experiments/aspdac/baseline_tools/README.md",
+      "bytes": 879,
+      "sha256": "61b65732f9677e0b59819f410473aa445db417b7f9c5b10994c3b681a5be3e76"
+    },
+    {
+      "path": "experiments/aspdac/baseline_tools/timeloop_accelergy/gemm_256_16pe_accelergy.yaml",
+      "bytes": 4565,
+      "sha256": "9dd6158af4ddfe60ef0c4d99820efa78d145aca080c7c677af7daa8b0fe4cf42"
+    },
+    {
+      "path": "experiments/aspdac/baseline_tools/timeloop_accelergy/timeloop_accelergy_core_workloads.yaml",
+      "bytes": 1773,
+      "sha256": "ea119359a16eac3cd9c2ef1689008e4965ec96468cc3583123c90ff499f8a3af"
+    },
+    {
+      "path": "experiments/aspdac/EXPERIMENT_PROTOCOL.md",
+      "bytes": 3846,
+      "sha256": "af6229fa41f4364e4abeab30b0b09432e1a43b5c813478499c6ab4f43484d546"
+    },
+    {
+      "path": "experiments/aspdac/external_inputs/booksim_config_hashes.csv",
+      "bytes": 68681,
+      "sha256": "40f391f863020eab2795b6052553b223d2feee87e2c0808bf14ecd0a0d9bb9e6"
+    },
+    {
+      "path": "experiments/aspdac/external_inputs/timeloop_model/attention_pv/attention_128_64_prob_v.yaml",
+      "bytes": 1401,
+      "sha256": "15671a4cf3f3652546bb3d80c8078fd4b146275771de39be5b7e3b98cb912852"
+    },
+    {
+      "path": "experiments/aspdac/external_inputs/timeloop_model/attention_pv/timeloop-mapper.map.yaml",
+      "bytes": 845,
+      "sha256": "7ddd1e4398bc58c51d7caadb902ce3cc88ae26ac16a67ede9cec71617aa008da"
+    },
+    {
+      "path": "experiments/aspdac/external_inputs/timeloop_model/attention_qk/attention_128_64_qk.yaml",
+      "bytes": 1401,
+      "sha256": "94d642c59a906e6e00af05d64e17f9c40e5b885d9a898db408fa6770bcccd209"
+    },
+    {
+      "path": "experiments/aspdac/external_inputs/timeloop_model/attention_qk/timeloop-mapper.map.yaml",
+      "bytes": 845,
+      "sha256": "4256893eccbdc0154e3cd3ba01e1e7453cb6418d32b92bffcaf8e65caebb69b5"
+    },
+    {
+      "path": "experiments/aspdac/external_inputs/timeloop_model/gemm_256/gemm_256_16pe.yaml",
+      "bytes": 1402,
+      "sha256": "802fed04fcc914586ed8bcd954330ac9db364e0ba120b6e7efa3e6f86c05e635"
+    },
+    {
+      "path": "experiments/aspdac/external_inputs/timeloop_model/gemm_256/timeloop-mapper.map.yaml",
+      "bytes": 846,
+      "sha256": "316205a0e7ee2820ffd292016c92aa8036264b87c80c192412be75777b160962"
+    },
+    {
+      "path": "experiments/aspdac/external_inputs/timeloop_model/mlp_l1/mlp_512_256_batch128_layer1.yaml",
+      "bytes": 1402,
+      "sha256": "6336b59a5b8b4637fb6287f3ab464c7c12a7efec1db3c93b9224010cb16b373d"
+    },
+    {
+      "path": "experiments/aspdac/external_inputs/timeloop_model/mlp_l1/timeloop-mapper.map.yaml",
+      "bytes": 846,
+      "sha256": "395de683f77f68bd5315b1537ea047a5590621757539e89d413773b3fb5e2427"
+    },
+    {
+      "path": "experiments/aspdac/external_inputs/timeloop_model/mlp_l2/mlp_512_256_batch128_layer2.yaml",
+      "bytes": 1402,
+      "sha256": "ec25d9ac1111918ec964a98acf6eb3f08d97c6afc833485f3690358faaaa6ecf"
+    },
+    {
+      "path": "experiments/aspdac/external_inputs/timeloop_model/mlp_l2/timeloop-mapper.map.yaml",
+      "bytes": 846,
+      "sha256": "e2afa91cdd07694e0773abe11b09cffa4678f7cbb0573bc8d15e028641898b98"
+    },
+    {
+      "path": "experiments/aspdac/external_inputs/tool_versions.json",
+      "bytes": 972,
+      "sha256": "367da364932b5b6650cd03e0c370eccb7db3b98f50bff4cf9cf59c32a691f894"
+    },
+    {
+      "path": "experiments/aspdac/README.md",
+      "bytes": 876,
+      "sha256": "cc6455a67394ef9678ed616a36defd19dfc7368d49d540b3a37a9cca184482f9"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/bundle_manifest.json",
+      "bytes": 3543,
+      "sha256": "b47555c25bca620e99617f2aa4df914daad55d891c8f982b7c4aab7b304bc5d2"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/config_revision_history.json",
+      "bytes": 1694,
+      "sha256": "175d6ce81f19aa9bdd91dceb63cd3bb04d3c5fb4eba9492e7e12a5941258f95d"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/final_regression_extension.json",
+      "bytes": 2839,
+      "sha256": "6f771a76d1c9fc8547a6ac81864e18a1041d713152515eb8f7bab3f64061c817"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/frozen_configs.json",
+      "bytes": 2867,
+      "sha256": "c585d078cd3cf1f264100e6a1063afd46377b64c559e3036e9427a0a02ec33ac"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/mnist_cnn_independent_audit.json",
+      "bytes": 28551,
+      "sha256": "7d3bd159bb18ca7c3b501c5501b182474da89d17328b479849daabf52498732e"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/mnist_cnn_noc_output_manifest.json",
+      "bytes": 9675,
+      "sha256": "486fa9459d8e3416536c86130357663e5600f92d382cdf51f1169d9e13d67574"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/mnist_cnn_noc_trace_manifest.json",
+      "bytes": 10207,
+      "sha256": "8cc50a7f5ff4802f527b0d31a3c610fc58e0bcee695cb84a3c5ee001e96351c9"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/plan_mnist_cnn_noc_booksim_stage_v2.yaml",
+      "bytes": 3276,
+      "sha256": "f76a1125bd7926d2a4ff2392494beffae3c7662e1ed9e10bbd2c69264c0c3568"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/plan_mnist_cnn_stage.yaml",
+      "bytes": 1422,
+      "sha256": "ce85c26c996c383b011087e5cb349f5ebf60fb77e3404b8dcc22d0f153930d9a"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/plan_rq1_exact.yaml",
+      "bytes": 629,
+      "sha256": "0d48d54c0243717f1b19c8399eaeeecc569548b3d68216f38b92ee9aabd2a3cf"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/plan_rq2_booksim_stage.yaml",
+      "bytes": 1064,
+      "sha256": "50d799575333e13b6297565b855bbcc172f4d5284f3708816f346eec63db85f0"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/plan_rq3_energy.yaml",
+      "bytes": 2948,
+      "sha256": "36742bb6d8affdd2d7cf3f08ef47e3a4e2dab064d8dc9c7648d58bc3e982be38"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/plan_rq3_matched_compute.yaml",
+      "bytes": 5830,
+      "sha256": "7037b0710b0b0211f64fd9fffbf8a1228b82ff504eed80dd7afba8389be20c96"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/plan_rq3_size_stage.yaml",
+      "bytes": 14931,
+      "sha256": "1c3e8066872aaf930bd57ca72dd9db5b4f2d0b7dcc0267a62fde8d3b32dedcd3"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/plan_rq4_optical.yaml",
+      "bytes": 5352,
+      "sha256": "c0d75e109a90439abe6f541db2b60c9338bea9f2c49c71ef10620610ee4c6332"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/plan_stage_codesign.yaml",
+      "bytes": 7289,
+      "sha256": "033723a643131f828523c96e79b53c5d193f50b9399d8b867d9fd2de0d236044"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/rq1_output_manifest.json",
+      "bytes": 4846,
+      "sha256": "f352685c10902b128378aeb43db5ddf5a6ead91f9dc6d2f00e2748687cd099c4"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/rq2_booksim_uniform_extension_manifest.json",
+      "bytes": 3756,
+      "sha256": "57bc7a7c0168c03ada990f677b987c2a3eb6234c0a5bc0d6e708c0dbb53a97b7"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/rq2_external_raw_manifest.json",
+      "bytes": 269236,
+      "sha256": "0c896d18ad2a5a0da41d3cf6727d8dcfc31e527b0f193e38bd5fc4d44e607b5c"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/rq2_output_manifest.json",
+      "bytes": 122697,
+      "sha256": "02aab8fffe7a49b0b210b4dce96a64525ba1200f58b8caa10fc7eb9ef2b3b6db"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/rq3_compute_external_raw_manifest.json",
+      "bytes": 11389,
+      "sha256": "7c6ea8912c58b7f45a31a7bd90b157e9bd709b9abe7eae27db353cbc074924bd"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/rq3_compute_output_manifest.json",
+      "bytes": 6721,
+      "sha256": "eca6c22d2c2ad984de555614417fc6a489943417dde1af29f050f20c06586105"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/rq3_energy_external_raw_manifest.json",
+      "bytes": 20050,
+      "sha256": "3e529a3f9e034060ebd3ed251dda23e394d79255e8175047b11f214a5e287bbc"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/rq3_energy_output_manifest.json",
+      "bytes": 4565,
+      "sha256": "b818da47fbb4299a9969f7f824c7a14d736f1fee60c91cb48249626bbe9793d9"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/rq3_size_scaling_output_manifest.json",
+      "bytes": 9713,
+      "sha256": "6da975b1e695d2aba4ff00f1fb2361bcc29698003c534962143724ec1e6a173d"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/rq4_output_manifest.json",
+      "bytes": 4571,
+      "sha256": "b4dd5d0d8b91793241a7c7269f991e7a9695fb56257501ba5aa09cfb26ccf642"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/size_scaling_matrix.json",
+      "bytes": 1392,
+      "sha256": "2b08b590d0d5d89f42986af7fb3046ac1162b11324ff42e3091a2af2c9317a43"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/stage_codesign_output_manifest.json",
+      "bytes": 11518,
+      "sha256": "9057a6343ded74397c72adceab98e3655cb25d955590d0d5a68c9eed978dadfd"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/manifests/stage_mot_mapping_output_manifest.json",
+      "bytes": 1561,
+      "sha256": "631f811165d57f5b1919394850a4d5be685f67b460fac4f8936043a0e83ff154"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/candidate_results.csv",
+      "bytes": 592441,
+      "sha256": "c67c65a62e1ff9423e9502e825eb8714b7f74422fbf358b4a170c9e2610b35e0"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/claim_status.csv",
+      "bytes": 6884,
+      "sha256": "3f512c21c5dddbddc24511f02a6a23a0114da9245f0b79875a9bfd211d163b46"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/CLAIM_STATUS.md",
+      "bytes": 7560,
+      "sha256": "2108600f27a9f11177239ba1707ac4163c2df626aaf2abfd0aaab9dde169d4f8"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/mnist_cnn_functional.csv",
+      "bytes": 2038,
+      "sha256": "d5d1fd8644729f8dbd57d2432f91f8074e4e948c58bf1effe39ed34ecc5ccbed"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/mnist_cnn_network_summary.csv",
+      "bytes": 672,
+      "sha256": "eb71cb6ab3fc0f3668361b3859bf3edb21f458bee579642aa158ed2321926a68"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/mnist_cnn_noc_cross_tool.csv",
+      "bytes": 2303,
+      "sha256": "ab687d7d30d03da79c1bac7854cf80ac72561a9659b619a84266649999fa862a"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/mnist_cnn_noc_repeat_hashes.csv",
+      "bytes": 4566,
+      "sha256": "1951509c970050c6df826d824ad4369b06f9295d7638b6c797d5a906d545166d"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/mnist_cnn_noc_runs.csv",
+      "bytes": 30730,
+      "sha256": "6a85e7345e3156e46eaf03cf46470574e6f2a5ea9935dafc33cee94a81254360"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/mnist_cnn_noc_trace_summary.csv",
+      "bytes": 1496,
+      "sha256": "6060769d9213fd1b80dceaf40a95b212e93b6b1bd84e25ed10789f54882d871f"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/mnist_cnn_stage_layers.csv",
+      "bytes": 14633,
+      "sha256": "52da9d1bda0950f8c8a9e63a538d50c98806285c25a65d73a04bcc5df4e86950"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/PROGRESS.md",
+      "bytes": 255,
+      "sha256": "3a32bcd84c5a92023a2a2cbca8f036509e7a263d636928db8d54ee01f335e365"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq1_exact_cases.csv",
+      "bytes": 1288,
+      "sha256": "87d18545c0b86117b593ca6d7bc4abdb5ef5d885245879efb6c28ea77d0e7c0f"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq1_repeat_hashes.csv",
+      "bytes": 5507,
+      "sha256": "bf7284e3cf0a8c735cb0378e55029d1e65d6728d9f10c35750446cba01605d7e"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq2_booksim_stage_sweep.csv",
+      "bytes": 631607,
+      "sha256": "b9e56147303820f7a27e6598be192667730b80d222e7150720d57f1568bdf4bc"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq2_booksim_uniform_extension_raw.csv",
+      "bytes": 4357,
+      "sha256": "9b3609dab45e6bca72b748a2c51ca72eae327b1b2e3450340bbbaec6b3c3d748"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq2_failure_disposition.csv",
+      "bytes": 1310,
+      "sha256": "5e4819ce265dc9d904568c70eee4d834595e94d765da8df73eebd56d07d0f111"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq2_rate_summary.csv",
+      "bytes": 26151,
+      "sha256": "477779ee9598cfd167bbc13de30dbc623f628181216cbc5f044e7355c5ac0a79"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq2_saturation_summary.csv",
+      "bytes": 818,
+      "sha256": "ee499c3d94a4201d4b7554885bcc8af064a7388e58c5280e289267503b951b2c"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq3_accelergy_stage_energy.csv",
+      "bytes": 2393,
+      "sha256": "852c909bf7006df22d0cca12bf419bc8d626ae8f918a3b1b7228725b08d04a97"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq3_accelergy_verification.csv",
+      "bytes": 1036,
+      "sha256": "2df5c463345a2e1170e9198419dc54b1ae8ffa1dd2a97d35811f5cb1af13ccbf"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq3_energy_microbench.csv",
+      "bytes": 1752,
+      "sha256": "8caf475a4a7f500eaed2ee9e6128f3d73080af69f1b0a7a836c2b39ee05b04a2"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq3_scalesim_stage_accesses.csv",
+      "bytes": 4307,
+      "sha256": "852a23ea9daa0f9d7c9538b1547431df9914dda25cdab82928358b799623944e"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq3_scalesim_stage_timing.csv",
+      "bytes": 3032,
+      "sha256": "5ae31be1340e05c72690af59a71d2b3cc7b82d87f9f24445ea332611657d64ae"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq3_size_accelergy_scaling.csv",
+      "bytes": 2702,
+      "sha256": "6d90702f5a662dc5ac2ae5733efcd741473c677e2796a6c1c2e024895076714c"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq3_size_access_scaling.csv",
+      "bytes": 15041,
+      "sha256": "2ae0f9ed489662df61d5883c034155c85454e99ba02df6542d024ece8f1844dc"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq3_size_scalesim_stage_scaling.csv",
+      "bytes": 5796,
+      "sha256": "8b267b511e3c7c31f1abefec7e926a0e5a16939391e06102f394a21ee2b3df96"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq3_size_timeloop_stage_scaling.csv",
+      "bytes": 5365,
+      "sha256": "e2a6254e088043d37bc97cd16c0592de299a1658ac955573255746d5a4f4b4b6"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq3_timeloop_stage_accesses.csv",
+      "bytes": 2677,
+      "sha256": "bc9c77c08e97d3a73fc03e48e776d7aa5383c51ff71ef5b64c6cef9b5d2d676c"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq3_timeloop_stage_cycles.csv",
+      "bytes": 2222,
+      "sha256": "faff9cb494e14a28e542656588857d441d4ce9f93f5c90dd2dde5dd9537d8c46"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq4_matched_transport.csv",
+      "bytes": 11013,
+      "sha256": "c2ab7277e892abb6273e8a81c650168cdcc794d64c433ac84dff2b0614566650"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/rq4_optical_oracle.csv",
+      "bytes": 1026,
+      "sha256": "68076a9b009a83f9ca830fb240d0a56bddf6d8fbd11c0419b83d8f771192ef2a"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/stage_causal_intervention.csv",
+      "bytes": 899,
+      "sha256": "8bd6cd598891620db10bc5efda3152e9336419114ecf5df0f49250542d17170a"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/stage_cim_comparison.csv",
+      "bytes": 14923,
+      "sha256": "7ffc9f3e7e433337432843483b8543c262f5a6f8b8d14b8b74378f49f67d5a11"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/stage_cim_statistics.csv",
+      "bytes": 520,
+      "sha256": "d27ed3aea2c2c3c5c970947f21d3c836dd2700d49b2fd2b160d5dbe93df1adcb"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/stage_codesign_bottleneck.csv",
+      "bytes": 13666,
+      "sha256": "18950031f566b6434b4414b337d769c67c924dc7d794f5d2e0819f7bfbf6e3c9"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/stage_mot_mapping.csv",
+      "bytes": 12465,
+      "sha256": "ebb3aa313b8c83ab6195da1a1ce6a26d1eeba30246885dd4966852caf8ee6b2a"
+    },
+    {
+      "path": "experiments/aspdac/results/final_20260716/summary/stage_precision.csv",
+      "bytes": 2063,
+      "sha256": "53218336578c4baf6a82f8701d106859800067aa9b235732f3d53af5890664a5"
+    },
+    {
+      "path": "experiments/aspdac/results/mnist_pe_precision_20260717/config/mnist_pe_precision_20260717_r1.resolved.json",
+      "bytes": 9063,
+      "sha256": "a313207c1ebfcd3c0290d7c78581b9ec3b2e72f57c710a8f608015d32d3a9c66"
+    },
+    {
+      "path": "experiments/aspdac/results/mnist_pe_precision_20260717/config/mnist_pe_precision_20260717_r1.resolved.yaml",
+      "bytes": 6595,
+      "sha256": "1104dbf10e512aa8303615b583cd240c840cc077eb43902618fb660b0359b18a"
+    },
+    {
+      "path": "experiments/aspdac/results/mnist_pe_precision_20260717/manifests/bundle_manifest.json",
+      "bytes": 1328,
+      "sha256": "08b03b5e70dca2e9c5ecefc31e76d4fc006a2a939caa88f2659da2041951b1a6"
+    },
+    {
+      "path": "experiments/aspdac/results/mnist_pe_precision_20260717/manifests/frozen_configs.json",
+      "bytes": 1174,
+      "sha256": "ad6425e7e3d231c80df7fc7b7a759519eb32b00555d1748c9abadcd03bebba83"
+    },
+    {
+      "path": "experiments/aspdac/results/mnist_pe_precision_20260717/manifests/mnist_pe_kernel_gate.json",
+      "bytes": 668,
+      "sha256": "8d6bb3efda48b4c30f2e85ab8d8ccb405ba7c47d66c15870d2232c761e841347"
+    },
+    {
+      "path": "experiments/aspdac/results/mnist_pe_precision_20260717/manifests/mnist_pe_precision_manifest_index.json",
+      "bytes": 10738,
+      "sha256": "95a36283aec4f5d4c8e92d021be209fd1f70de70bf26654c063a3671cf7c5fc5"
+    },
+    {
+      "path": "experiments/aspdac/results/mnist_pe_precision_20260717/manifests/mnist_pe_smoke_gate.json",
+      "bytes": 384,
+      "sha256": "3959b8c80c2800f47ea937ecf1095a4658c4af55b41c8c5ebda3027859c3572a"
+    },
+    {
+      "path": "experiments/aspdac/results/mnist_pe_precision_20260717/manifests/plan_mnist_pe_precision_r1.yaml",
+      "bytes": 3816,
+      "sha256": "d93115ed27b50324e880ae84d32ce2a8126e297c4394331885da4bacaa3db962"
+    },
+    {
+      "path": "experiments/aspdac/results/mnist_pe_precision_20260717/summary/candidate_results.csv",
+      "bytes": 284197,
+      "sha256": "cc84cccde27d6c5c620e3df7e172efbf8f9b477364e24ec2621c60461ec7a8f0"
+    },
+    {
+      "path": "experiments/aspdac/results/mnist_pe_precision_20260717/summary/mnist_pe_precision_accuracy.csv",
+      "bytes": 1913,
+      "sha256": "1439013ec42b193c4048b42eda310d962ccaf692b18002078d75adaa9de3d2e8"
+    },
+    {
+      "path": "experiments/aspdac/results/mnist_pe_precision_20260717/summary/mnist_pe_precision_claim_matrix.md",
+      "bytes": 1698,
+      "sha256": "114ef2e465e9caf5d1de29124729761533cb59ddf530965b80fe48b09c452352"
+    },
+    {
+      "path": "experiments/aspdac/results/mnist_pe_precision_20260717/summary/mnist_pe_precision_kernel_conformance.csv",
+      "bytes": 42170,
+      "sha256": "74c0ac04cdc7db830e169db1bd37c7b081b957614043267b940c54a50f8b581e"
+    },
+    {
+      "path": "experiments/aspdac/results/mnist_pe_precision_20260717/summary/mnist_pe_precision_layer_error.csv",
+      "bytes": 4202,
+      "sha256": "a063b78352f6b9193487dbeea5ed79ee15f7cf950d5eba9f161377f87c9b6ba8"
+    },
+    {
+      "path": "experiments/aspdac/results/mnist_pe_precision_20260717/summary/mnist_pe_precision_paired.csv",
+      "bytes": 3953,
+      "sha256": "b49b9e2472e1fbff4e628711cba8f4bd86859ba4669052d0d0e48cc223be4d08"
+    },
+    {
+      "path": "experiments/aspdac/results/mnist_pe_precision_20260717/summary/mnist_pe_precision_predictions.csv",
+      "bytes": 229044,
+      "sha256": "4d631883329d8115d2bc9b374827106a88a07f460330b268dc0a0f0992dff8c9"
+    },
+    {
+      "path": "experiments/aspdac/results/mnist_pe_precision_20260717/summary/mnist_pe_precision_repeat_hashes.csv",
+      "bytes": 20834,
+      "sha256": "b7f1f0e32ffab1ad1417b6153373e9f3917444d01b42727c10c974356112a67f"
+    },
+    {
+      "path": "experiments/aspdac/results/mnist_pe_precision_20260717/summary/mnist_pe_precision_system_cost.csv",
+      "bytes": 58012,
+      "sha256": "038e0c0111a27372d43075b20669b8b2521614ab8410e89ef3bbd2f029109be8"
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/config/s_native.resolved.json",
+      "bytes": 772,
+      "sha256": "3d723f00d08408dacc29ff2bf2def330347f880e7e8158c8a2707ff027e61abd"
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/config/s_native.resolved.yaml",
+      "bytes": 605,
+      "sha256": "9ed8c2f20de92618c309a18dfb188ff84754484fa5c57d72abd105104f6692aa"
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/manifests/bundle_manifest.json",
+      "bytes": 1038,
+      "sha256": "5ab9eb199a0a3caf73b41e22b96af699de9fd11142196a9f51aa3de2b3a8f0bc"
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/manifests/candidates_optical_intervention.json",
+      "bytes": 10097,
+      "sha256": "e3c530d7b4567c0426fbfca64efcae3aafd35bb9487cea9d7d4428e193a89c73"
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/manifests/checkpoint_optical_intervention.json",
+      "bytes": 333,
+      "sha256": "87b33de5dbd4b928fd5c008281b7d167e3016a45852d525ce4a9bcf9a67c7915"
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/manifests/frozen_configs.json",
+      "bytes": 522,
+      "sha256": "6279d3b65859ef1f30d573a6a029de9abe2e799661fcf8b08279622e91d365c4"
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/manifests/optical_intervention_output_manifest.json",
+      "bytes": 2417,
+      "sha256": "5137852a63034e46ca218f2aad85fa258f01672be0e5460aeae539d76bf57b15"
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/manifests/plan_optical_intervention.yaml",
+      "bytes": 2162,
+      "sha256": "ce0f57244d087b379f5ac680dd4f51cb3fe56f0e49e02afaef1572e4d45ddbe5"
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/manifests/runner_inputs/c-1cfab1f1753dc917.json",
+      "bytes": 2231,
+      "sha256": "abf4038243735e0e6659a941eca29157e79ca5fedafdf85a238b9b54a37c3f98"
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/manifests/runner_inputs/c-1d99b3c28dd735ce.json",
+      "bytes": 2231,
+      "sha256": "9f66e6f15baaccfd559b2b71904fb828215c524eabcd467ad2b6ceb8ff58fda7"
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/manifests/runner_inputs/c-51fa9674e6303cc1.json",
+      "bytes": 2241,
+      "sha256": "f66ae632846d57a73f6d05c14b66d0a65d88219ce66db2c7f215f32fadf5b47f"
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/manifests/runner_inputs/c-a8d951ef7c96103c.json",
+      "bytes": 2241,
+      "sha256": "f3dcdeed08ed9df58354309dec439f43a4aeff1b34ec61716a554800ccf10286"
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/manifests/runner_outputs/c-1cfab1f1753dc917.json",
+      "bytes": 2882,
+      "sha256": "1b43e1cb0171628dd84203aa9c351e393c012fe75bfb51e43cd75e82c30240a0"
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/manifests/runner_outputs/c-1d99b3c28dd735ce.json",
+      "bytes": 2882,
+      "sha256": "cafc5d093d85a3d1340ff8645594449ead66092f665ef6ae035efe989a3fefdd"
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/manifests/runner_outputs/c-51fa9674e6303cc1.json",
+      "bytes": 2823,
+      "sha256": "71b82f4375ae26e4aa19088ba9a84fb0e12d386f26faf81a4fdfe00f4a27a836"
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/manifests/runner_outputs/c-a8d951ef7c96103c.json",
+      "bytes": 2823,
+      "sha256": "b2a9c43a64faf7feab09c944d046054cee22ad021ee63c0040586f6707e7b1a7"
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/raw/optical_intervention_electrical/c-51fa9674e6303cc1.json",
+      "bytes": 6209,
+      "sha256": "9603164d84538e9b73c4b3e0fe72381d0fb47db6a5eee632f52a802220b27232"
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/raw/optical_intervention_electrical/c-a8d951ef7c96103c.json",
+      "bytes": 6209,
+      "sha256": "5684bcfbb67240f11c5f6844810934cead6bb750d513ebd5c1541da670709894"
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/raw/optical_intervention_wdm/c-1cfab1f1753dc917.json",
+      "bytes": 6258,
+      "sha256": "526f146b88226b185f41de8c52d22ba1b89088ade4666acadd5c097fd6e76490"
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/raw/optical_intervention_wdm/c-1d99b3c28dd735ce.json",
+      "bytes": 6244,
+      "sha256": "70ad9799bbd2746129075470b823dfe99420a120bcd707cc5a68056845cc913f"
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/summary/candidate_results.csv",
+      "bytes": 6435,
+      "sha256": "9600f2119c5c341f60bfc1787537c4c572118ff56b66b24b4d0d404882d3846e"
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/summary/optical_intervention.csv",
+      "bytes": 1374,
+      "sha256": "1825054b9bb0f5215e4884fcb9816ec3b7b9d697aace06d5273c0ba9ab80aaef"
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/summary/optical_intervention_claim_status.md",
+      "bytes": 582,
+      "sha256": "af83f61618cb1ca1779d47a77bd221aa63fb9b30e5641005a2f9323e19b51fb5"
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/summary/optical_intervention_summary.json",
+      "bytes": 311,
+      "sha256": "dbd8c385b35e8eb3d0111dc76f361e8d26c5dad0b4d95da3cf4f3933023f7879"
+    },
+    {
+      "path": "experiments/aspdac/results/optical_intervention_20260717/summary/PROGRESS.md",
+      "bytes": 268,
+      "sha256": "48828fe33038ff8a6804f49f43cda0612e33abb30118f13733cb3bd2f726860f"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_attn_qk_s096_d064-4ee4a76eba42deda-r0.json",
+      "bytes": 427,
+      "sha256": "4e86eda2d8d675f8055d114d768bca3afc7c1a4a024237dfae44544aeddd94c6"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_attn_qk_s096_d064-4ee4a76eba42deda-r1.json",
+      "bytes": 427,
+      "sha256": "a45ca7e81fbe03835b6bb2f649efcd9e9658a88676dab318e1e71a9862b96d04"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_attn_qk_s096_d064-cf82757e571974ee-r0.json",
+      "bytes": 421,
+      "sha256": "1b89c4b7522e45cd4fa8eafb3a3d8008934fde761fc4ff5e0a0f71637b54b4c5"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_attn_qk_s096_d064-cf82757e571974ee-r1.json",
+      "bytes": 421,
+      "sha256": "d354665bd248c6f3953d6e0db5fbbf7c36f7ad22cb8374f6c334765b2ac2edc3"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_attn_qk_s192_d064-05a638e2de54fa90-r0.json",
+      "bytes": 429,
+      "sha256": "0cdfacb0ce840741be90827fe29261660fd22c087ed67c071c4d4fcbe1c1a6b2"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_attn_qk_s192_d064-05a638e2de54fa90-r1.json",
+      "bytes": 429,
+      "sha256": "316bb0d98f70a28631681a6e216c3d0a7e2921f8b8bbfe2f4210c822cc5c2dad"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_attn_qk_s192_d064-f94b76dea3c99c6b-r0.json",
+      "bytes": 423,
+      "sha256": "c5eb9a1abc546bb2e518bfbe8ec5c09a66ec7c87f6d749d2f97154dfc86a8aaf"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_attn_qk_s192_d064-f94b76dea3c99c6b-r1.json",
+      "bytes": 423,
+      "sha256": "06e5fdedea91cfdb25be3d28b218c3b0afd58e548197dc0695f5ac845f469fe0"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_gemm_096-451daf1ed1c12ed2-r0.json",
+      "bytes": 409,
+      "sha256": "c7c2e6cbe4b63ba3db06c1e7134eb40980e91ce8a5b5f424640d48fd341a75c4"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_gemm_096-451daf1ed1c12ed2-r1.json",
+      "bytes": 409,
+      "sha256": "2a1ebb6d675a21e4bfa408be933206d51dbe67e51d22afc3d8ee8041f165a040"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_gemm_096-b6a62809008ff575-r0.json",
+      "bytes": 403,
+      "sha256": "c4ae2e5b56dd1734304198553aa0edf954fda64148a8bc8d698daa21853c8f6e"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_gemm_096-b6a62809008ff575-r1.json",
+      "bytes": 403,
+      "sha256": "badce82fc782bc47ba610657bd559533f44be4843350dd148547c23b0a92de95"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_gemm_192-0f990a9434110def-r0.json",
+      "bytes": 406,
+      "sha256": "869954e8fe767264e40eda1ebc96b599340344a6d7f0160801ad3afaa59e1c51"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_gemm_192-0f990a9434110def-r1.json",
+      "bytes": 406,
+      "sha256": "9509871b9e37ec84db1d0767da9c46f156d417d2c735926734cf5ecac639fd0b"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_gemm_192-60a111ce896b8e19-r0.json",
+      "bytes": 412,
+      "sha256": "a18f07c5018578ad9f09dc09aaaf2ec869ae40cd1b1e9f1eacd12df2e973461e"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_gemm_192-60a111ce896b8e19-r1.json",
+      "bytes": 412,
+      "sha256": "90abd46a4a42a671ba8ce1510319c4766cb2232b658ba6b35bd65b0366cb3272"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_gemm_384-2dc73f7ab8542825-r0.json",
+      "bytes": 406,
+      "sha256": "656c62570e17c285550367b6e2e705cec32807ecf77baab4841f161f77799115"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_gemm_384-2dc73f7ab8542825-r1.json",
+      "bytes": 406,
+      "sha256": "da68f1965e25c19baf715d96bd982859367e5bec98885be0890d3ea7adabc309"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_gemm_384-a0ac510429e61b4b-r0.json",
+      "bytes": 412,
+      "sha256": "d60fde9394282cf26765bccd0f1e8503ec1e5e090aa521991011573a9b23855b"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_gemm_384-a0ac510429e61b4b-r1.json",
+      "bytes": 412,
+      "sha256": "b1b1d18d5e6f7b177fbcbcb615cc035bfc90020cacc87dc1a3d11d7a81cd3b34"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_rect_128x256x64-5981473c8299b30d-r0.json",
+      "bytes": 419,
+      "sha256": "e6662978f965f2b95aa18c6f22edfcb28f8825382ea7bca452547aa22a2b37f8"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_rect_128x256x64-5981473c8299b30d-r1.json",
+      "bytes": 419,
+      "sha256": "38624db8289785f6f14b9f7f48a45b6d321236e346b1fe072b272a0002861e3b"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_rect_128x256x64-7cb7c5048ab6f87e-r0.json",
+      "bytes": 425,
+      "sha256": "f9921898ab83b0813870d6d0fd8500a6f347ab91a03c85e6380270fcfb756a7b"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_rect_128x256x64-7cb7c5048ab6f87e-r1.json",
+      "bytes": 425,
+      "sha256": "d7d60887bae57c0733274e3b29c98d98e2898bbd6fce0276b9780b3b81c999c9"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_rect_256x64x192-2ca34cfdeb3c4e5d-r0.json",
+      "bytes": 425,
+      "sha256": "cfa7c92f31ce0ce9745b02e31f785eac364f598ef240c0d0eb9280a1b8b74fcd"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_rect_256x64x192-2ca34cfdeb3c4e5d-r1.json",
+      "bytes": 425,
+      "sha256": "b8642640f77d206ad785bee545a933663e4761631d47cefaa9414058e83691c3"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_rect_256x64x192-96f4d8fbc5a70d21-r0.json",
+      "bytes": 419,
+      "sha256": "5a1f3e1306b3032ff4c153f9956b46127b7052a184fd7124f35e1f6f7028fc3c"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_rect_256x64x192-96f4d8fbc5a70d21-r1.json",
+      "bytes": 419,
+      "sha256": "57afc46ab7a1e73d883f938fcd4be63974299208d4be2105dcd943b65eb0368a"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_rect_64x384x128-111e7db34170a28c-r0.json",
+      "bytes": 425,
+      "sha256": "fa538434649d6913dcf80ca65eb1f817f1ca68c35b924d81c9a7dba446c8f119"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_rect_64x384x128-111e7db34170a28c-r1.json",
+      "bytes": 425,
+      "sha256": "63e98fc3a91c98393dfb355c3e0c006d8eab48bbea66de0b6506e6cb8805cff3"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_rect_64x384x128-764bce7677c7bc4e-r0.json",
+      "bytes": 419,
+      "sha256": "edfe632629150d0607c4a61646d04d90600026e665add4f0da94c3702a0c2962"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-holdout-holdout_rect_64x384x128-764bce7677c7bc4e-r1.json",
+      "bytes": 419,
+      "sha256": "919f27f2fe0a702cfff475757c067901b46c4a2ca3730b56666bb96512cbf4bb"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-noc-noc_n01_single_128-a27e906411d4fa7c-r0.json",
+      "bytes": 328,
+      "sha256": "04b7a04b570fb8322ed5ed469cdbac5e3338a4b2a4645de03f5011c16087cd0f"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-noc-noc_n01_single_128-a27e906411d4fa7c-r1.json",
+      "bytes": 328,
+      "sha256": "26b8461c3eba26f1619f9422ef85770ae02f72e5b94aee15ad7cfdb3ad444d60"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-noc-noc_n02_single_256_vc1-410a3635357c967b-r0.json",
+      "bytes": 336,
+      "sha256": "f6cf7e1e00db1a019554223f925730a276698ec80342521afbe7059fc2979346"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-noc-noc_n02_single_256_vc1-410a3635357c967b-r1.json",
+      "bytes": 336,
+      "sha256": "3d2780d825539c930fc36a33aff2b7c4fa2ac0fcec82c85c02dfe7fa4385c55b"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-noc-noc_n03_single_512_vc3-3a39d41273aa55ae-r0.json",
+      "bytes": 336,
+      "sha256": "94b7b646678d9e52077f3ff222dd831c3e5a06ba1dba4a2e1818c649838157f1"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-noc-noc_n03_single_512_vc3-3a39d41273aa55ae-r1.json",
+      "bytes": 336,
+      "sha256": "f7a1089ed260d4191dae01682efdb966c5afa4ade015a417a59d0721d2897943"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-noc-noc_n04_single_1024-302e6f932eaf9166-r0.json",
+      "bytes": 330,
+      "sha256": "7f8febb712600a821bf49c398c40e38bc793b44ac1cd72e498906a160d2eb724"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-noc-noc_n04_single_1024-302e6f932eaf9166-r1.json",
+      "bytes": 330,
+      "sha256": "f6f9a2fb72d00e8cab2738e847afba93207af34495a967a387b4611afee1fb21"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-noc-noc_n05_contend_128-84df0dcaaaf636a6-r0.json",
+      "bytes": 330,
+      "sha256": "9fa017f890ad34da5f397c1c3246027c16b032cb70b3fa8fd1b04dc9e6f8fd24"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-noc-noc_n05_contend_128-84df0dcaaaf636a6-r1.json",
+      "bytes": 330,
+      "sha256": "5a2440d0bc520e85b9e282017e6ef26bf72f60f96f5cdebcf63f7e20e4d52600"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-noc-noc_n06_contend_512-f8a7c7b64b0d684b-r0.json",
+      "bytes": 330,
+      "sha256": "c22818db703bd4b36ed9167185ca1effbec01451aceaa872fb58ba5814b78fac"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-noc-noc_n06_contend_512-f8a7c7b64b0d684b-r1.json",
+      "bytes": 330,
+      "sha256": "cc4c74bb2cb959668158630e110fe0c15aea77f80ceb3eb8527219a3d9a20a6f"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-noc-noc_n07_block_release_256-8527e5cc0cd13859-r0.json",
+      "bytes": 342,
+      "sha256": "ad92d71adbe700273be2e2b96dc1b0e0a65cc05953368735058a3e8d3ef3b777"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-noc-noc_n07_block_release_256-8527e5cc0cd13859-r1.json",
+      "bytes": 342,
+      "sha256": "1925dcbba01d46f06580f3d797960f3fc3b37daffc0b455fedc656d47e87d9f3"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-noc-noc_n08_block_tail_1024-c8d78220c70e2460-r0.json",
+      "bytes": 338,
+      "sha256": "8d83f087a414bf9fdcb643dbb37139f498ce03c2445eb3be649c603dba1a1489"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-noc-noc_n08_block_tail_1024-c8d78220c70e2460-r1.json",
+      "bytes": 338,
+      "sha256": "40f337173c48a773dc5f62d9839fc32efd3969a9b92e8ec41a2a2e73e4f693cc"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-noc-noc_n09_atomic_depth_boundary-61008605a69536c2-r0.json",
+      "bytes": 350,
+      "sha256": "91262b2c8edcab96e5f3326b0d2c7a0bf3be09d830e2bbf5da26e3dffbe836a4"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/inputs/p1-noc-noc_n09_atomic_depth_boundary-61008605a69536c2-r1.json",
+      "bytes": 350,
+      "sha256": "eb3b3f2c88f6800f67b490f5cc5eaa6a82a05447b6639f425a7c6293ce8e09c7"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/manifests/holdout_independence_audit.md",
+      "bytes": 4218,
+      "sha256": "a7f32db223db1efd806b1f2ccfe74bcd02c2c11dc70e8f26045af89ef4cd2e2c"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/manifests/p1_bundle_manifest.json",
+      "bytes": 53768,
+      "sha256": "d6ad9e4caeaf0553531c7578494c0f7a89f281ea1091b6cf084b2d884adacf14"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/manifests/p1_candidates.json",
+      "bytes": 37533,
+      "sha256": "2a84f91899cd32d0f55a5ad2469500a4770f87885fe8f75f7f93475a3e7d34c3"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/manifests/p1_checkpoint.json",
+      "bytes": 16046,
+      "sha256": "17371630a759649af4e02b44b64bf17adf22f8737b8bd24b993067ef06fa96f5"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/manifests/p1_plan.json",
+      "bytes": 40216,
+      "sha256": "6d74a279c8376652db9dae3ded07f6c3b1c988abe21f4358670361030d85a4f4"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/manifests/p1_source_audit.json",
+      "bytes": 651,
+      "sha256": "ed2c1faa28ee032b71a326b1d210310b4c6f04c40d820f3b274e3be219767262"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/manifests/p2_intervention_analysis.json",
+      "bytes": 9492,
+      "sha256": "fb61be239c546b949c9a264ac93410e07c68c8eefe16cd3d6e183a4bac16a207"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/manifests/p2_intervention_preregistration.json",
+      "bytes": 44902,
+      "sha256": "9630d44d7bf5b708bd40737ae6ffd2f3ff6201df0752fa3199a9cd76b1bfffee"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/manifests/p2_observation_manifest.json",
+      "bytes": 5423,
+      "sha256": "1a295d5d33a51522269013e5e5effb8520df023bfa2d058acb9e1d6a4db8e53b"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/manifests/p2_reporting_manifest.json",
+      "bytes": 1979,
+      "sha256": "2a657d66637b81f4c9051695a8eb7c9eae686f8c1c3b19903b0ee394c68943ba"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/summary/fig2_pending_note.md",
+      "bytes": 286,
+      "sha256": "19f443cd38e3e9a35203b798131f8585ed5b75fa69ee1329e37ee4e34106c093"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/summary/holdout_pair_status.csv",
+      "bytes": 970,
+      "sha256": "218c00658e8dbeb38bd0e804ffb6deb6fdcf6bf829dfafb5fc0dac6bc7f806ca"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/summary/holdout_scalesim_stage_accesses.csv",
+      "bytes": 26650,
+      "sha256": "71c89c0dd59a8e4db369fdf8abda653bc21498d57c728ffce9b5ab1283f1a497"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/summary/holdout_scalesim_stage_timing.csv",
+      "bytes": 7744,
+      "sha256": "f2f2809883df8c328d12a62a9ee7100278b29fd4ab5b951aa3791846dfc93cd1"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/summary/intervention_prediction_error.csv",
+      "bytes": 1301,
+      "sha256": "c1a7f4193e31403a7f0d3c07c914eb6dd07d2aba7af78af1502fb229d298f45f"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/summary/noc_contract_microbench.csv",
+      "bytes": 6460,
+      "sha256": "4e624e1b9c4014b6df8aaed783e7f0ad9696f8fcdd67d7876a957535851d8cbe"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/summary/noc_cycle_timeline.csv",
+      "bytes": 67395,
+      "sha256": "800ce1f6e0dbb4a5c0e4bb01b1b67a570bdbfaf5d5993f0165ed69a754d43f76"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/summary/noc_feature_boundary.csv",
+      "bytes": 2273,
+      "sha256": "cff3a5b5bd9f845ddc296031ad5237d086e516b973a863503a8bc07adf7ed22a"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/summary/noc_oracle_timeline.csv",
+      "bytes": 122767,
+      "sha256": "f1f9e9ca44cc8cd6fdc27b19bbfe8d67d32170f0d8df012f661c7cd0b5de39ab"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/summary/reviewer_claim_matrix.csv",
+      "bytes": 3072,
+      "sha256": "d027a05d8c80dfdb9d17c3734ed5fc98d254627e9739de3585b689f8ed4dcd5d"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/summary/reviewer_claim_matrix.md",
+      "bytes": 3464,
+      "sha256": "80c02fa3a5f80002a321dfca33052373810c79c2ca8bc3f97f6caf83d2260253"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/summary/reviewer_execution_disposition.csv",
+      "bytes": 719,
+      "sha256": "e807efd764a6ddbf50e4856dff201df0f59cce0b2bdddd850d4622d0e1f6866e"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/summary/reviewer_execution_disposition.md",
+      "bytes": 1117,
+      "sha256": "0ee0a67522095546f4479b6fc725ed6c190605b44fc85b525ced3cb6805f3898"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/summary/reviewer_paper_replacement_text.md",
+      "bytes": 4177,
+      "sha256": "e215e1eeb733892bcd9f92a8399b5f6a11be9bceb23533ad49f42732a439a0eb"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/summary/specialist_tool_runtime_context.csv",
+      "bytes": 19508,
+      "sha256": "3c045a84be62bb5d0e63049da78f7c34b22c7f013b560815d53d75700e792750"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/summary/stage_compile_scaling.csv",
+      "bytes": 14334,
+      "sha256": "4875c43ef605a45c2de73c265360718d4f7c0f06051cd9373d52cddeb078babc"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/summary/stage_scalability.csv",
+      "bytes": 48972,
+      "sha256": "846740aafd0b90864f7bbbc1640e3674f5fda1ecc460af3305e7582046e73264"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/summary/stage_trace_overhead.csv",
+      "bytes": 9288,
+      "sha256": "eacfd4235ba123eec9ff59a612177de750ef828040d36043fc1d863fe586a4b3"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/summary/table_reviewer_scalability.md",
+      "bytes": 894,
+      "sha256": "480cd2ac2202002ea699083a0bf19052eb18ecbbe7abde55cd22e483e8de40d8"
+    },
+    {
+      "path": "experiments/aspdac/results/reviewer_extension_20260717/summary/trace_guided_interventions.csv",
+      "bytes": 2028,
+      "sha256": "0c364c2faa86552efaae823cbf7e5f46d8ac1728dbb76eff7e85203b5b214607"
+    },
+    {
+      "path": "experiments/aspdac/results/scalesim_wsl/core_mnk_v1/aspdac_4x4_ws.cfg",
+      "bytes": 740,
+      "sha256": "e00ddda32f020bcf713f3afc22539243a5b4250786d1e9b90999df23177ed0bd"
+    },
+    {
+      "path": "experiments/aspdac/results/scalesim_wsl/core_mnk_v1/aspdac_core_mnk.csv",
+      "bytes": 190,
+      "sha256": "28812a37634bce20eb04350bc81f51f29e0fecc52fd1f79995c1f91455a123d1"
+    },
+    {
+      "path": "experiments/aspdac/results/scalesim_wsl/core_mnk_v1/scalesim_local_patch.diff",
+      "bytes": 1268,
+      "sha256": "ee0f1075ace7dc2b299e9cfaf4bc9f423b7fdfb9747ecff20f542dfa5f3dad1b"
+    },
+    {
+      "path": "experiments/aspdac/results/trace_visualization_20260717/config/aspg_trace_alignment.schema.json",
+      "bytes": 1617,
+      "sha256": "2d6e3ea3eb2965d235e053edf04ed2e0bd5e17dcce055621f6a55cb098799ad2"
+    },
+    {
+      "path": "experiments/aspdac/results/trace_visualization_20260717/config/trace_visualization.resolved.json",
+      "bytes": 841,
+      "sha256": "fea6491ca32a924d9b38925bf4f3bae2997463fe7a92484b1d9d0a7166ca9379"
+    },
+    {
+      "path": "experiments/aspdac/results/trace_visualization_20260717/manifests/paired_run_manifest.json",
+      "bytes": 1294,
+      "sha256": "40528ed4c7c10978d0e1f2aaa3e9dcf971bd704513bc76969fddfd0271864ea5"
+    },
+    {
+      "path": "experiments/aspdac/results/trace_visualization_20260717/manifests/render_determinism_audit.json",
+      "bytes": 7217,
+      "sha256": "e2b05fe0c19c1f4e861e480d48427688f6b38020e3e6d6c76f57e24d273ea57d"
+    },
+    {
+      "path": "experiments/aspdac/results/trace_visualization_20260717/manifests/source_immutability_audit.json",
+      "bytes": 306,
+      "sha256": "dc457ea11cda6e6bda9432eae500906181d42b84703b0274aa729f9f9918f822"
+    },
+    {
+      "path": "experiments/aspdac/results/trace_visualization_20260717/manifests/trace_visualization_manifest_index.json",
+      "bytes": 14874,
+      "sha256": "bd905276a8b9427ba772e715e642ee1ea4c6e1f1f8554f1c68bab835f6b1f7e1"
+    },
+    {
+      "path": "experiments/aspdac/results/trace_visualization_20260717/summary/aligned_runs.csv",
+      "bytes": 26322,
+      "sha256": "ab82298cd14a6951560a637d604e887e450632f70be39a9c432821279452bf4a"
+    },
+    {
+      "path": "experiments/aspdac/results/trace_visualization_20260717/summary/claim_status.md",
+      "bytes": 1774,
+      "sha256": "5690fcca263877c6c540c57f9d4e6c6f7080a771f2bf9691d7aaad26cea10ba3"
+    },
+    {
+      "path": "experiments/aspdac/results/trace_visualization_20260717/summary/cross_tool_alignment.csv",
+      "bytes": 27567,
+      "sha256": "f6de7e8e95ccb3aec0cc3efc1615670dd8e8aed169fc90b20380712f366fe574"
+    },
+    {
+      "path": "experiments/aspdac/results/trace_visualization_20260717/summary/hotspot_node5_spatial_summary.json",
+      "bytes": 1070,
+      "sha256": "21ecc89889c5bfd3c1056294cc826f50977cfccf84780577d50e77810a60fb14"
+    },
+    {
+      "path": "experiments/aspdac/results/trace_visualization_20260717/summary/large_trace_discipline.csv",
+      "bytes": 1060,
+      "sha256": "a646f109486237f7d3a8ea6830af332bd9011e292ad77c4bfa776c7717d30864"
+    },
+    {
+      "path": "experiments/aspdac/results/trace_visualization_20260717/summary/metric_definition_matrix.csv",
+      "bytes": 1597,
+      "sha256": "10f59654f81e990315b612b5d618e14e9bd4851d8607318205b1e8915dcc6449"
+    },
+    {
+      "path": "experiments/aspdac/results/trace_visualization_20260717/summary/missing_field_ledger.csv",
+      "bytes": 1056,
+      "sha256": "2c47185221bed5239329a85495648f0107ec85c483eaf8a3bf36a1de6d420dd7"
+    },
+    {
+      "path": "experiments/aspdac/results/trace_visualization_20260717/summary/spatial_component_windows.csv",
+      "bytes": 238143,
+      "sha256": "c97cba9c4dc6bf69957f01fcd5afe50092311bfa66104c0f6da652f582fdf33c"
+    },
+    {
+      "path": "experiments/aspdac/results/trace_visualization_20260717/summary/spatial_link_windows.csv",
+      "bytes": 291844,
+      "sha256": "af7718cf0d5d9ba4a51d2b37c613ed3242708585a7db7339362e72b77ed85a4b"
+    },
+    {
+      "path": "experiments/aspdac/results/trace_visualization_20260717/summary/stall_cause_paths.csv",
+      "bytes": 8920,
+      "sha256": "f8ccdce22316f4f3c3c6ac8503250a5b135bccdfabb6f3f32325a48580c6cb43"
+    },
+    {
+      "path": "experiments/aspdac/results/trace_visualization_20260717/summary/timeline_bins.csv",
+      "bytes": 3579497,
+      "sha256": "9785a385446d2a9cd2ddf56775c1aa4915cf6a66f28ea6ed1dc958e659c95a13"
+    },
+    {
+      "path": "experiments/aspdac/scripts/analyze_cim_egress_rerun.py",
+      "bytes": 15178,
+      "sha256": "6bfc7c3532271ca57b940663e44373fbc92a52768e2bc321623cffcd2000ec2f"
+    },
+    {
+      "path": "experiments/aspdac/scripts/analyze_mnist_cnn_feasibility.py",
+      "bytes": 21858,
+      "sha256": "8fdc7d73ce972d97db4a67663743a59ccec447da87de55d6dd45f0872a5c70f6"
+    },
+    {
+      "path": "experiments/aspdac/scripts/analyze_mnist_cnn_noc.py",
+      "bytes": 21607,
+      "sha256": "d9a05ea9a53a9646e4199e422172f654ab913c697a5a41f546aed6e894979baf"
+    },
+    {
+      "path": "experiments/aspdac/scripts/analyze_mnist_pe_precision.py",
+      "bytes": 31476,
+      "sha256": "8e2a68f29e77b8b21d84578681a8aefefe67324a93ce29d8622bd83152f60bd7"
+    },
+    {
+      "path": "experiments/aspdac/scripts/analyze_mnist_precision_cross_tool.py",
+      "bytes": 10226,
+      "sha256": "ea9ed81fae38c9119a949cc39d48e9f808fca32458e152d28136904b20d1979d"
+    },
+    {
+      "path": "experiments/aspdac/scripts/analyze_optical_intervention.py",
+      "bytes": 7912,
+      "sha256": "9ee836cc7cbc1ef12dfc25f066da31c788e2da0d4a0262ba25505efd34e16029"
+    },
+    {
+      "path": "experiments/aspdac/scripts/build_mnist_cnn_noc_trace.py",
+      "bytes": 12920,
+      "sha256": "16ee17b199091ef69a4bf4e26d43edae866793837085e61c93ed1278f8b5cb15"
+    },
+    {
+      "path": "experiments/aspdac/scripts/build_rq3_size_stage_plan.py",
+      "bytes": 13835,
+      "sha256": "f44513d3e2664c5d28db55075bf4b6565833df02037a72b29199b2cfde3237ba"
+    },
+    {
+      "path": "experiments/aspdac/scripts/build_trace_visualization_bundle.py",
+      "bytes": 94291,
+      "sha256": "73f043c5cccdf0b683f7c7aa6c956e53da82046a0ba811e5b694810afd58ac27"
+    },
+    {
+      "path": "experiments/aspdac/scripts/experiment_manager.py",
+      "bytes": 29433,
+      "sha256": "ec93b47b43e36f60c0a93a125dc95b3d356b6a90c097af211e1ab61690480ab0"
+    },
+    {
+      "path": "experiments/aspdac/scripts/final_analysis.py",
+      "bytes": 22541,
+      "sha256": "ff3c872e0c60c0d7258a84a70862486ac3ecf18d1219427ca591557ccf40ed04"
+    },
+    {
+      "path": "experiments/aspdac/scripts/finalize_bundle.py",
+      "bytes": 15919,
+      "sha256": "39bfcf8932920c294e3d6df0c050895cfbfcf58149f36a26c3612740d9e19127"
+    },
+    {
+      "path": "experiments/aspdac/scripts/finalize_overnight_consistency.py",
+      "bytes": 19758,
+      "sha256": "57cfe8fb8a6679362045a01cfc6175d002b74141c41d56dd6e2ca3163cdf63f4"
+    },
+    {
+      "path": "experiments/aspdac/scripts/finalize_reviewer_extension.py",
+      "bytes": 49892,
+      "sha256": "4e1f6f525d19c5c121154daa418b001d6dced3af824706659c3524c733cfb912"
+    },
+    {
+      "path": "experiments/aspdac/scripts/generate_booksim_configs.py",
+      "bytes": 3648,
+      "sha256": "1e8bcf5389f1cc485bf9d2bc79cc1eda5f845c7797b356c437232ab205aacd10"
+    },
+    {
+      "path": "experiments/aspdac/scripts/package_mot_mapping_for_paper.py",
+      "bytes": 6011,
+      "sha256": "12f7087927557f4b7a23996de1c5bf000b180099ba0041fb48103c05fbf06eb5"
+    },
+    {
+      "path": "experiments/aspdac/scripts/plot_current_overleaf_v1.py",
+      "bytes": 30341,
+      "sha256": "4c3fa74ae2c31e2a1ce8d2b89f7cbf04526be9f44682570ebc734c879324c1d4"
+    },
+    {
+      "path": "experiments/aspdac/scripts/plot_external_draft_20260716.py",
+      "bytes": 17094,
+      "sha256": "327b19f5da1b85da0cb17119e330f6559e169d6ae490cdc0e42e07b1e05f84f1"
+    },
+    {
+      "path": "experiments/aspdac/scripts/plot_paper_figures_20260716.py",
+      "bytes": 14204,
+      "sha256": "25fddd6add9496b84effe7ead315f95c2e42fa1bc208cbfda80ab13dd97e807d"
+    },
+    {
+      "path": "experiments/aspdac/scripts/README.md",
+      "bytes": 632,
+      "sha256": "72f4cd0ea84d6871245194535f594ec0317144edc5328c76fe5cf9ea1ab64583"
+    },
+    {
+      "path": "experiments/aspdac/scripts/reviewer_extension_p0.py",
+      "bytes": 46831,
+      "sha256": "43899998cf9a68aaa081fba61ec6fbefdb2d3fec930e9a1b1473d130c4e4f8fd"
+    },
+    {
+      "path": "experiments/aspdac/scripts/reviewer_extension_p1.py",
+      "bytes": 22649,
+      "sha256": "9fc437937e2a485565174d88674b00035e91d3bade0fc84b077d7a206808c354"
+    },
+    {
+      "path": "experiments/aspdac/scripts/reviewer_extension_p2.py",
+      "bytes": 66369,
+      "sha256": "d31789a7d48cfe0b57c51234391da34d3b3719b74c06f88ea555e8cc7a0c6e9b"
+    },
+    {
+      "path": "experiments/aspdac/scripts/rq3_analysis.py",
+      "bytes": 13474,
+      "sha256": "efc7cd5f0f2bde87bb9be1134a64984c6589f0eb2e1b7c128dfd51fb4dae4f7f"
+    },
+    {
+      "path": "experiments/aspdac/scripts/rq3_energy_analysis.py",
+      "bytes": 9495,
+      "sha256": "ee736dd50439aada1b73786cbd6591d2fc4a463d4644934d2e2e69ee9bcf67f6"
+    },
+    {
+      "path": "experiments/aspdac/scripts/rq3_size_analysis.py",
+      "bytes": 21150,
+      "sha256": "70918789ada14453d92d88b50f599e4ac2e9dfbc45dda7d130381b6912920e2f"
+    },
+    {
+      "path": "experiments/aspdac/scripts/rq4_analysis.py",
+      "bytes": 12356,
+      "sha256": "d9dd26ff26bc91791e05b78148acf4fa618e20ee6543b60d027f8abc43009e81"
+    },
+    {
+      "path": "experiments/aspdac/scripts/run_accelergy_core_workloads.py",
+      "bytes": 8527,
+      "sha256": "08bf274a440be219f1785adc7e426f5b6e1ccc606d392f22cd7fec9dc8e82d4d"
+    },
+    {
+      "path": "experiments/aspdac/scripts/run_booksim_cnn_trace_case.py",
+      "bytes": 17686,
+      "sha256": "f3c64062995c5f32157569d224e835494cca1bdfc8af681000f204e5f20abdcd"
+    },
+    {
+      "path": "experiments/aspdac/scripts/run_booksim_uniform_extension.py",
+      "bytes": 5351,
+      "sha256": "b6fd639cdd7eba2c48416a9704fe9099b1005bd717c66260bb0f83c932cd4e58"
+    },
+    {
+      "path": "experiments/aspdac/scripts/run_competitor_baselines.py",
+      "bytes": 10305,
+      "sha256": "ebb66ab280a6676fb614d6ed0f580f088de5158da2464826aff138b0f5ab7073"
+    },
+    {
+      "path": "experiments/aspdac/scripts/run_external_draft_20260716.py",
+      "bytes": 21389,
+      "sha256": "7cbae375e59196e338b379290850c416244e8365a82f920fa11ac67fcb490995"
+    },
+    {
+      "path": "experiments/aspdac/scripts/run_mnist_cnn_feasibility.py",
+      "bytes": 13114,
+      "sha256": "7dd36423acbc95e65744ac74a36bfd27e1739ee6f6e1db9b0b108cd03aecf1e6"
+    },
+    {
+      "path": "experiments/aspdac/scripts/run_mnist_pe_precision.py",
+      "bytes": 31589,
+      "sha256": "f9f33f6337c8ea8e648538c21892f0509eae5c54867ca6de88f5952c5d12918c"
+    },
+    {
+      "path": "experiments/aspdac/scripts/run_mnist_precision_timeloop.py",
+      "bytes": 15033,
+      "sha256": "0a1091f9353048ee5709e96aebc6d6a4c2f8f02cbc1c4bf6a14a2f8f4bd46561"
+    },
+    {
+      "path": "experiments/aspdac/scripts/run_mnist_precision_timeloop_final.py",
+      "bytes": 1274,
+      "sha256": "2d2c69b0c78d9e42ed8a78760c5cddf8fc36578f428dad2560d5f097c248e6bf"
+    },
+    {
+      "path": "experiments/aspdac/scripts/run_mnist_precision_zigzag.py",
+      "bytes": 11627,
+      "sha256": "f70941a7c252cd89e746eada12f88b59625f3726b3466f6da81a6c2e32fb7442"
+    },
+    {
+      "path": "experiments/aspdac/scripts/run_mnist_precision_zigzag_final.py",
+      "bytes": 1632,
+      "sha256": "6ae5c115134f05dd9e7c50078cc9cf6b2dafee13a40f9fdd7e2d8d0d398dab2e"
+    },
+    {
+      "path": "experiments/aspdac/scripts/run_reviewer_p0_scalesim.py",
+      "bytes": 19250,
+      "sha256": "4c2c5cd0c119ad5bbda70f9c3460075e486aa5c44a7e4c880753f59b084282c9"
+    },
+    {
+      "path": "experiments/aspdac/scripts/run_reviewer_p1_scalesim.py",
+      "bytes": 22498,
+      "sha256": "27602567a8ebabca9046b433878046ab90a4db451d20181f9c87a75fd2897cec"
+    },
+    {
+      "path": "experiments/aspdac/scripts/run_rq3_size_scalesim.py",
+      "bytes": 23009,
+      "sha256": "3d7d6d42c32c98bf8732ce369b2609f96425dd6cad875f0d4d1ff82b0ae28cf0"
+    },
+    {
+      "path": "experiments/aspdac/scripts/run_rq3_size_timeloop_accelergy.py",
+      "bytes": 19617,
+      "sha256": "d9817de9f3ece65e36c59358943092fb4037b20f691b8a56ef0804e31444250e"
+    },
+    {
+      "path": "experiments/aspdac/scripts/run_timeloop_model_final.py",
+      "bytes": 5786,
+      "sha256": "0dfc6b016a9d20af658a328cf46c88ca2c23e2280b1a665c6b25764a6211a993"
+    },
+    {
+      "path": "experiments/aspdac/scripts/stage_codesign_analysis.py",
+      "bytes": 20374,
+      "sha256": "4528fd193ee6deb9b6272d2b09bcdd75da213e3dbc971e749f4bfb294bf3671d"
+    },
+    {
+      "path": "experiments/aspdac/specs/final_configs/mnist_pe_precision.yaml",
+      "bytes": 6499,
+      "sha256": "20859e977c7111b5c0a5f3fa7ff3e84d61aca0a0614eb4622c6246b011a86f29"
+    },
+    {
+      "path": "experiments/aspdac/specs/final_configs/s_cim.yaml",
+      "bytes": 880,
+      "sha256": "4d2907d29671cb864e82e3602a4052086cf7da2629511ab5e5c495ec64246e9b"
+    },
+    {
+      "path": "experiments/aspdac/specs/final_configs/s_native.yaml",
+      "bytes": 580,
+      "sha256": "09dd04c5e456d733e2dcdf5c868b4b538352adf0373d241d5f0eb2798b395398"
+    },
+    {
+      "path": "experiments/aspdac/specs/final_configs/v_bs.yaml",
+      "bytes": 846,
+      "sha256": "b234ee9a107b8f51b1d57407e82d1e4734b049acf8813954dda47de601bf92c5"
+    },
+    {
+      "path": "experiments/aspdac/specs/final_configs/v_bs_cnn.yaml",
+      "bytes": 1439,
+      "sha256": "049c4f5ddf799c996078930b229dae95ee033330a8ec74a765031ad5dc33ebaf"
+    },
+    {
+      "path": "experiments/aspdac/specs/final_configs/v_ss.yaml",
+      "bytes": 876,
+      "sha256": "b9c74f63a15f5e6625bd6f0037211bcf20fddc9948f8e9cd0a1e48861ed770c4"
+    },
+    {
+      "path": "experiments/aspdac/specs/final_configs/v_tl.yaml",
+      "bytes": 796,
+      "sha256": "ef38d9979c1b380ade8a4653a5bab31f956fabea21f295395462295ef7c3b0e3"
+    },
+    {
+      "path": "experiments/aspdac/specs/final_sweeps/experiment_plan.schema.json",
+      "bytes": 1655,
+      "sha256": "f85212ba0998a9d1920de2e0e1d2c60c92351f71ead30455a37920fee4463b85"
+    },
+    {
+      "path": "experiments/aspdac/specs/final_sweeps/mnist_cnn_noc_booksim_stage.yaml",
+      "bytes": 3276,
+      "sha256": "f76a1125bd7926d2a4ff2392494beffae3c7662e1ed9e10bbd2c69264c0c3568"
+    },
+    {
+      "path": "experiments/aspdac/specs/final_sweeps/mnist_cnn_stage.yaml",
+      "bytes": 1422,
+      "sha256": "ce85c26c996c383b011087e5cb349f5ebf60fb77e3404b8dcc22d0f153930d9a"
+    },
+    {
+      "path": "experiments/aspdac/specs/final_sweeps/mnist_pe_precision.yaml",
+      "bytes": 3816,
+      "sha256": "d93115ed27b50324e880ae84d32ce2a8126e297c4394331885da4bacaa3db962"
+    },
+    {
+      "path": "experiments/aspdac/specs/final_sweeps/p0_smoke.yaml",
+      "bytes": 1508,
+      "sha256": "e5883abffcb6556f814c2d521c5d7f59871a5964e78894049b100590a0d02c41"
+    },
+    {
+      "path": "experiments/aspdac/specs/final_sweeps/rq1_exact.yaml",
+      "bytes": 629,
+      "sha256": "0d48d54c0243717f1b19c8399eaeeecc569548b3d68216f38b92ee9aabd2a3cf"
+    },
+    {
+      "path": "experiments/aspdac/specs/final_sweeps/rq2_booksim_stage.yaml",
+      "bytes": 1064,
+      "sha256": "50d799575333e13b6297565b855bbcc172f4d5284f3708816f346eec63db85f0"
+    },
+    {
+      "path": "experiments/aspdac/specs/final_sweeps/rq2_smoke.yaml",
+      "bytes": 550,
+      "sha256": "c53fc63d184b71d68053aa3757b62bd07e6e0368669fd835b3186127f75476f5"
+    },
+    {
+      "path": "experiments/aspdac/specs/final_sweeps/rq3_energy.yaml",
+      "bytes": 2948,
+      "sha256": "36742bb6d8affdd2d7cf3f08ef47e3a4e2dab064d8dc9c7648d58bc3e982be38"
+    },
+    {
+      "path": "experiments/aspdac/specs/final_sweeps/rq3_matched_compute.yaml",
+      "bytes": 5830,
+      "sha256": "7037b0710b0b0211f64fd9fffbf8a1228b82ff504eed80dd7afba8389be20c96"
+    },
+    {
+      "path": "experiments/aspdac/specs/final_sweeps/rq3_size_matrix.yaml",
+      "bytes": 1871,
+      "sha256": "0c503d4fc403830840441e7c723126140b146c79de8a734273d5fa0e65746c72"
+    },
+    {
+      "path": "experiments/aspdac/specs/final_sweeps/rq3_size_stage.yaml",
+      "bytes": 14931,
+      "sha256": "1c3e8066872aaf930bd57ca72dd9db5b4f2d0b7dcc0267a62fde8d3b32dedcd3"
+    },
+    {
+      "path": "experiments/aspdac/specs/final_sweeps/rq4_optical.yaml",
+      "bytes": 5352,
+      "sha256": "c0d75e109a90439abe6f541db2b60c9338bea9f2c49c71ef10620610ee4c6332"
+    },
+    {
+      "path": "experiments/aspdac/specs/final_sweeps/stage_codesign.yaml",
+      "bytes": 7289,
+      "sha256": "033723a643131f828523c96e79b53c5d193f50b9399d8b867d9fd2de0d236044"
+    },
+    {
+      "path": "experiments/aspdac/specs/mapping_configs/baseline_mapping.yaml",
+      "bytes": 948,
+      "sha256": "ca2273e1406d1b2c710ec1811629f01161b9cb239934291f4b8d31fb9286811e"
+    },
+    {
+      "path": "experiments/aspdac/specs/model_bindings/model_bindings_pending.yaml",
+      "bytes": 1136,
+      "sha256": "e8e077f78e2037a7f5f06b676b4330967bb0b963d9816e57b4839d32142c27ce"
+    },
+    {
+      "path": "experiments/aspdac/specs/README.md",
+      "bytes": 728,
+      "sha256": "d39e07d5aad3cac02d3a2262e447f9f79a92e6281ac0fefe0bb00bc0ac1397c4"
+    },
+    {
+      "path": "experiments/aspdac/specs/reporting/experiment_claim_register_20260717.md",
+      "bytes": 23016,
+      "sha256": "05c68a088db8670f24588101d549f181a6da74c87e634ffda521a5a656b7f9f4"
+    },
+    {
+      "path": "experiments/aspdac/specs/reviewer_extension_20260717/p0_README.md",
+      "bytes": 2206,
+      "sha256": "eb8c2e08250d5889a0c4892a617442860287ed22308cbcf611612a2687fc9a99"
+    },
+    {
+      "path": "experiments/aspdac/specs/reviewer_extension_20260717/p0_smoke.yaml",
+      "bytes": 555,
+      "sha256": "525c4440cc17df3563057c7adf3062c3926f12654db39f52cb55e7ac3716ab93"
+    },
+    {
+      "path": "experiments/aspdac/specs/reviewer_extension_20260717/p0_specialist_runtime.yaml",
+      "bytes": 959,
+      "sha256": "b6453fe161d0b37f394777bd8bb2b7daec335b231303ac896ac932a5122af9c9"
+    },
+    {
+      "path": "experiments/aspdac/specs/reviewer_extension_20260717/p0_stage_scalability.yaml",
+      "bytes": 606,
+      "sha256": "bf4f307ee1a3d8a5de2857ebd9d4ac962468e8fb13056ba3572badfec4d494db"
+    },
+    {
+      "path": "experiments/aspdac/specs/reviewer_extension_20260717/p0_stage_seed_stability.yaml",
+      "bytes": 576,
+      "sha256": "8193cbba07f6bc3b4b5fc081d7e9fe8742b5aad8151e0328772a7a122e392f3b"
+    },
+    {
+      "path": "experiments/aspdac/specs/reviewer_extension_20260717/p0_stage_stretch.yaml",
+      "bytes": 603,
+      "sha256": "0af88d6f7b4591c5d5f373279bbb1b95f23ebc02f16bc1c1b191a437eec97fa5"
+    },
+    {
+      "path": "experiments/aspdac/specs/reviewer_extension_20260717/p1_execution.json",
+      "bytes": 937,
+      "sha256": "f83ba90627a98970dd49e187887d522e82e56013b3f6f98f7cec1ce373e75372"
+    },
+    {
+      "path": "experiments/aspdac/specs/reviewer_extension_20260717/p1_holdout.yaml",
+      "bytes": 1559,
+      "sha256": "11249a1cbd0bf785bcc46d10e001d0383c3d77444a766839cbc3c9df306ca62e"
+    },
+    {
+      "path": "experiments/aspdac/specs/reviewer_extension_20260717/p1_noc.yaml",
+      "bytes": 2806,
+      "sha256": "210a9fac1ebee84259a23d3a2dbbc34b368276dab8b991feefdf5cbbdb972838"
+    },
+    {
+      "path": "experiments/aspdac/specs/reviewer_extension_20260717/p1_source_audit.json",
+      "bytes": 875,
+      "sha256": "6ab3d5f4c02742ce5401f7034890a4402a7a8b3d3a801ca9165fa1c187a5c1d9"
+    },
+    {
+      "path": "experiments/aspdac/specs/reviewer_extension_20260717/p2_interventions.yaml",
+      "bytes": 8095,
+      "sha256": "d143ff5a7e53eb8e918134a3c1380deaabb111c6cff7d00aad5350e868345a0d"
+    },
+    {
+      "path": "experiments/aspdac/specs/reviewer_extension_20260717/p2_observation.schema.json",
+      "bytes": 2815,
+      "sha256": "77658ade08fd936df74b4b62083f15f0831aeff743ed8e0ffcc56d5369f755b3"
+    },
+    {
+      "path": "experiments/aspdac/specs/sweep_configs/core_sweeps.yaml",
+      "bytes": 1196,
+      "sha256": "337c6c0cb4a40797213d028409c4d4141cdd7d0f68e98263773eea28188cc4b6"
+    },
+    {
+      "path": "experiments/aspdac/specs/system_configs/vhacsim_16pe_4x4mesh_baseline.yaml",
+      "bytes": 1377,
+      "sha256": "15345d0f2194ed452d5adb936d9f314bd2fce4d4cc13279f6d7cf7950df32810"
+    },
+    {
+      "path": "experiments/aspdac/specs/ui_scenes/aspdac-multichip-electro-optical.hardware.json",
+      "bytes": 128733,
+      "sha256": "53839c28a3a6c81c3bc2fbc2f0fd21a38ba1ba3948012f6692e125e89d7170cb"
+    },
+    {
+      "path": "experiments/aspdac/specs/ui_scenes/README.md",
+      "bytes": 996,
+      "sha256": "7faccfe514e9a4447bb3d238cb88050633fe3cb9c82dfade9448345e6ada7480"
+    },
+    {
+      "path": "experiments/aspdac/specs/ui_scenes/VALIDATION.md",
+      "bytes": 974,
+      "sha256": "8426a9fe95f1c0b48afa248136632f765b846308804f4af554a476bc85c50fc3"
+    },
+    {
+      "path": "experiments/aspdac/specs/workload_configs/ai_workloads.yaml",
+      "bytes": 818,
+      "sha256": "8a99bf76960fe0789016269f20ae6927bcb45754767e5ee6cb892982d5d329f2"
+    },
+    {
+      "path": "global.json",
+      "bytes": 108,
+      "sha256": "546b7a626451526a3d390b862254cb0d15f62042ad1b4e40eccbb44168ba8f7c"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "NOTICE",
+      "bytes": 230,
+      "sha256": "4c8626e9a6c26c81682acfc04b2b7294f37309987788217eafadbd4f716a77be"
+    },
+    {
+      "path": "NOTICE.md",
+      "bytes": 676,
+      "sha256": "b08868979aec983215f7758fed16f945912eb1c39850b9158350f59206959363"
+    },
+    {
+      "path": "README.md",
+      "bytes": 14472,
+      "sha256": "a9aebacd0a066efa7ccf08014cc87faef818ab0a1e6e2fd90ec96ae8facf9f4e"
+    },
+    {
+      "path": "requirements-mnist.txt",
+      "bytes": 428,
+      "sha256": "55a2b2178cd9c1b1f9337b4e36256c3ab90856ee9385b1a012fb0c75c25014e8"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 81,
+      "sha256": "c6a659fbf957b308aeb679ef34da5b355bb452b1c1f08132f750fbb9534aa939"
+    },
+    {
+      "path": "scripts/anonymization_scan.py",
+      "bytes": 3120,
+      "sha256": "94f155eb954bc43eb204dcca6713d8f0fe98459f18083adcbe6423ea112dbf76"
+    },
+    {
+      "path": "scripts/build_manifest.py",
+      "bytes": 2277,
+      "sha256": "fc0cb2b376824bf5960b6a7217479ef71487dcea5a3bb1b52fa6ba89305f3b3c"
+    },
+    {
+      "path": "scripts/check_environment.py",
+      "bytes": 2172,
+      "sha256": "a65d0ece21d814eed49d4f1246d81d45dba82ac085296e08f06e5cd487bd239a"
+    },
+    {
+      "path": "scripts/compare_hashes.py",
+      "bytes": 3440,
+      "sha256": "e5eaf2286ca3d4bb11ae948a65df99785f7ebbdf212d014840afdff111302175"
+    },
+    {
+      "path": "scripts/package_artifact.py",
+      "bytes": 2170,
+      "sha256": "97db2df4dbab98638f188c2773a7667f73cd24ed682407bbf0d8a3a51db878fa"
+    },
+    {
+      "path": "scripts/run_all.ps1",
+      "bytes": 4315,
+      "sha256": "e6caa29e9f45ce7c6f958adb911f386b9a10100a4e498c8f2090020aeaddb408"
+    },
+    {
+      "path": "scripts/run_all.sh",
+      "bytes": 1798,
+      "sha256": "31ce777258ef33c626c2e759cdc2b127c4b945a0ce59f0e6e9b4e905db400e49"
+    },
+    {
+      "path": "scripts/run_figures.ps1",
+      "bytes": 545,
+      "sha256": "7cec219fe12e5c336aeef98b87a12d5fe7bef3bdef594e5dd389972c650b3ca1"
+    },
+    {
+      "path": "scripts/run_figures.sh",
+      "bytes": 370,
+      "sha256": "a237f16d24aafb18de1ab5a2e68ef08187bcbf10545eac40862848373bc9d2fc"
+    },
+    {
+      "path": "scripts/run_tests.ps1",
+      "bytes": 685,
+      "sha256": "d2e8c510a9d021d451909111582e4ebe8d64a3e8ddf50b6101553bd933405386"
+    },
+    {
+      "path": "scripts/run_tests.sh",
+      "bytes": 454,
+      "sha256": "63b4b5d1a83e085a61f9e067846d666fa67aed495500151e60f80d2a6a590ff9"
+    },
+    {
+      "path": "scripts/validate_frozen.py",
+      "bytes": 20143,
+      "sha256": "e094ac01445b4606d03cc4c9a96e321e78f70e7894bea5b6192bcef7211f69d5"
+    },
+    {
+      "path": "scripts/verify_figures.py",
+      "bytes": 2224,
+      "sha256": "02e11783f78ea4fada2b3fc8553905b30bd4ce200b4e65ccc0ae8559ede6ccb1"
+    },
+    {
+      "path": "src/HardwareSim.Core/AdapterInsertionApplier.cs",
+      "bytes": 8572,
+      "sha256": "4ef130420ffda23cf1e3833fe89a71b92209f89d92fbe1dab71ae5942c05f031"
+    },
+    {
+      "path": "src/HardwareSim.Core/AdapterInsertionChain.cs",
+      "bytes": 17626,
+      "sha256": "b6fca15f847f604703aeda6f6d14663c5cfe5be2f05b26afab77f3b55a208886"
+    },
+    {
+      "path": "src/HardwareSim.Core/AdapterInsertionPlanner.cs",
+      "bytes": 7629,
+      "sha256": "82bb7366faeaaa6d85b2ee455074d94f6ff129dcf3bbf71ae6ff34b59168a8d8"
+    },
+    {
+      "path": "src/HardwareSim.Core/AdapterRuntimeMetadata.cs",
+      "bytes": 11644,
+      "sha256": "004b913711d4163fa1deaa21e04a4e2aac941c22a43ed114cc0482fac4796023"
+    },
+    {
+      "path": "src/HardwareSim.Core/AdvancedPhysicalModels.cs",
+      "bytes": 87966,
+      "sha256": "b2b0675662fad20d44e4242ed66f781779673e4606901d7967ec3ea0eb7c66ac"
+    },
+    {
+      "path": "src/HardwareSim.Core/AreaMetrics.cs",
+      "bytes": 4872,
+      "sha256": "0dd81a2cb24301ab2641e7e3956e60beb111eee120d44798f29a307c6b329399"
+    },
+    {
+      "path": "src/HardwareSim.Core/AspdacCnnRuntime.cs",
+      "bytes": 7996,
+      "sha256": "c7909ebe07db1ad728c6bf6242d15d7803d1427aa211a67226510c33079555b1"
+    },
+    {
+      "path": "src/HardwareSim.Core/AspdacCodesignRuntime.cs",
+      "bytes": 10415,
+      "sha256": "f77c2b6b2b6e6db535bb66c6341d31471d7ee9b8eacad334e5b565360072f84d"
+    },
+    {
+      "path": "src/HardwareSim.Core/AspdacMatchedRuntime.cs",
+      "bytes": 11117,
+      "sha256": "c7b3a47297b7fa435f7ee0b3789f374e52778b3cbc6803079f29e04458faa078"
+    },
+    {
+      "path": "src/HardwareSim.Core/AspdacReviewerHoldoutRuntime.cs",
+      "bytes": 11930,
+      "sha256": "10a60f6af0a2b252815c77397d444525335a8c2057454542cf570281c4a8e882"
+    },
+    {
+      "path": "src/HardwareSim.Core/AspdacReviewerNocContractRuntime.cs",
+      "bytes": 38931,
+      "sha256": "813a02e0d660a3e6aa823c67c9310671b52df893cf99aaf4d1d2e56be1b7b66e"
+    },
+    {
+      "path": "src/HardwareSim.Core/AspdacReviewerScalingRuntime.cs",
+      "bytes": 37586,
+      "sha256": "3c04396edb20be01443642856ebda9401e66a7c77c7a038a0e5c312b54a1cdeb"
+    },
+    {
+      "path": "src/HardwareSim.Core/AspdacTransportRuntime.cs",
+      "bytes": 15168,
+      "sha256": "28992667d3935374843eb20530456ff633d0f8db8e2b6b28ddf4e35ade1fe522"
+    },
+    {
+      "path": "src/HardwareSim.Core/AspdacVbsRuntime.cs",
+      "bytes": 41959,
+      "sha256": "963a8aba886030855c302d85d6baf214f99d078779c2aea455d11bc7d6bbca3a"
+    },
+    {
+      "path": "src/HardwareSim.Core/BottleneckAnalyzer.cs",
+      "bytes": 27723,
+      "sha256": "9f724ee36dd6c53737dd63e9a8590f27e1204750730c9d76bc9b9cc8dad18c73"
+    },
+    {
+      "path": "src/HardwareSim.Core/BufferRuntime.cs",
+      "bytes": 10667,
+      "sha256": "40c5a5a41fc4410da5c7834cf05ab998c7a2e51471a9bb2a72e25c5e1ad343dd"
+    },
+    {
+      "path": "src/HardwareSim.Core/CanonicalTraceHash.cs",
+      "bytes": 6552,
+      "sha256": "89394f03e3ceb6ba9fb0851b418a2d69de96a3cb900eacd3aa134cb3a67123c7"
+    },
+    {
+      "path": "src/HardwareSim.Core/Compatibility/IsExternalInit.cs",
+      "bytes": 118,
+      "sha256": "bc5677a0310d4d168215fbcf3335828c704af019cd8a97a97de4cb22d9f80cff"
+    },
+    {
+      "path": "src/HardwareSim.Core/Compilation.cs",
+      "bytes": 95671,
+      "sha256": "6b1acafac8c41a60ad1d83717e5bd3196b636bc11c7d5580fca3da0b0ddd9713"
+    },
+    {
+      "path": "src/HardwareSim.Core/ComponentDefinitionAdapter.cs",
+      "bytes": 90232,
+      "sha256": "4a0ab244ee91d54ab7c1f21b9973adfd470264035d11e1656d3fba9b21311900"
+    },
+    {
+      "path": "src/HardwareSim.Core/ComponentExecutionFramework.cs",
+      "bytes": 52961,
+      "sha256": "8ae4274ea937f7bff68cc572683bf4b533ef1972b613b1c65e4f3ccf6214d3e2"
+    },
+    {
+      "path": "src/HardwareSim.Core/ComponentKernelTestRunner.cs",
+      "bytes": 22340,
+      "sha256": "8525dd47066b846f0d3af907421b45b24f017edbbe05f045c3ed07059ac8f7d2"
+    },
+    {
+      "path": "src/HardwareSim.Core/ComponentPlugins.cs",
+      "bytes": 59336,
+      "sha256": "3b354408d7d7ba1589db525237cad63fafedab9267c4957a8b747e1628e5698c"
+    },
+    {
+      "path": "src/HardwareSim.Core/ComponentTemplateParameterSweep.cs",
+      "bytes": 49183,
+      "sha256": "d6100695d188984b3ab75f779350bd0828b4ed96d07a9adc4ae171f1f47a6aae"
+    },
+    {
+      "path": "src/HardwareSim.Core/ComponentTemplates.cs",
+      "bytes": 88655,
+      "sha256": "b012aafe6171df7e4516aecfcf39210812cf5d76d99d32269c3659dd393d5cd7"
+    },
+    {
+      "path": "src/HardwareSim.Core/CoreDigitalVmmKernel.cs",
+      "bytes": 41517,
+      "sha256": "55b2ec979c970cfd58f6e73ee59b1f4ab822cfc9ddff340b8cc2b74785eb29d9"
+    },
+    {
+      "path": "src/HardwareSim.Core/CycleSimulationEngine.cs",
+      "bytes": 62045,
+      "sha256": "d40035d1381b371ccddaaaad11b9e81b7fa47a665bff56fc850b086508b19733"
+    },
+    {
+      "path": "src/HardwareSim.Core/CycleSimulationEngine.Deterministic.cs",
+      "bytes": 100444,
+      "sha256": "9bcef8f27595aede552847c5530e8a4949e4774e38055a4ea02e4e8076afe2e2"
+    },
+    {
+      "path": "src/HardwareSim.Core/CycleSimulationEngine.Executable.cs",
+      "bytes": 3495,
+      "sha256": "cfb66ac639466da1700f093bb3f172d632f496aead9743cfb26f336118c03fec"
+    },
+    {
+      "path": "src/HardwareSim.Core/DeviceModels.cs",
+      "bytes": 20651,
+      "sha256": "7be5d707fec70dbfba0a79f88a2800067c36870958dea502c02a66c45f4318d0"
+    },
+    {
+      "path": "src/HardwareSim.Core/DigitalNumericFormats.cs",
+      "bytes": 8683,
+      "sha256": "6f4e0bada5aad890a0197a04e4e91b38dae7b016df5d72411746f95210f74b26"
+    },
+    {
+      "path": "src/HardwareSim.Core/DseReports.cs",
+      "bytes": 9368,
+      "sha256": "1a1b7a1be4ddc6e12dc34c51fbbd9f6c53dd2449c262aeb12d785537a1e08be2"
+    },
+    {
+      "path": "src/HardwareSim.Core/EditorModel.cs",
+      "bytes": 40364,
+      "sha256": "99cb609e18bd91eabb3f7fe8807721e470f9a74ba50654a3de0ae48e9d1f2bda"
+    },
+    {
+      "path": "src/HardwareSim.Core/ExperimentReports.cs",
+      "bytes": 9042,
+      "sha256": "098efe37a54f8d87f9be23514aad803c96a65a060b67569e343b74964009f3be"
+    },
+    {
+      "path": "src/HardwareSim.Core/Flat2DMeshTopologyPresetBuilder.cs",
+      "bytes": 22251,
+      "sha256": "a586b1cf61afe395d0397b4ae9b3d73cb04f62d86cd89fc0c8e1e020cc137075"
+    },
+    {
+      "path": "src/HardwareSim.Core/FlitTransport.cs",
+      "bytes": 14011,
+      "sha256": "abe29226a6a79da93486d8b6578828c6212e57c373bdd601acab190e49dd98cb"
+    },
+    {
+      "path": "src/HardwareSim.Core/GraphModel.cs",
+      "bytes": 41742,
+      "sha256": "575b5e60b2206b2c7c292a027fe5aada0261e4641f49d2abb0eb05785240f68f"
+    },
+    {
+      "path": "src/HardwareSim.Core/GroupMacroTools.cs",
+      "bytes": 50224,
+      "sha256": "7e0ce5b7617a9d4fb5beb79d9676ff8fab2b641782f7fb70da9c9a280323cac4"
+    },
+    {
+      "path": "src/HardwareSim.Core/HardwareDependencyScopes.cs",
+      "bytes": 523,
+      "sha256": "91ecd2c65920d15c762c310d4f0bcdab1b87115bea586f6160e751ac96308a4a"
+    },
+    {
+      "path": "src/HardwareSim.Core/HardwareGraphSchemaMigration.cs",
+      "bytes": 15434,
+      "sha256": "81a4bc27b53a51cd94239c5970fd758d3a9b8f032c479f4e89c945942086c0de"
+    },
+    {
+      "path": "src/HardwareSim.Core/HardwareSim.Core.csproj",
+      "bytes": 554,
+      "sha256": "88f743e583e150c0ecc73c9fa6ad6a2e75e4f8dd29d9c3a0d1b3a1bc5f66d10f"
+    },
+    {
+      "path": "src/HardwareSim.Core/MemoryRuntime.cs",
+      "bytes": 10472,
+      "sha256": "01e3737e9f953bdc8041237ae8b8848e4ecb034f1d5f22108904c15293f0994e"
+    },
+    {
+      "path": "src/HardwareSim.Core/MeshOfTreesTopologyGenerator.cs",
+      "bytes": 28774,
+      "sha256": "d0c68fea399b214da7f6d5d61393857cdb62ec0aeb1528f1700886729c734bc7"
+    },
+    {
+      "path": "src/HardwareSim.Core/MeshOfTreesTopologyPresetBuilder.cs",
+      "bytes": 6072,
+      "sha256": "efd9436afbc6ba4047225843ac063525d7e0958822e51d2cbdeb45697651b37f"
+    },
+    {
+      "path": "src/HardwareSim.Core/MetricCalculations.cs",
+      "bytes": 4485,
+      "sha256": "ad61e89ebf0e31d8d27d25158b9de9a03b6b4aab6f2c3b1c91274b78b5e6f3c1"
+    },
+    {
+      "path": "src/HardwareSim.Core/MetricContracts.cs",
+      "bytes": 7350,
+      "sha256": "8f06a3b9a6692a0f0096bd73450f7bd40709d30d76c4c3ce20047609f3af5cdd"
+    },
+    {
+      "path": "src/HardwareSim.Core/MetricCrossValidation.cs",
+      "bytes": 19408,
+      "sha256": "602899835569ade056e35f3535737c69883a18d15e692229d52e2a4399e1bdc5"
+    },
+    {
+      "path": "src/HardwareSim.Core/MetricsPanel.cs",
+      "bytes": 16741,
+      "sha256": "216e028fb28465efc510ef1315cc7e6b3bbff39123a925d3862797fbc6d56db3"
+    },
+    {
+      "path": "src/HardwareSim.Core/NormalizedDeviceProfiles.cs",
+      "bytes": 24702,
+      "sha256": "6ca1f90ce53e291d43ea81b75c280a551f810e1a8ee8aedcb834317bb99b9085"
+    },
+    {
+      "path": "src/HardwareSim.Core/NormalizedDeviceProfileSerialization.cs",
+      "bytes": 11940,
+      "sha256": "608e748830fc928bfc18a64993dfaca6f4b2b8f4479531e841c36f3662812fd1"
+    },
+    {
+      "path": "src/HardwareSim.Core/PacketTraceIdentity.cs",
+      "bytes": 4204,
+      "sha256": "c253c29dc8d430828b5418737324c35d6b46ad16bd587ff1a51cc8b0db39d83c"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase7BSamplePacketDelayKernel.cs",
+      "bytes": 21052,
+      "sha256": "ed46330e09ffcf98dd4a8fd8955cde2ae922b6dfae609c350d2b2bc68150a3f2"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase7BSamplePacketDelayScenarioProvider.cs",
+      "bytes": 5360,
+      "sha256": "bc9adaa3ae13a37bfbd57117f5cdafecb50e5bb3b7479abee402eb501da48f09"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase7CLiteratureCharacterization.cs",
+      "bytes": 32978,
+      "sha256": "bc1e7c3b33a15875c63418cda33fbe87303153d554b9ca8b83f6366a32c44b4f"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AActivationDistributionPlanner.cs",
+      "bytes": 6045,
+      "sha256": "4f630a9ebf480ebd73989c565e51d6b83b69a8807b981afa03001b262448375a"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AActivationTreeContracts.cs",
+      "bytes": 17828,
+      "sha256": "cb717c3262258dc21f6082d87ec1ff4189ef1abfd25f5dc709c6e36311f288b9"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AActivationTreePlanner.cs",
+      "bytes": 33603,
+      "sha256": "5f68b3d541598c1631a4d7c773504ebac1074037a7c195f2a5ce85873de4465d"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AAnalyticalEstimator.cs",
+      "bytes": 10295,
+      "sha256": "0add9a4cc42f3ec72bfa691b18b9c7af4031df00f4e1f4dfffdaae0bd1351553"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AAnalyticalEstimatorContracts.cs",
+      "bytes": 7540,
+      "sha256": "86f91afe2f089a44b8a8ed183e5f3063bd26bfa4f9ab99e9d70b522a6990ba0a"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8ABiasAddKernel.cs",
+      "bytes": 9388,
+      "sha256": "79ad1991402188323916a124797b134483bb697baf669687cee2924ae0f967fe"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8ABranchMulticastKernel.cs",
+      "bytes": 13061,
+      "sha256": "4b8106b9fd6e9e5bdfbbb5bda8e6da9c08cba6338bccb769e8b39003e1de6e16"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8ABranchMulticastPlugin.cs",
+      "bytes": 5158,
+      "sha256": "6cf8838c2b32651e21f018162bd59114a291eb51db11cb912afbd71a29662cd0"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8ABranchPipelineRouting.cs",
+      "bytes": 13303,
+      "sha256": "1d6a8c5a6d36e75ca6192ae29b6c5bfb43e3f270cbdd36c08a77b4f477f36347"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8ACapabilityDiscovery.cs",
+      "bytes": 32124,
+      "sha256": "89736e6c9b8076a9145f046fe0336c6ff7e59d3d40e0c750b8737459dfc01b38"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8ACollectiveComponentPlugins.cs",
+      "bytes": 696,
+      "sha256": "4ca4d23464502e12f18967167b1d462072e64fc46aab98416be01b06afde8c15"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8ACollectivePluginRuntime.cs",
+      "bytes": 2311,
+      "sha256": "af2036f4a9f27fe53b4a47d9337009b8ac330e580ce2492ff7dfbbf93179ff60"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8ACollectiveRuntimeContracts.cs",
+      "bytes": 15900,
+      "sha256": "cc36bb945a60bb326f7bf93f4c4542996ced01f6171af465d6f2b8061b4ece29"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8ADcLayoutContracts.cs",
+      "bytes": 19852,
+      "sha256": "f67eec668e72d1102a919d701a588ea38d9927b72742ac130345bf57a3036a4c"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8ADcLayoutPlanner.cs",
+      "bytes": 28695,
+      "sha256": "c7f6d9a62e856c1f15b7fd86b096760107c230e773722a28416395266424b581"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AElementwisePacketValidation.cs",
+      "bytes": 1038,
+      "sha256": "91e68b841385548ef9193b9748cfe389b45649f3e07b2443f5673948c94fc1a4"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AElementwisePlugins.cs",
+      "bytes": 6778,
+      "sha256": "5a63486845754be302b488ebb5f5374d61caca134019a32bcfcca08fedc8664e"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AExecutableOperandPipeline.cs",
+      "bytes": 13918,
+      "sha256": "999569ad4ce0a9e6675564545e22311b7beb3cf374d183041798f818cef94355"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AExplicitRouteRuntime.cs",
+      "bytes": 6316,
+      "sha256": "8847f463fd6de7c9776cca2bed290e86f02298cfe49e963e46c1a5e222f103c5"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AGroupedVectorSumKernel.cs",
+      "bytes": 19863,
+      "sha256": "0dd1501d64293c16da132232a04ffc124f9a920395ef2d96543c3e66a28b01d2"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AGroupedVectorSumPlugin.cs",
+      "bytes": 8274,
+      "sha256": "ca001c4d11ed47fc68b5df8ac9ad3d07c87fd5baecf02261762909b8914aeeea"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AHierarchicalReductionContracts.cs",
+      "bytes": 27109,
+      "sha256": "6cf2ded5162201c798f0587f729f44f7bab95e5c75714e737a4c90b486ce7063"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AHierarchicalReductionPlanner.cs",
+      "bytes": 47252,
+      "sha256": "b060e6b2585fcca3a3dbe8e955dc9e1661a9491cb19c1e04252d5921e6b1929f"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8ALogicalPathCatalog.cs",
+      "bytes": 71351,
+      "sha256": "7a67aa0b7f54270827c1a111a16ec624351bb38fceae6d038051a2a67b89b3aa"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AMappingProblem.cs",
+      "bytes": 132701,
+      "sha256": "7fe86f7857e57c5b9be41dc40de0f267d51115e6444e4317da5671661c1a4fae"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AMappingProposal.cs",
+      "bytes": 78431,
+      "sha256": "ed4e3853d44530a1c75bce73a5909590d43b6499ae51df8b7790208e47bce4a1"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AMatMulExecutionStrategies.cs",
+      "bytes": 3837,
+      "sha256": "639d911c20cc41e8a7ba2f9ab7b069d928831bb3a115860ba22112d96af7a282"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AMatMulResolvedAuthorities.cs",
+      "bytes": 25199,
+      "sha256": "439bc6861bca21fc2789fcd0a11a7428cf0d871ee8cdb4136a88c1cc135823b4"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AMatMulResolvedRuntimeBuilder.cs",
+      "bytes": 23898,
+      "sha256": "6669bb98e8d3b4ad1a620e1060e13f4759db08ef2855acb1ee8ea6faa49958c2"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AMatMulRuntimeIds.cs",
+      "bytes": 2882,
+      "sha256": "f5e2aad84d9cf046c77040d229718c3edc0b5b5bc608bbb66e1872f0946f74c3"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AMatMulRuntimeProgramCompiler.cs",
+      "bytes": 25077,
+      "sha256": "3279c9db3122a2d721d7c03e4f0ece983e05e10fc9a258a840a1db6dc23c0663"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AMatMulScenarioContracts.cs",
+      "bytes": 8867,
+      "sha256": "db4c75c6a8f62d065c4ee345bed54d1ff1a4d8273efe9a1413ee5956c7f19cf6"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AMatMulScenarioGenerator.cs",
+      "bytes": 14168,
+      "sha256": "2cba2479d44104a72d3813bcd19ac3d1289f7e25d67904e3de34134ded050453"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AMatMulScenarioGraphBuilder.cs",
+      "bytes": 626,
+      "sha256": "14be553ad61dd98d034de15f04c451b78fc7f32b44206ec62e0a01696f5ec47a"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AMatMulScenarioPlan.cs",
+      "bytes": 3569,
+      "sha256": "4d380181806e0128376c413b12f69737064b2c35aef50a6c2f0c3873f950c89a"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AMeshReductionForest.cs",
+      "bytes": 11894,
+      "sha256": "abea2de1b0a04c89fa098d01f5abe2f9f22d158789c059a9e775c9eadeab928b"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AMoTInrGeneralRuntimeCompiler.cs",
+      "bytes": 42572,
+      "sha256": "df015a1ab8656aa9c837f22e6019306d8bcfd18e14fd7d280c0248933deab606"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AMoTInrRuntimeBuilder.cs",
+      "bytes": 28924,
+      "sha256": "f19d7029c6d4e059167b7f568ca5928b2a24bbc109587de5f2f4cde191da0a1d"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AMoTInrRuntimeCompiler.cs",
+      "bytes": 35585,
+      "sha256": "946459829b6afb1bd839eb478b3893d0fc58d79db42cfb9a385e16f8b8a0d809"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8APaperScenarioMetrics.cs",
+      "bytes": 15122,
+      "sha256": "a9654bb3aec4cef78de1729e3b0280d8e517351da7c53587d57faa65d23c56db"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8APaperWorkloadProfile.cs",
+      "bytes": 5032,
+      "sha256": "1b1a314df5bebb6f3392b715750e8f6ad118ccca6dc377fb2d692cd341488a50"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AReluKernel.cs",
+      "bytes": 6581,
+      "sha256": "35a00d1b5ee294cbb2e3b28e1865b76ad180dbe88c24f353fa3de7e9c7bea55c"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8ARowReplicatedTrafficProjection.cs",
+      "bytes": 15571,
+      "sha256": "5578d669f8b83ecf741defd776ee9a98b874393fe2732048933d13c7e06915fa"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AStageRouting.cs",
+      "bytes": 8524,
+      "sha256": "2390c677cdb5577432202ac57016ad59f6d3f6b0c90ccf983634dee6df903fa5"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AStaticWeightDigitalVmmKernel.cs",
+      "bytes": 6634,
+      "sha256": "6aad9231459cc77b4f9d83cb0ff4b2fb50377241c12c7cbf0d7d8ca8af74946f"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8ATensorAssemblyKernel.cs",
+      "bytes": 20281,
+      "sha256": "e5b0fe13a5314139b241fb7db27368a63e9c86c00b01128098d0568d1922cdd2"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8ATensorAssemblyPlugin.cs",
+      "bytes": 5212,
+      "sha256": "157e94847533235cc66b299a528bd70620e6bcf0375c1e8088ec649424825c27"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8ATensorLowering.cs",
+      "bytes": 32897,
+      "sha256": "ee5c50e4f79ba84a695451dc44a81c3c1bd430f3c9c1fd144212e6ed88f0f020"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8ATensorSliceKernel.cs",
+      "bytes": 11671,
+      "sha256": "c84be89f094dd88313b90755c1d4d4dcae6fc2df322798dba6d155357e1b5653"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8ATensorSlicePlugin.cs",
+      "bytes": 12594,
+      "sha256": "70295bd7073632bdd7cb462cf305c15feec2bae66395a48e778146d409647d99"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8ATiledMlpReference.cs",
+      "bytes": 7772,
+      "sha256": "cf78b8ded2ad0cfa0f9db77b45c0d3a06d812d8438104659c0cafac8c609ea14"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8ATopologyAwareMappingContracts.cs",
+      "bytes": 54320,
+      "sha256": "3760ee766ce9c52380b1eb45c0cb7c79e6ff272be81b241f02a26104e53be672"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8ATopologyCostAwarePolicy.cs",
+      "bytes": 82817,
+      "sha256": "457dc4e899eadc2ca5283a2642418db9ced3c273ca32123b48325112355fbbe9"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8AUnityWorkbenchAdapter.cs",
+      "bytes": 27701,
+      "sha256": "9cb599ff65d8ef8b77bd829b7e0649e26bed5a361c006091545c4f9f22f2556b"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8OpticalModels.cs",
+      "bytes": 22915,
+      "sha256": "18b33e6e6ea6a15e0db6a254f822f1e7026dcbed3dcc97d4052c645276833dcf"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8OpticalPluginContracts.cs",
+      "bytes": 40020,
+      "sha256": "4966d45eff415cdbcc9eb603385fbf74d57c1a55f47dcf69b66f27c7a6179573"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8OpticalRouting.cs",
+      "bytes": 32819,
+      "sha256": "ed96a9611280fca8311ec4db531bca61d839bcba8069c2653131f0fe46365da0"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8OpticalRuntime.cs",
+      "bytes": 71495,
+      "sha256": "b3e64905b7cd3828c0cf33bfab38a2259a7a28712d246c257373996d5789d20d"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8OptoelectronicExamples.cs",
+      "bytes": 33513,
+      "sha256": "9d8d557416ff535296d7de5639461de049b9ceacfcb972b87951d3a6f4327aa4"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase8SerDesPlugins.cs",
+      "bytes": 31973,
+      "sha256": "b0df76b5c72cbc9173c4b34d8a1f05791c112e99c3a164d818628cab21f2800f"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase9CimArrayRuntime.cs",
+      "bytes": 15926,
+      "sha256": "77256ca54cb0328556da04bec769e1e3bb452214c3749aa30ce273530eb8488e"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase9CimMetrics.cs",
+      "bytes": 10391,
+      "sha256": "fd3843017826d0f61bcdcacd6070851a05219469b149190f81727cf52efbbcec"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase9CimTemplateFactory.cs",
+      "bytes": 15444,
+      "sha256": "d4341e6d4a09ea6640161ea5f5bfe80ff695aeb802fcd1ec60df24b39229e7c1"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase9CimVmmKernel.cs",
+      "bytes": 6155,
+      "sha256": "06a6745aead5379f55e1e81e7285f98b37ba0b416d00affb237b2462f6bf682f"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase9ConverterRuntime.cs",
+      "bytes": 11127,
+      "sha256": "7f6b96c9f764e5c2e534d6eb76d6c58433d3939c64134b7a27e4c55160afdc61"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase9DevicePrimitiveContracts.cs",
+      "bytes": 29349,
+      "sha256": "8e47a7aaf252a5e77244af7b71aef897cb65712d24b2abd093ad6eb490ba740e"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase9LiteratureDeviceProfileNormalizer.cs",
+      "bytes": 10830,
+      "sha256": "d2043ef335f70917550cbe489f61e04236dc99b7128da9d6f9a798a7a3576627"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase9NonIdealRuntime.cs",
+      "bytes": 11512,
+      "sha256": "f78b466c6677b433b0644d4b5d06a68aebc49122b2782bf480bd6085551ee22d"
+    },
+    {
+      "path": "src/HardwareSim.Core/Phase9PhysicalFootprints.cs",
+      "bytes": 18584,
+      "sha256": "a22913c688858fbfed827d58a3ad9281e07ff5fad752ea58d2a722593c909736"
+    },
+    {
+      "path": "src/HardwareSim.Core/PhysicalModel.cs",
+      "bytes": 76656,
+      "sha256": "69ae83347645ede68111c59ff51de9234c265382062a9fa251fae7492f916291"
+    },
+    {
+      "path": "src/HardwareSim.Core/PhysicalRouteEditor.cs",
+      "bytes": 3941,
+      "sha256": "ccabaea0e378918ad4659e4580fcd61b58baf6be21a6a8ca5e67f03b971a0104"
+    },
+    {
+      "path": "src/HardwareSim.Core/PhysicalRouteMetrics.cs",
+      "bytes": 2343,
+      "sha256": "be5e15bfbea78d3ba69557ecb39b64ba22455afe4a696f1d77882e7c325d1c03"
+    },
+    {
+      "path": "src/HardwareSim.Core/PhysicalRouteValidation.cs",
+      "bytes": 10302,
+      "sha256": "e776e51ac557fda5d19ab43610a26319488eda6f45283a6f54da39ca37f91b80"
+    },
+    {
+      "path": "src/HardwareSim.Core/PhysicalRoutingAlgorithms.cs",
+      "bytes": 3603,
+      "sha256": "382e9480dd90db0b1742239c2b720e449cf46ecff739bf98a39beef6de7048b5"
+    },
+    {
+      "path": "src/HardwareSim.Core/PortConnectionCompatibility.cs",
+      "bytes": 13783,
+      "sha256": "34ee2a837e36daab02faa7f71c101d7e93c9f7d34618d3b96e491353b6765615"
+    },
+    {
+      "path": "src/HardwareSim.Core/PrecisionSweepReports.cs",
+      "bytes": 7553,
+      "sha256": "6cb326e56e5cbd82742382e8766ca14b231430f3ba1d12e11234b61ee5f43d17"
+    },
+    {
+      "path": "src/HardwareSim.Core/ProcessingElementRuntime.cs",
+      "bytes": 7047,
+      "sha256": "b0adc3cc9c5a39a807c177278058c915f2e1b14d737b1bc1d3eb200b165b23f2"
+    },
+    {
+      "path": "src/HardwareSim.Core/ProjectDirtyState.cs",
+      "bytes": 4204,
+      "sha256": "899f779d948cfa557b9b3c6247aeb027c5718aa417909ebd1040a38abadfbc00"
+    },
+    {
+      "path": "src/HardwareSim.Core/Properties/AssemblyInfo.cs",
+      "bytes": 146,
+      "sha256": "73f8870f69a055ce222a522d87e19ead233be6478a8280b9c2341ce552880dad"
+    },
+    {
+      "path": "src/HardwareSim.Core/ReferenceFirstFitMapper.cs",
+      "bytes": 68365,
+      "sha256": "6d0fb38d851c221988de4493958abdeb76f9868fd60d9358f5a1b5ce5b9ce5bb"
+    },
+    {
+      "path": "src/HardwareSim.Core/ReferenceMappingContracts.cs",
+      "bytes": 33623,
+      "sha256": "41aafd3f631e9511bdc8f1109ac78020916886d804bb8b07b34095d3c2eb0459"
+    },
+    {
+      "path": "src/HardwareSim.Core/ReplayAnalysis.cs",
+      "bytes": 13520,
+      "sha256": "a93abbb15a42322a18deabc7f7d8e23fdfeb64a1899b0abe753061b19e8f0acf"
+    },
+    {
+      "path": "src/HardwareSim.Core/ReplayVisualization.cs",
+      "bytes": 12188,
+      "sha256": "46ea894d97ddf1cdc65ab8f4fd1ec6442c69a02bddfbe9c0f08e570fb3ac8670"
+    },
+    {
+      "path": "src/HardwareSim.Core/RouteGridAnalysis.cs",
+      "bytes": 20188,
+      "sha256": "32b36e777346d8f65c3db075415af7aa7625a0ab4dc322866f39fae1ab91108a"
+    },
+    {
+      "path": "src/HardwareSim.Core/RouterRuntime.cs",
+      "bytes": 14185,
+      "sha256": "39feb651eb7332b976885ec2c01a57b25eb2b3714e027d6c182814697cc2179d"
+    },
+    {
+      "path": "src/HardwareSim.Core/RuntimeMetricSummaries.cs",
+      "bytes": 4491,
+      "sha256": "380664063b11cab9dfc50402fe2dfe7306fd691c56f9061cd976d3115e47f953"
+    },
+    {
+      "path": "src/HardwareSim.Core/SampleGraphs.cs",
+      "bytes": 28370,
+      "sha256": "95230839d56e0201a56b1ca995921094810bc82e5f6cdbb2e1748b196ca65982"
+    },
+    {
+      "path": "src/HardwareSim.Core/SimulationGraph.cs",
+      "bytes": 22015,
+      "sha256": "5060f37a7497b9a20f6d3b8734b21af4a8f7a502878fdc7571cf6f03a95e0a85"
+    },
+    {
+      "path": "src/HardwareSim.Core/SimulationModels.cs",
+      "bytes": 47054,
+      "sha256": "d5b69f10b4fea8b426cc795ca7e7a307506681238b4c1afe8d09f7ef8f643ba5"
+    },
+    {
+      "path": "src/HardwareSim.Core/StorageMap.cs",
+      "bytes": 17226,
+      "sha256": "bc175aa538c4305dde9b66618250cdbbb1c90573879528d10dc9dce2379907ff"
+    },
+    {
+      "path": "src/HardwareSim.Core/TopologyLogicalPathPlanner.cs",
+      "bytes": 16197,
+      "sha256": "51bae5e7d341ab23e9b5b9181759d1aec96626087a8b9297fbdbc926fb40344f"
+    },
+    {
+      "path": "src/HardwareSim.Core/TopologyPresetBuilderRegistry.cs",
+      "bytes": 6533,
+      "sha256": "0682674ea78652a3ad33ff9ac40607a1ff735fe52db517b320084cf8b24cef71"
+    },
+    {
+      "path": "src/HardwareSim.Core/TopologyPresetCanonicalization.cs",
+      "bytes": 36019,
+      "sha256": "513fd1b045821bcc977de5f0bf83f99fb4ffde948312e0a9adf13b3afee506aa"
+    },
+    {
+      "path": "src/HardwareSim.Core/TopologyPresetContracts.cs",
+      "bytes": 24463,
+      "sha256": "2d921865eb9d6a15b6c3e7d7fc4de53f0dd003fe9e0b16754ee13d9ff68495c3"
+    },
+    {
+      "path": "src/HardwareSim.Core/TraceExport.cs",
+      "bytes": 5605,
+      "sha256": "ebc93fbe3a6ed68d55ac3208338d2a5a80775028075a26372c2cd5015cded00c"
+    },
+    {
+      "path": "src/HardwareSim.Core/TraceProvenance.cs",
+      "bytes": 5449,
+      "sha256": "1986f6ab8ac33f19cab64ed53cbb3cc6de010b995650942edd71bcbfe4873326"
+    },
+    {
+      "path": "src/HardwareSim.Core/TraceProvenanceRuntime.cs",
+      "bytes": 3888,
+      "sha256": "606cad4b8d13a4fc25ec6d8542d754b7c1d539fce7b71630d61e2461b3418834"
+    },
+    {
+      "path": "src/HardwareSim.Core/TraceReplay.cs",
+      "bytes": 18143,
+      "sha256": "367c2ff8045fa493d53947846307f69a1915c972fa3f2830b2bc6e41908e4aaf"
+    },
+    {
+      "path": "src/HardwareSim.Core/TraceStorage.cs",
+      "bytes": 23425,
+      "sha256": "49da968b1bfd51f9105c9596db0b2b1cd9f6264e712a35200cd7efeebadea556"
+    },
+    {
+      "path": "src/HardwareSim.Core/TransportSemantics.cs",
+      "bytes": 7950,
+      "sha256": "cd5ab87e921de47d773367da7de98a9f8ad46cd089b2e73d7fcc33ced3314fd1"
+    },
+    {
+      "path": "src/HardwareSim.Core/UnifiedSimulationEngine.cs",
+      "bytes": 564,
+      "sha256": "b04775d61c22b1dd2cb95abe30b36efe6341136fab73463a61f2cfcbff10f72f"
+    },
+    {
+      "path": "src/HardwareSim.Core/UnitSystem.cs",
+      "bytes": 4285,
+      "sha256": "2eee088bf4b7b1f6461ed48a543037c9270b732882780f08518b94f7e73cf40f"
+    },
+    {
+      "path": "src/HardwareSim.Core/UnityAdapter.cs",
+      "bytes": 102703,
+      "sha256": "51399e568283416264fa716378f89b98a96573356abaf5452f26977e933d84e4"
+    },
+    {
+      "path": "src/HardwareSim.Core/UnitySourceVerifier.cs",
+      "bytes": 5609,
+      "sha256": "9cd5f105d9bfbf9b3e579a5fa36ea4fc31c075011b18bbd54f6d5fc01bc7f3b8"
+    },
+    {
+      "path": "src/HardwareSim.Core/UnityTraceGenerationAdapter.cs",
+      "bytes": 5807,
+      "sha256": "a125f145042fa862a23510e6e62a7cfe5d41a2e3dcc1578349b03b883c087913"
+    },
+    {
+      "path": "src/HardwareSim.Core/UtilizationMetrics.cs",
+      "bytes": 7945,
+      "sha256": "448b3a138faaf26ca38de1ffe358912cc22257a7caf909ccea6e5541bf82f00b"
+    },
+    {
+      "path": "src/HardwareSim.Core/Validation.cs",
+      "bytes": 21031,
+      "sha256": "e3308beb10b396fd001d17c04d16b6e9cf276918071782b627464009833597da"
+    },
+    {
+      "path": "src/HardwareSim.Core/WeightPlacementPlanner.cs",
+      "bytes": 46057,
+      "sha256": "37696311b97eec9249e89f8e795b952394652966ad1ad95ce96eb5a28215abd0"
+    },
+    {
+      "path": "src/HardwareSim.Core/WorkloadExecutionEngine.cs",
+      "bytes": 5493,
+      "sha256": "b54c583383be9a01dfa759cfb3e8f492e74b6a8f77689c0adb3bdd7bf46ce64b"
+    },
+    {
+      "path": "src/HardwareSim.Core/WorkloadMappingV2.cs",
+      "bytes": 37852,
+      "sha256": "c046de2782c4c1846213fdc1f4db3a4e68a16786ea746ef0ee32baf6bf02562f"
+    },
+    {
+      "path": "src/HardwareSim.Core/WorkloadMappingV2CanonicalHash.cs",
+      "bytes": 2133,
+      "sha256": "65297aa75ddf4e3e68c53d594c1f48f04ef51e018b51535a7a66ca3c19b247f4"
+    },
+    {
+      "path": "src/HardwareSim.Core/WorkloadMappingV2Migration.cs",
+      "bytes": 5572,
+      "sha256": "299154dda259f3f91841439c6ae18ac601999ae19f713904ac139bb9ad03aca2"
+    },
+    {
+      "path": "src/HardwareSim.Core/WorkloadMappingV2Serialization.cs",
+      "bytes": 37303,
+      "sha256": "5375e1bca1d367160b399739a1a5f85e1b9f9765f73d2a2c5c52e8fcc4d087d4"
+    },
+    {
+      "path": "src/HardwareSim.Core/WorkloadModel.cs",
+      "bytes": 49797,
+      "sha256": "309ecc580a9963c52ac9288df3688ef447aee5a6dccd8ae05065295bb6bd56d6"
+    },
+    {
+      "path": "STAGE.sln",
+      "bytes": 4757,
+      "sha256": "434e11e1a04b99e670f8975538e4dcae8bd894d01750c7f25269c017f19dfc1c"
+    },
+    {
+      "path": "tests/HardwareSim.Tests/CimEgressAccountingTests.cs",
+      "bytes": 2177,
+      "sha256": "d354fe4e1e8cb13e6d4b4224c349ca7e77f7a753d665b5cd6f54e379f93440a9"
+    },
+    {
+      "path": "tests/HardwareSim.Tests/ExactCycleGoldenTests.cs",
+      "bytes": 47975,
+      "sha256": "492d45d610ccc3c5530d008648cb4fe9dfa88e8c79c814e7c3088da58b59f509"
+    },
+    {
+      "path": "tests/HardwareSim.Tests/HardwareSim.Tests.csproj",
+      "bytes": 363,
+      "sha256": "6e18d3a58845c4d5330589ed18ef9aa432d3864b88656724e3585d9f38c7f775"
+    },
+    {
+      "path": "tests/HardwareSim.Tests/NocAndHoldoutTests.cs",
+      "bytes": 12560,
+      "sha256": "5119b0261b37dbf9f3241a50a543e38bdf50e556240eecafb4cfc33165588b8a"
+    },
+    {
+      "path": "tests/HardwareSim.Tests/OpticalInterventionTests.cs",
+      "bytes": 2222,
+      "sha256": "f4e5a76f91fe973920376e04658ec1ee341116c89b44154a6167f82c05fc25c6"
+    },
+    {
+      "path": "tests/HardwareSim.Tests/PaperExperimentTests.cs",
+      "bytes": 17622,
+      "sha256": "0274721914f641f18464e6d3f0c4a1f235bda2f2f7a925262e765f5dce0c62e2"
+    },
+    {
+      "path": "tests/HardwareSim.Tests/Program.cs",
+      "bytes": 287,
+      "sha256": "09d492f6582ec3b55ac8ee450fc410679c3bc244f4432a180da86d77ead44e42"
+    },
+    {
+      "path": "tests/HardwareSim.Tests/TestInfrastructure.cs",
+      "bytes": 7004,
+      "sha256": "c3ed259d8162457d41664d0cad8f1d3faa14b6f00742d05186e8e5322fc1cfc4"
+    },
+    {
+      "path": "THIRD_PARTY.md",
+      "bytes": 1981,
+      "sha256": "c5661faf21e9e41f4eeb51ce15b78c70c98930fd63d94ff75a9c5cef6bd88789"
+    },
+    {
+      "path": "tools/HardwareSim.AspdacRunner/AspdacReviewerP1Scenarios.cs",
+      "bytes": 13499,
+      "sha256": "24d0358a8f571a6eaf22592cbd2bf8ce5e36ede01a302a9499b17c9e01a5744f"
+    },
+    {
+      "path": "tools/HardwareSim.AspdacRunner/AspdacReviewerScalingScenarios.cs",
+      "bytes": 11369,
+      "sha256": "3dcda75c796339a3326634ac4b100a2a84b2567ab95c2fb39b0cb33addd586b2"
+    },
+    {
+      "path": "tools/HardwareSim.AspdacRunner/AspdacRunnerScenarios.cs",
+      "bytes": 15981,
+      "sha256": "44879f6b20cd82f6f1397be2c17bfe60dbe2f120901884617e506adcbaffcfee"
+    },
+    {
+      "path": "tools/HardwareSim.AspdacRunner/HardwareSim.AspdacRunner.csproj",
+      "bytes": 353,
+      "sha256": "992cb2d2043c4c8eabc7d01e2bca4f33b61769ff9e0d48892fbd9b1c63881b02"
+    },
+    {
+      "path": "tools/HardwareSim.AspdacRunner/Program.cs",
+      "bytes": 51239,
+      "sha256": "d0b65d0fbc152dcf90694dd0b1eaf985a1c71f414fa14f99c848d80facd53ac4"
+    }
+  ]
+}

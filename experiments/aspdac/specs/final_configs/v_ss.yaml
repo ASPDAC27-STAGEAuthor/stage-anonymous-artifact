@@ -1,0 +1,40 @@
+schema_version: aspg-final-config-1.0
+config_id: V-SS
+purpose: SCALE-Sim-matched weight-stationary systolic array
+evidence_level: numerical_when_definitions_match_else_trend
+array:
+  rows: 4
+  columns: 4
+  cell_macs_per_cycle: 1
+  dataflow: weight_stationary
+  dense: true
+queues:
+  read_request_entries: 32
+  write_request_entries: 32
+ports:
+  memory_banks: 1
+  ifmap_sram_ports: 2
+  filter_sram_ports: 2
+storage:
+  ifmap_sram_kib: 8
+  filter_sram_kib: 8
+  ofmap_sram_kib: 8
+bandwidth:
+  interface_mode: USER
+  ifmap_words_per_cycle: 8
+  filter_words_per_cycle: 8
+  ofmap_words_per_cycle: 8
+prefetch:
+  cold_start_inclusive: true
+  warm_array_execution_reported_separately: true
+reference:
+  tool: scale-sim
+  seed: 40
+  result_root: experiments/aspdac/results/external_draft_20260716/scalesim
+workloads:
+  - gemm_256
+  - mlp_l1
+  - mlp_l2
+  - attention_qk
+  - attention_pv
+
