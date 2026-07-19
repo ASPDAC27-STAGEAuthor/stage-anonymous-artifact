@@ -1,0 +1,29 @@
+{
+  "router_config": "experiments/aspdac/specs/electrical_energy_calibration/dsent_router_45nm_128b.cfg",
+  "link_configs": [
+    "experiments/aspdac/specs/electrical_energy_calibration/dsent_link_45nm_128b_20um.cfg",
+    "experiments/aspdac/specs/electrical_energy_calibration/dsent_link_45nm_128b_200um.cfg",
+    "experiments/aspdac/specs/electrical_energy_calibration/dsent_link_45nm_128b_1mm.cfg"
+  ],
+  "raw_si_outputs": {
+    "buffer_write_j": "9.7446954228064561e-11",
+    "buffer_read_j": "9.5447675427007175e-11",
+    "crossbar_traversal_j": "2.1259511533842634e-12",
+    "arbitration_stage1_j": "8.1498086494125e-14",
+    "arbitration_stage2_j": "1.3333004571736351e-13",
+    "clock_distribution_j": "1.271981404043004e-12",
+    "router_leakage_w": "0.75671392362071399",
+    "router_active_area_m2": "2.5873073600000625e-06",
+    "queue_storage_area_m2": "2.5559195200000627e-06",
+    "link_20um_send_j": "2.4573760355120163e-13",
+    "link_200um_send_j": "1.1495219235512017e-12",
+    "link_1mm_send_j": "5.1663411235512023e-12",
+    "link_leakage_w": "5.5471359999999996e-05",
+    "link_active_area_m2": "1.8022400000000001e-10"
+  },
+  "conversions": {
+    "joule_to_picojoule": "x 1e12",
+    "watt_to_pj_per_1ns_cycle": "x 1e-9 s/cycle x 1e12 pJ/J",
+    "m2_to_mm2": "x 1e6"
+  }
+}

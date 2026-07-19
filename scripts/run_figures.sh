@@ -7,5 +7,5 @@ PYTHON="$ROOT/.venv/bin/python"
 export PYTHONHASHSEED=0
 export MPLCONFIGDIR="$ROOT/output/matplotlib"
 mkdir -p "$MPLCONFIGDIR"
-"$PYTHON" experiments/aspdac/scripts/plot_current_overleaf_v1.py
+"$PYTHON" experiments/aspdac/scripts/plot_submitted_figures_20260719.py
 "$PYTHON" scripts/verify_figures.py

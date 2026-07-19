@@ -1,0 +1,5 @@
+Contract,Scope,Exact cases,Checked events,Result
+Base one-flit,4x4 mesh; deterministic XY; one VC; depths 1/4/16,7/7 cases; 869/869 packets,packet injection cycles; arrival cycles; delivery order; packet canonical hashes,EXACT
+Multi-flit / multi-VC,1/2 VCs; 3/4 flits; deterministic dimension-order contention,3/3 cases,injection; route; VC grant; switch grant; router send; credit return; ejection; retirement; canonical hashes,EXACT
+Routing RNG,BookSim Knuth RNG; XY/YX modes and ROMM intermediates; seed 40,4/4 cases (2 XY/YX + 2 ROMM),RNG choices/intermediates plus full selected event timelines and canonical hashes,EXACT
+Bernoulli uniform traffic manager,one class; rate 0.02; seed 40; generation horizon 218,2/2 native repeats; 69 packets and 255 router sends per repeat,generation; injection; route; grants; sends; credits; ejection; retirement; repeat hashes,EXACT

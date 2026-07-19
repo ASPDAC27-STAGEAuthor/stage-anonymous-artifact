@@ -18,6 +18,9 @@ FINAL = RESULTS / "final_20260716" / "summary"
 REVIEWER = RESULTS / "reviewer_extension_20260717" / "summary"
 OPTICAL = RESULTS / "optical_intervention_20260717" / "summary"
 PRECISION = RESULTS / "mnist_pe_precision_20260717" / "summary"
+PAPER_RESULTS = RESULTS / "paper_revision_20260718"
+MATCHED47 = PAPER_RESULTS / "session_c_matched_47bars"
+BOOKSIM_TIMING = PAPER_RESULTS / "session_j_booksim_production_paper"
 TOOL_IDENTITIES = json.loads((ROOT / "experiments" / "aspdac" / "external_inputs" / "tool_versions.json").read_text(encoding="utf-8"))
 
 EXPECTED_RQ1_HASHES = {
@@ -151,6 +154,32 @@ def validate_timeloop() -> dict[str, object]:
     }
 
 
+def validate_matched47() -> dict[str, object]:
+    evidence = rows(MATCHED47 / "matched_47bar_values.csv")
+    expected_ids = [f"C{index:02d}" for index in range(1, 48)]
+    require(len(evidence) == 47, "expected 47 matched configurations")
+    require([row["config_id"] for row in evidence] == expected_ids, "matched configuration IDs changed")
+    require(
+        {row["family"] for row in evidence}
+        == {"square_gemm", "rectangular_gemm", "mlp_l1", "mlp_l2", "attention_qk", "attention_pv"},
+        "matched workload families changed",
+    )
+    require(all(row["cycle_exact_match"].lower() == "true" for row in evidence), "47-case cycle match changed")
+    require(all(float(row["cycle_relative_error"]) == 0.0 for row in evidence), "47-case cycle error changed")
+    require(all(row["energy_exact_match"].lower() == "true" for row in evidence), "47-case energy match changed")
+    maximum_energy_error = max(abs(float(row["energy_relative_error"])) for row in evidence)
+    require(maximum_energy_error <= 2.1e-16, "47-case energy error exceeded the frozen numerical bound")
+    return {
+        "status": "pass",
+        "configurations": len(evidence),
+        "cycle_exact_matches": len(evidence),
+        "energy_exact_matches": len(evidence),
+        "maximum_cycle_relative_error": 0.0,
+        "maximum_energy_relative_error": maximum_energy_error,
+        "workload_families": sorted({row["family"] for row in evidence}),
+    }
+
+
 def validate_scalesim() -> dict[str, object]:
     evidence = [row for row in rows(REVIEWER / "holdout_scalesim_stage_timing.csv") if row["status"] == "completed"]
     pairs: list[tuple[str, str, int, int]] = []
@@ -202,6 +231,52 @@ def saturation_value(value: str) -> float:
     return float(value.removeprefix(">"))
 
 
+def validate_booksim_timing() -> dict[str, object]:
+    contracts = rows(BOOKSIM_TIMING / "paper_contract_summary.csv")
+    events = rows(BOOKSIM_TIMING / "event_exactness_summary.csv")
+    repeats = rows(BOOKSIM_TIMING / "repeat_hash_comparison.csv")
+    status = json.loads((BOOKSIM_TIMING / "status.json").read_text(encoding="utf-8"))
+
+    require(len(contracts) == 4, "expected four selected BookSim timing contracts")
+    require(all(row["Result"] == "EXACT" for row in contracts), "selected BookSim contract changed")
+    require(len(events) == 9, "expected nine normalized event categories")
+    for row in events:
+        require(row["repeat_1_exact_vs_native"].lower() == "true", f"BookSim repeat 1 mismatch: {row['event']}")
+        require(row["repeat_2_exact_vs_native"].lower() == "true", f"BookSim repeat 2 mismatch: {row['event']}")
+        require(row["cross_workflow_repeat_exact"].lower() == "true", f"BookSim workflow repeat mismatch: {row['event']}")
+        require(row["result"] == "EXACT", f"BookSim event result changed: {row['event']}")
+
+    require(len(repeats) == 11, "expected eleven BookSim/STAGE repeat-hash rows")
+    for row in repeats:
+        require(row["repeat_1_hash"] == row["repeat_2_hash"], f"BookSim/STAGE hash changed: {row['artifact_or_case']}")
+        require(row["cross_workflow_hash_exact"].lower() == "true", f"BookSim/STAGE cross-workflow hash mismatch: {row['artifact_or_case']}")
+        require(row["result"] == "EXACT", f"BookSim/STAGE repeat result changed: {row['artifact_or_case']}")
+
+    selected = status["selected_contract"]
+    integration = selected["production_stage_integration"]
+    source_path = ROOT / "src" / "HardwareSim.Core" / "AspdacStageNocRuntime.cs"
+    source_hash = sha256(source_path)
+    expected_source_hash = status["not_booksim_backend"]["source_audit"]["src/HardwareSim.Core/AspdacStageNocRuntime.cs"]["sha256"]
+    require(source_hash == expected_source_hash, "BookSim-matched managed source hash changed")
+    require(status["status"] == "COMPLETE", "BookSim production evidence is incomplete")
+    require(status["scientific_status"] == "PRODUCTION_STAGE_SELECTED_CONTRACT_EXACT", "BookSim scientific status changed")
+    require(selected["all_selected_contracts_exact"] is True, "selected BookSim contracts are not exact")
+    require(integration["exact"] is True and integration["cases"] == 7, "production STAGE integration result changed")
+    require(integration["engine_identity"] == "stage_managed_flit_vc_runtime", "production STAGE engine identity changed")
+    require(integration["external_backend_invocations"] == 0, "production STAGE invoked an external backend")
+    return {
+        "status": "pass",
+        "selected_contracts_exact": len(contracts),
+        "event_categories_exact": len(events),
+        "repeat_hash_rows_exact": len(repeats),
+        "production_cases_exact": integration["cases"],
+        "engine_identity": integration["engine_identity"],
+        "external_backend_invocations": integration["external_backend_invocations"],
+        "managed_source_sha256": source_hash,
+        "claim_boundary": "selected tested 4x4 mesh contract only",
+    }
+
+
 def validate_booksim() -> dict[str, object]:
     evidence = rows(FINAL / "rq2_saturation_summary.csv")
     require({row["traffic"] for row in evidence} == {"uniform", "transpose", "bit_complement", "hotspot_node5"}, "BookSim traffic set changed")
@@ -220,7 +295,7 @@ def validate_booksim() -> dict[str, object]:
         "shared_first_congested_traffic": "hotspot_node5",
         "booksim_hotspot_saturation": 0.04,
         "stage_hotspot_saturation": 0.08,
-        "claim_boundary": "congestion ordering only; no cycle or absolute-saturation equivalence",
+        "claim_boundary": "additional saturation study only, no cycle or absolute-saturation equivalence",
         "tool_identity": identity,
     }
 
@@ -339,8 +414,10 @@ VALIDATORS: dict[str, Callable[[], dict[str, object]]] = {
     "determinism": validate_determinism,
     "noc": validate_noc,
     "timeloop": validate_timeloop,
+    "matched47": validate_matched47,
     "scalesim": validate_scalesim,
     "accelergy": validate_accelergy,
+    "booksim_timing": validate_booksim_timing,
     "booksim": validate_booksim,
     "attribution": validate_attribution,
     "mapping": validate_mapping,

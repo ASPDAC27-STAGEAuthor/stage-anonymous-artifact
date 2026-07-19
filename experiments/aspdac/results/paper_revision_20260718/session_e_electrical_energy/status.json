@@ -1,0 +1,23 @@
+{
+  "task": "RF-E-ELECTRICAL-ENERGY-V1",
+  "status": "PASS",
+  "production_core_modified": false,
+  "paper_tex_modified": false,
+  "old_data_overwritten": false,
+  "analytical_contracts_pass": true,
+  "five_architectures_pass": true,
+  "energy_conservation_pass": true,
+  "units_audit_pass": true,
+  "double_count_audit_pass": true,
+  "nominal_technology": "DSENT Bulk45LVT 45 nm, 1.0 V, 1 GHz, 340 K",
+  "session_a_alignment": "45-nm node and 1-GHz cycle aligned; Session A voltage unspecified",
+  "architectures": [
+    "E128",
+    "O1",
+    "O2",
+    "O4",
+    "H4"
+  ],
+  "claim_boundary": "analytic shared digital NoC sidecar for endpoint-*/electrical-* only; optical and silicon calibration excluded",
+  "one_click_command": "python experiments/aspdac/tests/results_first_electrical_energy_runner/run_electrical_energy.py all"
+}

@@ -1,0 +1,121 @@
+{
+  "schema_version": "rf-e-electrical-ert-v1",
+  "model_identity": {
+    "tool": "DSENT",
+    "version": "0.91 (26 June 2012)",
+    "official_repository": "https://gem5.googlesource.com/public/gem5/",
+    "commit": "bc5b00cd2b5dea850acf63f6a1055ff260c8fba7",
+    "source_tree_sha256": "83b68f61cca0979372c27784b20aed4c679e5ec6014026a95ca09b5aaa449551",
+    "technology_model": "Bulk45LVT.model",
+    "technology_node_nm": 45,
+    "voltage_v": 1.0,
+    "temperature_k": 340,
+    "frequency_hz": 1000000000,
+    "cycle_seconds": 1e-09,
+    "source_units": "SI: joule, watt, meter, square meter"
+  },
+  "router_attributes": {
+    "router_count": 16,
+    "input_ports": 5,
+    "output_ports": 5,
+    "flit_bits": 128,
+    "virtual_networks": 1,
+    "virtual_channels_per_network": 4,
+    "buffers_per_virtual_channel": 128,
+    "buffer_model": "DFFRAM",
+    "crossbar_model": "MultiplexerCrossbar",
+    "switch_allocator": "two-stage MatrixArbiter",
+    "clock_tree": "5-level BroadcastHTree on Global wire layer"
+  },
+  "actions": {
+    "input_buffer_write": {
+      "energy_pj_per_128b_action": 97.44695422806456,
+      "dsent_event": "Router:WriteBuffer"
+    },
+    "input_buffer_read": {
+      "energy_pj_per_128b_action": 95.44767542700717,
+      "dsent_event": "Router:ReadBuffer"
+    },
+    "route_computation_and_arbitration": {
+      "energy_pj_per_successful_router_traversal": 0.2148281322114885,
+      "dsent_events": [
+        "Router:ArbitrateSwitch->ArbitrateStage1",
+        "Router:ArbitrateSwitch->ArbitrateStage2"
+      ],
+      "boundary": "DSENT does not expose route-computation logic separately; this is a combined non-zero switch-allocation binding, not a claim that route computation has zero cost."
+    },
+    "crossbar_traversal": {
+      "energy_pj_per_128b_action": 2.125951153384263,
+      "dsent_event": "Router:TraverseCrossbar->Multicast1"
+    },
+    "clock_distribution": {
+      "energy_pj_per_router_cycle": 1.271981404043004,
+      "dsent_event": "Router:DistributeClock"
+    },
+    "router_leakage": {
+      "energy_pj_per_router_cycle": 756.713923620714,
+      "source_power_w": 0.756713923620714
+    },
+    "queue_storage": {
+      "area_mm2_per_router": 2.555919520000063,
+      "read_energy_action": "input_buffer_read",
+      "write_energy_action": "input_buffer_write"
+    }
+  },
+  "electrical_link_classes": {
+    "endpoint_20um": {
+      "length_mm": 0.02,
+      "send_energy_pj_per_128b": 0.24573760355120164,
+      "energy_pj_per_bit_mm": 0.09599125138718814
+    },
+    "mesh_200um": {
+      "length_mm": 0.2,
+      "send_energy_pj_per_128b": 1.1495219235512018,
+      "energy_pj_per_bit_mm": 0.04490320013871882
+    },
+    "normalization_1mm": {
+      "length_mm": 1.0,
+      "send_energy_pj_per_128b": 5.166341123551202,
+      "energy_pj_per_bit_mm": 0.04036204002774377
+    },
+    "shared": {
+      "leakage_energy_pj_per_link_cycle": 0.05547136,
+      "active_area_mm2_per_link": 0.00018022400000000001,
+      "boundary": "Length-class coefficients are used because the DSENT repeated-link intercept makes pJ/bit-mm non-constant at short lengths."
+    }
+  },
+  "raw_dsent_si_outputs": {
+    "buffer_write_j": 9.744695422806456e-11,
+    "buffer_read_j": 9.544767542700718e-11,
+    "crossbar_traversal_j": 2.1259511533842634e-12,
+    "arbitration_stage1_j": 8.1498086494125e-14,
+    "arbitration_stage2_j": 1.333300457173635e-13,
+    "clock_distribution_j": 1.271981404043004e-12,
+    "router_leakage_w": 0.756713923620714,
+    "router_active_area_m2": 2.5873073600000625e-06,
+    "queue_storage_area_m2": 2.5559195200000627e-06,
+    "link_20um_send_j": 2.4573760355120163e-13,
+    "link_200um_send_j": 1.1495219235512017e-12,
+    "link_1mm_send_j": 5.166341123551202e-12,
+    "link_leakage_w": 5.5471359999999996e-05,
+    "link_active_area_m2": 1.80224e-10
+  },
+  "applicability": {
+    "included_link_ids": [
+      "endpoint-*",
+      "electrical-*"
+    ],
+    "excluded_link_ids": [
+      "optical-*"
+    ],
+    "transfer_width_requirement_bits": 128,
+    "architectures": [
+      "E128",
+      "O1",
+      "O2",
+      "O4",
+      "H4"
+    ],
+    "technology_alignment": "Nominal 45-nm DSENT model aligns by node and 1-GHz cycle with Session A; Session A voltage is unspecified, so voltage equivalence is not asserted."
+  }
+}

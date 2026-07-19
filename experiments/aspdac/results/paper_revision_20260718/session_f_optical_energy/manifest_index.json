@@ -1,0 +1,59 @@
+{
+  "schema_version": "rf-f-optical-energy-manifest-v1.0",
+  "task_id": "RF-F-OPTICAL-ENERGY-V1",
+  "frozen_utc": "2026-07-18T00:00:00Z",
+  "output_root": "experiments/aspdac/results/paper_revision_20260718/session_f_optical_energy",
+  "entries": [
+    {
+      "path": "paper_handoff.md",
+      "bytes": 3685,
+      "sha256": "84f9e82784fbf2ce0ecebf848d6ce8eff40b51d09c4d96826f5b48813bf7c418"
+    },
+    {
+      "path": "source_provenance.md",
+      "bytes": 26494,
+      "sha256": "19a3efe9b355df07a6cbe2e8ad7502d8c5ac35dee3f9db1e7bb982912cdb9cbb"
+    },
+    {
+      "path": "optical_energy_profiles.yaml",
+      "bytes": 19396,
+      "sha256": "cf6b929cfd8f0fc3f23da836d960f93e87ef8ba23aff40853c739fc22b3531a4"
+    },
+    {
+      "path": "optical_energy_profiles.json",
+      "bytes": 20919,
+      "sha256": "5426068561a3a525c486956652fa6c495338914cc7ea6ca119d79945dab85cef"
+    },
+    {
+      "path": "analytical_contract_results.csv",
+      "bytes": 3350,
+      "sha256": "4828d2e961b73b29ba06e36404b100222b2e027b905e2da505f62693e230092c"
+    },
+    {
+      "path": "architecture_energy_breakdown.csv",
+      "bytes": 26368,
+      "sha256": "964577e62e016e71391876649e7e0abd06a92bea73b43109be3c99bf28c90250"
+    },
+    {
+      "path": "sensitivity_results.csv",
+      "bytes": 10335,
+      "sha256": "b4355a7080c569b26ccce21f3b82b25f48ab771399157987b0db76a0d7679457"
+    },
+    {
+      "path": "units_and_double_count_audit.csv",
+      "bytes": 5005,
+      "sha256": "a298d50111deba7d98c410375efd33fc473c379d3a8c73d11af265de65a7ad2d"
+    },
+    {
+      "path": "status.json",
+      "bytes": 1517,
+      "sha256": "c522ad17ac3b85bb6d56e08a9bca9b1d547307c16dc357cafe53efb6f105b640"
+    },
+    {
+      "path": "manifest_index.json",
+      "bytes": null,
+      "sha256": null,
+      "note": "self hash intentionally excluded"
+    }
+  ]
+}

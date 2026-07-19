@@ -1,0 +1,151 @@
+{
+  "case_count": 47,
+  "completed_utc": "2026-07-18T15:11:16.641833+00:00",
+  "family_counts": {
+    "attention_pv": 10,
+    "attention_qk": 10,
+    "mlp_l1": 6,
+    "mlp_l2": 6,
+    "rectangular_gemm": 8,
+    "square_gemm": 7
+  },
+  "figure": {
+    "configurations_per_panel": 47,
+    "encoding": "paired raw-value markers on log scale with absolute-relative-error tolerance strips",
+    "panels": {
+      "a": "Timeloop and STAGE matched compute cycles plus cycle-error strip",
+      "b": "Accelergy and STAGE matched shared-ERT energy plus energy-error strip"
+    },
+    "pdf_header_valid": true,
+    "png_dpi": [
+      299.9994,
+      299.9994
+    ],
+    "png_height_px": 1500,
+    "png_width_px": 2175
+  },
+  "generated_utc": "2026-07-18T15:10:03.478605+00:00",
+  "input_integrity": {
+    "numerical_and_png_inputs_match_manifest": true,
+    "warnings": [
+      {
+        "actual_sha256": "ffff475052eef4ea7c5bb8a62a51ce67ca33b933f53f98b26418cec30c519c20",
+        "manifest_sha256": "9f50e17b2615573dc773050fe9645f5637bc44e5c1df197aba08135a806357ae",
+        "path": "figures/fig_matched_cycles.pdf"
+      },
+      {
+        "actual_sha256": "4bca19327b0fd08058eb1695a3725fe7e0a324e505920a49e494cebea22cd143",
+        "manifest_sha256": "bb30233e6a3eabcbf54629e000065572a97a316e203504aac9aafe83a2682810",
+        "path": "figures/fig_matched_energy.pdf"
+      }
+    ]
+  },
+  "metrics": {
+    "cycle_exact_matches": 47,
+    "energy_exact_matches": 47,
+    "max_cycle_absolute_error": "0",
+    "max_energy_absolute_error_pj": "0.00000095367431640625",
+    "max_energy_relative_error": "2.054879117283632500E-16"
+  },
+  "normalization": {
+    "all_47_cycle_pairs_valid": true,
+    "all_47_energy_pairs_valid": true,
+    "error_strip_tolerance": "1.000000000000000000E-15",
+    "figure_uses_pair_normalization": false,
+    "index_csv_definition": "reference_value / (reference_value + stage_value) and stage_value / the same sum"
+  },
+  "output_directory": "experiments/aspdac/results/paper_revision_20260718/session_c_matched_47bars",
+  "output_sha256": {
+    "figure_generator": {
+      "bytes": 11411,
+      "path": "experiments/aspdac/results/paper_revision_20260718/session_c_matched_47bars/matched_47bar_figure.py",
+      "sha256": "2a87a6dccd5e3145c26d9555c635c9d982e1af3abbae6ce10a03b3d979261559"
+    },
+    "figure_pdf": {
+      "bytes": 28900,
+      "path": "experiments/aspdac/results/paper_revision_20260718/session_c_matched_47bars/STAGE_Figure2_Matched_47Bars.pdf",
+      "sha256": "13214907e8538da0cf3202fa354e1bc7b8e513f0cf0725b9de587de89f860878"
+    },
+    "figure_png": {
+      "bytes": 230195,
+      "path": "experiments/aspdac/results/paper_revision_20260718/session_c_matched_47bars/STAGE_Figure2_Matched_47Bars.png",
+      "sha256": "b47de0bb0bda14802bd855eb1f925024de38dc84f246c69af1ced241979aa278"
+    },
+    "generator": {
+      "bytes": 32452,
+      "path": "experiments/aspdac/results/paper_revision_20260718/session_c_matched_47bars/generate_matched_47bars.py",
+      "sha256": "dafceb028b588371252851383bd6e1124788bb8dd80c5c2a562aaf626f764c7a"
+    },
+    "input_hashes": {
+      "bytes": 1525,
+      "path": "experiments/aspdac/results/paper_revision_20260718/session_c_matched_47bars/input_sha256.csv",
+      "sha256": "650c0516157be59fd370c6cd8fcf5a1db31d9f8be113e5c322c0d014df96c98b"
+    },
+    "paper_candidate_pdf": {
+      "bytes": 28900,
+      "path": "latex/final_revision/figure/STAGE_Figure2_Matched_47Bars.pdf",
+      "sha256": "13214907e8538da0cf3202fa354e1bc7b8e513f0cf0725b9de587de89f860878"
+    },
+    "paper_candidate_png": {
+      "bytes": 230195,
+      "path": "latex/final_revision/figure/STAGE_Figure2_Matched_47Bars.png",
+      "sha256": "b47de0bb0bda14802bd855eb1f925024de38dc84f246c69af1ced241979aa278"
+    },
+    "pdf_visual_inspection_render": {
+      "bytes": 169418,
+      "path": "experiments/aspdac/results/paper_revision_20260718/session_c_matched_47bars/visual_inspection/STAGE_Figure2_Matched_47Bars_pdf_render.png",
+      "sha256": "c4bb0a0ac9707e3baeda6307ce74c9f121f32418089e1e2deb21edb2b71a812e"
+    },
+    "values_index": {
+      "bytes": 21329,
+      "path": "experiments/aspdac/results/paper_revision_20260718/session_c_matched_47bars/matched_47bar_values.csv",
+      "sha256": "aed258b64c705b347fe50604d4abe55af1460e8fa42f9920d7e622f69304109e"
+    }
+  },
+  "repo_root": "F:/github/visual-hardware-ai-codesign-simulator",
+  "schema_version": "rf-c-matched-47bar-status-1.0",
+  "scope_guards": {
+    "other_parallel_task_directories_modified": false,
+    "paper_tex_modified": false,
+    "preexisting_figure2_overwritten": false
+  },
+  "small_result_audit": {
+    "cycle_max_raw": "8388608",
+    "cycle_min_raw": "16384",
+    "cycle_small_result_cases": [],
+    "cycle_zero_component_cases": [],
+    "energy_max_raw_pj": "8246540501.867771",
+    "energy_min_raw_pj": "16119676.90923049",
+    "energy_small_result_cases": [],
+    "energy_zero_component_cases": [],
+    "silent_drop_count": 0,
+    "threshold_relative_to_max_pair_sum": "1.000000000000000000E-12",
+    "zero_denominator_cases": []
+  },
+  "source_bundle": "experiments/aspdac/results/results_first_20260718/session_a_matched_tools",
+  "status": "COMPLETE",
+  "task_id": "RF-C-MATCHED-47BAR-V1",
+  "visual_inspection": {
+    "checked_pdf_render": "experiments/aspdac/results/paper_revision_20260718/session_c_matched_47bars/visual_inspection/STAGE_Figure2_Matched_47Bars_pdf_render.png",
+    "checked_png": "experiments/aspdac/results/paper_revision_20260718/session_c_matched_47bars/STAGE_Figure2_Matched_47Bars.png",
+    "checks": {
+      "47_paired_configurations_visible_per_panel": true,
+      "configuration_index_labels_removed": true,
+      "legend_and_axes_legible": true,
+      "no_clipping_or_overlap_observed": true,
+      "six_family_groups_visible": true,
+      "two_metric_separated_panels": true
+    },
+    "notes": "PASS: Figure 2 retains the enlarged typography, removes C01-C47 tick labels, adds a clear matched-configuration family label, and preserves legibility of all paired markers, family groups, legends, axes, and error strips in PNG and independent PDF render.",
+    "pdf_render_dimensions": [
+      2175,
+      1500
+    ],
+    "png_dimensions": [
+      2175,
+      1500
+    ],
+    "recorded_utc": "2026-07-18T15:11:16.641833+00:00",
+    "status": "PASS"
+  }
+}

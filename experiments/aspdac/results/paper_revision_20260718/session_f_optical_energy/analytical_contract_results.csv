@@ -1,0 +1,38 @@
+contract,profile,expected,observed,unit,absolute_error,status,details
+encoding_128_payload_bits,all,132,132,encoded_bit,0,PASS,IEEE 64B/66B exact block expansion
+one_serializer_action,low,55.04,55.04,pJ,0,PASS,128 original bits; serializer owns pre-encoding activity
+one_deserializer_cdr_action,low,69.96,69.96,pJ,0,PASS,132 encoded bits; CDR ownership included
+gearbox_not_instantiated,low,0,0,pJ,0,PASS,No independent rate conversion exists in frozen runner
+one_eo_action,low,6.6,6.6,pJ,0,PASS,One encoded E/O action
+one_oe_action,low,9.24,9.24,pJ,0,PASS,One encoded O/E action
+passive_wdm_has_no_dynamic_energy,low,0,0,pJ,0,PASS,Mux and demux enter loss budget only
+passive_waveguide_has_no_dynamic_energy,low,0,0,pJ,0,PASS,Waveguide enters propagation loss only
+laser_mw_ns_equals_pj,low,0.3,0.3,pJ,0,PASS,1 mW x 1 ns = 1 pJ
+tuning_mw_ns_equals_pj,low,0,0,pJ,0,PASS,Profile resonator count for one lane and one ns
+dynamic_bit_scaling,low,2,2,ratio,0,PASS,Doubling encoded bits doubles E/O dynamic energy
+laser_time_scaling,low,2,2,ratio,0,PASS,Doubling active time doubles laser energy
+laser_lane_scaling,low,4,4,ratio,0,PASS,Four provisioned TX lanes consume four per-lane equivalents
+one_serializer_action,nominal,204.8,204.8,pJ,0,PASS,128 original bits; serializer owns pre-encoding activity
+one_deserializer_cdr_action,nominal,319.176,319.176,pJ,0,PASS,132 encoded bits; CDR ownership included
+gearbox_not_instantiated,nominal,0,0,pJ,0,PASS,No independent rate conversion exists in frozen runner
+one_eo_action,nominal,92.4,92.4,pJ,0,PASS,One encoded E/O action
+one_oe_action,nominal,184.8,184.8,pJ,0,PASS,One encoded O/E action
+passive_wdm_has_no_dynamic_energy,nominal,0,0,pJ,0,PASS,Mux and demux enter loss budget only
+passive_waveguide_has_no_dynamic_energy,nominal,0,0,pJ,0,PASS,Waveguide enters propagation loss only
+laser_mw_ns_equals_pj,nominal,2.3831904009,2.3831904009,pJ,0,PASS,1 mW x 1 ns = 1 pJ
+tuning_mw_ns_equals_pj,nominal,3.9,3.9,pJ,0,PASS,Profile resonator count for one lane and one ns
+dynamic_bit_scaling,nominal,2,2,ratio,0,PASS,Doubling encoded bits doubles E/O dynamic energy
+laser_time_scaling,nominal,2,2,ratio,0,PASS,Doubling active time doubles laser energy
+laser_lane_scaling,nominal,4,4,ratio,0,PASS,Four provisioned TX lanes consume four per-lane equivalents
+one_serializer_action,high,1203.2,1203.2,pJ,0,PASS,128 original bits; serializer owns pre-encoding activity
+one_deserializer_cdr_action,high,790.68,790.68,pJ,0,PASS,132 encoded bits; CDR ownership included
+gearbox_not_instantiated,high,0,0,pJ,0,PASS,No independent rate conversion exists in frozen runner
+one_eo_action,high,203.28,203.28,pJ,0,PASS,One encoded E/O action
+one_oe_action,high,448.8,448.8,pJ,0,PASS,One encoded O/E action
+passive_wdm_has_no_dynamic_energy,high,0,0,pJ,0,PASS,Mux and demux enter loss budget only
+passive_waveguide_has_no_dynamic_energy,high,0,0,pJ,0,PASS,Waveguide enters propagation loss only
+laser_mw_ns_equals_pj,high,140,140,pJ,0,PASS,1 mW x 1 ns = 1 pJ
+tuning_mw_ns_equals_pj,high,52,52,pJ,0,PASS,Profile resonator count for one lane and one ns
+dynamic_bit_scaling,high,2,2,ratio,0,PASS,Doubling encoded bits doubles E/O dynamic energy
+laser_time_scaling,high,2,2,ratio,0,PASS,Doubling active time doubles laser energy
+laser_lane_scaling,high,4,4,ratio,0,PASS,Four provisioned TX lanes consume four per-lane equivalents

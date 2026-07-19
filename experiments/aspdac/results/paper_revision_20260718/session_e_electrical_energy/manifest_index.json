@@ -1,0 +1,230 @@
+{
+  "schema_version": "rf-e-manifest-v1",
+  "self_hash_excluded": true,
+  "outputs": [
+    {
+      "path": "experiments/aspdac/results/paper_revision_20260718/session_e_electrical_energy/paper_handoff.md",
+      "bytes": 2894,
+      "sha256": "e0b382929d9cc7c49d34d052e419ab9ca590f5af19f2e7024d02aa31a88213a9"
+    },
+    {
+      "path": "experiments/aspdac/results/paper_revision_20260718/session_e_electrical_energy/source_provenance.md",
+      "bytes": 4382,
+      "sha256": "2219a5e2bb7edbd42333959b76a788044e00e2d89ae424f61debe6d57f751436"
+    },
+    {
+      "path": "experiments/aspdac/results/paper_revision_20260718/session_e_electrical_energy/electrical_ert.yaml",
+      "bytes": 3784,
+      "sha256": "9d2a45231e0b0ff617feef61c95f69e974e12083c0a502df4756598a0594e383"
+    },
+    {
+      "path": "experiments/aspdac/results/paper_revision_20260718/session_e_electrical_energy/electrical_ert.json",
+      "bytes": 4397,
+      "sha256": "db39ddc663efab58bde4f070e7f66ec0360d8f09fb6db8821adf89186a254182"
+    },
+    {
+      "path": "experiments/aspdac/results/paper_revision_20260718/session_e_electrical_energy/action_contract_results.csv",
+      "bytes": 2056,
+      "sha256": "2eff316ad62e810c6bd13f89ed81468e049beaa488ba3d33cbb11af96790fc42"
+    },
+    {
+      "path": "experiments/aspdac/results/paper_revision_20260718/session_e_electrical_energy/five_architecture_breakdown.csv",
+      "bytes": 6517,
+      "sha256": "9939e4add93b72e5cceeb2c457a193fcb14b971ea69a73a0b6e7aead67104fdf"
+    },
+    {
+      "path": "experiments/aspdac/results/paper_revision_20260718/session_e_electrical_energy/units_audit.csv",
+      "bytes": 1691,
+      "sha256": "e63c68b84734f2fec5ec664551823a47e6f8be5a0c69e4375b6df59d586bf1db"
+    },
+    {
+      "path": "experiments/aspdac/results/paper_revision_20260718/session_e_electrical_energy/status.json",
+      "bytes": 858,
+      "sha256": "8e280a72088e5e08eed0f81607e0cbf93285e67dff38a06d7f3eb0e1ab5dcf7d"
+    },
+    {
+      "path": "experiments/aspdac/results/paper_revision_20260718/session_e_electrical_energy/dsent_calibration_raw.json",
+      "bytes": 1324,
+      "sha256": "c6575f472745b8be1d5e55058ee34de3bd6694a3dac574a00f7fd2eabd5f687d"
+    }
+  ],
+  "inputs": [
+    {
+      "architecture": "E128",
+      "path": "experiments/aspdac/results/results_first_20260718/session_b_opto_noc_reduced_v1/raw/run_1/b1_main_attempt_2/rfbr1-940b58dbceba3030b3cc.json",
+      "bytes": 2597,
+      "sha256": "3ddbd2cce87c1ade2f0c2d51da0544945aec1dfeadcd2524ec54a62c52651d5f"
+    },
+    {
+      "architecture": "E128",
+      "path": "experiments/aspdac/results/results_first_20260718/session_b_opto_noc_reduced_v1/raw/run_1/b1_main_attempt_2/rfbr1-940b58dbceba3030b3cc-trace/trace-manifest.json",
+      "bytes": 139787,
+      "sha256": "bcf1dd03c8a59345fac6b877d7214f4612ade319b1d3c8633985d7ca2681fcff"
+    },
+    {
+      "architecture": "E128",
+      "path": "experiments/aspdac/results/results_first_20260718/session_b_opto_noc_reduced_v1/raw/run_1/b1_main_attempt_2/rfbr1-940b58dbceba3030b3cc-trace/cycles.jsonl",
+      "bytes": 615918,
+      "sha256": "2d0bd68351005e22ab750edcfb5c39f74fa34a0fd87527c8be7d651113f1d9c1"
+    },
+    {
+      "architecture": "O1",
+      "path": "experiments/aspdac/results/results_first_20260718/session_b_opto_noc_reduced_v1/raw/run_1/b1_main_attempt_2/rfbr1-ccc57f6604d591f6f726.json",
+      "bytes": 2666,
+      "sha256": "9398733f153969465a60c9fb27bac76d61f2e7f53cae9279f899b281681ff417"
+    },
+    {
+      "architecture": "O1",
+      "path": "experiments/aspdac/results/results_first_20260718/session_b_opto_noc_reduced_v1/raw/run_1/b1_main_attempt_2/rfbr1-ccc57f6604d591f6f726-trace/trace-manifest.json",
+      "bytes": 690137,
+      "sha256": "94706327e410d456070d3a2fe399a4474090c3a4c52f677a7a7268b0adf48bc9"
+    },
+    {
+      "architecture": "O1",
+      "path": "experiments/aspdac/results/results_first_20260718/session_b_opto_noc_reduced_v1/raw/run_1/b1_main_attempt_2/rfbr1-ccc57f6604d591f6f726-trace/cycles.jsonl",
+      "bytes": 3368271,
+      "sha256": "e881ff0424f3f516280ed6d257706ce9553a9f382e4ea10c16059698c8323aab"
+    },
+    {
+      "architecture": "O2",
+      "path": "experiments/aspdac/results/results_first_20260718/session_b_opto_noc_reduced_v1/raw/run_1/b1_main_attempt_2/rfbr1-8d69dd87b6e0ad4187c4.json",
+      "bytes": 2683,
+      "sha256": "345509b86ee8e914dee1f74d9bdb9c61b6bd3ddb4eb4e0bc77325aa2866c96c0"
+    },
+    {
+      "architecture": "O2",
+      "path": "experiments/aspdac/results/results_first_20260718/session_b_opto_noc_reduced_v1/raw/run_1/b1_main_attempt_2/rfbr1-8d69dd87b6e0ad4187c4-trace/trace-manifest.json",
+      "bytes": 1372146,
+      "sha256": "49afd8d38cd5a7cb447f47c59c9ef40c073ca318cd1c7e54be66e8cb84d25fe0"
+    },
+    {
+      "architecture": "O2",
+      "path": "experiments/aspdac/results/results_first_20260718/session_b_opto_noc_reduced_v1/raw/run_1/b1_main_attempt_2/rfbr1-8d69dd87b6e0ad4187c4-trace/cycles.jsonl",
+      "bytes": 4303611,
+      "sha256": "5e35d598cbe8d63649af9d7d1766dcca6cc82f677f31b17a4d020ab295d75f40"
+    },
+    {
+      "architecture": "O4",
+      "path": "experiments/aspdac/results/results_first_20260718/session_b_opto_noc_reduced_v1/raw/run_1/b1_main_attempt_2/rfbr1-026d6eef8125883f7cd8.json",
+      "bytes": 2711,
+      "sha256": "c7e33da066d310ed28da95c4ab7355392140707e6584ffe7c14423517c26eb53"
+    },
+    {
+      "architecture": "O4",
+      "path": "experiments/aspdac/results/results_first_20260718/session_b_opto_noc_reduced_v1/raw/run_1/b1_main_attempt_2/rfbr1-026d6eef8125883f7cd8-trace/trace-manifest.json",
+      "bytes": 1983272,
+      "sha256": "e1a46790ba02ff3eac8a4bd80c2500463afd3c276b70953223248b728e559f31"
+    },
+    {
+      "architecture": "O4",
+      "path": "experiments/aspdac/results/results_first_20260718/session_b_opto_noc_reduced_v1/raw/run_1/b1_main_attempt_2/rfbr1-026d6eef8125883f7cd8-trace/cycles.jsonl",
+      "bytes": 5336916,
+      "sha256": "0cbb711491c1a7398f3f86d8b24d8702cb1f116d429c0b75b9042c9157296743"
+    },
+    {
+      "architecture": "H4",
+      "path": "experiments/aspdac/results/results_first_20260718/session_b_opto_noc_reduced_v1/raw/run_1/b1_main_attempt_2/rfbr1-6463eb6de5e82cdec423.json",
+      "bytes": 2677,
+      "sha256": "2e34a6b56c5af3c672dc8f9bd0eebdedbbd3673a7f6eb955d94b82a2951c8cd1"
+    },
+    {
+      "architecture": "H4",
+      "path": "experiments/aspdac/results/results_first_20260718/session_b_opto_noc_reduced_v1/raw/run_1/b1_main_attempt_2/rfbr1-6463eb6de5e82cdec423-trace/trace-manifest.json",
+      "bytes": 1146666,
+      "sha256": "03dbf2b94fe1aec3ff3de5220ca768c320d1dbfe061b476cef3ec28ecedab5f0"
+    },
+    {
+      "architecture": "H4",
+      "path": "experiments/aspdac/results/results_first_20260718/session_b_opto_noc_reduced_v1/raw/run_1/b1_main_attempt_2/rfbr1-6463eb6de5e82cdec423-trace/cycles.jsonl",
+      "bytes": 1725760,
+      "sha256": "939e8603c4a4a51b7f15c713dd826fde3d2ca086acd3acef475845a460ffd6bc"
+    },
+    {
+      "role": "calibration_config",
+      "path": "experiments/aspdac/specs/electrical_energy_calibration/dsent_link_45nm_128b_1mm.cfg",
+      "bytes": 1091,
+      "sha256": "f3116acdaf0b1b1ef6735e0a7d97e6764c02d04b237ef3dda6f078c30da4ec2f"
+    },
+    {
+      "role": "calibration_config",
+      "path": "experiments/aspdac/specs/electrical_energy_calibration/dsent_link_45nm_128b_200um.cfg",
+      "bytes": 1073,
+      "sha256": "fca4aa2e7e7b6efc44b1fc211ec426f3e1d138aca4612c2e83aa4f4a4f348012"
+    },
+    {
+      "role": "calibration_config",
+      "path": "experiments/aspdac/specs/electrical_energy_calibration/dsent_link_45nm_128b_20um.cfg",
+      "bytes": 1075,
+      "sha256": "35e30c5fbf57ad4b7b45bc02455b056051e1014760f1cecb7b4ee659c522ade9"
+    },
+    {
+      "role": "calibration_config",
+      "path": "experiments/aspdac/specs/electrical_energy_calibration/dsent_router_45nm_128b.cfg",
+      "bytes": 2093,
+      "sha256": "afeaf3aa2ae3567b1e0b752b9f29cd18408920c965460c53715e1720949ca02e"
+    },
+    {
+      "role": "calibration_config",
+      "path": "experiments/aspdac/specs/electrical_energy_calibration/experiment_config.json",
+      "bytes": 546,
+      "sha256": "e05f1a3ade5a9a2598039daa6952d753867b7bab6794978beb4ddd09c9cbd9d3"
+    },
+    {
+      "role": "sidecar_runner",
+      "path": "experiments/aspdac/tests/results_first_electrical_energy_runner/dsent_cli_main.cc",
+      "bytes": 1095,
+      "sha256": "e843ad4f30975acd5c62083fc0222772bd33339b77862b6236831e8834c322ba"
+    },
+    {
+      "role": "sidecar_runner",
+      "path": "experiments/aspdac/tests/results_first_electrical_energy_runner/README.md",
+      "bytes": 868,
+      "sha256": "39e8ff5e5ba721af8ade85659c33cce356b7a7b8fc4321c05987f0e227159abe"
+    },
+    {
+      "role": "sidecar_runner",
+      "path": "experiments/aspdac/tests/results_first_electrical_energy_runner/rebuild_dsent_ert.sh",
+      "bytes": 995,
+      "sha256": "4ad3f5e338eed3f8d1a4a1dc82dfc339039af8cc3c61d5d567d0bd27514ef9b5"
+    },
+    {
+      "role": "sidecar_runner",
+      "path": "experiments/aspdac/tests/results_first_electrical_energy_runner/reproduce.ps1",
+      "bytes": 84,
+      "sha256": "5f3e004e0328ea8792f1b0c8cbfd6b8a5d32198c25f9cbf33c3ff49bab2d3291"
+    },
+    {
+      "role": "sidecar_runner",
+      "path": "experiments/aspdac/tests/results_first_electrical_energy_runner/run_electrical_energy.py",
+      "bytes": 37578,
+      "sha256": "e6c8520a48ac24e524997a14aadd5dc57942f2a7687e1eb609cba134442ab7c1"
+    }
+  ],
+  "architecture_candidates": [
+    {
+      "architecture": "E128",
+      "candidate_id": "rfbr1-940b58dbceba3030b3cc"
+    },
+    {
+      "architecture": "O1",
+      "candidate_id": "rfbr1-ccc57f6604d591f6f726"
+    },
+    {
+      "architecture": "O2",
+      "candidate_id": "rfbr1-8d69dd87b6e0ad4187c4"
+    },
+    {
+      "architecture": "O4",
+      "candidate_id": "rfbr1-026d6eef8125883f7cd8"
+    },
+    {
+      "architecture": "H4",
+      "candidate_id": "rfbr1-6463eb6de5e82cdec423"
+    }
+  ],
+  "official_source_lock": {
+    "dsent_commit": "bc5b00cd2b5dea850acf63f6a1055ff260c8fba7",
+    "dsent_source_tree_sha256": "83b68f61cca0979372c27784b20aed4c679e5ec6014026a95ca09b5aaa449551",
+    "booksim_commit_reference_only": "28f43299f1706a3160ffac721ca461d74eb6e618"
+  }
+}

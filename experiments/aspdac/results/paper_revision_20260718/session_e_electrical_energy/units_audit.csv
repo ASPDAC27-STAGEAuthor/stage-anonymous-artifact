@@ -1,0 +1,12 @@
+parameter,source_unit,target_unit,source_value,conversion,converted_value,dimensional_check,pass
+input_buffer_write,J/action,pJ/action,9.7446954228064561E-11,x 1e12 pJ/J,97.446954228065,energy/action remains energy/action,true
+input_buffer_read,J/action,pJ/action,9.5447675427007175E-11,x 1e12 pJ/J,95.447675427007,energy/action remains energy/action,true
+route_computation_and_arbitration,J/traversal,pJ/traversal,2.1482813221148851E-13,sum stages; x 1e12 pJ/J,0.214828132211,two allocator stages per successful traversal,true
+crossbar_traversal,J/action,pJ/action,2.1259511533842634E-12,x 1e12 pJ/J,2.125951153384,128-bit event width preserved,true
+clock_distribution,J/router-cycle,pJ/router-cycle,1.271981404043004E-12,x 1e12 pJ/J,1.271981404043,one DSENT clock event bound per router-cycle,true
+router_leakage,W,pJ/router-cycle,0.75671392362071399,x 1e-9 s/cycle x 1e12 pJ/J,756.713923620714,W*s = J,true
+link_leakage,W,pJ/link-cycle,0.000055471359999999996,x 1e-9 s/cycle x 1e12 pJ/J,0.055471360000,W*s = J,true
+queue_storage_area,m^2/router,mm^2/router,0.0000025559195200000627,x 1e6 mm^2/m^2,2.555919520000,area conversion,true
+endpoint_electrical_link,J/(128b send at 0.02mm),pJ/(bit-mm),2.4573760355120163E-13,x 1e12 / (128 bit x 0.02 mm),0.095991251387,energy divided by bit-distance,true
+mesh_electrical_link,J/(128b send at 0.2mm),pJ/(bit-mm),1.1495219235512017E-12,x 1e12 / (128 bit x 0.2 mm),0.044903200139,energy divided by bit-distance,true
+E128_legacy_link_dynamic,pJ/link event accumulated by core,pJ,841.728000000000,sum manifest endpoint-* and electrical-* link energy,841.728000000000,matches 841.728 pJ legacy E128 electrical total before replacement,true

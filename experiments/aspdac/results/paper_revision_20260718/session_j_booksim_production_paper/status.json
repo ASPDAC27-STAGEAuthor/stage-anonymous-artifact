@@ -1,0 +1,227 @@
+{
+  "schema_version": "rf-j-booksim-production-paper-1.0",
+  "task_id": "RF-J-BOOKSIM-PRODUCTION-PAPER-V1",
+  "status": "COMPLETE",
+  "scientific_status": "PRODUCTION_STAGE_SELECTED_CONTRACT_EXACT",
+  "blocking_reasons": [],
+  "commit": "b357fa7c35c47c2b3226de25369c6263992ae9c9",
+  "clean_checkout": {
+    "path": "C:/tmp/rf-j-booksim-production-paper-v1-lf-20260719",
+    "core_autocrlf": false,
+    "tracked_status_clean": true,
+    "ignored_solution_descriptors_materialized": 3
+  },
+  "serial_validation": {
+    "debug_solution_build": {
+      "status": "PASS",
+      "warnings": 0,
+      "errors": 0
+    },
+    "release_solution_build": {
+      "status": "PASS",
+      "warnings": 0,
+      "errors": 0
+    },
+    "phase10_booksim_focused_debug": {
+      "status": "PASS",
+      "passed": 6,
+      "total": 6
+    },
+    "full_debug": {
+      "status": "PASS",
+      "passed": 501,
+      "total": 501
+    },
+    "full_release": {
+      "status": "PASS",
+      "passed": 501,
+      "total": 501
+    }
+  },
+  "selected_contract": {
+    "classification": "PRODUCTION_STAGE_SELECTED_CONTRACT_EXACT",
+    "all_selected_contracts_exact": true,
+    "production_code_modified": true,
+    "base_one_flit_contract": {
+      "exact": true,
+      "cases": 7,
+      "packets": 869
+    },
+    "multi_flit_multi_vc": {
+      "exact": true,
+      "cases": 3,
+      "flit_injections": 18,
+      "router_sends": 66,
+      "flit_ejections": 18
+    },
+    "xy_yx_rng_routing": {
+      "exact": true,
+      "cases": 2,
+      "generated_modes": {
+        "R_XYYX_0_to_6_f4_vc2_seed40": {
+          "route-a": "xy"
+        },
+        "R_XYYX_cross_f4_vc2_seed40": {
+          "route-cross-a": "yx",
+          "route-cross-b": "yx"
+        }
+      }
+    },
+    "romm_rng_routing": {
+      "exact": true,
+      "cases": 2,
+      "generated_intermediates": {
+        "R_ROMM_0_to_15_f4_vc2_seed40": {
+          "romm-a": 11
+        },
+        "R_ROMM_cross_f4_vc2_seed40": {
+          "romm-cross-a": 2,
+          "romm-cross-b": 14
+        }
+      }
+    },
+    "stochastic_traffic_manager": {
+      "exact": true,
+      "native_repeat_hash_exact": true,
+      "seed": 40,
+      "traffic": "uniform",
+      "injection_process": "bernoulli",
+      "rate": 0.02,
+      "generation_horizon": 218,
+      "packets_per_repeat": 69,
+      "router_sends_per_repeat": 255,
+      "native_repeats": 2
+    },
+    "production_stage_integration": {
+      "exact": true,
+      "cases": 7,
+      "stochastic_exact": true,
+      "not_booksim_backend_evidence_pass": true,
+      "engine_identity": "stage_managed_flit_vc_runtime",
+      "external_backend_invocations": 0
+    },
+    "tested_scope": {
+      "topology": "4x4 mesh",
+      "routing": [
+        "dim_order",
+        "xy_yx",
+        "romm"
+      ],
+      "packet_flits": [
+        1,
+        3,
+        4
+      ],
+      "vcs": [
+        1,
+        2
+      ],
+      "buffer_depths": [
+        1,
+        4,
+        16
+      ],
+      "traffic_classes": 1,
+      "stochastic_seed": 40
+    },
+    "not_yet_proven": [
+      "more than two VCs and arbitrary VC-class partitions",
+      "packet sizes other than the tested 1/3/4 flits",
+      "valiant, adaptive, torus, and other BookSim routing/topology modes",
+      "multiple traffic classes or subnetworks",
+      "non-uniform stochastic traffic patterns, other rates, and other seeds",
+      "router speedup, speculative allocation, or hold-switch variants"
+    ]
+  },
+  "workflow_repeats": {
+    "count": 2,
+    "repeat_1": "PASS",
+    "repeat_2": "PASS",
+    "all_native_and_stage_event_categories_exact": true,
+    "all_canonical_hashes_equal": true,
+    "whole_file_difference": "stage_production_results.json generated_utc only"
+  },
+  "frozen_figure_impact": {
+    "aspdac_vbs_runtime_changed_by_b357fa7": false,
+    "figures_checked": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "any_runner_uses_aspdac_stage_noc_runtime": false,
+    "existing_figures_changed": false,
+    "mandatory_rerun": false
+  },
+  "not_booksim_backend": {
+    "engine_identity": "stage_managed_flit_vc_runtime",
+    "external_backend_invocations": 0,
+    "managed_core_assembly_sha256": "142e7f0db0bb6f73e21f8dc32f1e3f8947a18c99a493ae5894dc9c4f43ab42e4",
+    "source_audit": {
+      "src/HardwareSim.Core/AspdacStageNocRuntime.cs": {
+        "sha256": "3de5fc8c68d90c4e8fa50ef6b4413550d45838e39c152451a8218c5cd8c7340f",
+        "forbidden_backend_tokens": []
+      },
+      "experiments/aspdac/tests/results_first_noc_booksim_crossval_runner/minimal_repro/extended_repro/production_repro/Program.cs": {
+        "sha256": "2af169deaa593f391f70eb1888171df5f860b7a848f34a33f07efbc420f5952b",
+        "forbidden_backend_tokens": []
+      }
+    },
+    "source_audit_pass": true,
+    "booksim_cannot_supply": {
+      "stage_workload_hardware_provenance": {
+        "stage_provenance_hash": "93fd3c4d9d24e435296d577050f8430324d310bad5e421269cf52ea6fea68682",
+        "delivery": {
+          "packet_id": "stage-native-proof",
+          "release_cycle": 0,
+          "injection_cycle": 0,
+          "arrival_cycle": 40,
+          "source_router": 0,
+          "destination_router": 15,
+          "flits": 4,
+          "layer_id": "conv2",
+          "tensor_role": "activation",
+          "mapping_id": "mapping-mnist-r3",
+          "source_component_id": "pe-array-03",
+          "destination_component_id": "reduce-00",
+          "route_resource_id": "WG1:east:r0-r1"
+        }
+      },
+      "native_cnn_compute_memory_noc_postop_attribution": {
+        "completed_macs": 86400,
+        "compute_cycles": 22,
+        "memory_cycles": 4507,
+        "noc_cycles": 4502,
+        "post_op_cycles": 270,
+        "total_cycles": 9301,
+        "dominant_service": "memory",
+        "canonical_trace_hash": "116b5d072d71f14e0bb17f4bca78f36a9cc533b85b7c9b12c71f3983f3992d58"
+      },
+      "numerical_pe_expected_vs_actual_output_hash": {
+        "is_success": true,
+        "expected_output_hash": "b87fbc56c653e6f80e94235836358d6985ea91a7941ef7d5c26e5005e9f16463",
+        "actual_output_hash": "b87fbc56c653e6f80e94235836358d6985ea91a7941ef7d5c26e5005e9f16463",
+        "trace_hash": "1b2adef1033fc023f514cd963d9a58dbd390550f78bedc94ecc7906e05f556ab",
+        "issue_count": 6
+      }
+    }
+  },
+  "claim_boundary": {
+    "unrestricted_booksim_equivalence": false,
+    "paper_figure_5_direct_runtime": "HardwareSim.Core.AspdacTransportRuntime",
+    "paper_figure_5_uses_booksim_matched_kernel": false,
+    "existing_vbs_noc_runtime": "HardwareSim.Core.AspdacVbsRuntime.FastRouter"
+  },
+  "required_artifacts": [
+    "paper_handoff.md",
+    "status.json",
+    "manifest_index.json",
+    "paper_contract_summary.csv",
+    "event_exactness_summary.csv",
+    "repeat_hash_comparison.csv",
+    "frozen_figure_impact_audit.csv",
+    "claim_boundary.md",
+    "commands_and_environment.md",
+    "sha256_manifest.csv"
+  ]
+}

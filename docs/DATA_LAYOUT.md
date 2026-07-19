@@ -7,6 +7,9 @@ Frozen evidence directories are immutable inputs to the portable replay. Their d
 - `trace_visualization_20260717`: reduced spatial and temporal trace products plus their rendering/provenance manifests.
 - `optical_intervention_20260717`: matched electrical/optical intervention configs, raw terminal JSON, and summary table.
 - `mnist_pe_precision_20260717`: four-profile numerical and system-cost terminal summaries.
+- <code>paper_revision_20260718/session_c_matched_47bars</code>: submitted 47-configuration Timeloop and Accelergy matched values.
+- <code>paper_revision_20260718/session_b_opto_noc_reduced_v1</code>, <code>session_d_o4_queue</code>, <code>session_e_electrical_energy</code>, and <code>session_f_optical_energy</code>: compact transport, queue, electrical-energy, and optical-energy inputs used by submitted Figure 5.
+- <code>paper_revision_20260718/session_j_booksim_production_paper</code>: selected-contract BookSim2 event-timing summaries, repeat hashes, and claim boundaries.
 
 Large raw candidate directories, external tool installations, redundant checkpoints, failed-attempt workspaces, and the 3.92-GiB full trace are intentionally omitted. The package retains the terminal tables used in the paper, the selected raw optical records, configuration plans, output manifests, canonical hashes, and code needed to inspect how each reduction was formed.
 

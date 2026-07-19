@@ -1,0 +1,76 @@
+{
+  "schema_version": "rf-j-booksim-production-paper-manifest-index-1.0",
+  "task_id": "RF-J-BOOKSIM-PRODUCTION-PAPER-V1",
+  "status": "COMPLETE",
+  "scientific_status": "PRODUCTION_STAGE_SELECTED_CONTRACT_EXACT",
+  "commit": "b357fa7c35c47c2b3226de25369c6263992ae9c9",
+  "artifacts": [
+    {
+      "path": "paper_handoff.md",
+      "sha256": "cddf254891c950b530f74ddb5d14a36d973d1836efd47528e01ea953dec17cfc",
+      "bytes": 2476,
+      "role": "required paper evidence"
+    },
+    {
+      "path": "status.json",
+      "sha256": "515a567db266be18a34f725e77676f4c002b1c39f7ce82d6f4630a3895a72fcc",
+      "bytes": 6858,
+      "role": "required paper evidence"
+    },
+    {
+      "path": "paper_contract_summary.csv",
+      "sha256": "ee2a16dcd90401d7b72f888f7d76aca631382c71bd76f301f86f9c63f169924b",
+      "bytes": 874,
+      "role": "required paper evidence"
+    },
+    {
+      "path": "event_exactness_summary.csv",
+      "sha256": "8d1b95dfa07b9b46142b51119267899757943df6a013559a7eb7ac0f8b76b442",
+      "bytes": 2182,
+      "role": "required paper evidence"
+    },
+    {
+      "path": "repeat_hash_comparison.csv",
+      "sha256": "844935f76eaeeaea4d36158f8fd3e8bc7f6adcdd5669c9d6e87cf12967d7532c",
+      "bytes": 2578,
+      "role": "required paper evidence"
+    },
+    {
+      "path": "frozen_figure_impact_audit.csv",
+      "sha256": "48bcc0771dc0783c0ca25e7d0adf82e03e07d59ef58d8d4ee5a2343952b69f80",
+      "bytes": 3070,
+      "role": "required paper evidence"
+    },
+    {
+      "path": "claim_boundary.md",
+      "sha256": "784d217ccb385dde26e683f0d600ef36f475a2dc4fbf901138b829cd638c36a8",
+      "bytes": 2136,
+      "role": "required paper evidence"
+    },
+    {
+      "path": "commands_and_environment.md",
+      "sha256": "3555844eb7e727c9e45049f3a41a8a5f49a95f277de45c0258e6dd601a6f68d7",
+      "bytes": 3249,
+      "role": "required paper evidence"
+    },
+    {
+      "path": "manifest_index.json",
+      "sha256": null,
+      "bytes": null,
+      "role": "self-index; hash recorded by sha256_manifest.csv"
+    },
+    {
+      "path": "sha256_manifest.csv",
+      "sha256": null,
+      "bytes": null,
+      "role": "input/output digest manifest; self-hash intentionally excluded"
+    }
+  ],
+  "raw_evidence": {
+    "repeat_1_files": 101,
+    "repeat_2_files": 101,
+    "base_one_flit_files": 6,
+    "validation_files": 5
+  },
+  "manifest_policy": "sha256_manifest.csv hashes all packaged raw inputs and all generated outputs except itself; manifest_index.json is included there after this file is written."
+}

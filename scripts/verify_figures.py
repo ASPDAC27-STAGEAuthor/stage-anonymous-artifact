@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check that all paper result figures were regenerated with expected geometry."""
+"""Check regenerated Figures 2-5 against the submitted visual references."""
 
 from __future__ import annotations
 
@@ -14,10 +14,10 @@ GENERATED = ROOT / "output" / "figures"
 EXPECTED = ROOT / "expected" / "figures"
 OUT = ROOT / "output"
 STEMS = [
-    "STAGE_Figure3_CrossTool_Validation",
-    "STAGE_Figure4_Optical_Transport",
-    "STAGE_Figure5_Mapping_Codesign",
-    "STAGE_Figure6_MNIST_Precision",
+    "STAGE_Figure2_Matched_47Bars",
+    "STAGE_Figure3_Mapping_Codesign",
+    "STAGE_Figure4_MNIST_Precision",
+    "STAGE_Figure5_Optoelectronic_Final",
 ]
 
 
@@ -46,10 +46,18 @@ def main() -> int:
                 reference_dimensions = list(image.size)
             if reference_dimensions != dimensions:
                 raise AssertionError(f"figure geometry changed for {stem}: {dimensions} vs {reference_dimensions}")
-            entry["reference_png_sha256"] = sha256(reference_png)
+            reference_png_hash = sha256(reference_png)
+            if reference_png_hash != entry["generated_png_sha256"]:
+                raise AssertionError(f"generated PNG does not match the submitted reference for {stem}")
+            entry["reference_png_sha256"] = reference_png_hash
             entry["reference_png_dimensions"] = reference_dimensions
+            entry["submission_png_exact"] = True
         if reference_pdf.is_file():
-            entry["reference_pdf_sha256"] = sha256(reference_pdf)
+            reference_pdf_hash = sha256(reference_pdf)
+            if reference_pdf_hash != entry["generated_pdf_sha256"]:
+                raise AssertionError(f"generated PDF does not match the submitted reference for {stem}")
+            entry["reference_pdf_sha256"] = reference_pdf_hash
+            entry["submission_pdf_exact"] = True
         report["figures"][stem] = entry
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "figure_verification.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")

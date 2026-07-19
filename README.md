@@ -1,6 +1,6 @@
 # STAGE anonymous review artifact
 
-This package contains the implementation, experiment contracts, frozen terminal evidence, tests, and plotting code for the submitted STAGE paper. It is intentionally history-free and identity-free. The default workflow builds the simulator, executes the exact-cycle golden and paper-claim tests, validates the frozen measurements, and regenerates the four result figures without requiring Unity, CUDA, or any external comparison tool.
+This package contains the implementation, experiment contracts, frozen terminal evidence, tests, and plotting code for the submitted STAGE paper plus additional experiments. It is intentionally history-free and identity-free. The default workflow builds the simulator, executes the exact-cycle golden and paper-claim tests, validates the frozen measurements, and regenerates submitted Figures 2--5 without requiring Unity, CUDA, or any external comparison tool.
 
 ## Quick start
 
@@ -34,22 +34,26 @@ Run commands from the artifact root. Times are conservative estimates for a norm
 
 | Paper claim | Artifact command | Expected result | Typical time |
 |---|---|---|---|
-| Complete portable review path | Windows: <code>.\scripts\run_all.ps1</code><br>Linux/macOS: <code>bash scripts/run_all.sh</code> | Build succeeds; 7/7 golden and 25/25 paper tests pass; every frozen claim passes; eight Figure 3--6 files are generated | 1--3 min cached |
+| Complete portable review path | Windows: <code>.\scripts\run_all.ps1</code><br>Linux/macOS: <code>bash scripts/run_all.sh</code> | Build succeeds, 7/7 golden and 31/31 paper tests pass, every frozen claim passes, and eight Figure 2--5 files are generated | 1--3 min cached |
 | Nine analytical contracts | <code>python scripts/validate_frozen.py --claim analytical</code> | 9/9 pass; 18 repeated runs are byte-identical; all nine expected SHA-256 values match | &lt;5 s |
 | Seven live exact-cycle golden traces | <code>dotnet run --project tests/HardwareSim.Tests/HardwareSim.Tests.csproj -c Release -- --group golden</code> | 7/7 pass; each trace is regenerated twice and matches its locked SHA-256 | &lt;1 min |
 | Seven supported NoC cycle contracts | <code>python scripts/validate_frozen.py --claim noc</code> | 14/14 runs across 7 cases pass the independent oracle and locked-hash checks; N07/N08 remain explicitly unsupported | &lt;5 s |
 | Byte-identical repeated traces | <code>python scripts/validate_frozen.py --claim determinism</code> | Two runs for each of 9 analytical cases have identical canonical bytes and SHA-256 | &lt;5 s |
 | Timeloop matched compute/accesses | <code>python scripts/validate_frozen.py --claim timeloop</code> | 5/5 compute-cycle cases and 20/20 hierarchy-access rows match exactly | &lt;5 s |
+| Submitted 47-configuration match | <code>python scripts/validate_frozen.py --claim matched47</code> | 47/47 compute-cycle pairs and 47/47 shared-ERT energy pairs pass the frozen exactness checks | &lt;5 s |
 | SCALE-Sim hold-outs | <code>python scripts/validate_frozen.py --claim scalesim</code> | 16/16 paired runs pass; maximum relative cycle difference is 9.691109% within the predefined 10% engineering envelope | &lt;5 s |
 | Accelergy shared ERT actions | <code>python scripts/validate_frozen.py --claim accelergy</code> | 9/9 action energies match exactly; ERT SHA-256 matches | &lt;5 s |
-| BookSim congestion ordering | <code>python scripts/validate_frozen.py --claim booksim</code> | Both tools identify <code>hotspot_node5</code> first; 0.04 versus 0.08 is reported without an equivalence claim | &lt;5 s |
+| BookSim2 selected-contract timing | <code>python scripts/validate_frozen.py --claim booksim_timing</code> | Four selected contracts, nine event categories, eleven repeat-hash rows, and seven production cases are exact. The managed STAGE runtime reports zero external backend calls | &lt;5 s |
+| Additional BookSim congestion-order study | <code>python scripts/validate_frozen.py --claim booksim</code> | Both tools identify <code>hotspot_node5</code> first. The 0.04 versus 0.08 saturation values remain explicitly non-equivalent | &lt;5 s |
 | BookSim matched input set | <code>python experiments/aspdac/scripts/generate_booksim_configs.py --output output/external-rerun/booksim-configs</code> | 530/530 generated configurations match their locked SHA-256 ledger | &lt;5 s |
 | Controlled bottleneck attribution | <code>python scripts/validate_frozen.py --claim attribution</code> | Two accepted interventions produce the trace-connected NoC -> memory -> NoC diagnosis | &lt;5 s |
 | Mapping/topology DSE | <code>python scripts/validate_frozen.py --claim mapping</code> | 24 candidates pass; cycle range 174--1741 and packet-move range 316--600 are recovered | &lt;5 s |
 | MNIST precision study | <code>python scripts/validate_frozen.py --claim precision</code> | Four accuracy/traffic profiles and checkpoint/prediction hashes match | &lt;5 s |
 | Electrical/optical intervention | <code>python scripts/validate_frozen.py --claim optical</code> | Effective payload is 4x; cycles are 8193 versus 2049 | &lt;5 s |
 | Full-trace overhead record | <code>python scripts/validate_frozen.py --claim trace</code> | The three-repeat medians, 46,852,084 events, 3.92-GiB raw size, and compressed size match; no large trace is generated | &lt;5 s |
-| Paper Figures 3--6 | Windows: <code>.\scripts\run_figures.ps1</code><br>Linux/macOS: <code>bash scripts/run_figures.sh</code> | Four PDF and four PNG files plus geometry/hash verification | &lt;1 min |
+| Submitted Figures 2--5 | Windows: <code>.\scripts\run_figures.ps1</code><br>Linux/macOS: <code>bash scripts/run_figures.sh</code> | Four PDF and four PNG files. Every submission-used format matches its locked reference byte for byte | &lt;1 min |
+
+The default plotting command emits only submitted Figures 2--5. The earlier Figure 3--6 generator remains at <code>experiments/aspdac/scripts/plot_current_overleaf_v1.py</code> as an additional visualization path and is not part of the submission-match gate.
 
 The selector reports are written to <code>output/claim_&lt;name&gt;.json</code>. The complete run writes <code>output/frozen_validation.json</code>. Expected trace hashes and mismatch localization are documented in <code>docs/CANONICAL_TRACES.md</code>. Frozen external-tool commits, versions, and binary/diff hashes are recorded without local paths in <code>experiments/aspdac/external_inputs/tool_versions.json</code>. Fresh BookSim, SCALE-Sim, Timeloop, and Accelergy reruns are intentionally separate; see <code>docs/EXTERNAL_TOOLS.md</code>.
 
@@ -62,7 +66,7 @@ A successful run ends with `Artifact validation passed` and produces:
 - `output/frozen_validation.json`: recomputed paper metrics and contract checks;
 - `output/anonymization_scan.json`: identity-leak scan;
 - `output/figure_verification.json`: generated figure hashes and geometry;
-- `output/figures/`: regenerated Figures 3--6 in PDF and PNG form;
+- `output/figures/`: regenerated submitted Figures 2--5 in PDF and PNG form;
 - `output/logs/`: per-step logs and exit markers; on Windows, .NET output is also streamed directly to the console.
 
 The default path is designed to finish on a normal CPU workstation. The initial package installation and .NET restore usually dominate wall time.
@@ -74,9 +78,9 @@ The default path is designed to finish on a normal CPU workstation. The initial 
 3. Verifies every static file against `metadata/artifact_manifest.json`.
 4. Restores and builds `STAGE.sln` sequentially.
 5. Runs `golden`, the seven exact-cycle regression cases.
-6. Runs `paper`, covering the paper experiment contracts, NoC oracle cases, hold-out shapes, optical intervention, precision accounting, and CIM output-stage accounting.
+6. Runs `paper`, covering the paper experiment contracts, NoC oracle cases, hold-out shapes, optical intervention, precision accounting, CIM output-stage accounting, and six live BookSim-matched network contracts.
 7. Recomputes the paper-facing validation values from the frozen CSV/JSON evidence.
-8. Regenerates the four result figures and verifies their geometry against the submission references.
+8. Regenerates submitted Figures 2--5 and verifies exact hashes for every format used by the paper.
 
 Build and regression commands are intentionally sequential because parallel .NET builds can contend on `obj/` files and give misleading failures.
 
@@ -86,15 +90,16 @@ Build and regression commands are intentionally sequential because parallel .NET
 |---|---|
 | `src/HardwareSim.Core/` | Typed graph, compiler, cycle engine, component models, event stream, metrics, lineage, NoC, optical, precision, and CIM logic. |
 | `tools/HardwareSim.AspdacRunner/` | Non-Unity experiment runner used by the paper workflow. |
-| `tests/HardwareSim.Tests/` | Curated 32-case paper-validation harness; internal development regressions are intentionally excluded. |
+| `tests/HardwareSim.Tests/` | Curated 38-case golden-plus-paper validation harness; internal development regressions are intentionally excluded. |
 | `experiments/aspdac/specs/` | Frozen experiment plans, sweeps, schemas, mappings, and reviewer-extension contracts. |
 | `experiments/aspdac/external_inputs/` | Locked BookSim configuration ledger and Timeloop workload/mapping decks for fresh external reruns. |
 | `experiments/aspdac/scripts/` | Experiment managers, analysis scripts, external-tool adapters, and paper plotting code. |
-| `experiments/aspdac/results/*/summary/` | Frozen terminal summaries used for tables, claims, and figures. |
+| `experiments/aspdac/results/*/summary/` | Frozen terminal summaries used for tables, claims, and additional experiments. |
+| <code>experiments/aspdac/results/paper_revision_20260718/</code> | Compact submitted-paper evidence for the 47-case match, optoelectronic study, energy audits, and selected-contract BookSim2 timing. |
 | `experiments/aspdac/results/*/manifests/` | Selected plans, audits, output manifests, preregistration record, and provenance metadata. |
 | `data/characterization/` | Literature-backed component characterization catalog used by the CIM contract. |
 | `data/mnist/` | Compressed MNIST archives, frozen checkpoint, predictions, and functional summary. |
-| `expected/figures/` | Submission-side visual references for figure-geometry checks. |
+| `expected/figures/` | Submission-side visual references for exact figure checks. |
 | `scripts/` | Portable environment, test, data-validation, plotting, integrity, and anonymization entry points. |
 | `docs/` | Claim map, canonical-trace/hash contract, data boundary, external-tool instructions, and anonymization notes. |
 | `LICENSE`, `NOTICE`, `THIRD_PARTY.md` | Apache-2.0 terms for STAGE-owned material and third-party scope notices. |
@@ -131,7 +136,7 @@ Validate all frozen measurements, or one named paper claim:
 
 ~~~powershell
 .\.venv\Scripts\python.exe scripts\validate_frozen.py
-.\.venv\Scripts\python.exe scripts\validate_frozen.py --claim booksim
+.\.venv\Scripts\python.exe scripts\validate_frozen.py --claim booksim_timing
 ~~~
 
 Bash equivalents are `scripts/run_tests.sh` and `scripts/run_figures.sh`.
@@ -142,9 +147,9 @@ The package deliberately separates three levels of reproducibility:
 
 - **Portable replay:** build, deterministic simulator contracts, frozen-data validation, and figure regeneration. This is the default path and is fully contained here.
 - **Native STAGE rerun:** selected plans can be rerun with `HardwareSim.AspdacRunner` and the managers under `experiments/aspdac/scripts/`. Fresh results must go to a new output directory; frozen directories are read-only evidence.
-- **Specialist/external rerun:** BookSim2, SCALE-Sim, Timeloop, Accelergy, ZigZag, and the full CUDA MNIST precision replay require separately installed third-party tools. Their configurations and terminal summaries are included; their source trees are not redistributed.
+- **Specialist/external rerun:** Fresh BookSim2, SCALE-Sim, Timeloop, Accelergy, ZigZag, and full CUDA MNIST executions require separately installed third-party tools. Their configurations and terminal summaries are included. Their source trees are not redistributed.
 
-The external comparisons do not claim cycle equivalence across mismatched abstractions. Each result is labeled as exact, trend, numerical, or unsupported in the supplied summaries and claim registers.
+The selected 4x4 mesh BookSim2 contract is event-exact in the tested cases and is checked by both live STAGE tests and frozen native comparisons. Other external comparisons retain their stated exact, trend, numerical, or unsupported boundaries. The separate saturation sweep remains an ordering result and does not claim absolute equivalence.
 
 ## Why the 3.92-GiB trace is not included
 

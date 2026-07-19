@@ -35,7 +35,7 @@ run_logged dotnet-build dotnet build STAGE.sln -c Release --no-restore --disable
 run_logged tests-golden dotnet run --project tests/HardwareSim.Tests/HardwareSim.Tests.csproj -c Release --no-build -- --group golden
 run_logged tests-paper dotnet run --project tests/HardwareSim.Tests/HardwareSim.Tests.csproj -c Release --no-build -- --group paper
 run_logged frozen-data "$PYTHON" scripts/validate_frozen.py
-run_logged paper-figures "$PYTHON" experiments/aspdac/scripts/plot_current_overleaf_v1.py
+run_logged paper-figures "$PYTHON" experiments/aspdac/scripts/plot_submitted_figures_20260719.py
 run_logged figure-verification "$PYTHON" scripts/verify_figures.py
 printf '{"status":"pass","output":"output/"}\n' > output/run_summary.json
 echo "Artifact validation passed. Outputs: $ROOT/output"

@@ -69,12 +69,12 @@ if (-not $SkipTests) {
     Write-Host '==> tests-paper'
     dotnet run --project tests/HardwareSim.Tests/HardwareSim.Tests.csproj -c Release --no-build -- --group paper
     if ($LASTEXITCODE -ne 0) { throw "tests-paper failed with exit code $LASTEXITCODE" }
-    [IO.File]::WriteAllText((Join-Path $Logs 'tests-paper.log'), "Exit code: 0`nTwenty-five paper-claim tests passed; output was streamed directly to the console.`n", [Text.UTF8Encoding]::new($false))
+    [IO.File]::WriteAllText((Join-Path $Logs 'tests-paper.log'), "Exit code: 0`nThirty-one paper-claim tests passed; output was streamed directly to the console.`n", [Text.UTF8Encoding]::new($false))
 }
 
 Invoke-NativeLogged 'frozen-data' $VenvPython @('scripts/validate_frozen.py')
 if (-not $SkipFigures) {
-    Invoke-NativeLogged 'paper-figures' $VenvPython @('experiments/aspdac/scripts/plot_current_overleaf_v1.py')
+    Invoke-NativeLogged 'paper-figures' $VenvPython @('experiments/aspdac/scripts/plot_submitted_figures_20260719.py')
     Invoke-NativeLogged 'figure-verification' $VenvPython @('scripts/verify_figures.py')
 }
 

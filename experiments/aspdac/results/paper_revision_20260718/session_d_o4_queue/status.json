@@ -1,0 +1,18 @@
+{
+  "schema_version": "rf-d-o4-queue-status-1.1",
+  "task_id": "RF-D-O4-QUEUE-V1",
+  "state": "complete",
+  "completed_utc": "2026-07-18T12:26:06.3811918\u002B00:00",
+  "outcome": "diagnosis_and_effective_compiled_queue_sweep_complete_no_production_core_change",
+  "conclusion": "Original O4 declared Q16 but executed at compiled Q4, then deterministically consumed 26 queue-overflow packets. Effective compiled queue designs are reported separately.",
+  "completed_deeper_queue_designs": [
+    "O4-Q32",
+    "O4-Q64",
+    "O4-Q128"
+  ],
+  "b2_disposition": "no_progress_from_10000_through_60000",
+  "deterministic_repeat_hashes_exact": true,
+  "frozen_source_unchanged": true,
+  "buffer_energy_boundary": "Reported energy excludes optical/SerDes queue-buffer read/write energy because that queue energy is not metered by this runtime path.",
+  "reproduction_command": "powershell -ExecutionPolicy Bypass -File experiments/aspdac/tests/results_first_o4_queue_runner/reproduce.ps1 -OutputRoot experiments/aspdac/results/paper_revision_20260718/session_d_o4_queue_repro"
+}

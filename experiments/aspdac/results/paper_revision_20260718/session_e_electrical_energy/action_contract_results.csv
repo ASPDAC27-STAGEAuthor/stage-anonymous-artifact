@@ -1,0 +1,13 @@
+order,action,count,count_unit,unit_energy_pj,expected_energy_pj,observed_energy_pj,unit_area_mm2,residual_pj,pass,source_binding
+1,input_buffer_write,1,action,97.446954228065,97.446954228065,97.446954228065,0.000000000000,0.000000000000,true,DSENT Router:WriteBuffer
+2,input_buffer_read,1,action,95.447675427007,95.447675427007,95.447675427007,0.000000000000,0.000000000000,true,DSENT Router:ReadBuffer
+3,route_computation_and_arbitration,1,successful_router_traversal,0.214828132211,0.214828132211,0.214828132211,0.000000000000,0.000000000000,true,DSENT switch allocator stage1 + stage2
+4,crossbar_traversal,1,action,2.125951153384,2.125951153384,2.125951153384,0.000000000000,0.000000000000,true,DSENT Multicast1 crossbar event
+5,electrical_link_bit_mm_endpoint_20um,1,bit-mm,0.095991251387,0.095991251387,0.095991251387,0.000000000000,0.000000000000,true,DSENT RepeatedLink 20-um class
+6,electrical_link_bit_mm_mesh_200um,1,bit-mm,0.044903200139,0.044903200139,0.044903200139,0.000000000000,0.000000000000,true,DSENT RepeatedLink 200-um class
+7,electrical_link_bit_mm_normalization_1mm,1,bit-mm,0.040362040028,0.040362040028,0.040362040028,0.000000000000,0.000000000000,true,DSENT RepeatedLink 1-mm normalization
+8,clock_distribution,1,router-cycle,1.271981404043,1.271981404043,1.271981404043,0.000000000000,0.000000000000,true,DSENT Router:DistributeClock
+9,router_leakage,1,router-cycle,756.713923620714,756.713923620714,756.713923620714,0.000000000000,0.000000000000,true,DSENT Router leakage power integrated over 1 ns
+10,electrical_link_leakage,1,link-cycle,0.055471360000,0.055471360000,0.055471360000,0.000000000000,0.000000000000,true,DSENT RepeatedLink leakage integrated over 1 ns
+11,queue_storage_inventory,1,router,0.000000000000,0.000000000000,0.000000000000,2.555919520000,0.000000000000,true,DSENT InputPort active area x 5 ports; energy is read/write actions above
+12,TOTAL_ONE_OF_EACH,11,heterogeneous_contract_actions,,953.458041816978,953.458041816978,2.555919520000,0.000000000000,true,sum of preceding one-action rows

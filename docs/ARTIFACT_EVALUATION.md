@@ -16,16 +16,16 @@ or:
 bash scripts/run_all.sh
 ~~~
 
-Acceptance condition: exit code 0, <code>output/run_summary.json</code> reports <code>pass</code>, all 7 golden and 25 paper tests pass, <code>output/frozen_validation.json</code> reports <code>pass</code> for every named claim, and eight generated figure files appear under <code>output/figures/</code>.
+Acceptance condition: exit code 0, <code>output/run_summary.json</code> reports <code>pass</code>, all 7 golden and 31 paper tests pass, <code>output/frozen_validation.json</code> reports <code>pass</code> for every named claim, and eight submitted Figure 2--5 files appear under <code>output/figures/</code>.
 
 ## B. Independent checks
 
 1. <code>python scripts/build_manifest.py --verify</code> authenticates the static package.
 2. <code>python scripts/anonymization_scan.py</code> checks the review copy for common identity leaks.
-3. <code>scripts/run_tests.*</code> builds and runs the seven exact-cycle plus 25 paper-claim tests.
+3. <code>scripts/run_tests.*</code> builds and runs the seven exact-cycle plus 31 paper-claim tests.
 4. <code>python scripts/validate_frozen.py --claim NAME</code> runs one assertion set; allowed names are shown by <code>--help</code>.
 5. <code>python experiments/aspdac/scripts/generate_booksim_configs.py --output output/external-rerun/booksim-configs</code> regenerates and verifies all 530 BookSim inputs.
-6. <code>scripts/run_figures.*</code> recreates Figures 3--6.
+6. <code>scripts/run_figures.*</code> recreates submitted Figures 2--5 and checks exact submission-reference hashes.
 7. <code>python scripts/compare_hashes.py expected.json actual.json</code> localizes a canonical-trace mismatch.
 
 ## C. Expected headline values
@@ -33,9 +33,11 @@ Acceptance condition: exit code 0, <code>output/run_summary.json</code> reports 
 - Nine analytical contracts pass with 18 byte-identical repeated traces and locked SHA-256 values.
 - 14 supported NoC oracle runs across seven cases; N07/N08 remain explicitly unsupported.
 - Timeloop: five compute-cycle cases and twenty hierarchy-access rows match exactly.
+- Submitted matched set: all 47 compute-cycle pairs and all 47 shared-ERT energy pairs pass.
 - SCALE-Sim: 16 paired hold-out runs; maximum relative difference 9.691109%, within the predefined 10% engineering tolerance.
 - Accelergy: nine shared ERT action values match exactly.
-- BookSim/STAGE: <code>hotspot_node5</code> is first in both, while 0.04 versus 0.08 is retained as a non-equivalent absolute result.
+- BookSim2 selected contract: four contract classes, nine event categories, eleven repeat-hash rows, and seven production cases are exact. The managed STAGE runtime makes zero external backend calls.
+- Additional BookSim saturation sweep: <code>hotspot_node5</code> is first in both, while 0.04 versus 0.08 remains a non-equivalent absolute result.
 - Controlled attribution: NoC -> memory -> NoC across the two accepted interventions.
 - Mapping: 24 candidates, 174--1,741 cycles, and 316--600 1024-bit packet moves.
 - MNIST accuracy: 98.39%, 98.40%, 98.28%, and 97.35% for FP32/A32, FP16/A16, FP8/A16, and FP8/A8.

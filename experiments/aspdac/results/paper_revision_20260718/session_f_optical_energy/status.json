@@ -1,0 +1,43 @@
+{
+  "schema_version": "rf-f-optical-energy-status-v1.0",
+  "task_id": "RF-F-OPTICAL-ENERGY-V1",
+  "status": "PASS",
+  "frozen_utc": "2026-07-18T00:00:00Z",
+  "scope": "sidecar_only_no_production_core_no_paper_tex_no_original_reduced_lane_writes",
+  "input_summary_csv": "experiments/aspdac/results/results_first_20260718/session_b_opto_noc_reduced_v1/summary/opto_noc_main_matrix.csv",
+  "input_summary_sha256": "5c12412320549403ba1283229a094738a5c91331db23f2e24399a40c9eb8c94c",
+  "workload": "attention_qk_s128_d64",
+  "traffic_scale": 2,
+  "architectures": [
+    "O1",
+    "O2",
+    "O4",
+    "H4"
+  ],
+  "profiles": [
+    "low",
+    "nominal",
+    "high"
+  ],
+  "repeat_count_per_architecture": 2,
+  "analytical_contract_count": 37,
+  "analytical_contract_failures": 0,
+  "sensitivity_row_count": 24,
+  "audit_row_count": 11,
+  "exact_repeat_match": true,
+  "laser_feasibility_all_rows": true,
+  "model_claim": "literature-sourced low/nominal/high sensitivity envelope; no unsupported node scaling",
+  "reproduce_command": "python experiments/aspdac/tests/results_first_optical_energy_runner/run_optical_energy.py all",
+  "required_outputs": [
+    "paper_handoff.md",
+    "source_provenance.md",
+    "optical_energy_profiles.yaml",
+    "optical_energy_profiles.json",
+    "analytical_contract_results.csv",
+    "architecture_energy_breakdown.csv",
+    "sensitivity_results.csv",
+    "units_and_double_count_audit.csv",
+    "status.json",
+    "manifest_index.json"
+  ]
+}
